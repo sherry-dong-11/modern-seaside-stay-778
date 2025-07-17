@@ -13,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
-import { ArrowRight, Search, MapPin, Building2, Star, Users, Award, CheckCircle2, Play, Phone, Mail, BookOpen } from "lucide-react";
+import { ArrowRight, Search, MapPin, Building2, Star, Users, Award, CheckCircle2, Play, Phone, Mail, BookOpen, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-cozy-room.jpg";
 import luxuryApartment from "@/assets/apartment-luxury.jpg";
@@ -196,9 +196,9 @@ export default function Index() {
                   <BookOpen className="w-5 h-5 mr-2" />
                   New Build Purchase Guide
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Talk to Expert
+                <Button size="lg" variant="outline" className="border-white text-orange-400 hover:bg-white/10">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Chat with AI Expert
                 </Button>
               </div>
               
