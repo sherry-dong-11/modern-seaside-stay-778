@@ -97,11 +97,7 @@ export default function Index() {
                 <span className="text-orange-400 block">New Home</span>
               </h1>
               
-              <p style={{
-              animationDelay: "200ms"
-            }} className="text-lg text-white/80 mb-12 max-w-2xl mx-auto animate-fade-in md:text-sm">
-                Discover premium off-the-plan apartments, townhouses, and new developments across Australia
-              </p>
+              
               
               {/* Search Bar */}
               <div className="max-w-2xl mx-auto mb-12 animate-fade-in" style={{
