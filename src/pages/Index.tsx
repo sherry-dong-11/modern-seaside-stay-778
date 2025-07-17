@@ -6,6 +6,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ExploreCitiesSection from "@/components/ExploreCitiesSection";
 import FeaturedCategoriesSection from "@/components/FeaturedCategoriesSection";
 import { HomeLoanCalculatorSection } from "@/components/HomeLoanCalculatorSection";
+import { LatestNewsSection } from "@/components/LatestNewsSection";
 import ApartmentCard, { ApartmentProps } from "@/components/ApartmentCard";
 import PropertyCarouselCard from "@/components/PropertyCarouselCard";
 import { Button } from "@/components/ui/button";
@@ -178,6 +179,9 @@ export default function Index() {
         
         {/* Home Loan Calculator */}
         <HomeLoanCalculatorSection />
+        
+        {/* Latest News */}
+        <LatestNewsSection />
         
         {/* Testimonials */}
         <TestimonialsSection />
