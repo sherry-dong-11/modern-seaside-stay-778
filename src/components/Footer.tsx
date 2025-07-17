@@ -58,7 +58,7 @@ Using intelligent tools and insights to make the journey to your new home feel i
           </div>
           
           <div className="animate-fade-in [animation-delay:300ms] mx-[8px]">
-            <h4 className="text-xl font-bold mb-4">{t.footer.contact}</h4>
+            <h4 className="text-xl font-bold mb-4 mx-0 my-0 px-0">{t.footer.contact}</h4>
             <ul className="space-y-3 mx-0">
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 mr-2 mt-0.5 text-primary" />
