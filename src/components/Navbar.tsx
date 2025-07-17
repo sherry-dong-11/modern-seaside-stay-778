@@ -14,6 +14,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [newHomeDropdownOpen, setNewHomeDropdownOpen] = useState(false);
   const [professionalsDropdownOpen, setProfessionalsDropdownOpen] = useState(false);
+  const [newHomeHoverTimeout, setNewHomeHoverTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [professionalsHoverTimeout, setProfessionalsHoverTimeout] = useState<NodeJS.Timeout | null>(null);
   
   const newHomeDropdownItems = [
     { name: "Apartments", path: "/apartments" },
@@ -61,8 +63,14 @@ export default function Navbar() {
           {/* New Home Dropdown */}
           <li 
             className="relative"
-            onMouseEnter={() => setNewHomeDropdownOpen(true)}
-            onMouseLeave={() => setNewHomeDropdownOpen(false)}
+            onMouseEnter={() => {
+              if (newHomeHoverTimeout) clearTimeout(newHomeHoverTimeout);
+              setNewHomeDropdownOpen(true);
+            }}
+            onMouseLeave={() => {
+              const timeout = setTimeout(() => setNewHomeDropdownOpen(false), 150);
+              setNewHomeHoverTimeout(timeout);
+            }}
           >
             <button className={cn("font-medium transition-colors hover:opacity-80 flex items-center gap-1", scrolled ? "text-foreground hover:text-primary" : "text-white")}>
               New Home
@@ -70,10 +78,20 @@ export default function Navbar() {
             </button>
             
             {/* Dropdown Menu */}
-            <div className={cn(
-              "absolute top-full left-0 mt-2 w-48 bg-white dark:bg-card rounded-lg shadow-lg border z-50 transition-all duration-200",
-              newHomeDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none"
-            )}>
+            <div 
+              className={cn(
+                "absolute top-full left-0 mt-2 w-48 bg-white dark:bg-card rounded-lg shadow-lg border z-50 transition-all duration-200",
+                newHomeDropdownOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"
+              )}
+              onMouseEnter={() => {
+                if (newHomeHoverTimeout) clearTimeout(newHomeHoverTimeout);
+                setNewHomeDropdownOpen(true);
+              }}
+              onMouseLeave={() => {
+                const timeout = setTimeout(() => setNewHomeDropdownOpen(false), 150);
+                setNewHomeHoverTimeout(timeout);
+              }}
+            >
               <ul className="py-2">
                 {newHomeDropdownItems.map(item => (
                   <li key={item.name}>
@@ -101,8 +119,14 @@ export default function Navbar() {
           {/* Professionals Dropdown */}
           <li 
             className="relative"
-            onMouseEnter={() => setProfessionalsDropdownOpen(true)}
-            onMouseLeave={() => setProfessionalsDropdownOpen(false)}
+            onMouseEnter={() => {
+              if (professionalsHoverTimeout) clearTimeout(professionalsHoverTimeout);
+              setProfessionalsDropdownOpen(true);
+            }}
+            onMouseLeave={() => {
+              const timeout = setTimeout(() => setProfessionalsDropdownOpen(false), 150);
+              setProfessionalsHoverTimeout(timeout);
+            }}
           >
             <button className={cn("font-medium transition-colors hover:opacity-80 flex items-center gap-1", scrolled ? "text-foreground hover:text-primary" : "text-white")}>
               Professionals
@@ -110,10 +134,20 @@ export default function Navbar() {
             </button>
             
             {/* Dropdown Menu */}
-            <div className={cn(
-              "absolute top-full left-0 mt-2 w-48 bg-white dark:bg-card rounded-lg shadow-lg border z-50 transition-all duration-200",
-              professionalsDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none"
-            )}>
+            <div 
+              className={cn(
+                "absolute top-full left-0 mt-2 w-48 bg-white dark:bg-card rounded-lg shadow-lg border z-50 transition-all duration-200",
+                professionalsDropdownOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"
+              )}
+              onMouseEnter={() => {
+                if (professionalsHoverTimeout) clearTimeout(professionalsHoverTimeout);
+                setProfessionalsDropdownOpen(true);
+              }}
+              onMouseLeave={() => {
+                const timeout = setTimeout(() => setProfessionalsDropdownOpen(false), 150);
+                setProfessionalsHoverTimeout(timeout);
+              }}
+            >
               <ul className="py-2">
                 {professionalsDropdownItems.map(item => (
                   <li key={item.name}>
