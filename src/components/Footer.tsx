@@ -13,7 +13,7 @@ export default function Footer() {
             <img 
               src="/lovable-uploads/656753f9-a816-4923-ae1b-085d43457414.png" 
               alt="YEPHOME" 
-              className="h-8 w-auto mb-4"
+              className="h-12 w-auto mb-4"
             />
             <p className="text-muted-foreground mb-4 text-base mx-0 px-0 my-[13px]">Our mission is to make finding your perfect new home simpler, smarter, and more transparent.
 

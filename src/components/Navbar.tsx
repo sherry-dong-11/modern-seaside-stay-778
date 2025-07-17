@@ -51,7 +51,7 @@ export default function Navbar() {
             <img 
               src="/lovable-uploads/656753f9-a816-4923-ae1b-085d43457414.png" 
               alt="YEPHOME" 
-              className="h-8 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
         </div>
