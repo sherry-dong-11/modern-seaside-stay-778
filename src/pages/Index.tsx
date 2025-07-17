@@ -4,9 +4,11 @@ import Footer from "@/components/Footer";
 import BookingForm from "@/components/BookingForm";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ApartmentCard, { ApartmentProps } from "@/components/ApartmentCard";
+import PropertyCarouselCard from "@/components/PropertyCarouselCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
 import { ArrowRight, Search, MapPin, Building2, TrendingUp, Star, Users, Award, CheckCircle2, Play, Bot, Phone, Mail } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -173,18 +175,30 @@ export default function Index() {
         <section className="section-sm">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <Badge variant="outline" className="mb-4">Featured Properties</Badge>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Premium New Developments
+                Featured Properties
               </h2>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredProperties.map((property, index) => (
-                <div key={property.id} className="animate-fade-in" style={{ animationDelay: `${(index + 1) * 150}ms` }}>
-                  <ApartmentCard apartment={property} />
-                </div>
-              ))}
+            {/* Property Carousel */}
+            <div className="relative max-w-4xl mx-auto">
+              <Carousel 
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {featuredProperties.map((property) => (
+                    <CarouselItem key={property.id}>
+                      <PropertyCarouselCard property={property} />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-4 bg-white/90 hover:bg-white border-gray-200 shadow-lg" />
+                <CarouselNext className="right-4 bg-white/90 hover:bg-white border-gray-200 shadow-lg" />
+              </Carousel>
             </div>
             
             <div className="text-center mt-12">
