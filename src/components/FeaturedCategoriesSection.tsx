@@ -166,34 +166,32 @@ const PropertyCard = ({ property }: { property: PropertyItem }) => {
           <h3 className="font-semibold text-lg mb-1 text-foreground">{property.name}</h3>
           <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{property.address}</p>
           
-          <div className="min-h-[24px] mb-3">
-            {(property.bedrooms > 0 || property.bathrooms > 0 || property.parking > 0) && (
-              <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                {property.bedrooms > 0 && (
-                  <div className="flex items-center gap-1">
-                    <Bed className="w-4 h-4" />
-                    <span>{property.bedrooms}</span>
-                  </div>
-                )}
-                {property.bathrooms > 0 && (
-                  <div className="flex items-center gap-1">
-                    <Bath className="w-4 h-4" />
-                    <span>{property.bathrooms}</span>
-                  </div>
-                )}
-                {property.parking > 0 && (
-                  <div className="flex items-center gap-1">
-                    <Car className="w-4 h-4" />
-                    <span>{property.parking}</span>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
+          {(property.bedrooms > 0 || property.bathrooms > 0 || property.parking > 0) && (
+            <div className="flex items-center gap-4 mb-3 text-sm text-muted-foreground">
+              {property.bedrooms > 0 && (
+                <div className="flex items-center gap-1">
+                  <Bed className="w-4 h-4" />
+                  <span>{property.bedrooms}</span>
+                </div>
+              )}
+              {property.bathrooms > 0 && (
+                <div className="flex items-center gap-1">
+                  <Bath className="w-4 h-4" />
+                  <span>{property.bathrooms}</span>
+                </div>
+              )}
+              {property.parking > 0 && (
+                <div className="flex items-center gap-1">
+                  <Car className="w-4 h-4" />
+                  <span>{property.parking}</span>
+                </div>
+              )}
+            </div>
+          )}
           
-          <div className="text-left">
-            <span className="text-sm text-muted-foreground block mb-1">Price</span>
-            <span className="font-semibold text-lg text-orange-500 block truncate">
+          <div className="flex items-center justify-between">
+            <span className="text-sm text-muted-foreground">Price</span>
+            <span className="font-semibold text-orange-500">
               {property.price}
             </span>
           </div>
