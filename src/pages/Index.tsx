@@ -182,37 +182,6 @@ export default function Index() {
         {/* Testimonials */}
         <TestimonialsSection />
         
-        {/* New Build Purchase Guide */}
-        <section className="py-16 bg-muted/30">
-          <div className="container">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-background rounded-2xl p-8 shadow-sm border border-border/50">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                        <Building2 className="w-6 h-6 text-primary" />
-                      </div>
-                      <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                        Purchase Guide for New Builds
-                      </h2>
-                    </div>
-                    <p className="text-lg text-muted-foreground mb-6 lg:mb-0">
-                      Step-by-step tips for buying off-the-plan apartments, townhouses and house & land.
-                    </p>
-                  </div>
-                  <div className="lg:flex-shrink-0">
-                    <Button size="lg" className="w-full lg:w-auto">
-                      Read the Full Guide
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
         {/* CTA Section */}
         <section className="relative py-16 bg-gradient-to-br from-primary-500 to-primary-600 text-white overflow-hidden">
           <div className="container relative z-10">
