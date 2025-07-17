@@ -11,10 +11,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="animate-fade-in [animation-delay:100ms]">
             <img 
-              src="/lovable-uploads/76685c20-ccdc-4df4-90d5-dfe3498fbbf6.png" 
+              src="/lovable-uploads/ec1d0529-2ae8-4481-8329-b97ea749e03f.png" 
               alt="YEPHOME" 
               className="h-6 w-auto mb-4"
-              style={{ filter: 'drop-shadow(0 0 0 transparent)' }}
             />
             <p className="text-muted-foreground mb-4 text-base mx-0 px-0 my-[13px]">Our mission is to make finding your perfect new home simpler, smarter, and more transparent.
 
