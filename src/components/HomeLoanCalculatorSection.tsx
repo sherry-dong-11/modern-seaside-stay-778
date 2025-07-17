@@ -34,14 +34,14 @@ export const HomeLoanCalculatorSection = () => {
             </p>
           </div>
 
-          {/* Dual Calculator Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Dual Calculator Layout - Flex for consistent heights */}
+          <div className="flex flex-col lg:flex-row gap-6">
             
             {/* Home Loan Calculator */}
-            <Card className="bg-card border border-border/20 shadow-lg rounded-xl">
-              <CardContent className="p-6 lg:p-8">
+            <Card className="bg-card border border-border/20 shadow-lg rounded-xl flex-1 min-h-[480px]">
+              <CardContent className="p-4 lg:p-6 h-full flex flex-col">
                 {/* Title */}
-                <div className="mb-6">
+                <div className="mb-4">
                   <h3 className="text-primary font-semibold text-xl mb-1">
                     Home Loan Calculator
                   </h3>
@@ -51,41 +51,41 @@ export const HomeLoanCalculatorSection = () => {
                 </div>
 
                 {/* Calculator Fields Grid */}
-                <div className="space-y-6">
+                <div className="space-y-3 flex-1">
                   {/* Top Row - Two columns */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <div className="text-2xl lg:text-3xl font-bold text-foreground mb-1">$ --</div>
-                      <div className="text-sm text-muted-foreground">Suggested target price</div>
+                      <div className="text-xl lg:text-2xl font-bold text-foreground mb-1">$ --</div>
+                      <div className="text-xs text-muted-foreground">Suggested target price</div>
                     </div>
                     <div>
-                      <div className="text-2xl lg:text-3xl font-bold text-foreground mb-1">
+                      <div className="text-xl lg:text-2xl font-bold text-foreground mb-1">
                         $ --
                         <span className="text-xs align-super ml-1">SM</span>
                       </div>
-                      <div className="text-sm text-muted-foreground">BuyAbility</div>
+                      <div className="text-xs text-muted-foreground">BuyAbility</div>
                     </div>
                   </div>
 
-                  {/* Bottom Row - Three columns */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  {/* Bottom Row - Three columns condensed */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div>
-                      <div className="text-2xl lg:text-3xl font-bold text-foreground mb-1">$ --</div>
-                      <div className="text-sm text-muted-foreground">Mo. payment</div>
+                      <div className="text-xl lg:text-2xl font-bold text-foreground mb-1">$ --</div>
+                      <div className="text-xs text-muted-foreground">Mo. payment</div>
                     </div>
                     <div>
-                      <div className="text-2xl lg:text-3xl font-bold text-foreground mb-1">-- %</div>
-                      <div className="text-sm text-muted-foreground">Today's rate</div>
+                      <div className="text-xl lg:text-2xl font-bold text-foreground mb-1">-- %</div>
+                      <div className="text-xs text-muted-foreground">Today's rate</div>
                     </div>
                     <div>
-                      <div className="text-2xl lg:text-3xl font-bold text-foreground mb-1">-- %</div>
-                      <div className="text-sm text-muted-foreground">APR</div>
+                      <div className="text-xl lg:text-2xl font-bold text-foreground mb-1">-- %</div>
+                      <div className="text-xs text-muted-foreground">APR</div>
                     </div>
                   </div>
                 </div>
 
-                {/* CTA Button */}
-                <div className="mt-8">
+                {/* CTA Button - Pushed to bottom */}
+                <div className="mt-auto pt-4">
                   <Button 
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-4 px-6 rounded-lg text-lg transition-colors duration-200"
                     size="lg"
@@ -97,10 +97,10 @@ export const HomeLoanCalculatorSection = () => {
             </Card>
 
             {/* Stamp Duty Calculator */}
-            <Card className="bg-card border border-border/20 shadow-lg rounded-xl">
-              <CardContent className="p-6 lg:p-8">
+            <Card className="bg-card border border-border/20 shadow-lg rounded-xl flex-1 min-h-[480px]">
+              <CardContent className="p-4 lg:p-6 h-full flex flex-col">
                 {/* Title */}
-                <div className="mb-6">
+                <div className="mb-4">
                   <h3 className="text-primary font-semibold text-xl mb-1">
                     Stamp Duty Calculator
                   </h3>
@@ -110,7 +110,7 @@ export const HomeLoanCalculatorSection = () => {
                 </div>
 
                 {/* Input Fields */}
-                <div className="space-y-4 mb-6">
+                <div className="space-y-4 flex-1">
                   {/* Property Price */}
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
@@ -164,20 +164,20 @@ export const HomeLoanCalculatorSection = () => {
                       </SelectContent>
                     </Select>
                   </div>
-                </div>
 
-                {/* Result Display */}
-                <div className="mb-6">
-                  <div className="bg-muted/30 rounded-lg p-4 text-center">
-                    <div className="text-sm text-muted-foreground mb-1">Estimated Stamp Duty</div>
-                    <div className="text-2xl lg:text-3xl font-bold text-foreground">
-                      {stampDuty ? `$${stampDuty.toLocaleString()}` : '$--'}
+                  {/* Result Display */}
+                  <div className="mt-auto">
+                    <div className="bg-muted/30 rounded-lg p-4 text-center">
+                      <div className="text-sm text-muted-foreground mb-1">Estimated Stamp Duty</div>
+                      <div className="text-xl lg:text-2xl font-bold text-foreground">
+                        {stampDuty ? `$${stampDuty.toLocaleString()}` : '$--'}
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                {/* CTA Button */}
-                <div>
+                {/* CTA Button - Aligned to bottom */}
+                <div className="pt-4">
                   <Button 
                     onClick={calculateStampDuty}
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-4 px-6 rounded-lg text-lg transition-colors duration-200"
