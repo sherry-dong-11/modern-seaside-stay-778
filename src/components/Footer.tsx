@@ -11,9 +11,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="animate-fade-in [animation-delay:100ms] mx-[8px]">
             <img src="/lovable-uploads/ec1d0529-2ae8-4481-8329-b97ea749e03f.png" alt="YEPHOME" className="h-8 w-auto mb-4" />
-            <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors text-base">
-              About us
-            </Link>
+            <div className="flex flex-col space-y-3">
+              <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors text-base">
+                About us
+              </Link>
+              <Link to="/faq" className="text-muted-foreground hover:text-primary transition-colors text-base">
+                FAQ's
+              </Link>
+            </div>
             <div className="flex space-x-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook size={20} />
