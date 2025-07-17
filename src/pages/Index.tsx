@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import BookingForm from "@/components/BookingForm";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ExploreCitiesSection from "@/components/ExploreCitiesSection";
+import FeaturedCategoriesSection from "@/components/FeaturedCategoriesSection";
 import ApartmentCard, { ApartmentProps } from "@/components/ApartmentCard";
 import PropertyCarouselCard from "@/components/PropertyCarouselCard";
 import { Button } from "@/components/ui/button";
@@ -170,6 +171,9 @@ export default function Index() {
         
         {/* Explore States / Cities */}
         <ExploreCitiesSection />
+        
+        {/* Featured Categories */}
+        <FeaturedCategoriesSection />
         
         {/* Testimonials */}
         <TestimonialsSection />
