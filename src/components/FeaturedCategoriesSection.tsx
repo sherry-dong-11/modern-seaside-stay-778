@@ -162,38 +162,44 @@ const PropertyCard = ({ property }: { property: PropertyItem }) => {
           </button>
         </div>
         
-        <div className="p-4">
-          <h3 className="font-semibold text-lg mb-1 text-foreground">{property.name}</h3>
-          <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{property.address}</p>
-          
-          {(property.bedrooms > 0 || property.bathrooms > 0 || property.parking > 0) && (
-            <div className="flex items-center gap-4 mb-3 text-sm text-muted-foreground">
-              {property.bedrooms > 0 && (
-                <div className="flex items-center gap-1">
-                  <Bed className="w-4 h-4" />
-                  <span>{property.bedrooms}</span>
-                </div>
-              )}
-              {property.bathrooms > 0 && (
-                <div className="flex items-center gap-1">
-                  <Bath className="w-4 h-4" />
-                  <span>{property.bathrooms}</span>
-                </div>
-              )}
-              {property.parking > 0 && (
-                <div className="flex items-center gap-1">
-                  <Car className="w-4 h-4" />
-                  <span>{property.parking}</span>
+        <div className="p-4 flex flex-col h-full">
+          <div className="flex-1">
+            <h3 className="font-semibold text-lg mb-1 text-foreground">{property.name}</h3>
+            <p className="text-sm text-muted-foreground mb-3 line-clamp-2 min-h-[2.5rem]">{property.address}</p>
+            
+            <div className="h-6 mb-3">
+              {(property.bedrooms > 0 || property.bathrooms > 0 || property.parking > 0) && (
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  {property.bedrooms > 0 && (
+                    <div className="flex items-center gap-1">
+                      <Bed className="w-4 h-4" />
+                      <span>{property.bedrooms}</span>
+                    </div>
+                  )}
+                  {property.bathrooms > 0 && (
+                    <div className="flex items-center gap-1">
+                      <Bath className="w-4 h-4" />
+                      <span>{property.bathrooms}</span>
+                    </div>
+                  )}
+                  {property.parking > 0 && (
+                    <div className="flex items-center gap-1">
+                      <Car className="w-4 h-4" />
+                      <span>{property.parking}</span>
+                    </div>
+                  )}
                 </div>
               )}
             </div>
-          )}
+          </div>
           
-          <div className="flex items-center justify-between">
-            <span className="text-sm text-muted-foreground">Price</span>
-            <span className="font-semibold text-orange-500">
-              {property.price}
-            </span>
+          <div className="mt-auto pt-3 border-t border-border/20">
+            <div className="flex items-center justify-between">
+              <span className="text-sm text-muted-foreground font-medium">Price</span>
+              <span className="font-semibold text-orange-500 text-right truncate max-w-[60%]">
+                {property.price}
+              </span>
+            </div>
           </div>
         </div>
       </CardContent>
