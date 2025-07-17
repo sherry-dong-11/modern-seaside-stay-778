@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { ArrowRight, Search, MapPin, Building2, TrendingUp, Star, Users, Award, CheckCircle2, Play, Bot, Phone, Mail } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroImage from "@/assets/hero-modern.jpg";
+import heroImage from "@/assets/hero-cozy-room.jpg";
 import luxuryApartment from "@/assets/apartment-luxury.jpg";
 import poolAmenities from "@/assets/amenities-pool.jpg";
 
@@ -98,45 +98,41 @@ export default function Index() {
       
       <main className="flex-1">
         {/* Modern Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img 
               src={heroImage}
-              alt="Modern apartments"
-              className="w-full h-full object-cover opacity-30"
+              alt="Cozy room interior"
+              className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 hero-gradient opacity-80" />
+            <div className="absolute inset-0 bg-black/60" />
           </div>
           
           {/* Hero Content */}
           <div className="container relative z-10 text-center text-white">
             <div className="max-w-4xl mx-auto">
-              <Badge variant="secondary" className="mb-6 bg-white/10 text-white border-white/20 hover:bg-white/20">
-                <Star className="w-4 h-4 mr-2" />
-                Australia's #1 AI-Powered New Home Platform
-              </Badge>
               
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white animate-fade-in">
                 Find Your Perfect
-                <span className="text-gradient block">New Home</span>
+                <span className="text-orange-400 block">New Home</span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-3xl mx-auto">
-                Discover premium off-the-plan apartments, townhouses, and new developments across Australia with our AI-powered search
+              <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "200ms" }}>
+                Discover premium off-the-plan apartments, townhouses, and new developments across Australia
               </p>
               
               {/* Search Bar */}
-              <div className="max-w-2xl mx-auto mb-12">
-                <div className="flex flex-col sm:flex-row gap-4 p-2 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20">
+              <div className="max-w-2xl mx-auto mb-12 animate-fade-in" style={{ animationDelay: "400ms" }}>
+                <div className="flex flex-col sm:flex-row gap-4 p-3 bg-white/95 backdrop-blur-lg rounded-2xl shadow-lg">
                   <div className="flex-1 relative">
-                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60 h-5 w-5" />
+                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
                     <Input 
-                      placeholder="Search by suburb, postcode or developer..." 
-                      className="pl-12 bg-transparent border-none text-white placeholder:text-white/60 focus:ring-0 text-lg"
+                      placeholder="Search by suburb, postcode..." 
+                      className="pl-12 border-none text-foreground text-lg focus:ring-0"
                     />
                   </div>
-                  <Button size="lg" className="btn-primary px-8">
+                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8">
                     <Search className="w-5 h-5 mr-2" />
                     Search
                   </Button>
@@ -144,16 +140,12 @@ export default function Index() {
               </div>
               
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button size="lg" className="btn-primary">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: "600ms" }}>
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
                   <Building2 className="w-5 h-5 mr-2" />
                   Browse Properties
                 </Button>
-                <Button size="lg" variant="outline" className="btn-secondary">
-                  <Bot className="w-5 h-5 mr-2" />
-                  Chat with AI
-                </Button>
-                <Button size="lg" variant="ghost" className="text-white hover:bg-white/10">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                   <Play className="w-5 h-5 mr-2" />
                   Watch Demo
                 </Button>
@@ -185,9 +177,6 @@ export default function Index() {
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Premium New Developments
               </h2>
-              <p className="text-xl text-muted-foreground">
-                Handpicked properties from Australia's most trusted developers
-              </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
