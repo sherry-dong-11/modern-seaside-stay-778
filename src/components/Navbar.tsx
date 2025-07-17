@@ -41,7 +41,9 @@ export default function Navbar() {
   return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", scrolled ? "bg-white/80 dark:bg-card/80 backdrop-blur-lg py-3 shadow-md" : "bg-transparent py-5")}>
       <nav className="container flex justify-between items-center">
         <div className="flex items-center space-x-2">
-          <LanguageSelector />
+          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+            <LanguageSelector />
+          </div>
         </div>
 
         {/* Desktop Navigation */}
@@ -52,7 +54,7 @@ export default function Navbar() {
             onMouseEnter={() => setNewHomeDropdownOpen(true)}
             onMouseLeave={() => setNewHomeDropdownOpen(false)}
           >
-            <button className="font-medium transition-colors hover:text-primary flex items-center gap-1">
+            <button className={cn("font-medium transition-colors hover:opacity-80 flex items-center gap-1", scrolled ? "text-foreground hover:text-primary" : "text-white")}>
               New Home
               <ChevronDown className={cn("h-4 w-4 transition-transform", newHomeDropdownOpen && "rotate-180")} />
             </button>
@@ -80,7 +82,7 @@ export default function Navbar() {
           {/* Other Nav Links */}
           {navLinks.map(link => (
             <li key={link.name} className="relative">
-              <Link to={link.path} className="font-medium transition-colors hover:text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">
+              <Link to={link.path} className={cn("font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:transition-all hover:after:w-full", scrolled ? "text-foreground hover:text-primary after:bg-primary" : "text-white hover:opacity-80 after:bg-white")}>
                 {link.name}
               </Link>
             </li>
@@ -88,7 +90,9 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden md:flex items-center space-x-2">
-          <ThemeToggle />
+          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+            <ThemeToggle />
+          </div>
           <Button asChild className="btn-primary">
             <Link to="/booking">{t.nav.bookNow}</Link>
           </Button>
@@ -96,8 +100,10 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         <div className="md:hidden flex items-center space-x-2">
-          <ThemeToggle />
-          <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="rounded-full">
+          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+            <ThemeToggle />
+          </div>
+          <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className={cn("rounded-full transition-colors", scrolled ? "text-foreground hover:text-primary" : "text-white hover:opacity-80")}>
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>

@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
-import { ArrowRight, Search, MapPin, Building2, TrendingUp, Star, Users, Award, CheckCircle2, Play, Bot, Phone, Mail } from "lucide-react";
+import { ArrowRight, Search, MapPin, Building2, Star, Users, Award, CheckCircle2, Play, Phone, Mail } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-cozy-room.jpg";
 import luxuryApartment from "@/assets/apartment-luxury.jpg";
@@ -61,29 +61,6 @@ const stats = [
   { number: "500+", label: "Developer Partners", icon: Award }
 ];
 
-// Key features
-const features = [
-  {
-    icon: <Bot className="h-6 w-6" />,
-    title: "AI-Powered Search",
-    description: "Find your perfect home with our intelligent recommendation engine"
-  },
-  {
-    icon: <TrendingUp className="h-6 w-6" />,
-    title: "Market Insights",
-    description: "Real-time market data and investment insights to guide your decisions"
-  },
-  {
-    icon: <CheckCircle2 className="h-6 w-6" />,
-    title: "Verified Listings",
-    description: "All properties are verified and come with detailed information"
-  },
-  {
-    icon: <Users className="h-6 w-6" />,
-    title: "Expert Support",
-    description: "Our team of property experts guide you through every step"
-  }
-];
 
 export default function Index() {
   const { t } = useLanguage();
@@ -120,7 +97,7 @@ export default function Index() {
                 <span className="text-orange-400 block">New Home</span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "200ms" }}>
+              <p className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "200ms" }}>
                 Discover premium off-the-plan apartments, townhouses, and new developments across Australia
               </p>
               
@@ -174,8 +151,8 @@ export default function Index() {
         {/* Featured Properties */}
         <section className="section-sm">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-4">
                 Featured Properties
               </h2>
             </div>
@@ -211,33 +188,81 @@ export default function Index() {
           </div>
         </section>
         
-        {/* Key Features */}
+        {/* Explore States / Cities */}
         <section className="section bg-neutral-50 dark:bg-neutral-900">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <Badge variant="outline" className="mb-4">Why Choose YEPHOME</Badge>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                The Future of Property Search
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+                Explore States / Cities
               </h2>
-              <p className="text-xl text-muted-foreground">
-                Experience next-generation property discovery powered by artificial intelligence
-              </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div 
-                  key={index} 
-                  className="card-modern text-center p-8 animate-fade-in"
-                  style={{ animationDelay: `${(index + 1) * 100}ms` }}
-                >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 text-primary rounded-2xl mb-6">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-foreground border-b border-gray-200 dark:border-gray-700 pb-2">
+                  ▸ New South Wales
+                </h3>
+                <ul className="space-y-2 ml-4">
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Sydney</li>
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Newcastle</li>
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Wollongong</li>
+                </ul>
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-foreground border-b border-gray-200 dark:border-gray-700 pb-2">
+                  ▸ Victoria
+                </h3>
+                <ul className="space-y-2 ml-4">
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Melbourne</li>
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Geelong</li>
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Ballarat</li>
+                </ul>
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-foreground border-b border-gray-200 dark:border-gray-700 pb-2">
+                  ▸ Queensland
+                </h3>
+                <ul className="space-y-2 ml-4">
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Brisbane</li>
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Gold Coast</li>
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Sunshine Coast</li>
+                </ul>
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-foreground border-b border-gray-200 dark:border-gray-700 pb-2">
+                  ▸ Western Australia
+                </h3>
+                <ul className="space-y-2 ml-4">
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Perth</li>
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Fremantle</li>
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Mandurah</li>
+                </ul>
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-foreground border-b border-gray-200 dark:border-gray-700 pb-2">
+                  ▸ South Australia
+                </h3>
+                <ul className="space-y-2 ml-4">
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Adelaide</li>
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Mount Gambier</li>
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Whyalla</li>
+                </ul>
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-foreground border-b border-gray-200 dark:border-gray-700 pb-2">
+                  ▸ Tasmania
+                </h3>
+                <ul className="space-y-2 ml-4">
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Hobart</li>
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Launceston</li>
+                  <li className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors">- Devonport</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>

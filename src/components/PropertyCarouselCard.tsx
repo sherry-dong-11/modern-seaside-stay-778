@@ -9,8 +9,8 @@ interface PropertyCarouselCardProps {
 export default function PropertyCarouselCard({ property }: PropertyCarouselCardProps) {
   return (
     <div className="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg">
-      {/* Full-width image */}
-      <div className="relative h-80 md:h-96 overflow-hidden">
+      {/* Full-width image - increased height for better image-to-text ratio */}
+      <div className="relative h-96 md:h-[500px] overflow-hidden">
         <img 
           src={property.image} 
           alt={property.name}
@@ -58,7 +58,7 @@ export default function PropertyCarouselCard({ property }: PropertyCarouselCardP
             Residential
           </Badge>
           <div className="text-right">
-            <p className="text-2xl font-bold text-orange-500">
+            <p className="text-lg font-semibold text-muted-foreground">
               from ${property.price.toLocaleString()}
             </p>
           </div>
