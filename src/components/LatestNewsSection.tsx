@@ -7,25 +7,25 @@ const newsArticles = [
     id: 1,
     image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800&h=600&fit=crop",
     date: "16th July 2025",
-    headline: "First look: Holdmark plans another 1,000 new apartments in Melrose Park masterplan"
+    headline: "Nationwide Rent Report Released: Melbourne Apartment Rents Surge — Only $5 Less Than Houses!"
   },
   {
     id: 2,
     image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=800&h=600&fit=crop",
     date: "15th July 2025", 
-    headline: "Fortis doubles down on Brisbane, files boutique apartment plans on Hamilton's Racecourse Road"
+    headline: "Energy-Efficient Homes in Australia Selling at Up to 23.8% Premium"
   },
   {
     id: 3,
     image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=600&fit=crop",
     date: "15th July 2025",
-    headline: "Marriott Street Terraces at Surry Hills Village offer 'perfect balance between bustle and privacy'"
+    headline: "Victoria May Scrap Stamp Duty for First-Home Buyers Next Year – Major Drop in Property Purchase Costs"
   },
   {
     id: 4,
     image: "https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=800&h=600&fit=crop",
-    date: "15th July 2025",
-    headline: "Shaping a sustainable future: Development Victoria sets new standards in sustainability"
+    date: "14th July 2025",
+    headline: "Great News for Victorian Homebuyers: Stamp Duty Discount Extended Another 12 Months"
   }
 ];
 
@@ -50,16 +50,16 @@ export function LatestNewsSection() {
         </div>
 
         {/* News Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {newsArticles.map((article) => (
-            <Card key={article.id} className="group cursor-pointer hover:shadow-lg transition-all duration-200 border-0 shadow-sm">
+            <Card key={article.id} className="group cursor-pointer hover:shadow-xl transition-all duration-300 border-0 shadow-sm hover:-translate-y-1">
               <CardContent className="p-0">
                 {/* Article Image */}
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img
                     src={article.image}
                     alt={article.headline}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-200"
+                    className="w-full h-[180px] object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
                 
