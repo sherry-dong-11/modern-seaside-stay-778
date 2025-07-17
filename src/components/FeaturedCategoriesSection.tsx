@@ -1,6 +1,7 @@
 import { Heart, Bed, Bath, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import sheahanTownhousesImage from "@/assets/sheahan-townhouses.jpg";
 
 interface PropertyItem {
   id: string;
@@ -97,7 +98,7 @@ const townhouseProperties: PropertyItem[] = [
     bathrooms: 1,
     parking: 0,
     price: "from A$1,350,000",
-    image: "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&h=600&fit=crop"
+    image: sheahanTownhousesImage
   }
 ];
 
