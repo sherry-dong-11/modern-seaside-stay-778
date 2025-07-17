@@ -144,16 +144,10 @@ export default function Index() {
         </section>
         
         {/* Featured Properties */}
-        <section className="py-16">
+        <section className="py-8">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-8">
-              <h2 className="text-3xl font-semibold mb-2 md:text-4xl">
-                Featured Properties
-              </h2>
-            </div>
-            
             {/* Property Carousel */}
-            <div className="relative max-w-4xl mx-auto">
+            <div className="relative max-w-4xl mx-auto mb-6">
               <Carousel opts={{
               align: "start",
               loop: true
@@ -168,7 +162,7 @@ export default function Index() {
               </Carousel>
             </div>
             
-            <div className="text-center mt-8">
+            <div className="flex justify-center">
               <Button size="lg" className="btn-primary">
                 <Building2 className="w-5 h-5 mr-2" />
                 View All Properties
