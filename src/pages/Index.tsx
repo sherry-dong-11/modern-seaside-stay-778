@@ -189,9 +189,7 @@ export default function Index() {
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Find Your Dream Home?
               </h2>
-              <p className="text-xl text-white/90 mb-8">
-                Join thousands of satisfied buyers who found their perfect property with YEPHOME
-              </p>
+              
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
