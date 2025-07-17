@@ -13,7 +13,7 @@ export default function Amenities() {
     window.scrollTo(0, 0);
   }, []);
   
-  // Helper function to get the appropriate icon for each amenity
+  // Helper function to get the appropriate icon for each amenity category
   const getIcon = (categoryName: string, index: number) => {
     const icons = {
       wellness: [<Heart key={0} />, <Dumbbell key={1} />, <Waves key={2} />, <Activity key={3} />],
