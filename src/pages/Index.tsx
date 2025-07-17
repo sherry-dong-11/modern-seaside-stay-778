@@ -143,33 +143,35 @@ export default function Index() {
           </div>
         </section>
         
-        {/* Featured Properties */}
-        <section className="py-16">
+        {/* Featured Properties - Modern Stylish Layout */}
+        <section className="py-8">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-8">
-              <h2 className="text-3xl font-semibold mb-2 md:text-4xl">
+            {/* Reduced spacing title section */}
+            <div className="text-center max-w-3xl mx-auto mb-6">
+              <h2 className="text-4xl md:text-5xl font-light mb-2 tracking-wide text-foreground">
                 Featured Properties
               </h2>
             </div>
             
-            {/* Property Carousel */}
-            <div className="relative max-w-4xl mx-auto">
+            {/* Property Carousel - Reduced spacing */}
+            <div className="relative max-w-5xl mx-auto">
               <Carousel opts={{
-              align: "start",
+              align: "center",
               loop: true
             }} className="w-full">
-                <CarouselContent>
-                  {featuredProperties.map(property => <CarouselItem key={property.id}>
+                <CarouselContent className="-ml-2 md:-ml-4">
+                  {featuredProperties.map(property => <CarouselItem key={property.id} className="pl-2 md:pl-4">
                       <PropertyCarouselCard property={property} />
                     </CarouselItem>)}
                 </CarouselContent>
-                <CarouselPrevious className="left-4 bg-white/90 hover:bg-white border-gray-200 shadow-lg" />
-                <CarouselNext className="right-4 bg-white/90 hover:bg-white border-gray-200 shadow-lg" />
+                <CarouselPrevious className="left-4 bg-white/95 hover:bg-white border-gray-200 shadow-xl backdrop-blur-sm transition-all duration-300" />
+                <CarouselNext className="right-4 bg-white/95 hover:bg-white border-gray-200 shadow-xl backdrop-blur-sm transition-all duration-300" />
               </Carousel>
             </div>
             
-            <div className="text-center mt-8">
-              <Button size="lg" className="btn-primary">
+            {/* Reduced spacing button section */}
+            <div className="text-center mt-6">
+              <Button size="lg" className="btn-primary shadow-lg hover:shadow-xl transition-all duration-300">
                 <Building2 className="w-5 h-5 mr-2" />
                 View All Properties
                 <ArrowRight className="ml-2 h-4 w-4" />
