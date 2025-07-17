@@ -1,0 +1,39 @@
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Y -->
+    <path d="M8 10 L16 25 L24 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M16 25 L16 35" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    
+    <!-- E -->
+    <path d="M32 10 L32 35" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M32 10 L44 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M32 22.5 L40 22.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M32 35 L44 35" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    
+    <!-- P -->
+    <path d="M52 10 L52 35" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M52 10 L64 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M64 10 L64 22.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M64 22.5 L52 22.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    
+    <!-- H -->
+    <path d="M72 10 L72 35" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M84 10 L84 35" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M72 22.5 L84 22.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    
+    <!-- O -->
+    <circle cx="98" cy="22.5" r="12.5" stroke="currentColor" stroke-width="3" fill="none"/>
+    
+    <!-- M -->
+    <path d="M120 35 L120 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M120 10 L128 25" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M128 25 L136 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M136 10 L136 35" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    
+    <!-- E -->
+    <path d="M148 10 L148 35" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M148 10 L160 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M148 22.5 L156 22.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M148 35 L160 35" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

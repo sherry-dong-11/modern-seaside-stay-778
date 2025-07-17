@@ -11,9 +11,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="animate-fade-in [animation-delay:100ms]">
             <img 
-              src="/lovable-uploads/656753f9-a816-4923-ae1b-085d43457414.png" 
+              src="/src/assets/logo.svg" 
               alt="YEPHOME" 
-              className="h-12 w-auto mb-4"
+              className="h-12 w-auto mb-4 text-foreground"
             />
             <p className="text-muted-foreground mb-4 text-base mx-0 px-0 my-[13px]">Our mission is to make finding your perfect new home simpler, smarter, and more transparent.
 

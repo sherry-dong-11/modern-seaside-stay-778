@@ -49,9 +49,9 @@ export default function Navbar() {
         <div className="flex-shrink-0">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/656753f9-a816-4923-ae1b-085d43457414.png" 
+              src="/src/assets/logo.svg" 
               alt="YEPHOME" 
-              className="h-12 w-auto"
+              className={cn("h-12 w-auto transition-colors duration-300", scrolled ? "text-foreground" : "text-white")}
             />
           </Link>
         </div>
