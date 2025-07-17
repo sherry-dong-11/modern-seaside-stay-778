@@ -13,7 +13,8 @@ export default function Footer() {
             <img 
               src="/lovable-uploads/76685c20-ccdc-4df4-90d5-dfe3498fbbf6.png" 
               alt="YEPHOME" 
-              className="h-10 w-auto mb-4"
+              className="h-6 w-auto mb-4"
+              style={{ filter: 'drop-shadow(0 0 0 transparent)' }}
             />
             <p className="text-muted-foreground mb-4 text-base mx-0 px-0 my-[13px]">Our mission is to make finding your perfect new home simpler, smarter, and more transparent.
 
