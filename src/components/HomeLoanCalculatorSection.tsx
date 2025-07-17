@@ -5,7 +5,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Label } from "@/components/ui/label";
 import { DollarSign, CreditCard, Percent, Calendar, Phone } from "lucide-react";
 import { useState } from "react";
-
 export const HomeLoanCalculatorSection = () => {
   // Home Loan Calculator state
   const [propertyPrice, setPropertyPrice] = useState("750000");
@@ -13,7 +12,7 @@ export const HomeLoanCalculatorSection = () => {
   const [interestRate, setInterestRate] = useState("6.5");
   const [loanTerm, setLoanTerm] = useState("30");
   const [repaymentType, setRepaymentType] = useState<"principal" | "interest">("principal");
-  
+
   // Stamp Duty Calculator state
   const [stampPropertyPrice, setStampPropertyPrice] = useState("");
   const [buyerType, setBuyerType] = useState("");
@@ -26,19 +25,16 @@ export const HomeLoanCalculatorSection = () => {
     const dep = parseFloat(deposit) || 0;
     const rate = parseFloat(interestRate) || 0;
     const term = parseFloat(loanTerm) || 0;
-    
     const loanAmount = price - dep;
     const monthlyRate = rate / 100 / 12;
     const numberOfPayments = term * 12;
-    
     if (repaymentType === "interest") {
-      return (loanAmount * monthlyRate);
+      return loanAmount * monthlyRate;
     } else {
       const monthlyPayment = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
       return monthlyPayment;
     }
   };
-
   const calculateStampDuty = () => {
     const price = parseFloat(stampPropertyPrice.replace(/,/g, ''));
     if (price && state) {
@@ -47,9 +43,7 @@ export const HomeLoanCalculatorSection = () => {
       setStampDuty(calculated);
     }
   };
-
-  return (
-    <section className="py-8 bg-gradient-to-br from-primary-500 to-primary-600">
+  return <section className="py-8 bg-gradient-to-br from-primary-500 to-primary-600">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
@@ -87,13 +81,7 @@ export const HomeLoanCalculatorSection = () => {
                         <Label className="text-xs font-medium text-gray-600">Estimated Property Price</Label>
                         <div className="relative">
                           <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                          <Input
-                            type="text"
-                            value={propertyPrice}
-                            onChange={(e) => setPropertyPrice(e.target.value)}
-                            className="pl-9 text-sm border-gray-300"
-                            placeholder="750000"
-                          />
+                          <Input type="text" value={propertyPrice} onChange={e => setPropertyPrice(e.target.value)} className="pl-9 text-sm border-gray-300" placeholder="750000" />
                         </div>
                       </div>
 
@@ -102,13 +90,7 @@ export const HomeLoanCalculatorSection = () => {
                         <Label className="text-xs font-medium text-gray-600">Deposit</Label>
                         <div className="relative">
                           <CreditCard className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                          <Input
-                            type="text"
-                            value={deposit}
-                            onChange={(e) => setDeposit(e.target.value)}
-                            className="pl-9 text-sm border-gray-300"
-                            placeholder="150000"
-                          />
+                          <Input type="text" value={deposit} onChange={e => setDeposit(e.target.value)} className="pl-9 text-sm border-gray-300" placeholder="150000" />
                         </div>
                       </div>
 
@@ -117,13 +99,7 @@ export const HomeLoanCalculatorSection = () => {
                         <Label className="text-xs font-medium text-gray-600">Interest Rate</Label>
                         <div className="relative">
                           <Percent className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                          <Input
-                            type="text"
-                            value={interestRate}
-                            onChange={(e) => setInterestRate(e.target.value)}
-                            className="pr-9 text-sm border-gray-300"
-                            placeholder="6.5"
-                          />
+                          <Input type="text" value={interestRate} onChange={e => setInterestRate(e.target.value)} className="pr-9 text-sm border-gray-300" placeholder="6.5" />
                         </div>
                       </div>
 
@@ -132,13 +108,7 @@ export const HomeLoanCalculatorSection = () => {
                         <Label className="text-xs font-medium text-gray-600">Loan Term</Label>
                         <div className="relative">
                           <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                          <Input
-                            type="text"
-                            value={loanTerm}
-                            onChange={(e) => setLoanTerm(e.target.value)}
-                            className="pl-9 pr-12 text-sm border-gray-300"
-                            placeholder="30"
-                          />
+                          <Input type="text" value={loanTerm} onChange={e => setLoanTerm(e.target.value)} className="pl-9 pr-12 text-sm border-gray-300" placeholder="30" />
                           <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-xs text-gray-400">Years</span>
                         </div>
                       </div>
@@ -148,24 +118,10 @@ export const HomeLoanCalculatorSection = () => {
                     <div className="space-y-2">
                       <Label className="text-xs font-medium text-gray-600">Repayment Type</Label>
                       <div className="flex bg-gray-100 rounded-lg p-1">
-                        <button
-                          onClick={() => setRepaymentType("principal")}
-                          className={`flex-1 py-2 px-3 text-sm font-medium rounded-md transition-colors ${
-                            repaymentType === "principal"
-                              ? "bg-orange-500 text-white shadow-sm"
-                              : "text-gray-600 hover:text-gray-800"
-                          }`}
-                        >
+                        <button onClick={() => setRepaymentType("principal")} className={`flex-1 py-2 px-3 text-sm font-medium rounded-md transition-colors ${repaymentType === "principal" ? "bg-orange-500 text-white shadow-sm" : "text-gray-600 hover:text-gray-800"}`}>
                           Principal & Interest
                         </button>
-                        <button
-                          onClick={() => setRepaymentType("interest")}
-                          className={`flex-1 py-2 px-3 text-sm font-medium rounded-md transition-colors ${
-                            repaymentType === "interest"
-                              ? "bg-gray-700 text-white shadow-sm"
-                              : "text-gray-600 hover:text-gray-800"
-                          }`}
-                        >
+                        <button onClick={() => setRepaymentType("interest")} className={`flex-1 py-2 px-3 text-sm font-medium rounded-md transition-colors ${repaymentType === "interest" ? "bg-gray-700 text-white shadow-sm" : "text-gray-600 hover:text-gray-800"}`}>
                           Interest Only
                         </button>
                       </div>
@@ -187,11 +143,8 @@ export const HomeLoanCalculatorSection = () => {
                     {/* Right Side - Contact */}
                     <div className="space-y-2">
                       <div className="text-sm text-gray-300">What's next?</div>
-                      <div className="text-sm text-gray-400 mb-2">Contact our agent</div>
-                      <Button 
-                        className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
-                        size="sm"
-                      >
+                      
+                      <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200" size="sm">
                         <Phone className="w-4 h-4 mr-2" />
                         Contact Agent
                       </Button>
@@ -221,13 +174,7 @@ export const HomeLoanCalculatorSection = () => {
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Property Price
                     </label>
-                    <Input
-                      type="text"
-                      placeholder="e.g. 750,000"
-                      value={stampPropertyPrice}
-                      onChange={(e) => setStampPropertyPrice(e.target.value)}
-                      className="text-lg"
-                    />
+                    <Input type="text" placeholder="e.g. 750,000" value={stampPropertyPrice} onChange={e => setStampPropertyPrice(e.target.value)} className="text-lg" />
                   </div>
 
                   {/* Buyer Type */}
@@ -283,12 +230,7 @@ export const HomeLoanCalculatorSection = () => {
 
                 {/* CTA Button - Aligned to bottom */}
                 <div className="pt-4">
-                  <Button 
-                    onClick={calculateStampDuty}
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-4 px-6 rounded-lg text-lg transition-colors duration-200"
-                    size="lg"
-                    disabled={!stampPropertyPrice || !state}
-                  >
+                  <Button onClick={calculateStampDuty} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-4 px-6 rounded-lg text-lg transition-colors duration-200" size="lg" disabled={!stampPropertyPrice || !state}>
                     Calculate Stamp Duty
                   </Button>
                 </div>
@@ -297,6 +239,5 @@ export const HomeLoanCalculatorSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
