@@ -10,7 +10,11 @@ export default function Footer() {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="animate-fade-in [animation-delay:100ms]">
-            <h4 className="text-xl font-bold mb-4">YEPHOME</h4>
+            <img 
+              src="/lovable-uploads/656753f9-a816-4923-ae1b-085d43457414.png" 
+              alt="YEPHOME" 
+              className="h-8 w-auto mb-4"
+            />
             <p className="text-muted-foreground mb-4 text-base mx-0 px-0 my-[13px]">Our mission is to make finding your perfect new home simpler, smarter, and more transparent.
 
 
@@ -35,23 +39,20 @@ Using intelligent tools and insights to make the journey to your new home feel i
             <h4 className="text-xl font-bold mb-4">{t.footer.quickLinks}</h4>
             <ul className="space-y-2">
               {[{
-              name: t.nav.home,
-              path: "/"
-            }, {
-              name: t.nav.apartments,
+              name: "New Home",
               path: "/apartments"
             }, {
-              name: t.nav.amenities,
-              path: "/amenities"
+              name: "Sold",
+              path: "/sold"
             }, {
-              name: t.nav.gallery,
-              path: "/gallery"
+              name: "Virtual Tours",
+              path: "/virtual-tours"
             }, {
-              name: t.nav.contact,
-              path: "/contact"
+              name: "Insights",
+              path: "/insights"
             }, {
-              name: t.nav.bookNow,
-              path: "/booking"
+              name: "Professionals",
+              path: "/for-developers"
             }].map(link => <li key={link.name}>
                   <Link to={link.path} className="text-muted-foreground hover:text-primary transition-colors">
                     {link.name}

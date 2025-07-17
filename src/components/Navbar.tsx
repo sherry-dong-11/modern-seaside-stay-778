@@ -13,6 +13,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [newHomeDropdownOpen, setNewHomeDropdownOpen] = useState(false);
+  const [professionalsDropdownOpen, setProfessionalsDropdownOpen] = useState(false);
   
   const newHomeDropdownItems = [
     { name: "Apartments", path: "/apartments" },
@@ -20,11 +21,15 @@ export default function Navbar() {
     { name: "House & Land", path: "/house-land" }
   ];
 
+  const professionalsDropdownItems = [
+    { name: "For Developers", path: "/for-developers" },
+    { name: "For Agents", path: "/for-agents" }
+  ];
+
   const navLinks = [
     { name: "Sold", path: "/sold" },
     { name: "Virtual Tours", path: "/virtual-tours" },
-    { name: "Insights", path: "/insights" },
-    { name: "Professional", path: "/professional" }
+    { name: "Insights", path: "/insights" }
   ];
 
   useEffect(() => {
@@ -40,7 +45,16 @@ export default function Navbar() {
   
   return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", scrolled ? "bg-white/80 dark:bg-card/80 backdrop-blur-lg py-3 shadow-md" : "bg-transparent py-5")}>
       <nav className="container flex justify-between items-center">
-        <div></div>
+        {/* Logo */}
+        <div className="flex-shrink-0">
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/656753f9-a816-4923-ae1b-085d43457414.png" 
+              alt="YEPHOME" 
+              className="h-8 w-auto"
+            />
+          </Link>
+        </div>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-8 items-center">
@@ -83,6 +97,37 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          
+          {/* Professionals Dropdown */}
+          <li 
+            className="relative"
+            onMouseEnter={() => setProfessionalsDropdownOpen(true)}
+            onMouseLeave={() => setProfessionalsDropdownOpen(false)}
+          >
+            <button className={cn("font-medium transition-colors hover:opacity-80 flex items-center gap-1", scrolled ? "text-foreground hover:text-primary" : "text-white")}>
+              Professionals
+              <ChevronDown className={cn("h-4 w-4 transition-transform", professionalsDropdownOpen && "rotate-180")} />
+            </button>
+            
+            {/* Dropdown Menu */}
+            <div className={cn(
+              "absolute top-full left-0 mt-2 w-48 bg-white dark:bg-card rounded-lg shadow-lg border z-50 transition-all duration-200",
+              professionalsDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none"
+            )}>
+              <ul className="py-2">
+                {professionalsDropdownItems.map(item => (
+                  <li key={item.name}>
+                    <Link 
+                      to={item.path} 
+                      className="block px-4 py-2 text-sm font-medium hover:bg-muted transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
         </ul>
 
         <div className="hidden md:flex items-center space-x-2">
@@ -148,6 +193,24 @@ export default function Navbar() {
                     </Link>
                   </li>
                 ))}
+                
+                {/* Professionals Section */}
+                <li>
+                  <div className="text-lg font-medium mb-3">Professionals</div>
+                  <ul className="space-y-2 ml-4">
+                    {professionalsDropdownItems.map(item => (
+                      <li key={item.name}>
+                        <Link 
+                          to={item.path} 
+                          className="text-base text-muted-foreground hover:text-primary transition-colors" 
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
               </ul>
             </div>
             

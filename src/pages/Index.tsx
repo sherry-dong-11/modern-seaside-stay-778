@@ -144,10 +144,10 @@ export default function Index() {
         </section>
         
         {/* Featured Properties */}
-        <section className="section-sm">
+        <section className="py-16">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-2xl font-semibold mb-4 md:text-4xl">
+            <div className="text-center max-w-3xl mx-auto mb-8">
+              <h2 className="text-3xl font-semibold mb-2 md:text-4xl">
                 Featured Properties
               </h2>
             </div>
@@ -168,7 +168,7 @@ export default function Index() {
               </Carousel>
             </div>
             
-            <div className="text-center mt-12">
+            <div className="text-center mt-8">
               <Button size="lg" className="btn-primary">
                 <Building2 className="w-5 h-5 mr-2" />
                 View All Properties
@@ -185,7 +185,7 @@ export default function Index() {
         <TestimonialsSection />
         
         {/* CTA Section */}
-        <section className="relative section bg-gradient-to-br from-primary-500 to-primary-600 text-white overflow-hidden">
+        <section className="relative py-16 bg-gradient-to-br from-primary-500 to-primary-600 text-white overflow-hidden">
           <div className="container relative z-10">
             <div className="text-center max-w-3xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">

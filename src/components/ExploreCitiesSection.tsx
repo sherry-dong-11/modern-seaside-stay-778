@@ -55,10 +55,10 @@ const citiesData = [
 
 export default function ExploreCitiesSection() {
   return (
-    <section className="section bg-neutral-50 dark:bg-neutral-900">
+    <section className="py-16 bg-neutral-50 dark:bg-neutral-900">
       <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-2xl font-semibold mb-4 md:text-4xl">
+        <div className="text-center max-w-3xl mx-auto mb-8">
+          <h2 className="text-3xl font-semibold mb-2 md:text-4xl">
             Explore States / Cities
           </h2>
         </div>
