@@ -187,20 +187,20 @@ export default function Index() {
         <TestimonialsSection />
         
         {/* CTA Section */}
-        <section className="relative bg-gradient-to-br from-primary-500 to-primary-600 text-white overflow-hidden py-[45px]">
+        <section className="relative bg-gradient-to-br from-primary-500 to-primary-600 text-white overflow-hidden mx-0 my-0 py-[27px]">
           <div className="container relative z-10">
             <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-4xl font-bold mb-6 md:text-3xl">
+              <h2 className="text-4xl font-bold mb-6 text-center md:text-4xl mx-0 py-[14px]">
                 Ready to Find Your Dream Home?
               </h2>
               
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                <Button size="lg" variant="secondary" className="mx-0 px-[24px] text-center text-orange-500 bg-gray-50">
                   <BookOpen className="w-5 h-5 mr-2" />
                   New Build Purchase Guide
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-orange-400 hover:bg-white/10">
+                <Button size="lg" variant="outline" className="border-white text-orange-500 bg-slate-50">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Chat with AI Expert
                 </Button>
