@@ -9,13 +9,9 @@ export default function Footer() {
   return <footer className="bg-card text-card-foreground pt-16 pb-8 border-t">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div className="animate-fade-in [animation-delay:100ms]">
-            <img 
-              src="/lovable-uploads/ec1d0529-2ae8-4481-8329-b97ea749e03f.png" 
-              alt="YEPHOME" 
-              className="h-8 w-auto mb-4"
-            />
-            <p className="text-muted-foreground mb-4 text-base mx-0 px-0 my-[13px]">Our mission is to make finding your perfect new home simpler, smarter, and more transparent.
+          <div className="animate-fade-in [animation-delay:100ms] mx-[8px]">
+            <img src="/lovable-uploads/ec1d0529-2ae8-4481-8329-b97ea749e03f.png" alt="YEPHOME" className="h-8 w-auto mb-4" />
+            <p className="text-muted-foreground mb-4 text-base px-0 my-[13px] mx-[2px]">Our mission is to make finding your perfect new home simpler, smarter, and more transparent.
 
 
 Using intelligent tools and insights to make the journey to your new home feel inspiring.</p>
@@ -35,9 +31,9 @@ Using intelligent tools and insights to make the journey to your new home feel i
             </div>
           </div>
           
-          <div className="animate-fade-in [animation-delay:200ms]">
+          <div className="animate-fade-in [animation-delay:200ms] mx-[8px]">
             <h4 className="text-xl font-bold mb-4">{t.footer.quickLinks}</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 mx-[4px]">
               {[{
               name: "New Home",
               path: "/apartments"
@@ -61,9 +57,9 @@ Using intelligent tools and insights to make the journey to your new home feel i
             </ul>
           </div>
           
-          <div className="animate-fade-in [animation-delay:300ms]">
+          <div className="animate-fade-in [animation-delay:300ms] mx-[8px]">
             <h4 className="text-xl font-bold mb-4">{t.footer.contact}</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-3 mx-0">
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 mr-2 mt-0.5 text-primary" />
                 <span className="text-muted-foreground">
@@ -83,7 +79,7 @@ Using intelligent tools and insights to make the journey to your new home feel i
             </ul>
           </div>
           
-          <div className="animate-fade-in [animation-delay:400ms]">
+          <div className="animate-fade-in [animation-delay:400ms] mx-[5px]">
             <h4 className="text-xl font-bold mb-4">{t.footer.newsletter}</h4>
             <p className="text-muted-foreground mb-4">
               {t.footer.newsletterDesc}

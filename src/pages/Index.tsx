@@ -183,7 +183,7 @@ export default function Index() {
         <TestimonialsSection />
         
         {/* CTA Section */}
-        <section className="relative py-16 bg-gradient-to-br from-primary-500 to-primary-600 text-white overflow-hidden">
+        <section className="relative bg-gradient-to-br from-primary-500 to-primary-600 text-white overflow-hidden py-[45px]">
           <div className="container relative z-10">
             <div className="text-center max-w-3xl mx-auto">
               <h2 className="text-4xl font-bold mb-6 md:text-3xl">

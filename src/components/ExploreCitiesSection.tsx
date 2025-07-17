@@ -43,7 +43,7 @@ const citiesData = [{
   image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop&crop=center"
 }];
 export default function ExploreCitiesSection() {
-  return <section className="py-16 bg-neutral-50 dark:bg-neutral-900">
+  return <section className="bg-neutral-50 dark:bg-neutral-900 py-[50px]">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-8">
           <h2 className="text-3xl mb-2 md:text-4xl font-semibold">Discover new homes throughout Australia</h2>
