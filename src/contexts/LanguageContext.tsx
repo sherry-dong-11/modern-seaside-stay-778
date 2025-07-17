@@ -2,6 +2,7 @@
 import React, { createContext, useState, useEffect, useContext, ReactNode } from 'react';
 import { en } from '../locales/en';
 import { it } from '../locales/it';
+import { zh } from '../locales/zh';
 
 type Translations = typeof en;
 
@@ -13,7 +14,8 @@ interface LanguageContextType {
 
 const translations: Record<string, Translations> = {
   en,
-  it
+  it,
+  zh
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);

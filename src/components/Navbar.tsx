@@ -40,11 +40,7 @@ export default function Navbar() {
   
   return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", scrolled ? "bg-white/80 dark:bg-card/80 backdrop-blur-lg py-3 shadow-md" : "bg-transparent py-5")}>
       <nav className="container flex justify-between items-center">
-        <div className="flex items-center space-x-2">
-          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
-            <LanguageSelector />
-          </div>
-        </div>
+        <div></div>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-8 items-center">
@@ -91,6 +87,9 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center space-x-2">
           <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+            <LanguageSelector />
+          </div>
+          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
             <ThemeToggle />
           </div>
           <Button asChild className="btn-primary">
@@ -100,6 +99,9 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         <div className="md:hidden flex items-center space-x-2">
+          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+            <LanguageSelector />
+          </div>
           <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
             <ThemeToggle />
           </div>
@@ -114,8 +116,7 @@ export default function Navbar() {
         <div className={cn("fixed inset-y-0 right-0 w-3/4 max-w-sm bg-card shadow-xl p-6 transition-transform duration-300 ease-in-out", mobileMenuOpen ? "translate-x-0" : "translate-x-full")}>
           <div className="flex flex-col h-full justify-between">
             <div>
-              <div className="flex justify-between mb-8">
-                <LanguageSelector />
+              <div className="flex justify-end mb-8">
                 <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)} className="rounded-full">
                   <X className="h-6 w-6" />
                 </Button>
