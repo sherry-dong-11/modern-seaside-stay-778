@@ -29,7 +29,7 @@ export const HomeLoanCalculatorSection = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-2">
               Property Purchase Calculators
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-white">
               Calculate your loan capacity and estimate stamp duty costs
             </p>
           </div>
