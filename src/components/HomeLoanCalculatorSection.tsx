@@ -21,7 +21,7 @@ export const HomeLoanCalculatorSection = () => {
   };
 
   return (
-    <section className="py-8 bg-orange-500">
+    <section className="py-8 bg-gradient-to-br from-primary-500 to-primary-600">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
