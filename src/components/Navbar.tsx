@@ -49,8 +49,8 @@ export default function Navbar() {
         <div className="flex-shrink-0">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/45e89a4e-b7de-45de-9bb3-c273d5f1e5c1.png" 
-              alt="YEP" 
+              src="/lovable-uploads/yep-home-logo-black.png" 
+              alt="YEP HOME" 
               className="h-8 w-auto transition-opacity duration-300"
             />
           </Link>
