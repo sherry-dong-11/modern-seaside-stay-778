@@ -1,21 +1,20 @@
-
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-
 export default function Footer() {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <footer className="bg-card text-card-foreground pt-16 pb-8 border-t">
+  return <footer className="bg-card text-card-foreground pt-16 pb-8 border-t">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="animate-fade-in [animation-delay:100ms]">
             <h4 className="text-xl font-bold mb-4">YEPHOME</h4>
-            <p className="text-muted-foreground mb-4">
-              Australia's premier platform for discovering new homes, apartments, and developments.
-            </p>
+            <p className="text-muted-foreground mb-4 text-base mx-0 px-0 my-[13px]">Our mission is to make finding your perfect new home simpler, smarter, and more transparent.
+
+
+Using intelligent tools and insights to make the journey to your new home feel inspiring.</p>
             <div className="flex space-x-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook size={20} />
@@ -35,23 +34,29 @@ export default function Footer() {
           <div className="animate-fade-in [animation-delay:200ms]">
             <h4 className="text-xl font-bold mb-4">{t.footer.quickLinks}</h4>
             <ul className="space-y-2">
-              {[
-                { name: t.nav.home, path: "/" },
-                { name: t.nav.apartments, path: "/apartments" },
-                { name: t.nav.amenities, path: "/amenities" },
-                { name: t.nav.gallery, path: "/gallery" },
-                { name: t.nav.contact, path: "/contact" },
-                { name: t.nav.bookNow, path: "/booking" },
-              ].map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    to={link.path} 
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
+              {[{
+              name: t.nav.home,
+              path: "/"
+            }, {
+              name: t.nav.apartments,
+              path: "/apartments"
+            }, {
+              name: t.nav.amenities,
+              path: "/amenities"
+            }, {
+              name: t.nav.gallery,
+              path: "/gallery"
+            }, {
+              name: t.nav.contact,
+              path: "/contact"
+            }, {
+              name: t.nav.bookNow,
+              path: "/booking"
+            }].map(link => <li key={link.name}>
+                  <Link to={link.path} className="text-muted-foreground hover:text-primary transition-colors">
                     {link.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
           
@@ -83,16 +88,8 @@ export default function Footer() {
               {t.footer.newsletterDesc}
             </p>
             <form className="flex flex-col space-y-2">
-              <input 
-                type="email" 
-                placeholder={t.footer.yourEmail} 
-                className="rounded-md px-4 py-2 bg-muted text-foreground"
-                required 
-              />
-              <button 
-                type="submit" 
-                className="btn-primary mt-2"
-              >
+              <input type="email" placeholder={t.footer.yourEmail} className="rounded-md px-4 py-2 bg-muted text-foreground" required />
+              <button type="submit" className="btn-primary mt-2">
                 {t.footer.subscribe}
               </button>
             </form>
@@ -103,6 +100,5 @@ export default function Footer() {
           <p>&copy; 2025 YEPHOME. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }
