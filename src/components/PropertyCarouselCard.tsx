@@ -1,21 +1,16 @@
 import { Badge } from "@/components/ui/badge";
 import { Bed, Bath, Car, MapPin } from "lucide-react";
 import { ApartmentProps } from "@/components/ApartmentCard";
-
 interface PropertyCarouselCardProps {
   property: ApartmentProps;
 }
-
-export default function PropertyCarouselCard({ property }: PropertyCarouselCardProps) {
-  return (
-    <div className="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg">
+export default function PropertyCarouselCard({
+  property
+}: PropertyCarouselCardProps) {
+  return <div className="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg">
       {/* Full-width image - increased height for better image-to-text ratio */}
       <div className="relative h-96 md:h-[500px] overflow-hidden">
-        <img 
-          src={property.image} 
-          alt={property.name}
-          className="w-full h-full object-cover"
-        />
+        <img src={property.image} alt={property.name} className="w-full h-full object-cover" />
         {/* Overlay project name in serif font */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
         <div className="absolute bottom-6 left-6">
@@ -58,12 +53,11 @@ export default function PropertyCarouselCard({ property }: PropertyCarouselCardP
             Residential
           </Badge>
           <div className="text-right">
-            <p className="text-lg font-semibold text-muted-foreground">
+            <p className="text-lg font-semibold text-orange-500">
               from ${property.price.toLocaleString()}
             </p>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 }

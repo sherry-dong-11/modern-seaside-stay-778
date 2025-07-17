@@ -17,62 +17,65 @@ import luxuryApartment from "@/assets/apartment-luxury.jpg";
 import poolAmenities from "@/assets/amenities-pool.jpg";
 
 // Featured properties data inspired by YEPHOME
-const featuredProperties: ApartmentProps[] = [
-  {
-    id: "1",
-    name: "BLVD Melbourne Square",
-    description: "Premium off-the-plan apartments in Melbourne's most sought-after location with stunning city views.",
-    price: 650000,
-    capacity: 2,
-    size: 65,
-    image: luxuryApartment,
-    location: "Southbank, Melbourne",
-    features: ["Smart Home Tech", "Premium Finishes", "City Views", "Concierge", "Pool", "Gym"]
-  },
-  {
-    id: "2", 
-    name: "Oasis Residence",
-    description: "Contemporary living spaces designed for modern lifestyles with resort-style amenities.",
-    price: 750000,
-    capacity: 3,
-    size: 85,
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
-    location: "South Melbourne",
-    features: ["Rooftop Garden", "Premium Appliances", "Storage", "Parking", "Balcony", "Air Conditioning"]
-  },
-  {
-    id: "3",
-    name: "Floret Townhouses",
-    description: "Luxury townhouses offering spacious living with private courtyards and premium finishes.",
-    price: 890000,
-    capacity: 4,
-    size: 120,
-    image: poolAmenities,
-    location: "Glen Waverley",
-    features: ["Private Courtyard", "Double Garage", "Designer Kitchen", "Master Suite", "Study", "Powder Room"]
-  }
-];
+const featuredProperties: ApartmentProps[] = [{
+  id: "1",
+  name: "BLVD Melbourne Square",
+  description: "Premium off-the-plan apartments in Melbourne's most sought-after location with stunning city views.",
+  price: 650000,
+  capacity: 2,
+  size: 65,
+  image: luxuryApartment,
+  location: "Southbank, Melbourne",
+  features: ["Smart Home Tech", "Premium Finishes", "City Views", "Concierge", "Pool", "Gym"]
+}, {
+  id: "2",
+  name: "Oasis Residence",
+  description: "Contemporary living spaces designed for modern lifestyles with resort-style amenities.",
+  price: 750000,
+  capacity: 3,
+  size: 85,
+  image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+  location: "South Melbourne",
+  features: ["Rooftop Garden", "Premium Appliances", "Storage", "Parking", "Balcony", "Air Conditioning"]
+}, {
+  id: "3",
+  name: "Floret Townhouses",
+  description: "Luxury townhouses offering spacious living with private courtyards and premium finishes.",
+  price: 890000,
+  capacity: 4,
+  size: 120,
+  image: poolAmenities,
+  location: "Glen Waverley",
+  features: ["Private Courtyard", "Double Garage", "Designer Kitchen", "Master Suite", "Study", "Powder Room"]
+}];
 
 // Platform statistics
-const stats = [
-  { number: "50,000+", label: "Properties Listed", icon: Building2 },
-  { number: "25,000+", label: "Happy Buyers", icon: Users },
-  { number: "98%", label: "Satisfaction Rate", icon: Star },
-  { number: "500+", label: "Developer Partners", icon: Award }
-];
-
-
+const stats = [{
+  number: "50,000+",
+  label: "Properties Listed",
+  icon: Building2
+}, {
+  number: "25,000+",
+  label: "Happy Buyers",
+  icon: Users
+}, {
+  number: "98%",
+  label: "Satisfaction Rate",
+  icon: Star
+}, {
+  number: "500+",
+  label: "Developer Partners",
+  icon: Award
+}];
 export default function Index() {
-  const { t } = useLanguage();
-  
+  const {
+    t
+  } = useLanguage();
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
-  
-  
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navbar />
       
       <main className="flex-1">
@@ -80,11 +83,7 @@ export default function Index() {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
-            <img 
-              src={heroImage}
-              alt="Cozy room interior"
-              className="w-full h-full object-cover"
-            />
+            <img src={heroImage} alt="Cozy room interior" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/60" />
           </div>
           
@@ -97,19 +96,20 @@ export default function Index() {
                 <span className="text-orange-400 block">New Home</span>
               </h1>
               
-              <p className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "200ms" }}>
+              <p style={{
+              animationDelay: "200ms"
+            }} className="text-lg text-white/80 mb-12 max-w-2xl mx-auto animate-fade-in md:text-sm">
                 Discover premium off-the-plan apartments, townhouses, and new developments across Australia
               </p>
               
               {/* Search Bar */}
-              <div className="max-w-2xl mx-auto mb-12 animate-fade-in" style={{ animationDelay: "400ms" }}>
+              <div className="max-w-2xl mx-auto mb-12 animate-fade-in" style={{
+              animationDelay: "400ms"
+            }}>
                 <div className="flex flex-col sm:flex-row gap-4 p-3 bg-white/95 backdrop-blur-lg rounded-2xl shadow-lg">
                   <div className="flex-1 relative">
                     <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
-                    <Input 
-                      placeholder="Search by suburb, postcode..." 
-                      className="pl-12 border-none text-foreground text-lg focus:ring-0"
-                    />
+                    <Input placeholder="Search by suburb, postcode..." className="pl-12 border-none text-foreground text-lg focus:ring-0" />
                   </div>
                   <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8">
                     <Search className="w-5 h-5 mr-2" />
@@ -119,15 +119,11 @@ export default function Index() {
               </div>
               
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: "600ms" }}>
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
-                  <Building2 className="w-5 h-5 mr-2" />
-                  Browse Properties
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  <Play className="w-5 h-5 mr-2" />
-                  Watch Demo
-                </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{
+              animationDelay: "600ms"
+            }}>
+                
+                
               </div>
             </div>
           </div>
@@ -136,13 +132,11 @@ export default function Index() {
           <div className="absolute bottom-8 left-0 right-0 z-10">
             <div className="container">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                {stats.map((stat, index) => (
-                  <div key={index} className="glass-card p-4 text-center text-white">
+                {stats.map((stat, index) => <div key={index} className="glass-card p-4 text-center text-white">
                     <stat.icon className="w-6 h-6 mx-auto mb-2 text-primary" />
                     <div className="text-2xl font-bold">{stat.number}</div>
                     <div className="text-sm text-white/80">{stat.label}</div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -152,26 +146,21 @@ export default function Index() {
         <section className="section-sm">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+              <h2 className="text-2xl font-semibold mb-4 md:text-4xl">
                 Featured Properties
               </h2>
             </div>
             
             {/* Property Carousel */}
             <div className="relative max-w-4xl mx-auto">
-              <Carousel 
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-                className="w-full"
-              >
+              <Carousel opts={{
+              align: "start",
+              loop: true
+            }} className="w-full">
                 <CarouselContent>
-                  {featuredProperties.map((property) => (
-                    <CarouselItem key={property.id}>
+                  {featuredProperties.map(property => <CarouselItem key={property.id}>
                       <PropertyCarouselCard property={property} />
-                    </CarouselItem>
-                  ))}
+                    </CarouselItem>)}
                 </CarouselContent>
                 <CarouselPrevious className="left-4 bg-white/90 hover:bg-white border-gray-200 shadow-lg" />
                 <CarouselNext className="right-4 bg-white/90 hover:bg-white border-gray-200 shadow-lg" />
@@ -192,7 +181,7 @@ export default function Index() {
         <section className="section bg-neutral-50 dark:bg-neutral-900">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+              <h2 className="text-2xl font-semibold mb-4 md:text-4xl">
                 Explore States / Cities
               </h2>
             </div>
@@ -318,6 +307,5 @@ export default function Index() {
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 }
