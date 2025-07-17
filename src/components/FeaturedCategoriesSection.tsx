@@ -149,8 +149,8 @@ const houseLandProperties: PropertyItem[] = [
 
 const PropertyCard = ({ property }: { property: PropertyItem }) => {
   return (
-    <Card className="group cursor-pointer transition-all duration-300 hover:shadow-lg border-0 bg-card">
-      <CardContent className="p-0">
+    <Card className="group cursor-pointer transition-all duration-300 hover:shadow-lg border-0 bg-card h-full flex flex-col">
+      <CardContent className="p-0 flex flex-col h-full">
         <div className="relative overflow-hidden rounded-lg">
           <img
             src={property.image}
@@ -162,12 +162,12 @@ const PropertyCard = ({ property }: { property: PropertyItem }) => {
           </button>
         </div>
         
-        <div className="p-4 flex flex-col h-full">
-          <div className="flex-1">
-            <h3 className="font-semibold text-lg mb-1 text-foreground">{property.name}</h3>
-            <p className="text-sm text-muted-foreground mb-3 line-clamp-2 min-h-[2.5rem]">{property.address}</p>
+        <div className="p-4 flex flex-col flex-1">
+          <div className="flex-1 space-y-3">
+            <h3 className="font-semibold text-lg text-foreground">{property.name}</h3>
+            <p className="text-sm text-muted-foreground line-clamp-2 min-h-[2.5rem] leading-relaxed">{property.address}</p>
             
-            <div className="h-6 mb-3">
+            <div className="h-6 flex items-center">
               {(property.bedrooms > 0 || property.bathrooms > 0 || property.parking > 0) && (
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   {property.bedrooms > 0 && (
@@ -193,7 +193,7 @@ const PropertyCard = ({ property }: { property: PropertyItem }) => {
             </div>
           </div>
           
-          <div className="mt-auto pt-3 border-t border-border/20">
+          <div className="pt-4 border-t border-border/20 mt-auto">
             <div className="flex items-center justify-between">
               <span className="text-sm text-muted-foreground font-medium">Price</span>
               <span className="font-semibold text-orange-500 text-right truncate max-w-[60%]">
