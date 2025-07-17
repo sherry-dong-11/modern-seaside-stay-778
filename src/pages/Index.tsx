@@ -95,7 +95,7 @@ export default function Index() {
           <div className="container relative z-10 text-center text-white">
             <div className="max-w-4xl mx-auto">
               
-              <h1 className="text-5xl font-bold mb-6 leading-tight text-white animate-fade-in mx-0 md:text-5xl">
+              <h1 className="text-5xl font-bold mb-6 leading-tight text-white animate-fade-in mx-0 md:text-5xl my-[29px]">
                 Find Your Perfect
                 <span className="text-orange-400 block">New Home</span>
               </h1>
