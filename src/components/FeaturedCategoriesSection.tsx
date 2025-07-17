@@ -191,7 +191,7 @@ const PropertyCard = ({ property }: { property: PropertyItem }) => {
           
           <div className="flex items-center justify-between">
             <span className="text-sm text-muted-foreground">Price</span>
-            <span className={`font-semibold ${property.isContactAgent ? 'text-orange-500' : 'text-foreground'}`}>
+            <span className="font-semibold text-orange-500">
               {property.price}
             </span>
           </div>
