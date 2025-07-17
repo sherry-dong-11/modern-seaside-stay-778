@@ -75,7 +75,7 @@ export const HomeLoanCalculatorSection = () => {
                 {/* Form Section - White Card */}
                 <Card className="bg-white border border-gray-200 rounded-lg mb-3 flex-1">
                   <CardContent className="p-3 lg:p-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4 items-center">
                       {/* Property Price */}
                       <div className="space-y-1">
                         <Label className="text-xs font-medium text-gray-600">Estimated Property Price</Label>
