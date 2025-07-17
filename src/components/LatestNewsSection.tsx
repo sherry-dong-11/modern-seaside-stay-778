@@ -1,47 +1,37 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-
-const newsArticles = [
-  {
-    id: 1,
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800&h=600&fit=crop",
-    date: "16th July 2025",
-    headline: "Nationwide Rent Report Released: Melbourne Apartment Rents Surge — Only $5 Less Than Houses!"
-  },
-  {
-    id: 2,
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=800&h=600&fit=crop",
-    date: "15th July 2025", 
-    headline: "Energy-Efficient Homes in Australia Selling at Up to 23.8% Premium"
-  },
-  {
-    id: 3,
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=600&fit=crop",
-    date: "15th July 2025",
-    headline: "Victoria May Scrap Stamp Duty for First-Home Buyers Next Year – Major Drop in Property Purchase Costs"
-  },
-  {
-    id: 4,
-    image: "https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=800&h=600&fit=crop",
-    date: "14th July 2025",
-    headline: "Great News for Victorian Homebuyers: Stamp Duty Discount Extended Another 12 Months"
-  }
-];
-
+const newsArticles = [{
+  id: 1,
+  image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800&h=600&fit=crop",
+  date: "16th July 2025",
+  headline: "Nationwide Rent Report Released: Melbourne Apartment Rents Surge — Only $5 Less Than Houses!"
+}, {
+  id: 2,
+  image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=800&h=600&fit=crop",
+  date: "15th July 2025",
+  headline: "Energy-Efficient Homes in Australia Selling at Up to 23.8% Premium"
+}, {
+  id: 3,
+  image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=600&fit=crop",
+  date: "15th July 2025",
+  headline: "Victoria May Scrap Stamp Duty for First-Home Buyers Next Year – Major Drop in Property Purchase Costs"
+}, {
+  id: 4,
+  image: "https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=800&h=600&fit=crop",
+  date: "14th July 2025",
+  headline: "Great News for Victorian Homebuyers: Stamp Duty Discount Extended Another 12 Months"
+}];
 export function LatestNewsSection() {
-  return (
-    <section className="py-12 bg-gray-50/50">
+  return <section className="py-12 bg-gray-50/50">
       <div className="container">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
           <div className="text-center sm:text-left mb-4 sm:mb-0">
-            <h2 className="text-2xl font-semibold text-foreground mb-2">
+            <h2 className="font-semibold text-foreground mb-2 text-4xl">
               Latest News
             </h2>
-            <p className="text-muted-foreground">
-              Insights on off-the-plan apartments and townhouses
-            </p>
+            <p className="text-muted-foreground">Insights into the Australian new development & real estate market</p>
           </div>
           <Button variant="ghost" className="text-primary hover:text-primary/90 self-center sm:self-auto">
             Browse all news
@@ -51,16 +41,11 @@ export function LatestNewsSection() {
 
         {/* News Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {newsArticles.map((article) => (
-            <Card key={article.id} className="group cursor-pointer hover:shadow-xl transition-all duration-300 border-0 shadow-sm hover:-translate-y-1">
+          {newsArticles.map(article => <Card key={article.id} className="group cursor-pointer hover:shadow-xl transition-all duration-300 border-0 shadow-sm hover:-translate-y-1">
               <CardContent className="p-0">
                 {/* Article Image */}
                 <div className="relative overflow-hidden rounded-t-lg">
-                  <img
-                    src={article.image}
-                    alt={article.headline}
-                    className="w-full h-[180px] object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
+                  <img src={article.image} alt={article.headline} className="w-full h-[180px] object-cover group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 
                 {/* Article Content */}
@@ -81,10 +66,8 @@ export function LatestNewsSection() {
                   </div>
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }

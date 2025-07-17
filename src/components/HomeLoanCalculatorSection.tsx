@@ -48,10 +48,10 @@ export const HomeLoanCalculatorSection = () => {
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="mb-6 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-2">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-2 text-left">
               Property Purchase Calculators
             </h2>
-            <p className="text-lg text-white">
+            <p className="text-white text-left text-base">
               Calculate your loan capacity and estimate stamp duty costs
             </p>
           </div>
