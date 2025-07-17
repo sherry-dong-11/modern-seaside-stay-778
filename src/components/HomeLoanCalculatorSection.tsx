@@ -132,7 +132,7 @@ export const HomeLoanCalculatorSection = () => {
                     </label>
                     <Select value={buyerType} onValueChange={setBuyerType}>
                       <SelectTrigger className="text-lg">
-                        <SelectValue placeholder="Select buyer type" />
+                        <SelectValue placeholder="Select buyer type" className="text-lg" />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="first-home">First Home Buyer</SelectItem>
@@ -150,7 +150,7 @@ export const HomeLoanCalculatorSection = () => {
                     </label>
                     <Select value={state} onValueChange={setState}>
                       <SelectTrigger className="text-lg">
-                        <SelectValue placeholder="Select state" />
+                        <SelectValue placeholder="Select state" className="text-lg" />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="VIC">Victoria</SelectItem>
