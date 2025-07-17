@@ -26,7 +26,7 @@ export const HomeLoanCalculatorSection = () => {
                     <div className="w-6 h-6 bg-primary rounded flex items-center justify-center">
                       <span className="text-primary-foreground text-sm font-bold">Z</span>
                     </div>
-                    Home Loans
+                    Home Loans Calculator
                   </div>
                 </div>
 
