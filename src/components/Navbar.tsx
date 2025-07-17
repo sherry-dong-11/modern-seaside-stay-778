@@ -92,7 +92,7 @@ export default function Navbar() {
           {/* Other Nav Links */}
           {navLinks.map(link => (
             <li key={link.name} className="relative">
-              <Link to={link.path} className={cn("font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:transition-all hover:after:w-full", scrolled ? "text-foreground hover:text-primary after:bg-primary" : "text-white hover:opacity-80 after:bg-white")}>
+              <Link to={link.path} className={cn("font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full", scrolled ? "text-foreground hover:text-primary" : "text-white hover:opacity-80")}>
                 {link.name}
               </Link>
             </li>
