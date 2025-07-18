@@ -34,7 +34,7 @@ export default function AnimatedPropertyCard({ property, index }: AnimatedProper
       className="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
     >
       {/* Large Format Full-Width Image */}
-      <div className="relative h-80 md:h-96 lg:h-[28rem] overflow-hidden">
+      <div className="relative h-96 md:h-[32rem] lg:h-[36rem] overflow-hidden">
         <motion.img 
           src={property.image} 
           alt={property.name}
@@ -136,19 +136,9 @@ export default function AnimatedPropertyCard({ property, index }: AnimatedProper
         </div>
       </motion.div>
 
-      {/* Carousel dots indicator */}
-      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-        {[0, 1, 2, 3].map((dot, idx) => (
-          <div 
-            key={idx} 
-            className={`w-2 h-2 rounded-full ${idx === index ? 'bg-white' : 'bg-white/40'}`} 
-          />
-        ))}
-      </div>
-
       {/* Subtle hover effect */}
       <motion.div
-        className="absolute inset-0 border border-orange-200/0 rounded-2xl group-hover:border-orange-200/60 transition-all duration-300"
+        className="absolute inset-0 border border-orange-200/0 rounded-xl group-hover:border-orange-200/60 transition-all duration-300"
         initial={{ opacity: 0 }}
         whileHover={{ opacity: 1 }}
       />

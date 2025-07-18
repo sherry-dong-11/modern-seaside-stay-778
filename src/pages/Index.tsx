@@ -116,15 +116,23 @@ export default function Index() {
               </p>
             </FadeInSection>
             
-            {/* Property Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-              {featuredProperties.map((property, index) => (
-                <AnimatedPropertyCard 
-                  key={property.id} 
-                  property={property} 
-                  index={index}
-                />
-              ))}
+            
+            {/* Single Property Carousel */}
+            <div className="max-w-4xl mx-auto">
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {featuredProperties.map((property, index) => (
+                    <CarouselItem key={property.id}>
+                      <AnimatedPropertyCard 
+                        property={property} 
+                        index={0} // Always 0 since we're showing one at a time
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-4" />
+                <CarouselNext className="right-4" />
+              </Carousel>
             </div>
             
             <FadeInSection className="text-center" delay={0.6}>
