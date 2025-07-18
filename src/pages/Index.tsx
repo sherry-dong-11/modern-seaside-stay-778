@@ -90,7 +90,7 @@ export default function Index() {
         <ModernHeroSection />
         
         {/* Featured Properties */}
-        <section ref={propertiesRef} className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
+        <section ref={propertiesRef} className="py-8 md:py-12 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
           {/* Background effects */}
           <div className="absolute inset-0">
             <div className="absolute top-1/4 left-0 w-72 h-72 bg-orange-500/5 rounded-full blur-3xl" />
