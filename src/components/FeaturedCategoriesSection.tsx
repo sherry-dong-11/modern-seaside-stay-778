@@ -132,14 +132,7 @@ const PropertyCard = ({
 }: {
   property: PropertyItem;
 }) => {
-  // Determine card style based on property type
-  const getCardStyle = () => {
-    if (property.id.startsWith('apt')) return 'card-property-default';
-    if (property.id.startsWith('th')) return 'card-property-warm'; 
-    return 'card-property-orange'; // house & land
-  };
-
-  return <Card className={`group cursor-pointer h-full flex flex-col overflow-hidden ${getCardStyle()}`}>
+  return <Card className="card-property-orange group cursor-pointer h-full flex flex-col overflow-hidden">
       <CardContent className="p-0 flex flex-col h-full">
         <div className="relative overflow-hidden">
           <img src={property.image} alt={property.name} className="w-full h-48 object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-105" />
