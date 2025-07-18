@@ -139,7 +139,7 @@ export default function ModernHeroSection() {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-              className="block"
+              className="block text-4xl md:text-5xl lg:text-6xl"
             >
               Find Your Perfect
             </motion.span>
