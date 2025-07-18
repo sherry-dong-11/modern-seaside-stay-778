@@ -19,7 +19,7 @@ export default function Footer() {
                 FAQ's
               </Link>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 my-[40px] mx-0">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
