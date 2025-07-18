@@ -181,23 +181,6 @@ export default function ModernHeroSection() {
             </div>
           </motion.div>
 
-          {/* Scroll to explore indicator */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.4, duration: 0.6 }}
-            className="flex flex-col items-center mt-16"
-          >
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="flex flex-col items-center text-white/70 cursor-pointer hover:text-white transition-colors"
-            >
-              <span className="text-sm mb-2">Scroll to explore</span>
-              <ChevronDown className="w-5 h-5" />
-            </motion.div>
-          </motion.div>
-
         </motion.div>
       </div>
 
