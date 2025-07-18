@@ -58,7 +58,7 @@ export default function ExploreCitiesSection() {
                 </div>
                 
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold mb-2 text-slate-700">{city.name}</h3>
+                  <h3 className="text-lg font-semibold mb-2">{city.name}</h3>
                   <p className="text-sm text-muted-foreground mb-4">{city.state}</p>
                   
                   <Button variant="outline" size="sm" className="w-full border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors">
