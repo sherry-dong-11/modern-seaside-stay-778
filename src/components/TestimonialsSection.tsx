@@ -58,7 +58,7 @@ export default function TestimonialsSection() {
     const interval = setInterval(nextTestimonial, 8000);
     return () => clearInterval(interval);
   }, []);
-  return <section className="bg-muted py-[55px]">
+  return <section className="bg-muted py-8 sm:py-12 lg:py-[55px]">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-8 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
@@ -70,22 +70,22 @@ export default function TestimonialsSection() {
         </div>
         
         <div className="relative max-w-4xl mx-auto">
-          <div className="relative h-[400px] md:h-[300px]">
-            {testimonials.map((testimonial, index) => <div key={testimonial.id} className={cn("absolute inset-0 glass-card p-8 md:p-10 transition-all duration-500", activeIndex === index ? "opacity-100 translate-x-0 z-10" : index < activeIndex ? "opacity-0 -translate-x-full z-0" : "opacity-0 translate-x-full z-0")}>
-                <div className="flex flex-col md:flex-row gap-6 h-full">
-                  <div className="flex flex-col items-center md:items-start">
-                    <div className="rounded-full overflow-hidden w-20 h-20 mb-4 border-2 border-primary">
+          <div className="relative min-h-[350px] sm:min-h-[400px] md:min-h-[300px]">
+            {testimonials.map((testimonial, index) => <div key={testimonial.id} className={cn("absolute inset-0 glass-card p-4 sm:p-6 md:p-8 lg:p-10 transition-all duration-500", activeIndex === index ? "opacity-100 translate-x-0 z-10" : index < activeIndex ? "opacity-0 -translate-x-full z-0" : "opacity-0 translate-x-full z-0")}>
+                <div className="flex flex-col md:flex-row gap-4 sm:gap-6 h-full">
+                  <div className="flex flex-col items-center md:items-start shrink-0">
+                    <div className="rounded-full overflow-hidden w-16 h-16 sm:w-20 sm:h-20 mb-3 sm:mb-4 border-2 border-primary">
                       <img src={testimonial.avatar} alt={testimonial.name} className="w-full h-full object-cover" />
                     </div>
                     <div className="flex mb-2">
-                      {[...Array(5)].map((_, i) => <Star key={i} className={`h-4 w-4 ${i < testimonial.rating ? "fill-primary text-primary" : "text-muted-foreground"}`} />)}
+                      {[...Array(5)].map((_, i) => <Star key={i} className={`h-3 w-3 sm:h-4 sm:w-4 ${i < testimonial.rating ? "fill-primary text-primary" : "text-muted-foreground"}`} />)}
                     </div>
-                    <h4 className="text-lg font-semibold text-center md:text-left">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground text-center md:text-left">{testimonial.location}</p>
+                    <h4 className="text-base sm:text-lg font-semibold text-center md:text-left">{testimonial.name}</h4>
+                    <p className="text-xs sm:text-sm text-muted-foreground text-center md:text-left">{testimonial.location}</p>
                   </div>
                   
-                  <div className="flex-1 flex items-center">
-                    <blockquote className="italic text-muted-foreground">
+                  <div className="flex-1 flex items-center min-h-0">
+                    <blockquote className="italic text-muted-foreground text-sm sm:text-base text-center md:text-left leading-relaxed">
                       "{testimonial.content}"
                     </blockquote>
                   </div>
