@@ -16,17 +16,17 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 40% 8%;
 
-    --primary: 274 89% 64%;
+    --primary: 25 95% 58%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 280 82% 78%;
-    --secondary-foreground: 280 20% 15%;
+    --secondary: 210 40% 98%;
+    --secondary-foreground: 210 40% 15%;
 
-    --muted: 230 15% 96%;
-    --muted-foreground: 230 10% 45%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 210 30% 45%;
 
-    --accent: 274 89% 84%;
-    --accent-foreground: 274 89% 25%;
+    --accent: 25 95% 95%;
+    --accent-foreground: 25 95% 25%;
 
     --destructive: 0 85% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -35,16 +35,13 @@
     --input: 210 20% 95%;
     --ring: 25 95% 58%;
 
-    /* Premium design tokens - Yepai inspired */
-    --primary-50: 280 100% 98%;
-    --primary-100: 276 96% 93%;
-    --primary-200: 274 89% 84%;
-    --primary-500: 274 89% 64%;
-    --primary-600: 270 85% 55%;
-    --primary-900: 265 80% 25%;
-    
-    --accent-gradient: 310 88% 70%;
-    --accent-pink: 320 100% 80%;
+    /* Premium design tokens */
+    --primary-50: 33 100% 96%;
+    --primary-100: 30 100% 90%;
+    --primary-200: 28 100% 82%;
+    --primary-500: 25 95% 58%;
+    --primary-600: 23 90% 52%;
+    --primary-900: 15 75% 25%;
 
     --neutral-50: 0 0% 98%;
     --neutral-100: 210 20% 96%;
@@ -57,12 +54,10 @@
     --neutral-800: 210 16% 16%;
     --neutral-900: 210 20% 8%;
 
-    /* Gradients - Yepai inspired */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary-500)), hsl(var(--accent-gradient)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-500) / 0.95), hsl(var(--accent-pink) / 0.8));
-    --gradient-subtle: linear-gradient(135deg, hsl(var(--primary-50)), hsl(var(--accent-pink) / 0.1));
-    --gradient-card: linear-gradient(145deg, hsl(var(--primary-100) / 0.8), hsl(var(--accent-pink) / 0.1));
-    --gradient-glass: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary-500)), hsl(var(--primary-600)));
+    --gradient-subtle: linear-gradient(135deg, hsl(var(--neutral-50)), hsl(var(--primary-50)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-500) / 0.9), hsl(var(--primary-600) / 0.95));
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(var(--neutral-900) / 0.05);
