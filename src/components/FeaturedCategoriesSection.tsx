@@ -141,7 +141,7 @@ const PropertyCard = ({
           </button>
         </div>
         
-        <div className="p-4 flex flex-col flex-1">
+        <div className="p-4 flex flex-col flex-1 bg-orange-50">
           <div className="flex-1 space-y-3">
             <h3 className="font-semibold text-lg text-foreground">{property.name}</h3>
             <p className="text-sm text-muted-foreground line-clamp-2 min-h-[2.5rem] leading-relaxed">{property.address}</p>
