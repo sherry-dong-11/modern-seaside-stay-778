@@ -186,13 +186,13 @@ export default function ModernHeroSection() {
 
       {/* Floating Stats */}
       <motion.div 
-        className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-8 left-0 right-0 z-20"
+        className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-0 right-0 z-20"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.6, duration: 0.8 }}
       >
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 max-w-5xl mx-auto px-4">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -200,10 +200,10 @@ export default function ModernHeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.8 + index * 0.1, duration: 0.6 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-white/10 backdrop-blur-xl p-3 sm:p-4 md:p-4 text-center text-white rounded-lg sm:rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer"
+                className="bg-white/10 backdrop-blur-xl p-2 sm:p-3 md:p-4 text-center text-white rounded-lg sm:rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer"
               >
-                <stat.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mx-auto mb-2 sm:mb-3 text-orange-400" />
-                <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-1">{stat.number}</div>
+                <stat.icon className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 mx-auto mb-1 sm:mb-2 md:mb-3 text-orange-400" />
+                <div className="text-sm sm:text-xl md:text-2xl lg:text-3xl font-bold mb-0 sm:mb-1">{stat.number}</div>
                 <div className="text-xs sm:text-sm text-white/80 leading-tight">{stat.label}</div>
               </motion.div>
             ))}
