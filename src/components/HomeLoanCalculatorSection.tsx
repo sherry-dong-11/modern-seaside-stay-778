@@ -230,7 +230,7 @@ export const HomeLoanCalculatorSection = () => {
 
                 {/* CTA Button - Aligned to bottom */}
                 <div className="pt-4">
-                  <Button onClick={calculateStampDuty} size="lg" disabled={!stampPropertyPrice || !state} className="w-full text-primary-foreground font-semibold py-4 px-6 rounded-lg text-lg transition-colors duration-200 bg-orange-600 hover:bg-orange-500">
+                  <Button onClick={calculateStampDuty} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-4 px-6 rounded-lg text-lg transition-colors duration-200" size="lg" disabled={!stampPropertyPrice || !state}>
                     Calculate Stamp Duty
                   </Button>
                 </div>
