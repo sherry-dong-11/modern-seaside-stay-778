@@ -38,7 +38,7 @@ export const en = {
     bookingConfirmed: "Booking Confirmed!"
   },
   testimonials: {
-    title: "What Our Guests Say",
+    title: "What Our Customers Say",
     description: "Discover why our guests keep coming back to MareSereno for their seaside getaways."
   },
   notFound: {
