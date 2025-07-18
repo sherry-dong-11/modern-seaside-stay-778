@@ -43,7 +43,7 @@ export const HomeLoanCalculatorSection = () => {
       setStampDuty(calculated);
     }
   };
-  return <section className="py-8 bg-gradient-to-br from-primary-500 to-primary-600">
+  return <section className="py-8 bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
