@@ -60,10 +60,6 @@ export default function ModernFooter() {
                   alt="YEPHOME" 
                   className="h-10 w-auto mb-6 brightness-0 invert"
                 />
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  Australia's premier platform for off-the-plan properties. 
-                  Discover your dream home with cutting-edge technology and expert guidance.
-                </p>
               </div>
               
               <div className="flex flex-col space-y-4">
