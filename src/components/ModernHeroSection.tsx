@@ -153,15 +153,6 @@ export default function ModernHeroSection() {
             </motion.span>
           </motion.h1>
 
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.6 }}
-            className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed"
-          >
-            Discover premium off-the-plan properties with cutting-edge technology and expert guidance
-          </motion.p>
 
           {/* Advanced Search Bar */}
           <motion.div
