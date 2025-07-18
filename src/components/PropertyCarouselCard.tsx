@@ -1,6 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Bed, Bath, Car, MapPin } from "lucide-react";
 import { ApartmentProps } from "@/components/ApartmentCard";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 interface PropertyCarouselCardProps {
   property: ApartmentProps;
@@ -9,15 +11,55 @@ interface PropertyCarouselCardProps {
 export default function PropertyCarouselCard({
   property
 }: PropertyCarouselCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+  
   return (
-    <div className="relative overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700">
-      {/* Full-width image without overlays */}
+    <motion.div 
+      className="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700 cursor-pointer"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+      whileHover={{ 
+        y: -6,
+        transition: { duration: 0.3, ease: "easeOut" }
+      }}
+      style={{
+        boxShadow: isHovered 
+          ? "0 20px 50px -12px rgba(0, 0, 0, 0.25)" 
+          : "0 4px 20px -2px rgba(0, 0, 0, 0.1)"
+      }}
+    >
+      {/* Enhanced full-width image */}
       <div className="relative h-96 md:h-[500px] overflow-hidden">
-        <img src={property.image} alt={property.name} className="w-full h-full object-cover" />
+        <motion.img 
+          src={property.image} 
+          alt={property.name} 
+          className="w-full h-full object-cover"
+          animate={{
+            scale: isHovered ? 1.05 : 1,
+          }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+        />
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0"
+          animate={{
+            opacity: isHovered ? 1 : 0,
+          }}
+          transition={{ duration: 0.3 }}
+        />
       </div>
       
-      {/* Compact property details strip */}
-      <div className="p-4">
+      {/* Enhanced property details strip */}
+      <motion.div 
+        className="p-6"
+        animate={{
+          y: isHovered ? -2 : 0,
+        }}
+        transition={{ duration: 0.3 }}
+      >
         <div className="flex items-center justify-between">
           {/* Left side - Project name and address */}
           <div className="flex-1">
@@ -46,18 +88,29 @@ export default function PropertyCarouselCard({
               </div>
             </div>
             
-            {/* Badge and price on same line */}
+            {/* Enhanced badge and price */}
             <div className="flex items-center gap-2">
-              <Badge variant="secondary" className="bg-orange-50 text-orange-700 hover:bg-orange-100 dark:bg-orange-900/20 dark:text-orange-300 text-xs px-2 py-1">
-                Residential
-              </Badge>
-              <p className="text-sm font-semibold text-orange-500">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Badge variant="secondary" className="bg-orange-50 text-orange-700 hover:bg-orange-100 dark:bg-orange-900/20 dark:text-orange-300 text-xs px-3 py-1.5 rounded-full">
+                  Residential
+                </Badge>
+              </motion.div>
+              <motion.p 
+                className="text-sm font-semibold text-orange-500"
+                animate={{
+                  scale: isHovered ? 1.05 : 1,
+                }}
+                transition={{ duration: 0.2 }}
+              >
                 from ${property.price.toLocaleString()}
-              </p>
+              </motion.p>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

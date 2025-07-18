@@ -5,6 +5,7 @@ import { Users, Maximize, MapPin, Bath, Coffee, Wifi } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { motion } from "framer-motion";
 
 export interface ApartmentProps {
   id: string;
@@ -32,21 +33,44 @@ export default function ApartmentCard({ apartment }: { apartment: ApartmentProps
     : apartment.description;
   
   return (
-    <div 
-      className="rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl bg-card group"
+    <motion.div 
+      className="rounded-2xl overflow-hidden shadow-lg bg-card group cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+      whileHover={{ 
+        y: -8, 
+        scale: 1.02,
+        transition: { duration: 0.3, ease: "easeOut" }
+      }}
+      style={{
+        boxShadow: isHovered 
+          ? "0 25px 60px -12px rgba(0, 0, 0, 0.15), 0 8px 30px -8px rgba(0, 0, 0, 0.1)" 
+          : "0 4px 20px -2px rgba(0, 0, 0, 0.08)"
+      }}
     >
       <div className="relative overflow-hidden h-64">
-        <img 
+        <motion.img 
           src={apartment.image} 
           alt={translatedName}
-          className={cn(
-            "w-full h-full object-cover transition-transform duration-700",
-            isHovered ? "scale-110" : "scale-100"
-          )}
+          className="w-full h-full object-cover"
+          animate={{
+            scale: isHovered ? 1.1 : 1,
+          }}
+          transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-6">
+        <motion.div 
+          className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-6"
+          animate={{
+            background: isHovered 
+              ? "linear-gradient(to bottom, transparent, rgba(0,0,0,0.8))"
+              : "linear-gradient(to bottom, transparent, rgba(0,0,0,0.6))"
+          }}
+          transition={{ duration: 0.3 }}
+        >
           <div>
             <h3 className="text-white text-xl font-bold mb-1">{translatedName}</h3>
             <div className="flex items-center text-white/80 text-sm mb-2">
@@ -65,7 +89,7 @@ export default function ApartmentCard({ apartment }: { apartment: ApartmentProps
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       
       <div className="p-6 space-y-4">
@@ -95,11 +119,16 @@ export default function ApartmentCard({ apartment }: { apartment: ApartmentProps
             <span className="text-xl font-bold">${apartment.price}</span>
             <span className="text-muted-foreground text-sm"> / {t.booking.summary.night}</span>
           </div>
-          <Button asChild className="btn-primary">
-            <Link to={`/apartments/${apartment.id}`}>{t.apartments.filters.viewDetails}</Link>
-          </Button>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Button asChild className="btn-primary">
+              <Link to={`/apartments/${apartment.id}`}>{t.apartments.filters.viewDetails}</Link>
+            </Button>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
