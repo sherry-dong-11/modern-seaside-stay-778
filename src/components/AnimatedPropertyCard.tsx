@@ -15,6 +15,7 @@ export default function AnimatedPropertyCard({ property, index }: AnimatedProper
 
   // Extract project name from property name (first word)
   const projectName = property.name.split(' ')[0].toUpperCase();
+  const projectSubtitle = property.name.split(' ').slice(1).join(' ').toUpperCase();
 
   return (
     <motion.div
@@ -30,10 +31,10 @@ export default function AnimatedPropertyCard({ property, index }: AnimatedProper
         y: -8,
         transition: { duration: 0.3, ease: "easeOut" }
       }}
-      className="group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
+      className="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
     >
       {/* Large Format Full-Width Image */}
-      <div className="relative h-72 sm:h-80 md:h-96 overflow-hidden">
+      <div className="relative h-80 md:h-96 lg:h-[28rem] overflow-hidden">
         <motion.img 
           src={property.image} 
           alt={property.name}
@@ -44,9 +45,9 @@ export default function AnimatedPropertyCard({ property, index }: AnimatedProper
         />
         
         {/* Subtle gradient overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-black/20" />
         
-        {/* Project Branding - Elegantly Centered */}
+        {/* Project Branding - Centered like OASIS RESIDENCES */}
         <motion.div 
           className="absolute inset-0 flex items-center justify-center"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -54,15 +55,20 @@ export default function AnimatedPropertyCard({ property, index }: AnimatedProper
           transition={{ delay: index * 0.15 + 0.3, duration: 0.6 }}
         >
           <div className="text-center">
-            <h3 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-white/90 tracking-wider drop-shadow-lg">
+            <h3 className="font-inter text-5xl md:text-6xl lg:text-7xl font-light text-white tracking-[0.2em] mb-2">
               {projectName}
             </h3>
+            {projectSubtitle && (
+              <p className="font-inter text-lg md:text-xl font-light text-white/90 tracking-[0.15em]">
+                {projectSubtitle}
+              </p>
+            )}
           </div>
         </motion.div>
 
         {/* Floating action buttons - minimal and refined */}
         <motion.div 
-          className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100"
+          className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100"
           initial={{ y: -20, opacity: 0 }}
           whileHover={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.3 }}
@@ -70,74 +76,75 @@ export default function AnimatedPropertyCard({ property, index }: AnimatedProper
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+            className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white/30 transition-colors"
           >
-            <Heart className="w-3.5 h-3.5" />
+            <Heart className="w-4 h-4" />
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+            className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white/30 transition-colors"
           >
-            <Share2 className="w-3.5 h-3.5" />
+            <Share2 className="w-4 h-4" />
           </motion.button>
         </motion.div>
-
-        {/* Premium badge - refined */}
-        <div className="absolute top-3 left-3">
-          <Badge variant="secondary" className="bg-orange-500/90 text-white backdrop-blur-sm border-0 text-xs px-2 py-1">
-            New Release
-          </Badge>
-        </div>
       </div>
       
-      {/* Bottom Detail Strip - Semi-transparent overlay with rounded bottom corners */}
+      {/* Bottom Detail Strip - Exactly like the reference */}
       <motion.div 
-        className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md rounded-t-2xl p-4"
+        className="bg-white p-4 flex items-center justify-between"
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: index * 0.15 + 0.4, duration: 0.6 }}
       >
-        {/* Property Name & Address */}
-        <div className="mb-3">
-          <h4 className="font-inter font-medium text-lg text-gray-900 mb-1 leading-tight">
+        {/* Left side - Property Name & Address */}
+        <div className="flex-1">
+          <h4 className="font-inter font-medium text-lg text-gray-900 mb-1">
             {property.name}
           </h4>
-          <div className="flex items-center text-gray-600">
-            <MapPin className="w-3.5 h-3.5 mr-1.5 text-orange-500" />
-            <span className="text-sm font-light">{property.location}</span>
+          <p className="text-sm text-gray-600 font-light">
+            {property.location}
+          </p>
+        </div>
+        
+        {/* Center - Icons */}
+        <div className="flex items-center gap-6 mx-8">
+          <div className="flex flex-col items-center">
+            <Bed className="w-5 h-5 text-gray-600 mb-1" />
+            <span className="text-xs text-gray-600 font-light">1-{property.capacity}</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <Bath className="w-5 h-5 text-gray-600 mb-1" />
+            <span className="text-xs text-gray-600 font-light">1-2</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <Car className="w-5 h-5 text-gray-600 mb-1" />
+            <span className="text-xs text-gray-600 font-light">0-2</span>
           </div>
         </div>
         
-        {/* Icons Row & Price */}
-        <div className="flex items-center justify-between">
-          {/* Bedroom / Bathroom / Parking icons */}
-          <div className="flex items-center gap-4 text-gray-600">
-            <div className="flex items-center gap-1">
-              <Bed className="w-4 h-4" />
-              <span className="text-sm font-light">{property.capacity}</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Bath className="w-4 h-4" />
-              <span className="text-sm font-light">2</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Car className="w-4 h-4" />
-              <span className="text-sm font-light">1</span>
-            </div>
-          </div>
-          
-          {/* Refined Price & Tag */}
+        {/* Right side - Tag & Price */}
+        <div className="flex items-center gap-4">
+          <Badge className="bg-orange-500 text-white text-xs px-3 py-1 font-medium">
+            RESIDENTIAL
+          </Badge>
           <div className="text-right">
-            <p className="text-sm font-light text-gray-900 mb-0.5">
+            <p className="text-lg font-medium text-orange-500">
               from ${property.price.toLocaleString()}
             </p>
-            <Badge variant="outline" className="text-xs px-2 py-0.5 border-gray-300 text-gray-600">
-              Residential
-            </Badge>
           </div>
         </div>
       </motion.div>
+
+      {/* Carousel dots indicator */}
+      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+        {[0, 1, 2, 3].map((dot, idx) => (
+          <div 
+            key={idx} 
+            className={`w-2 h-2 rounded-full ${idx === index ? 'bg-white' : 'bg-white/40'}`} 
+          />
+        ))}
+      </div>
 
       {/* Subtle hover effect */}
       <motion.div
