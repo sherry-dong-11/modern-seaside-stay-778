@@ -98,26 +98,26 @@ export default function Index() {
           </div>
 
           <div className="container relative z-10">
-            <FadeInSection className="text-center mb-16">
+            <FadeInSection className="text-center mb-8">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isPropertiesInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.6 }}
-                className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 px-4 py-2 rounded-full text-sm font-medium mb-6"
+                className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 px-4 py-2 rounded-full text-sm font-medium mb-4"
               >
                 <Star className="w-4 h-4 fill-current" />
                 Featured Properties
               </motion.div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                 Premium Off-The-Plan Properties
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 Discover exclusive new developments with modern designs, premium finishes, and unbeatable locations
               </p>
             </FadeInSection>
             
             {/* Property Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
               {featuredProperties.map((property, index) => (
                 <AnimatedPropertyCard 
                   key={property.id} 
