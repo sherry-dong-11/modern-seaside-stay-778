@@ -211,17 +211,6 @@ export default function ModernHeroSection() {
         </div>
       </motion.div>
 
-      {/* Scroll indicator */}
-      <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <div className="flex flex-col items-center opacity-70 hover:opacity-100 transition-opacity cursor-pointer">
-          <span className="text-sm mb-2 hidden md:block">Scroll to explore</span>
-          <ChevronDown className="h-6 w-6" />
-        </div>
-      </motion.div>
 
       {/* Video Modal */}
       <AnimatePresence>
