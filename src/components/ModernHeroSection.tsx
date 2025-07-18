@@ -227,7 +227,7 @@ export default function ModernHeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.8 + index * 0.1, duration: 0.6 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-white/10 backdrop-blur-xl p-6 text-center text-white rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer"
+                className="bg-white/10 backdrop-blur-xl p-4 text-center text-white rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer"
               >
                 <stat.icon className="w-8 h-8 mx-auto mb-3 text-orange-400" />
                 <div className="text-2xl md:text-3xl font-bold mb-1">{stat.number}</div>
