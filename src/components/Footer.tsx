@@ -98,6 +98,14 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-border pt-8 mt-8 text-center text-muted-foreground">
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 mb-4">
+            <Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors underline">
+              Privacy Policy
+            </Link>
+            <Link to="/terms-conditions" className="text-muted-foreground hover:text-primary transition-colors underline">
+              Terms & Conditions
+            </Link>
+          </div>
           <p>&copy; 2025 YEPHOME. All rights reserved.</p>
         </div>
       </div>
