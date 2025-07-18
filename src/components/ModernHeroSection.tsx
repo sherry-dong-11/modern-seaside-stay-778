@@ -147,7 +147,7 @@ export default function ModernHeroSection() {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
-              className="block bg-gradient-to-r from-orange-400 to-pink-500 bg-clip-text text-transparent"
+              className="block bg-gradient-to-r from-orange-400 to-pink-500 bg-clip-text text-transparent text-4xl md:text-5xl lg:text-6xl"
             >
               New Home
             </motion.span>
