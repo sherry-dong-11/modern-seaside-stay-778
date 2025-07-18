@@ -135,39 +135,39 @@ const PropertyCard = ({
   return <Card className="group cursor-pointer transition-all duration-300 hover:shadow-lg border-0 bg-card h-full flex flex-col">
       <CardContent className="p-0 flex flex-col h-full">
         <div className="relative overflow-hidden rounded-lg">
-          <img src={property.image} alt={property.name} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
-          <button className="absolute top-3 right-3 p-2 bg-white/90 hover:bg-white rounded-full shadow-sm transition-colors">
-            <Heart className="w-4 h-4 text-muted-foreground hover:text-red-500" />
+          <img src={property.image} alt={property.name} className="w-full h-40 md:h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
+          <button className="absolute top-2 md:top-3 right-2 md:right-3 p-2 md:p-2 bg-white/90 hover:bg-white rounded-full shadow-sm transition-colors min-h-[44px] min-w-[44px] md:min-h-auto md:min-w-auto">
+            <Heart className="w-3 h-3 md:w-4 md:h-4 text-muted-foreground hover:text-red-500" />
           </button>
         </div>
         
-        <div className="p-4 flex flex-col flex-1 bg-orange-50">
-          <div className="flex-1 space-y-3">
-            <h3 className="font-semibold text-lg text-foreground">{property.name}</h3>
-            <p className="text-sm text-muted-foreground line-clamp-2 min-h-[2.5rem] leading-relaxed">{property.address}</p>
+        <div className="p-3 md:p-4 flex flex-col flex-1 bg-orange-50">
+          <div className="flex-1 space-y-2 md:space-y-3">
+            <h3 className="font-semibold text-base md:text-lg text-foreground">{property.name}</h3>
+            <p className="text-xs md:text-sm text-muted-foreground line-clamp-2 min-h-[2rem] md:min-h-[2.5rem] leading-relaxed">{property.address}</p>
             
-            <div className="h-6 flex items-center">
-              {(property.bedrooms > 0 || property.bathrooms > 0 || property.parking > 0) && <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <div className="h-5 md:h-6 flex items-center">
+              {(property.bedrooms > 0 || property.bathrooms > 0 || property.parking > 0) && <div className="flex items-center gap-2 md:gap-4 text-xs md:text-sm text-muted-foreground">
                   {property.bedrooms > 0 && <div className="flex items-center gap-1">
-                      <Bed className="w-4 h-4" />
+                      <Bed className="w-3 h-3 md:w-4 md:h-4" />
                       <span>{property.bedrooms}</span>
                     </div>}
                   {property.bathrooms > 0 && <div className="flex items-center gap-1">
-                      <Bath className="w-4 h-4" />
+                      <Bath className="w-3 h-3 md:w-4 md:h-4" />
                       <span>{property.bathrooms}</span>
                     </div>}
                   {property.parking > 0 && <div className="flex items-center gap-1">
-                      <Car className="w-4 h-4" />
+                      <Car className="w-3 h-3 md:w-4 md:h-4" />
                       <span>{property.parking}</span>
                     </div>}
                 </div>}
             </div>
           </div>
           
-          <div className="pt-4 border-t border-border/20 mt-auto">
+          <div className="pt-3 md:pt-4 border-t border-border/20 mt-auto">
             <div className="flex items-center justify-between">
-              <span className="text-sm text-muted-foreground font-medium">Price</span>
-              <span className="font-semibold text-orange-500 text-right truncate max-w-[60%]">
+              <span className="text-xs md:text-sm text-muted-foreground font-medium">Price</span>
+              <span className="font-semibold text-orange-500 text-right truncate max-w-[65%] text-sm md:text-base">
                 {property.price}
               </span>
             </div>
@@ -183,22 +183,22 @@ const CategorySection = ({
   title: string;
   properties: PropertyItem[];
 }) => {
-  return <div className="mb-12">
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-foreground">{title}</h2>
-        <Button variant="ghost" className="text-orange-500 hover:text-orange-600 p-0">
+  return <div className="mb-8 md:mb-12">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 md:mb-6 space-y-2 sm:space-y-0">
+        <h2 className="text-xl md:text-2xl font-bold text-foreground">{title}</h2>
+        <Button variant="ghost" className="text-orange-500 hover:text-orange-600 p-0 self-start sm:self-auto text-sm md:text-base">
           Show all
         </Button>
       </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {properties.map(property => <PropertyCard key={property.id} property={property} />)}
       </div>
     </div>;
 };
 export default function FeaturedCategoriesSection() {
-  return <section className="bg-background py-[35px]">
-      <div className="container mx-auto px-4">
+  return <section className="bg-background py-8 md:py-[35px]">
+      <div className="container mx-auto px-4 md:px-8">
         <CategorySection title="New Apartments" properties={apartmentProperties} />
         <CategorySection title="New Townhouses" properties={townhouseProperties} />
         <CategorySection title="House & Land" properties={houseLandProperties} />
