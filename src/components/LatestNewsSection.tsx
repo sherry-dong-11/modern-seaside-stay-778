@@ -23,7 +23,7 @@ const newsArticles = [{
   headline: "Great News for Victorian Homebuyers: Stamp Duty Discount Extended Another 12 Months"
 }];
 export function LatestNewsSection() {
-  return <section className="py-12 bg-gray-50/50">
+  return <section className="section-bg-soft py-12">
       <div className="container">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">

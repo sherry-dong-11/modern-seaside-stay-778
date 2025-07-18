@@ -132,10 +132,18 @@ const PropertyCard = ({
 }: {
   property: PropertyItem;
 }) => {
-  return <Card className="group cursor-pointer transition-all duration-300 hover:shadow-lg border-0 bg-card h-full flex flex-col">
+  // Determine card style based on property type
+  const getCardStyle = () => {
+    if (property.id.startsWith('apt')) return 'card-property-default';
+    if (property.id.startsWith('th')) return 'card-property-warm'; 
+    return 'card-property-orange'; // house & land
+  };
+
+  return <Card className={`group cursor-pointer h-full flex flex-col overflow-hidden ${getCardStyle()}`}>
       <CardContent className="p-0 flex flex-col h-full">
-        <div className="relative overflow-hidden rounded-lg">
-          <img src={property.image} alt={property.name} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
+        <div className="relative overflow-hidden">
+          <img src={property.image} alt={property.name} className="w-full h-48 object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-105" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <button className="absolute top-3 right-3 p-2 bg-white/90 hover:bg-white rounded-full shadow-sm transition-colors">
             <Heart className="w-4 h-4 text-muted-foreground hover:text-red-500" />
           </button>
@@ -197,7 +205,7 @@ const CategorySection = ({
     </div>;
 };
 export default function FeaturedCategoriesSection() {
-  return <section className="bg-background py-[35px]">
+  return <section className="section-bg-gradient-1 py-[35px]">
       <div className="container mx-auto px-4">
         <CategorySection title="New Apartments" properties={apartmentProperties} />
         <CategorySection title="New Townhouses" properties={townhouseProperties} />

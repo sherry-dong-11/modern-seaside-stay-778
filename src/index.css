@@ -54,6 +54,21 @@
     --neutral-800: 210 16% 16%;
     --neutral-900: 210 20% 8%;
 
+    /* Section backgrounds */
+    --section-bg-primary: 0 0% 99%;
+    --section-bg-secondary: 210 20% 98%;
+    --section-bg-soft: 210 12% 97%;
+    --section-bg-gradient-1: linear-gradient(135deg, hsl(0 0% 100%), hsl(210 25% 98%));
+    --section-bg-gradient-2: linear-gradient(135deg, hsl(220 20% 98%), hsl(210 30% 96%));
+    --section-bg-gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 15% 99%));
+
+    /* Card backgrounds */
+    --card-bg-default: 0 0% 100%;
+    --card-bg-soft: 0 0% 99%;
+    --card-bg-warm: 25 15% 98%;
+    --card-bg-cool: 210 15% 98%;
+    --card-bg-orange-tint: 25 25% 97%;
+
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary-500)), hsl(var(--primary-600)));
     --gradient-subtle: linear-gradient(135deg, hsl(var(--neutral-50)), hsl(var(--primary-50)));
@@ -117,6 +132,21 @@
     --neutral-800: 210 16% 84%;
     --neutral-900: 210 20% 92%;
 
+    /* Dark section backgrounds */
+    --section-bg-primary: 210 20% 12%;
+    --section-bg-secondary: 210 18% 10%;
+    --section-bg-soft: 210 16% 14%;
+    --section-bg-gradient-1: linear-gradient(135deg, hsl(210 20% 12%), hsl(210 18% 10%));
+    --section-bg-gradient-2: linear-gradient(135deg, hsl(210 18% 10%), hsl(210 16% 14%));
+    --section-bg-gradient-subtle: linear-gradient(180deg, hsl(210 20% 12%), hsl(210 18% 10%));
+
+    /* Dark card backgrounds */
+    --card-bg-default: 210 20% 12%;
+    --card-bg-soft: 210 18% 14%;
+    --card-bg-warm: 210 15% 16%;
+    --card-bg-cool: 210 20% 16%;
+    --card-bg-orange-tint: 25 10% 15%;
+
     /* Dark gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary-500)), hsl(var(--primary-600)));
     --gradient-subtle: linear-gradient(135deg, hsl(var(--neutral-50)), hsl(var(--primary-50)));
@@ -171,12 +201,60 @@
     @apply py-12 md:py-16 lg:py-20;
   }
   
+  /* Section Background Utilities */
+  .section-bg-primary {
+    background: hsl(var(--section-bg-primary));
+  }
+
+  .section-bg-secondary {
+    background: hsl(var(--section-bg-secondary));
+  }
+
+  .section-bg-soft {
+    background: hsl(var(--section-bg-soft));
+  }
+
+  .section-bg-gradient-1 {
+    background: var(--section-bg-gradient-1);
+  }
+
+  .section-bg-gradient-2 {
+    background: var(--section-bg-gradient-2);
+  }
+
+  .section-bg-gradient-subtle {
+    background: var(--section-bg-gradient-subtle);
+  }
+
+  /* Enhanced Card Styles */
   .card-modern {
-    @apply bg-white dark:bg-neutral-100 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-200 dark:border-neutral-200 hover:border-primary/20 dark:hover:border-primary/30;
+    @apply rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-200/50 hover:border-primary/20 hover:scale-[1.02] hover:-translate-y-1;
+    background: hsl(var(--card-bg-soft));
   }
 
   .card-premium {
-    @apply bg-gradient-to-br from-white to-neutral-50 dark:from-neutral-100 dark:to-neutral-200 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-300;
+    @apply rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200/50;
+    background: var(--section-bg-gradient-subtle);
+  }
+
+  .card-property-default {
+    @apply rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200/60 hover:border-primary/20 hover:scale-105;
+    background: hsl(var(--card-bg-soft));
+  }
+
+  .card-property-warm {
+    @apply rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-orange-200/40 hover:border-orange-300/60 hover:scale-105;
+    background: hsl(var(--card-bg-warm));
+  }
+
+  .card-property-cool {
+    @apply rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-blue-200/40 hover:border-blue-300/60 hover:scale-105;
+    background: hsl(var(--card-bg-cool));
+  }
+
+  .card-property-orange {
+    @apply rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-orange-200/50 hover:border-orange-300/70 hover:scale-105;
+    background: hsl(var(--card-bg-orange-tint));
   }
   
   .glass-card {
