@@ -43,15 +43,15 @@ export const HomeLoanCalculatorSection = () => {
       setStampDuty(calculated);
     }
   };
-  return <section className="section-bg-gradient-2 py-8">
+  return <section className="py-8 bg-gradient-to-br from-primary-500 to-primary-600">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="mb-6 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-2 text-left">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-2 text-left">
               Property Purchase Calculators
             </h2>
-            <p className="text-muted-foreground text-left text-base">
+            <p className="text-white text-left text-base">
               Calculate your loan capacity and estimate stamp duty costs
             </p>
           </div>

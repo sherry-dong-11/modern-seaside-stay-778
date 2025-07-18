@@ -43,14 +43,14 @@ const citiesData = [{
   image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop&crop=center"
 }];
 export default function ExploreCitiesSection() {
-  return <section className="section-bg-secondary py-[50px]">
+  return <section className="bg-neutral-50 dark:bg-neutral-900 py-[50px]">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-8">
           <h2 className="text-3xl mb-2 md:text-4xl font-semibold">Discover new homes throughout Australia</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {citiesData.map(city => <Card key={city.id} className="card-modern group overflow-hidden">
+          {citiesData.map(city => <Card key={city.id} className="group overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-0">
                 <div className="relative overflow-hidden">
                   <img src={city.image} alt={`${city.name} cityscape`} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />

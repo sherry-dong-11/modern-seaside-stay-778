@@ -70,18 +70,6 @@ export default {
 					700: 'hsl(var(--neutral-700))',
 					800: 'hsl(var(--neutral-800))',
 					900: 'hsl(var(--neutral-900))'
-				},
-				section: {
-					'bg-primary': 'hsl(var(--section-bg-primary))',
-					'bg-secondary': 'hsl(var(--section-bg-secondary))',
-					'bg-soft': 'hsl(var(--section-bg-soft))'
-				},
-				'card-bg': {
-					'default': 'hsl(var(--card-bg-default))',
-					'soft': 'hsl(var(--card-bg-soft))',
-					'warm': 'hsl(var(--card-bg-warm))',
-					'cool': 'hsl(var(--card-bg-cool))',
-					'orange-tint': 'hsl(var(--card-bg-orange-tint))'
 				}
 			},
 			borderRadius: {

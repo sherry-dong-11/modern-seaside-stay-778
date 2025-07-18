@@ -143,7 +143,7 @@ export default function Index() {
         </section>
         
         {/* Featured Properties */}
-        <section className="section-bg-primary py-8">
+        <section className="py-8">
           <div className="container">
             {/* Property Carousel */}
             <div className="relative max-w-4xl mx-auto mb-6">

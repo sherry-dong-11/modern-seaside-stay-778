@@ -10,11 +10,10 @@ export default function PropertyCarouselCard({
   property
 }: PropertyCarouselCardProps) {
   return (
-    <div className="card-property-default group relative overflow-hidden cursor-pointer">
+    <div className="relative overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700">
       {/* Full-width image without overlays */}
       <div className="relative h-96 md:h-[500px] overflow-hidden">
-        <img src={property.image} alt={property.name} className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-105" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <img src={property.image} alt={property.name} className="w-full h-full object-cover" />
       </div>
       
       {/* Compact property details strip */}
