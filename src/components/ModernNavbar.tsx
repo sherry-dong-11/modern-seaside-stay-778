@@ -68,11 +68,11 @@ export default function ModernNavbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         scrolled 
-          ? "bg-white/80 dark:bg-card/80 backdrop-blur-xl py-3 shadow-lg border-b border-white/20" 
+          ? "bg-white/90 dark:bg-card/90 backdrop-blur-xl py-3 shadow-lg border-b border-white/20" 
           : "bg-transparent py-6"
       )}
     >
-      <nav className="container flex justify-between items-center">
+      <nav className="container flex justify-between items-center relative z-50">
         {/* Logo */}
         <motion.div 
           variants={logoVariants}

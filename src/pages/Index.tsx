@@ -85,12 +85,12 @@ export default function Index() {
     <div className="min-h-screen flex flex-col">
       <ModernNavbar />
       
-      <main className="flex-1">
+      <main className="flex-1 pt-20">
         {/* Modern Hero Section */}
         <ModernHeroSection />
         
         {/* Featured Properties */}
-        <section ref={propertiesRef} className="py-24 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
+        <section ref={propertiesRef} className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
           {/* Background effects */}
           <div className="absolute inset-0">
             <div className="absolute top-1/4 left-0 w-72 h-72 bg-orange-500/5 rounded-full blur-3xl" />

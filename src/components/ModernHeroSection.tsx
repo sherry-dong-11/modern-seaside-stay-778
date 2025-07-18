@@ -51,7 +51,7 @@ export default function ModernHeroSection() {
   return (
     <motion.section 
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden -mt-20 pt-20"
       style={{ opacity }}
     >
       {/* Animated Background */}
