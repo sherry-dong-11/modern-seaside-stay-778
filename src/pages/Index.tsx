@@ -137,6 +137,7 @@ export default function Index() {
             
             <FadeInSection className="text-center" delay={0.6}>
               <motion.div
+                className="mt-6"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
