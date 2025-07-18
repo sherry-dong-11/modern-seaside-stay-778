@@ -125,7 +125,7 @@ export default function ModernHeroSection() {
             className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 mb-8 border border-white/20"
           >
             <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-            <span className="text-sm font-medium">Premium Real Estate Platform</span>
+            <span className="text-sm font-medium">Premium New Home Platform</span>
           </motion.div>
 
           {/* Main heading with staggered animation */}
