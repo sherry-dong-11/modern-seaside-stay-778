@@ -143,7 +143,7 @@ export default function Index() {
                 <Button 
                   asChild 
                   size="lg" 
-                  className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white border-0 px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-orange-500 hover:bg-orange-600 text-white border-0 px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <Link to="/apartments">
                     <Building2 className="w-5 h-5 mr-2" />
