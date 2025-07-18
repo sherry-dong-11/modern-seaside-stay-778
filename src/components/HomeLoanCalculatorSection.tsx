@@ -48,9 +48,7 @@ export const HomeLoanCalculatorSection = () => {
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="mb-6 text-center">
-            <h2 className="text-3xl lg:text-4xl text-white mb-2 text-left font-bold">
-              Property Purchase Calculators
-            </h2>
+            <h2 className="text-3xl lg:text-4xl text-white mb-2 text-left font-bold">Home Purchase Calculators</h2>
             <p className="text-white text-left text-base">
               Calculate your loan capacity and estimate stamp duty costs
             </p>
@@ -64,9 +62,7 @@ export const HomeLoanCalculatorSection = () => {
               <CardContent className="p-3 lg:p-4 h-full flex flex-col">
                 {/* Title */}
                 <div className="mb-3">
-                  <h3 className="text-primary font-semibold text-xl mb-1">
-                    Home Loan Calculator
-                  </h3>
+                  <h3 className="text-primary font-semibold text-xl mb-1">Loan Repayment Calculator</h3>
                   <p className="text-sm text-muted-foreground">
                     Calculate your monthly repayments
                   </p>
