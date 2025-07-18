@@ -111,7 +111,7 @@ export default function Index() {
               <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                 Premium Off-The-Plan Properties
               </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-sm text-muted-foreground mx-auto whitespace-nowrap">
                 Discover exclusive new developments with modern designs, premium finishes, and unbeatable locations
               </p>
             </FadeInSection>
