@@ -35,6 +35,8 @@ export default {
 					900: 'hsl(var(--primary-900))',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
+				'accent-gradient': 'hsl(var(--accent-gradient))',
+				'accent-pink': 'hsl(var(--accent-pink))',
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
