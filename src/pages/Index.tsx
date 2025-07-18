@@ -1,22 +1,22 @@
 import { useEffect } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import BookingForm from "@/components/BookingForm";
+import ModernNavbar from "@/components/ModernNavbar";
+import ModernFooter from "@/components/ModernFooter";
+import ModernHeroSection from "@/components/ModernHeroSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ExploreCitiesSection from "@/components/ExploreCitiesSection";
 import FeaturedCategoriesSection from "@/components/FeaturedCategoriesSection";
 import { HomeLoanCalculatorSection } from "@/components/HomeLoanCalculatorSection";
 import { LatestNewsSection } from "@/components/LatestNewsSection";
-import ApartmentCard, { ApartmentProps } from "@/components/ApartmentCard";
-import PropertyCarouselCard from "@/components/PropertyCarouselCard";
+import AnimatedPropertyCard from "@/components/AnimatedPropertyCard";
+import FadeInSection from "@/components/FadeInSection";
+import { ApartmentProps } from "@/components/ApartmentCard";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
-import { ArrowRight, Search, MapPin, Building2, Star, Users, Award, CheckCircle2, Play, Phone, Mail, BookOpen, MessageCircle } from "lucide-react";
+import { ArrowRight, Building2, Star, Users, Award, CheckCircle2, BookOpen, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroImage from "@/assets/hero-cozy-room.jpg";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import luxuryApartment from "@/assets/apartment-luxury.jpg";
 import poolAmenities from "@/assets/amenities-pool.jpg";
 
@@ -72,165 +72,203 @@ const stats = [{
   icon: Award
 }];
 export default function Index() {
-  const {
-    t
-  } = useLanguage();
+  const { t } = useLanguage();
+  const propertiesRef = useRef(null);
+  const isPropertiesInView = useInView(propertiesRef, { once: true, margin: "-100px" });
+
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
-  return <div className="min-h-screen flex flex-col">
-      <Navbar />
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <ModernNavbar />
       
       <main className="flex-1">
         {/* Modern Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0">
-            <img src={heroImage} alt="Cozy room interior" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/60" />
-          </div>
-          
-          {/* Hero Content */}
-          <div className="container relative z-10 text-center text-white">
-            <div className="max-w-4xl mx-auto">
-              
-              <h1 className="text-5xl font-bold mb-6 leading-tight text-white animate-fade-in mx-0 md:text-5xl my-[29px]">
-                Find Your Perfect
-                <span className="text-orange-400 block">New Home</span>
-              </h1>
-              
-              
-              
-              {/* Search Bar */}
-              <div className="max-w-2xl mx-auto mb-12 animate-fade-in" style={{
-              animationDelay: "400ms"
-            }}>
-                <div className="flex flex-col sm:flex-row gap-4 p-3 bg-white/95 backdrop-blur-lg rounded-2xl shadow-lg">
-                  <div className="flex-1 relative">
-                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
-                    <Input placeholder="Search by suburb, postcode..." className="pl-12 border-none text-foreground text-lg focus:ring-0" />
-                  </div>
-                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8">
-                    <Search className="w-5 h-5 mr-2" />
-                    Search
-                  </Button>
-                </div>
-              </div>
-              
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{
-              animationDelay: "600ms"
-            }}>
-                
-                
-              </div>
-            </div>
-          </div>
-          
-          {/* Floating Stats */}
-          <div className="absolute bottom-8 left-0 right-0 z-10">
-            <div className="container">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                {stats.map((stat, index) => <div key={index} className="glass-card p-4 text-center text-white">
-                    <stat.icon className="w-6 h-6 mx-auto mb-2 text-primary" />
-                    <div className="text-2xl font-bold">{stat.number}</div>
-                    <div className="text-sm text-white/80">{stat.label}</div>
-                  </div>)}
-              </div>
-            </div>
-          </div>
-        </section>
+        <ModernHeroSection />
         
         {/* Featured Properties */}
-        <section className="py-[13px]">
-          <div className="container">
-            {/* Property Carousel */}
-            <div className="relative max-w-4xl mx-auto mb-6">
-              <Carousel opts={{
-              align: "start",
-              loop: true
-            }} className="w-full">
-                <CarouselContent>
-                  {featuredProperties.map(property => <CarouselItem key={property.id}>
-                      <PropertyCarouselCard property={property} />
-                    </CarouselItem>)}
-                </CarouselContent>
-                <CarouselPrevious className="left-4 bg-white/90 hover:bg-white border-gray-200 shadow-lg" />
-                <CarouselNext className="right-4 bg-white/90 hover:bg-white border-gray-200 shadow-lg" />
-              </Carousel>
+        <section ref={propertiesRef} className="py-24 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
+          {/* Background effects */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-0 w-72 h-72 bg-orange-500/5 rounded-full blur-3xl" />
+            <div className="absolute bottom-1/4 right-0 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl" />
+          </div>
+
+          <div className="container relative z-10">
+            <FadeInSection className="text-center mb-16">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isPropertiesInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.6 }}
+                className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 px-4 py-2 rounded-full text-sm font-medium mb-6"
+              >
+                <Star className="w-4 h-4 fill-current" />
+                Featured Properties
+              </motion.div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+                Premium Off-The-Plan Properties
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Discover exclusive new developments with modern designs, premium finishes, and unbeatable locations
+              </p>
+            </FadeInSection>
+            
+            {/* Property Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {featuredProperties.map((property, index) => (
+                <AnimatedPropertyCard 
+                  key={property.id} 
+                  property={property} 
+                  index={index}
+                />
+              ))}
             </div>
             
-            <div className="flex justify-center">
-              <Button size="lg" className="btn-primary">
-                <Building2 className="w-5 h-5 mr-2" />
-                View All Properties
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
+            <FadeInSection className="text-center" delay={0.6}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white border-0 px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <Link to="/apartments">
+                    <Building2 className="w-5 h-5 mr-2" />
+                    View All Properties
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </motion.div>
+            </FadeInSection>
           </div>
         </section>
         
         {/* Explore States / Cities */}
-        <ExploreCitiesSection />
+        <FadeInSection>
+          <ExploreCitiesSection />
+        </FadeInSection>
         
         {/* Featured Categories */}
-        <FeaturedCategoriesSection />
+        <FadeInSection>
+          <FeaturedCategoriesSection />
+        </FadeInSection>
         
         {/* Home Loan Calculator */}
-        <HomeLoanCalculatorSection />
+        <FadeInSection>
+          <HomeLoanCalculatorSection />
+        </FadeInSection>
         
         {/* Latest News */}
-        <LatestNewsSection />
+        <FadeInSection>
+          <LatestNewsSection />
+        </FadeInSection>
         
         {/* Testimonials */}
-        <TestimonialsSection />
+        <FadeInSection>
+          <TestimonialsSection />
+        </FadeInSection>
         
         {/* CTA Section */}
-        <section className="relative bg-gradient-to-br from-primary-500 to-primary-600 text-white overflow-hidden mx-0 my-0 py-[27px]">
-          <div className="container relative z-10">
-            <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-4xl font-bold mb-6 text-center md:text-4xl mx-0 py-[14px]">
-                Ready to Find Your Dream Home?
-              </h2>
-              
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="mx-0 px-[24px] text-center text-orange-500 bg-gray-50">
-                  <BookOpen className="w-5 h-5 mr-2" />
-                  New Build Purchase Guide
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-orange-500 bg-slate-50">
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Chat with AI Expert
-                </Button>
-              </div>
-              
-              <div className="mt-8 flex items-center justify-center gap-6 text-sm text-white/80">
-                <div className="flex items-center">
-                  <CheckCircle2 className="w-4 h-4 mr-2" />
-                  No fees for buyers
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle2 className="w-4 h-4 mr-2" />
-                  Expert guidance
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle2 className="w-4 h-4 mr-2" />
-                  Verified properties
-                </div>
-              </div>
+        <FadeInSection>
+          <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden py-24">
+            {/* Background effects */}
+            <div className="absolute inset-0">
+              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
+              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
             </div>
-          </div>
-          
-          {/* Background decorations */}
-          <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
-            <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-white blur-3xl" />
-            <div className="absolute bottom-20 right-40 w-48 h-48 rounded-full bg-white blur-3xl" />
-          </div>
-        </section>
+            
+            <div className="container relative z-10">
+              <motion.div 
+                className="text-center max-w-4xl mx-auto"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.2, duration: 0.6 }}
+                  className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20"
+                >
+                  <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  <span className="text-sm font-medium">Ready to Start?</span>
+                </motion.div>
+
+                <motion.h2 
+                  className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.8 }}
+                >
+                  Ready to Find Your Dream Home?
+                </motion.h2>
+                
+                <motion.p
+                  className="text-xl text-gray-300 mb-12 leading-relaxed"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6, duration: 0.8 }}
+                >
+                  Join thousands of satisfied buyers who found their perfect property with us
+                </motion.p>
+                
+                <motion.div 
+                  className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8, duration: 0.8 }}
+                >
+                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    <Button size="lg" className="bg-white text-slate-900 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                      <BookOpen className="w-5 h-5 mr-2" />
+                      New Build Purchase Guide
+                    </Button>
+                  </motion.div>
+                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg font-semibold rounded-full">
+                      <MessageCircle className="w-5 h-5 mr-2" />
+                      Chat with AI Expert
+                    </Button>
+                  </motion.div>
+                </motion.div>
+                
+                <motion.div 
+                  className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1, duration: 0.8 }}
+                >
+                  {[
+                    { icon: CheckCircle2, text: "No fees for buyers" },
+                    { icon: CheckCircle2, text: "Expert guidance" },
+                    { icon: CheckCircle2, text: "Verified properties" }
+                  ].map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex flex-col items-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.2 + index * 0.1, duration: 0.6 }}
+                      whileHover={{ y: -5 }}
+                    >
+                      <feature.icon className="w-8 h-8 text-green-400 mb-3" />
+                      <span className="text-gray-300 font-medium">{feature.text}</span>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </motion.div>
+            </div>
+          </section>
+        </FadeInSection>
       </main>
       
-      <Footer />
-    </div>;
+      <ModernFooter />
+    </div>
+  );
 }
