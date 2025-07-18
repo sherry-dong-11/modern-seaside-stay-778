@@ -1,5 +1,5 @@
+
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -45,86 +45,216 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrolled]);
   
-  return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        scrolled 
-          ? "bg-background/80 backdrop-blur-xl py-3 shadow-2xl border-b border-border/50" 
-          : "bg-transparent py-5"
-      )}
-    >
+  return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", scrolled ? "bg-white/80 dark:bg-card/80 backdrop-blur-lg py-3 shadow-md" : "bg-transparent py-5")}>
       <nav className="container flex justify-between items-center">
         {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex-shrink-0"
-        >
+        <div className="flex-shrink-0">
           <Link to="/" className="flex items-center">
-            <motion.img 
+            <img 
               src="/lovable-uploads/45e89a4e-b7de-45de-9bb3-c273d5f1e5c1.png" 
               alt="YEP" 
-              className="h-10 w-auto transition-opacity duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="h-8 w-auto transition-opacity duration-300"
             />
           </Link>
-        </motion.div>
+        </div>
 
         {/* Desktop Navigation */}
-        <motion.ul
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="hidden md:flex space-x-8 items-center"
-        >
-          {/* Nav Links */}
-          {navLinks.map((link, index) => (
-            <motion.li
-              key={link.name}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-              className="relative"
+        <ul className="hidden md:flex space-x-8 items-center">
+          {/* New Home Dropdown */}
+          <li 
+            className="relative"
+            onMouseEnter={() => {
+              if (newHomeHoverTimeout) clearTimeout(newHomeHoverTimeout);
+              setNewHomeDropdownOpen(true);
+            }}
+            onMouseLeave={() => {
+              const timeout = setTimeout(() => setNewHomeDropdownOpen(false), 150);
+              setNewHomeHoverTimeout(timeout);
+            }}
+          >
+            <button className={cn("font-medium transition-colors hover:opacity-80 flex items-center gap-1", scrolled ? "text-foreground hover:text-primary" : "text-white")}>
+              New Home
+              <ChevronDown className={cn("h-4 w-4 transition-transform", newHomeDropdownOpen && "rotate-180")} />
+            </button>
+            
+            {/* Dropdown Menu */}
+            <div 
+              className={cn(
+                "absolute top-full left-0 mt-2 w-48 bg-white dark:bg-card rounded-lg shadow-lg border z-50 transition-all duration-200",
+                newHomeDropdownOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"
+              )}
+              onMouseEnter={() => {
+                if (newHomeHoverTimeout) clearTimeout(newHomeHoverTimeout);
+                setNewHomeDropdownOpen(true);
+              }}
+              onMouseLeave={() => {
+                const timeout = setTimeout(() => setNewHomeDropdownOpen(false), 150);
+                setNewHomeHoverTimeout(timeout);
+              }}
             >
-              <Link 
-                to={link.path} 
-                className={cn(
-                  "font-medium transition-all duration-300 relative group",
-                  scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-primary"
-                )}
-              >
+              <ul className="py-2">
+                {newHomeDropdownItems.map(item => (
+                  <li key={item.name}>
+                    <Link 
+                      to={item.path} 
+                      className="block px-4 py-2 text-sm font-medium hover:bg-muted transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
+          
+          {/* Other Nav Links */}
+          {navLinks.map(link => (
+            <li key={link.name} className="relative">
+              <Link to={link.path} className={cn("font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full", scrolled ? "text-foreground hover:text-primary" : "text-white hover:opacity-80")}>
                 {link.name}
               </Link>
-            </motion.li>
+            </li>
           ))}
-        </motion.ul>
+          
+          {/* Professionals Dropdown */}
+          <li 
+            className="relative"
+            onMouseEnter={() => {
+              if (professionalsHoverTimeout) clearTimeout(professionalsHoverTimeout);
+              setProfessionalsDropdownOpen(true);
+            }}
+            onMouseLeave={() => {
+              const timeout = setTimeout(() => setProfessionalsDropdownOpen(false), 150);
+              setProfessionalsHoverTimeout(timeout);
+            }}
+          >
+            <button className={cn("font-medium transition-colors hover:opacity-80 flex items-center gap-1", scrolled ? "text-foreground hover:text-primary" : "text-white")}>
+              Professionals
+              <ChevronDown className={cn("h-4 w-4 transition-transform", professionalsDropdownOpen && "rotate-180")} />
+            </button>
+            
+            {/* Dropdown Menu */}
+            <div 
+              className={cn(
+                "absolute top-full left-0 mt-2 w-48 bg-white dark:bg-card rounded-lg shadow-lg border z-50 transition-all duration-200",
+                professionalsDropdownOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"
+              )}
+              onMouseEnter={() => {
+                if (professionalsHoverTimeout) clearTimeout(professionalsHoverTimeout);
+                setProfessionalsDropdownOpen(true);
+              }}
+              onMouseLeave={() => {
+                const timeout = setTimeout(() => setProfessionalsDropdownOpen(false), 150);
+                setProfessionalsHoverTimeout(timeout);
+              }}
+            >
+              <ul className="py-2">
+                {professionalsDropdownItems.map(item => (
+                  <li key={item.name}>
+                    <Link 
+                      to={item.path} 
+                      className="block px-4 py-2 text-sm font-medium hover:bg-muted transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
+        </ul>
 
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="hidden md:flex items-center space-x-4"
-        >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button asChild variant="gradient" className="rounded-full px-6">
-              <Link to="/booking">{t.nav.bookNow}</Link>
-            </Button>
-          </motion.div>
-        </motion.div>
+        <div className="hidden md:flex items-center space-x-2">
+          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+            <LanguageSelector />
+          </div>
+          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+            <ThemeToggle />
+          </div>
+          <Button asChild className="btn-primary">
+            <Link to="/booking">{t.nav.bookNow}</Link>
+          </Button>
+        </div>
 
         {/* Mobile Navigation */}
         <div className="md:hidden flex items-center space-x-2">
-          <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+            <LanguageSelector />
+          </div>
+          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+            <ThemeToggle />
+          </div>
+          <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className={cn("rounded-full transition-colors", scrolled ? "text-foreground hover:text-primary" : "text-white hover:opacity-80")}>
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
       </nav>
-    </motion.header>
-  );
+
+      {/* Mobile Menu */}
+      <div className={cn("fixed inset-0 z-40 bg-background/80 backdrop-blur-sm md:hidden transition-opacity duration-300", mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none")}>
+        <div className={cn("fixed inset-y-0 right-0 w-3/4 max-w-sm bg-card shadow-xl p-6 transition-transform duration-300 ease-in-out", mobileMenuOpen ? "translate-x-0" : "translate-x-full")}>
+          <div className="flex flex-col h-full justify-between">
+            <div>
+              <div className="flex justify-end mb-8">
+                <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)} className="rounded-full">
+                  <X className="h-6 w-6" />
+                </Button>
+              </div>
+              <ul className="space-y-6">
+                {/* New Home Section */}
+                <li>
+                  <div className="text-lg font-medium mb-3">New Home</div>
+                  <ul className="space-y-2 ml-4">
+                    {newHomeDropdownItems.map(item => (
+                      <li key={item.name}>
+                        <Link 
+                          to={item.path} 
+                          className="text-base text-muted-foreground hover:text-primary transition-colors" 
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+                
+                {/* Other Nav Links */}
+                {navLinks.map(link => (
+                  <li key={link.name}>
+                    <Link to={link.path} className="text-lg font-medium transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+                
+                {/* Professionals Section */}
+                <li>
+                  <div className="text-lg font-medium mb-3">Professionals</div>
+                  <ul className="space-y-2 ml-4">
+                    {professionalsDropdownItems.map(item => (
+                      <li key={item.name}>
+                        <Link 
+                          to={item.path} 
+                          className="text-base text-muted-foreground hover:text-primary transition-colors" 
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            
+            <Button asChild className="w-full btn-primary mt-6">
+              <Link to="/booking" onClick={() => setMobileMenuOpen(false)}>
+                {t.nav.bookNow}
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </header>;
 }
