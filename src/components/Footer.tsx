@@ -97,15 +97,17 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-border pt-8 mt-8 text-center text-muted-foreground">
-          <p>&copy; 2025 YEPHOME. All rights reserved.</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 mt-4">
-            <Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors underline text-sm">
-              Privacy Policy
-            </Link>
-            <Link to="/terms-conditions" className="text-muted-foreground hover:text-primary transition-colors underline text-sm">
-              Terms & Conditions
-            </Link>
+        <div className="border-t border-border pt-8 mt-8 text-muted-foreground">
+          <div className="flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
+            <p>&copy; 2025 YEPHOME. All rights reserved.</p>
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+              <Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors underline text-sm">
+                Privacy Policy
+              </Link>
+              <Link to="/terms-conditions" className="text-muted-foreground hover:text-primary transition-colors underline text-sm">
+                Terms & Conditions
+              </Link>
+            </div>
           </div>
         </div>
       </div>
