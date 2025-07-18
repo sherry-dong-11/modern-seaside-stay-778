@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 
@@ -82,11 +82,11 @@ export default function ModernFooter() {
               </div>
 
               {/* Social links */}
-              <div className="flex space-x-4">
+               <div className="flex space-x-4">
                 {[
                   { icon: Facebook, href: "#", name: "Facebook" },
                   { icon: Instagram, href: "#", name: "Instagram" },
-                  { icon: Twitter, href: "#", name: "Twitter" }
+                  { icon: Linkedin, href: "#", name: "LinkedIn" }
                 ].map((social, index) => (
                   <motion.a
                     key={social.name}
