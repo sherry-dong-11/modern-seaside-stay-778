@@ -181,33 +181,6 @@ export default function ModernHeroSection() {
             </div>
           </motion.div>
 
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.4, duration: 0.6 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
-          >
-            <Button
-              asChild
-              size="lg"
-              className="bg-white text-black hover:bg-white/90 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
-            >
-              <Link to="/apartments">Explore Properties</Link>
-            </Button>
-            
-            <motion.button
-              onClick={() => setIsVideoPlaying(true)}
-              className="flex items-center gap-3 text-white/90 hover:text-white transition-colors group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                <Play className="w-5 h-5 ml-1" />
-              </div>
-              <span className="font-medium">Watch Our Story</span>
-            </motion.button>
-          </motion.div>
         </motion.div>
       </div>
 
