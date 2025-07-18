@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Search, MapPin, Building2, Star, Users, Award, CheckCircle2, Play, Phone, Mail, BookOpen, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-cozy-room.jpg";
-import luxuryApartment from "@/assets/luxury-beachfront-apartments.jpg";
+import luxuryApartment from "@/assets/apartment-luxury.jpg";
 import poolAmenities from "@/assets/amenities-pool.jpg";
 
 // Featured properties data inspired by YEPHOME
@@ -143,7 +143,7 @@ export default function Index() {
         </section>
         
         {/* Featured Properties */}
-        <section className="py-8">
+        <section className="py-[13px]">
           <div className="container">
             {/* Property Carousel */}
             <div className="relative max-w-4xl mx-auto mb-6">
