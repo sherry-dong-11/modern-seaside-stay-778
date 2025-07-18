@@ -49,36 +49,36 @@ export default function ModernFooter() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="container pt-12 md:pt-20 pb-8 md:pb-12 px-4 md:px-8"
+          className="container pt-20 pb-12"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Company info */}
-            <motion.div variants={itemVariants} className="space-y-4 md:space-y-6 col-span-1 sm:col-span-2 lg:col-span-1">
+            <motion.div variants={itemVariants} className="space-y-6">
               <div>
                 <img 
                   src="/lovable-uploads/ec1d0529-2ae8-4481-8329-b97ea749e03f.png" 
                   alt="YEPHOME" 
-                  className="h-8 md:h-10 w-auto mb-4 md:mb-6 brightness-0 invert"
+                  className="h-10 w-auto mb-6 brightness-0 invert"
                 />
               </div>
               
-              <div className="flex flex-col space-y-3 md:space-y-4">
+              <div className="flex flex-col space-y-4">
                 <Link 
                   to="/about" 
-                  className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group text-sm md:text-base"
+                  className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">About us</span>
                 </Link>
                 <Link 
                   to="/faq" 
-                  className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group text-sm md:text-base"
+                  className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">FAQ's</span>
                 </Link>
               </div>
 
               {/* Social links */}
-               <div className="flex space-x-3 md:space-x-4">
+               <div className="flex space-x-4">
                 {[
                   { icon: Facebook, href: "#", name: "Facebook" },
                   { icon: Instagram, href: "#", name: "Instagram" },
@@ -87,14 +87,14 @@ export default function ModernFooter() {
                   <motion.a
                     key={social.name}
                     href={social.href}
-                    className="w-12 h-12 md:w-10 md:h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-gray-300 hover:text-white hover:bg-orange-500/20 transition-all duration-300"
+                    className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-gray-300 hover:text-white hover:bg-orange-500/20 transition-all duration-300"
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 0.8 + index * 0.1 }}
                   >
-                    <social.icon size={16} className="md:w-[18px] md:h-[18px]" />
+                    <social.icon size={18} />
                     <span className="sr-only">{social.name}</span>
                   </motion.a>
                 ))}
@@ -102,12 +102,12 @@ export default function ModernFooter() {
             </motion.div>
             
             {/* Quick Links */}
-            <motion.div variants={itemVariants} className="space-y-4 md:space-y-6">
-              <h4 className="text-lg md:text-xl font-bold text-white mb-4 md:mb-6 relative">
+            <motion.div variants={itemVariants} className="space-y-6">
+              <h4 className="text-xl font-bold text-white mb-6 relative">
                 {t.footer.quickLinks}
                 <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full" />
               </h4>
-              <ul className="space-y-3 md:space-y-4">
+              <ul className="space-y-4">
                 {[
                   { name: "New Home", path: "/apartments" },
                   { name: "Sold", path: "/sold" },
@@ -123,7 +123,7 @@ export default function ModernFooter() {
                   >
                     <Link 
                       to={link.path} 
-                      className="text-gray-300 hover:text-white transition-colors duration-300 group flex items-center text-sm md:text-base"
+                      className="text-gray-300 hover:text-white transition-colors duration-300 group flex items-center"
                     >
                       <span className="group-hover:translate-x-1 transition-transform duration-300">
                         {link.name}
@@ -214,10 +214,10 @@ export default function ModernFooter() {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 1 }}
         >
-          <div className="container py-6 md:py-8 px-4 md:px-8">
+          <div className="container py-8">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               <motion.p 
-                className="text-gray-400 text-xs md:text-sm"
+                className="text-gray-400 text-sm"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 1.2 }}
@@ -226,14 +226,14 @@ export default function ModernFooter() {
               </motion.p>
               
               <motion.div 
-                className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 md:space-x-8"
+                className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 1.4 }}
               >
                 <Link 
                   to="/privacy-policy" 
-                  className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm group"
+                  className="text-gray-400 hover:text-white transition-colors text-sm group"
                 >
                   <span className="group-hover:underline underline-offset-4 decoration-orange-500">
                     Privacy Policy
@@ -241,7 +241,7 @@ export default function ModernFooter() {
                 </Link>
                 <Link 
                   to="/terms-conditions" 
-                  className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm group"
+                  className="text-gray-400 hover:text-white transition-colors text-sm group"
                 >
                   <span className="group-hover:underline underline-offset-4 decoration-orange-500">
                     Terms & Conditions
@@ -256,14 +256,14 @@ export default function ModernFooter() {
       {/* Scroll to top button */}
       <motion.button
         onClick={scrollToTop}
-        className="fixed bottom-4 md:bottom-8 right-4 md:right-8 w-14 h-14 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50"
+        className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50"
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2 }}
       >
-        <ArrowUp className="w-4 h-4 md:w-5 md:h-5" />
+        <ArrowUp className="w-5 h-5" />
       </motion.button>
     </footer>
   );
