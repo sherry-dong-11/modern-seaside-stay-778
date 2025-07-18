@@ -143,7 +143,7 @@ const PropertyCard = ({
         
         <div className="p-4 flex flex-col flex-1 bg-orange-50">
           <div className="flex-1 space-y-3">
-            <h3 className="font-semibold text-lg text-foreground">{property.name}</h3>
+            <h3 className="font-semibold text-lg text-slate-700">{property.name}</h3>
             <p className="text-sm text-muted-foreground line-clamp-2 min-h-[2.5rem] leading-relaxed">{property.address}</p>
             
             <div className="h-6 flex items-center">
@@ -185,7 +185,7 @@ const CategorySection = ({
 }) => {
   return <div className="mb-12">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-foreground">{title}</h2>
+        <h2 className="text-2xl font-bold text-slate-700">{title}</h2>
         <Button variant="ghost" className="text-orange-500 hover:text-orange-600 p-0">
           Show all
         </Button>

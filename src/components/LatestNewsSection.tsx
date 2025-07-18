@@ -28,7 +28,7 @@ export function LatestNewsSection() {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
           <div className="text-center sm:text-left mb-4 sm:mb-0">
-            <h2 className="font-semibold text-foreground mb-2 text-4xl">
+            <h2 className="font-semibold mb-2 text-4xl text-slate-700">
               Latest News
             </h2>
             <p className="text-muted-foreground">Insights into the Australian new development & real estate market</p>
@@ -53,7 +53,7 @@ export function LatestNewsSection() {
                   <p className="text-sm text-muted-foreground mb-2">
                     {article.date}
                   </p>
-                  <h3 className="text-base font-medium leading-tight text-foreground group-hover:text-primary transition-colors line-clamp-3">
+                  <h3 className="text-base font-medium leading-tight transition-colors line-clamp-3 text-slate-700">
                     {article.headline}
                   </h3>
                   
