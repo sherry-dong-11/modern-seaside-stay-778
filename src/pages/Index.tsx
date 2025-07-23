@@ -90,15 +90,11 @@ export default function Index() {
         <ModernHeroSection />
         
         {/* Featured Properties */}
-        <section ref={propertiesRef} className="py-16 md:py-24 bg-gradient-to-br from-neutral-50 via-white to-primary-50/20 dark:from-neutral-900 dark:via-neutral-800 dark:to-primary-900/10 relative overflow-hidden">
-          {/* Enhanced Background effects */}
+        <section ref={propertiesRef} className="py-8 md:py-12 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
+          {/* Background effects */}
           <div className="absolute inset-0">
-            <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-to-br from-primary-500/8 to-primary-600/4 rounded-full blur-3xl animate-pulse-slow" />
-            <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-gradient-to-tl from-orange-400/6 to-pink-400/4 rounded-full blur-3xl animate-float" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-primary-400/3 to-orange-300/3 rounded-full blur-3xl" />
-            {/* Geometric patterns */}
-            <div className="absolute top-10 right-20 w-32 h-32 bg-primary-100/30 dark:bg-primary-900/20 rounded-2xl rotate-12 blur-sm" />
-            <div className="absolute bottom-20 left-16 w-24 h-24 bg-orange-100/40 dark:bg-orange-900/20 rounded-full blur-sm" />
+            <div className="absolute top-1/4 left-0 w-72 h-72 bg-orange-500/5 rounded-full blur-3xl" />
+            <div className="absolute bottom-1/4 right-0 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl" />
           </div>
 
           <div className="container relative z-10">
@@ -107,16 +103,16 @@ export default function Index() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isPropertiesInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.6 }}
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-primary-100 to-orange-100 dark:from-primary-900/30 dark:to-orange-900/30 text-primary-700 dark:text-primary-300 px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-primary-200/50 dark:border-primary-800/30 shadow-sm backdrop-blur-sm"
+                className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 px-4 py-2 rounded-full text-sm font-medium mb-4"
               >
-                <Star className="w-4 h-4 fill-current animate-pulse" />
+                <Star className="w-4 h-4 fill-current" />
                 Featured Properties
               </motion.div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-900 via-primary-600 to-orange-600 dark:from-white dark:via-primary-200 dark:to-orange-300 bg-clip-text text-transparent leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                 Premium Off-The-Plan Properties
               </h2>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Discover exclusive new developments with modern designs, premium finishes, and unbeatable locations across Australia's most desirable neighborhoods
+              <p className="text-sm text-muted-foreground mx-auto whitespace-nowrap">
+                Discover exclusive new developments with modern designs, premium finishes, and unbeatable locations
               </p>
             </FadeInSection>
             
