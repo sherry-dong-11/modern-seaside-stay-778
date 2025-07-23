@@ -46,7 +46,7 @@ export default function ApartmentCard({
               </div>
               <div className="flex items-center">
                 <Maximize className="h-4 w-4 mr-1" />
-                <span>{apartment.size} m²</span>
+                
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@ export default function ApartmentCard({
         
         <div className="flex items-end justify-between pt-2">
           <div>
-            <span className="text-xl font-bold">From ${apartment.price}</span>
+            <span className="text-xl font-bold">${apartment.price}</span>
             <span className="text-muted-foreground text-sm"> / {t.booking.summary.night}</span>
           </div>
           <Button asChild className="btn-primary">
