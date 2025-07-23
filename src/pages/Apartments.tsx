@@ -7,67 +7,67 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Slider } from "@/components/ui/slider";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-// Sample apartments data (will use translations from context)
+// Properties data matching reference design
 const allApartments: ApartmentProps[] = [{
   id: "1",
-  name: "Deluxe Sea View Suite",
-  description: "Luxurious suite with panoramic sea views, modern amenities, and a private balcony.",
-  price: 180,
-  capacity: 2,
+  name: "Atlas Melbourne",
+  description: "Modern off-the-plan apartments in the heart of Melbourne's CBD with premium finishes and city views.",
+  price: 399000,
+  capacity: 3,
   size: 45,
-  image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop",
-  location: "Beachfront",
-  features: ["Wi-Fi", "Kitchen", "Bathroom", "Air Conditioning", "TV", "Balcony"]
+  image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+  location: "383 La Trobe Street, Melbourne VIC 3000",
+  features: ["1-3 Bedrooms", "1-2 Bathrooms", "0-1 Car Space", "Balcony", "Modern Kitchen"]
 }, {
   id: "2",
-  name: "Premium Family Apartment",
-  description: "Spacious apartment ideal for families, with full kitchen and stunning coastal views.",
-  price: 250,
-  capacity: 4,
+  name: "640 Bourke St",
+  description: "Contemporary apartments offering luxury living in Melbourne's premier location with exceptional amenities.",
+  price: 640000,
+  capacity: 3,
   size: 75,
-  image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
-  location: "Second row",
-  features: ["Wi-Fi", "Kitchen", "Bathroom", "Air Conditioning", "TV", "Washing Machine"]
+  image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+  location: "640 Bourke Street, Melbourne VIC 3000",
+  features: ["1-3 Bedrooms", "1-2 Bathrooms", "No Car Space", "City Views", "Premium Appliances"]
 }, {
   id: "3",
-  name: "Executive Beach Studio",
-  description: "Elegant studio with direct beach access, modern design, and premium finishes.",
-  price: 150,
+  name: "Eliza Residences",
+  description: "Sophisticated apartments with thoughtful design and quality finishes in a vibrant Melbourne location.",
+  price: 485000,
   capacity: 2,
-  size: 35,
-  image: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=800&h=600&fit=crop",
-  location: "Beachfront",
-  features: ["Wi-Fi", "Kitchenette", "Bathroom", "Air Conditioning", "TV"]
+  size: 55,
+  image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop",
+  location: "Melbourne VIC 3000",
+  features: ["1-2 Bedrooms", "1-2 Bathrooms", "1 Car Space", "Terrace", "Storage"]
 }, {
   id: "4",
-  name: "Luxury Penthouse Suite",
-  description: "Exclusive top-floor suite with expansive terrace and panoramic sea views.",
-  price: 350,
-  capacity: 4,
-  size: 90,
-  image: "https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?w=800&h=600&fit=crop",
-  location: "Beachfront",
-  features: ["Wi-Fi", "Full Kitchen", "2 Bathrooms", "Air Conditioning", "TV", "Terrace", "Jacuzzi"]
+  name: "The Grounds",
+  description: "Innovative residential development offering modern living spaces with green communal areas.",
+  price: 520000,
+  capacity: 2,
+  size: 60,
+  image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+  location: "Melbourne VIC 3000",
+  features: ["1-2 Bedrooms", "1 Bathroom", "1 Car Space", "Garden Views", "Communal Spaces"]
 }, {
   id: "5",
-  name: "Classic Double Room",
-  description: "Comfortable hotel room with modern amenities and partial sea views.",
-  price: 120,
-  capacity: 2,
-  size: 28,
-  image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&h=600&fit=crop",
-  location: "Hotel building",
-  features: ["Wi-Fi", "Bathroom", "Air Conditioning", "TV", "Mini Fridge"]
+  name: "Collins Wharf",
+  description: "Waterfront apartments with stunning harbor views and world-class amenities in Docklands.",
+  price: 750000,
+  capacity: 3,
+  size: 85,
+  image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+  location: "Docklands VIC 3008",
+  features: ["2-3 Bedrooms", "2 Bathrooms", "1 Car Space", "Water Views", "Gym & Pool"]
 }, {
   id: "6",
-  name: "Garden View Apartment",
-  description: "Peaceful apartment surrounded by lush gardens, just a short walk from the beach.",
-  price: 160,
-  capacity: 3,
-  size: 55,
-  image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=800&h=600&fit=crop",
-  location: "Garden area",
-  features: ["Wi-Fi", "Kitchen", "Bathroom", "Air Conditioning", "TV", "Terrace"]
+  name: "Melbourne Square",
+  description: "Iconic tower living with panoramic city views and premium facilities in Southbank.",
+  price: 580000,
+  capacity: 2,
+  size: 50,
+  image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+  location: "Southbank VIC 3006",
+  features: ["1-2 Bedrooms", "1-2 Bathrooms", "0-1 Car Space", "Sky Gardens", "Concierge"]
 }];
 export default function Apartments() {
   const {
@@ -76,7 +76,7 @@ export default function Apartments() {
   const [filteredApartments, setFilteredApartments] = useState<ApartmentProps[]>(allApartments);
   const [capacityFilter, setCapacityFilter] = useState<string>("all");
   const [locationFilter, setLocationFilter] = useState<string>("all");
-  const [priceRange, setPriceRange] = useState<number[]>([100, 350]);
+  const [priceRange, setPriceRange] = useState<number[]>([300000, 800000]);
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
@@ -195,7 +195,7 @@ export default function Apartments() {
                   onClick={() => {
                     setCapacityFilter("all");
                     setLocationFilter("all");
-                    setPriceRange([100, 350]);
+                    setPriceRange([300000, 800000]);
                   }}
                   className="h-12 px-3 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow flex items-center gap-2"
                 >
@@ -247,13 +247,13 @@ export default function Apartments() {
             {/* Price Range Section */}
             <div className="mt-6 max-w-sm animate-fade-in [animation-delay:200ms]">
               <label className="block text-sm font-medium mb-2">
-                {t.apartments.filters.priceRange}: ${priceRange[0]} - ${priceRange[1]}
+                {t.apartments.filters.priceRange}: ${priceRange[0].toLocaleString()} - ${priceRange[1].toLocaleString()}
               </label>
               <Slider 
-                defaultValue={[100, 350]} 
-                min={100} 
-                max={350} 
-                step={10} 
+                defaultValue={[300000, 800000]} 
+                min={300000} 
+                max={800000} 
+                step={10000} 
                 value={priceRange} 
                 onValueChange={setPriceRange} 
                 className="my-4" 
@@ -269,10 +269,35 @@ export default function Apartments() {
           </div>
         </section>
         
-        {/* Apartments Grid */}
+        {/* Properties Grid */}
         <section className="section">
           <div className="container">
-            {filteredApartments.length > 0 ? <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Section Header */}
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
+              <div>
+                <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                  Projects For Sale & other Off the Plan Properties nearby
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Showing {filteredApartments.length} out of {allApartments.length} projects available on Yephome
+                </p>
+              </div>
+              <div className="mt-4 lg:mt-0">
+                <Select defaultValue="recommended">
+                  <SelectTrigger className="w-48 border-gray-200">
+                    <SelectValue placeholder="Sort by" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="recommended">Sort by Recommended</SelectItem>
+                    <SelectItem value="price-low">Price: Low to High</SelectItem>
+                    <SelectItem value="price-high">Price: High to Low</SelectItem>
+                    <SelectItem value="newest">Newest First</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+
+            {filteredApartments.length > 0 ? <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
                 {filteredApartments.map((apartment, index) => <div key={apartment.id} className="animate-fade-in" style={{
               animationDelay: `${(index + 1) * 100}ms`
             }}>
@@ -284,7 +309,7 @@ export default function Apartments() {
                 <Button variant="outline" onClick={() => {
               setCapacityFilter("all");
               setLocationFilter("all");
-              setPriceRange([100, 350]);
+              setPriceRange([300000, 800000]);
             }}>
                   {t.apartments.filters.resetFilters}
                 </Button>
