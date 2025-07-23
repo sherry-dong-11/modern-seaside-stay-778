@@ -233,7 +233,7 @@ export default function Index() {
                 }} whileTap={{
                   scale: 0.95
                 }}>
-                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <Button size="lg" className="btn-primary">
                       <BookOpen className="w-5 h-5 mr-2" />
                       New Build Purchase Guide
                     </Button>
@@ -243,7 +243,7 @@ export default function Index() {
                 }} whileTap={{
                   scale: 0.95
                 }}>
-                    <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg font-bold rounded-xl border-2">
+                    <Button size="lg" className="btn-primary">
                       <MessageCircle className="w-5 h-5 mr-2" />
                       Chat with AI Expert
                     </Button>
