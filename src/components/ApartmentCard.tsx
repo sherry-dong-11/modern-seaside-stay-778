@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Users, Maximize, MapPin, Bath, Coffee, Wifi } from "lucide-react";
+import { Users, Maximize, MapPin, Bath, Coffee, Wifi, Bed, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -56,7 +56,20 @@ export default function ApartmentCard({
       <div className="p-6 space-y-4">
         <p className="text-muted-foreground line-clamp-2">{translatedDescription}</p>
         
-        
+        <div className="flex items-center space-x-4 text-muted-foreground text-sm">
+          <div className="flex items-center">
+            <Bed className="h-4 w-4 mr-1" />
+            <span>1 - 3</span>
+          </div>
+          <div className="flex items-center">
+            <Bath className="h-4 w-4 mr-1" />
+            <span>1 - 2</span>
+          </div>
+          <div className="flex items-center">
+            <Car className="h-4 w-4 mr-1" />
+            <span>0 - 1</span>
+          </div>
+        </div>
         
         <div className="flex items-end justify-between pt-2">
           <div>
