@@ -10,6 +10,7 @@ import BookingPage from "./pages/BookingPage";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Amenities from "./pages/Amenities";
+import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
@@ -30,6 +31,8 @@ const App = () => (
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/amenities" element={<Amenities />} />
+            <Route path="/insights" element={<Blog />} />
+            <Route path="/blog" element={<Blog />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
