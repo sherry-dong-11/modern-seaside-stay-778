@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
@@ -10,6 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Navbar() {
   const { t } = useLanguage();
+  const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [newHomeDropdownOpen, setNewHomeDropdownOpen] = useState(false);
@@ -45,6 +46,17 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrolled]);
   
+  // Determine text colors based on route and scroll state
+  const isHomepage = location.pathname === "/";
+  const getTextColor = () => {
+    if (!isHomepage) return "text-foreground hover:text-primary";
+    return scrolled ? "text-foreground hover:text-primary" : "text-white";
+  };
+  const getTextColorMobile = () => {
+    if (!isHomepage) return "text-foreground hover:text-primary";
+    return scrolled ? "text-foreground hover:text-primary" : "text-white hover:opacity-80";
+  };
+  
   return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", scrolled ? "bg-white/80 dark:bg-card/80 backdrop-blur-lg py-3 shadow-md" : "bg-transparent py-5")}>
       <nav className="container flex justify-between items-center">
         {/* Logo */}
@@ -72,7 +84,7 @@ export default function Navbar() {
               setNewHomeHoverTimeout(timeout);
             }}
           >
-            <button className={cn("font-medium transition-colors hover:opacity-80 flex items-center gap-1", scrolled ? "text-foreground hover:text-primary" : "text-white")}>
+            <button className={cn("font-medium transition-colors hover:opacity-80 flex items-center gap-1", getTextColor())}>
               New Home
               <ChevronDown className={cn("h-4 w-4 transition-transform", newHomeDropdownOpen && "rotate-180")} />
             </button>
@@ -110,7 +122,7 @@ export default function Navbar() {
           {/* Other Nav Links */}
           {navLinks.map(link => (
             <li key={link.name} className="relative">
-              <Link to={link.path} className={cn("font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full", scrolled ? "text-foreground hover:text-primary" : "text-white hover:opacity-80")}>
+              <Link to={link.path} className={cn("font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full", getTextColorMobile())}>
                 {link.name}
               </Link>
             </li>
@@ -128,7 +140,7 @@ export default function Navbar() {
               setProfessionalsHoverTimeout(timeout);
             }}
           >
-            <button className={cn("font-medium transition-colors hover:opacity-80 flex items-center gap-1", scrolled ? "text-foreground hover:text-primary" : "text-white")}>
+            <button className={cn("font-medium transition-colors hover:opacity-80 flex items-center gap-1", getTextColor())}>
               Professionals
               <ChevronDown className={cn("h-4 w-4 transition-transform", professionalsDropdownOpen && "rotate-180")} />
             </button>
@@ -165,10 +177,10 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden md:flex items-center space-x-2">
-          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+          <div className={cn("transition-colors", !isHomepage ? "text-foreground" : (scrolled ? "text-foreground" : "text-white"))}>
             <LanguageSelector />
           </div>
-          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+          <div className={cn("transition-colors", !isHomepage ? "text-foreground" : (scrolled ? "text-foreground" : "text-white"))}>
             <ThemeToggle />
           </div>
           <Button asChild className="btn-primary">
@@ -178,13 +190,13 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         <div className="md:hidden flex items-center space-x-2">
-          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+          <div className={cn("transition-colors", !isHomepage ? "text-foreground" : (scrolled ? "text-foreground" : "text-white"))}>
             <LanguageSelector />
           </div>
-          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+          <div className={cn("transition-colors", !isHomepage ? "text-foreground" : (scrolled ? "text-foreground" : "text-white"))}>
             <ThemeToggle />
           </div>
-          <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className={cn("rounded-full transition-colors", scrolled ? "text-foreground hover:text-primary" : "text-white hover:opacity-80")}>
+          <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className={cn("rounded-full transition-colors", !isHomepage ? "text-foreground hover:text-primary" : (scrolled ? "text-foreground hover:text-primary" : "text-white hover:opacity-80"))}>
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
