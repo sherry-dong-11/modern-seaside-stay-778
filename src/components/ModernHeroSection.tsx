@@ -147,7 +147,7 @@ export default function ModernHeroSection() {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
-              className="block bg-gradient-to-r from-orange-400 to-pink-500 bg-clip-text text-transparent text-4xl md:text-5xl lg:text-6xl"
+              className="block text-gradient text-4xl md:text-5xl lg:text-6xl"
             >
               New Home
             </motion.span>
@@ -172,7 +172,7 @@ export default function ModernHeroSection() {
                 </div>
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 h-14 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                  className="btn-primary px-8 h-14"
                 >
                   <Search className="w-5 h-5 mr-2" />
                   Search Properties
