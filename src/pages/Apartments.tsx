@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ApartmentCard, { ApartmentProps } from "@/components/ApartmentCard";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
@@ -11,7 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Slider } from "@/components/ui/slider";
+import { Search, RotateCcw, Bed, DollarSign, SlidersHorizontal } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 // Sample apartments data (will use translations from context)
@@ -87,9 +88,10 @@ const allApartments: ApartmentProps[] = [
 export default function Apartments() {
   const { t } = useLanguage();
   const [filteredApartments, setFilteredApartments] = useState<ApartmentProps[]>(allApartments);
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [propertyType, setPropertyType] = useState<string>("Apartment");
   const [capacityFilter, setCapacityFilter] = useState<string>("all");
-  const [locationFilter, setLocationFilter] = useState<string>("all");
-  const [priceRange, setPriceRange] = useState<number[]>([100, 350]);
+  const [priceFilter, setPriceFilter] = useState<string>("all");
   
   useEffect(() => {
     // Scroll to top when component mounts
@@ -100,22 +102,28 @@ export default function Apartments() {
   useEffect(() => {
     let result = allApartments;
     
+    // Filter by search query
+    if (searchQuery.trim()) {
+      result = result.filter(apt => 
+        apt.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        apt.location.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+    
     // Filter by capacity
     if (capacityFilter !== "all") {
       const capacity = parseInt(capacityFilter);
       result = result.filter(apt => apt.capacity >= capacity);
     }
     
-    // Filter by location
-    if (locationFilter !== "all") {
-      result = result.filter(apt => apt.location === locationFilter);
+    // Filter by price
+    if (priceFilter !== "all") {
+      const maxPrice = parseInt(priceFilter);
+      result = result.filter(apt => apt.price <= maxPrice);
     }
     
-    // Filter by price range
-    result = result.filter(apt => apt.price >= priceRange[0] && apt.price <= priceRange[1]);
-    
     setFilteredApartments(result);
-  }, [capacityFilter, locationFilter, priceRange]);
+  }, [searchQuery, capacityFilter, priceFilter]);
   
   // Get unique locations for filter
   const locations = ["all", ...new Set(allApartments.map(apt => apt.location))];
@@ -146,77 +154,98 @@ export default function Apartments() {
         </section>
         
         {/* Filter Section */}
-        <section className="py-8 border-b">
+        <section className="py-8 border-b bg-gray-50 dark:bg-gray-900/20">
           <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in">
-              {/* Capacity Filter */}
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  {t.apartments.filters.guests}
-                </label>
-                <Select value={capacityFilter} onValueChange={setCapacityFilter}>
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder={t.apartments.filters.guests} />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">{t.apartments.filters.anyGuests}</SelectItem>
-                    <SelectItem value="1">{t.apartments.filters.onePlus}</SelectItem>
-                    <SelectItem value="2">{t.apartments.filters.twoPlus}</SelectItem>
-                    <SelectItem value="3">{t.apartments.filters.threePlus}</SelectItem>
-                    <SelectItem value="4">{t.apartments.filters.fourPlus}</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              
-              {/* Location Filter */}
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  {t.apartments.filters.location}
-                </label>
-                <Select value={locationFilter} onValueChange={setLocationFilter}>
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder={t.apartments.filters.location} />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">{t.apartments.filters.allLocations}</SelectItem>
-                    {locations.filter(loc => loc !== "all").map(location => (
-                      <SelectItem key={location} value={location}>{location}</SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              
-              {/* Price Range Filter */}
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  {t.apartments.filters.priceRange}: ${priceRange[0]} - ${priceRange[1]}
-                </label>
-                <Slider
-                  defaultValue={[100, 350]}
-                  min={100}
-                  max={350}
-                  step={10}
-                  value={priceRange}
-                  onValueChange={setPriceRange}
-                  className="my-4"
+            <div className="flex flex-wrap items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+              {/* Search Input */}
+              <div className="flex-1 min-w-[280px] relative">
+                <Input
+                  type="text"
+                  placeholder="Suburb, Postcode Or Region"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-4 pr-12 h-12 text-base bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600"
                 />
+                <Button 
+                  size="sm"
+                  className="absolute right-1 top-1 h-10 px-4 bg-orange-500 hover:bg-orange-600 text-white rounded-md"
+                >
+                  <Search className="h-4 w-4" />
+                </Button>
               </div>
+              
+              {/* Property Type Filter */}
+              <Button
+                variant={propertyType === "Apartment" ? "default" : "outline"}
+                className={`h-12 px-6 text-base ${
+                  propertyType === "Apartment" 
+                    ? "bg-teal-500 hover:bg-teal-600 text-white border-teal-500" 
+                    : "border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
+                }`}
+                onClick={() => setPropertyType("Apartment")}
+              >
+                Apartment
+              </Button>
+              
+              {/* Bed Filter */}
+              <Select value={capacityFilter} onValueChange={setCapacityFilter}>
+                <SelectTrigger className="h-12 px-4 min-w-[120px] border-gray-300 dark:border-gray-600">
+                  <Bed className="h-4 w-4 mr-2" />
+                  <SelectValue placeholder="Bed" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">Any beds</SelectItem>
+                  <SelectItem value="1">1+ beds</SelectItem>
+                  <SelectItem value="2">2+ beds</SelectItem>
+                  <SelectItem value="3">3+ beds</SelectItem>
+                  <SelectItem value="4">4+ beds</SelectItem>
+                </SelectContent>
+              </Select>
+              
+              {/* Price Filter */}
+              <Select value={priceFilter} onValueChange={setPriceFilter}>
+                <SelectTrigger className="h-12 px-4 min-w-[120px] border-gray-300 dark:border-gray-600">
+                  <DollarSign className="h-4 w-4 mr-2" />
+                  <SelectValue placeholder="Price" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">Any price</SelectItem>
+                  <SelectItem value="150">Under $150</SelectItem>
+                  <SelectItem value="200">Under $200</SelectItem>
+                  <SelectItem value="300">Under $300</SelectItem>
+                </SelectContent>
+              </Select>
+              
+              {/* More Filters */}
+              <Button
+                variant="outline"
+                className="h-12 px-4 border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
+              >
+                <SlidersHorizontal className="h-4 w-4 mr-2" />
+                More Filters
+              </Button>
+              
+              {/* Reset Button */}
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setSearchQuery("");
+                  setPropertyType("Apartment");
+                  setCapacityFilter("all");
+                  setPriceFilter("all");
+                }}
+                className="h-12 px-4 border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
+              >
+                <RotateCcw className="h-4 w-4 mr-2" />
+                Reset
+              </Button>
             </div>
             
-            <div className="flex justify-between items-center mt-6 animate-fade-in [animation-delay:200ms]">
-              <p className="text-muted-foreground">
-                {t.apartments.filters.showing} {filteredApartments.length} {t.apartments.filters.of} {allApartments.length} {t.apartments.filters.accommodations}
+            {/* Results count */}
+            <div className="mt-4">
+              <p className="text-muted-foreground text-sm">
+                Showing {filteredApartments.length} of {allApartments.length} properties
               </p>
-              <Button 
-                variant="outline" 
-                onClick={() => {
-                  setCapacityFilter("all");
-                  setLocationFilter("all");
-                  setPriceRange([100, 350]);
-                }}
-              >
-                {t.apartments.filters.resetFilters}
-              </Button>
             </div>
           </div>
         </section>
@@ -239,12 +268,13 @@ export default function Apartments() {
                 <Button 
                   variant="outline" 
                   onClick={() => {
+                    setSearchQuery("");
+                    setPropertyType("Apartment");
                     setCapacityFilter("all");
-                    setLocationFilter("all");
-                    setPriceRange([100, 350]);
+                    setPriceFilter("all");
                   }}
                 >
-                  {t.apartments.filters.resetFilters}
+                  Reset Filters
                 </Button>
               </div>
             )}
