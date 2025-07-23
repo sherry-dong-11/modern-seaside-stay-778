@@ -61,7 +61,7 @@ export default function TestimonialsSection() {
   return <section className="bg-muted py-8 sm:py-12 lg:py-[55px]">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-8 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-slate-900">
             {t.testimonials.title}
           </h2>
           <p className="text-muted-foreground">
@@ -80,7 +80,7 @@ export default function TestimonialsSection() {
                     <div className="flex mb-2">
                       {[...Array(5)].map((_, i) => <Star key={i} className={`h-3 w-3 sm:h-4 sm:w-4 ${i < testimonial.rating ? "fill-primary text-primary" : "text-muted-foreground"}`} />)}
                     </div>
-                    <h4 className="text-base sm:text-lg font-semibold text-center md:text-left">{testimonial.name}</h4>
+                    <h4 className="text-base sm:text-lg font-semibold text-center md:text-left text-slate-900">{testimonial.name}</h4>
                     <p className="text-xs sm:text-sm text-muted-foreground text-center md:text-left">{testimonial.location}</p>
                   </div>
                   
