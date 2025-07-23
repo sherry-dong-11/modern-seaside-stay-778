@@ -241,12 +241,6 @@ export default function Apartments() {
               />
             </div>
             
-            {/* Results Summary */}
-            <div className="flex justify-between items-center mt-4 animate-fade-in [animation-delay:300ms]">
-              <p className="text-muted-foreground">
-                {t.apartments.filters.showing} {filteredApartments.length} {t.apartments.filters.of} {allApartments.length} {t.apartments.filters.accommodations}
-              </p>
-            </div>
           </div>
         </section>
         
