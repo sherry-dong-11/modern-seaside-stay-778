@@ -222,7 +222,7 @@ export default function FeaturedPropertiesSection() {
           </Button>
 
           {/* Pagination Dots */}
-          <div className="flex justify-center mt-8 gap-2">
+          <div className="flex justify-center mt-4 gap-2">
             {scrollSnaps.map((_, index) => (
               <button
                 key={index}
