@@ -7,63 +7,52 @@
 
 @layer base {
   :root {
-    /* Setpoint-style color palette */
-    --background: 40 15% 97%;  /* Off-white */
-    --foreground: 220 15% 15%; /* Dark gray */
+    --background: 0 0% 100%;
+    --foreground: 210 40% 8%;
 
-    --card: 40 15% 97%;
-    --card-foreground: 220 15% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 8%;
 
-    --popover: 40 15% 97%;
-    --popover-foreground: 220 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 8%;
 
-    --primary: 25 100% 51%;  /* Vivid orange #FF6A00 */
+    --primary: 25 95% 58%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 92%; /* Light sand */
-    --secondary-foreground: 220 15% 15%;
+    --secondary: 210 40% 98%;
+    --secondary-foreground: 210 40% 15%;
 
-    --muted: 220 10% 88%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 210 30% 45%;
 
-    --accent: 25 100% 95%;
-    --accent-foreground: 25 100% 25%;
+    --accent: 25 95% 95%;
+    --accent-foreground: 25 95% 25%;
 
     --destructive: 0 85% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 80%;
-    --input: 220 10% 92%;
-    --ring: 25 100% 51%;
+    --border: 210 20% 88%;
+    --input: 210 20% 95%;
+    --ring: 25 95% 58%;
 
-    /* Dark section backgrounds */
-    --dark-bg: 220 20% 12%;      /* Dark gray */
-    --dark-bg-alt: 220 18% 16%;  /* Slightly lighter dark gray */
-    --dark-foreground: 220 15% 95%;
+    /* Premium design tokens */
+    --primary-50: 33 100% 96%;
+    --primary-100: 30 100% 90%;
+    --primary-200: 28 100% 82%;
+    --primary-500: 25 95% 58%;
+    --primary-600: 23 90% 52%;
+    --primary-900: 15 75% 25%;
 
-    /* Light section backgrounds */
-    --light-bg: 40 15% 97%;      /* Off-white */
-    --light-bg-alt: 220 15% 92%; /* Light sand */
-    --light-foreground: 220 15% 15%;
-
-    /* Premium design tokens - Setpoint style */
-    --primary-50: 25 100% 97%;
-    --primary-100: 25 100% 92%;
-    --primary-200: 25 100% 84%;
-    --primary-500: 25 100% 51%;
-    --primary-600: 20 100% 45%;
-    --primary-900: 15 90% 20%;
-
-    --neutral-50: 40 15% 97%;
-    --neutral-100: 220 15% 92%;
-    --neutral-200: 220 15% 85%;
-    --neutral-300: 220 12% 70%;
-    --neutral-400: 220 10% 55%;
-    --neutral-500: 220 10% 40%;
-    --neutral-600: 220 12% 30%;
-    --neutral-700: 220 15% 20%;
-    --neutral-800: 220 18% 16%;
-    --neutral-900: 220 20% 12%;
+    --neutral-50: 0 0% 98%;
+    --neutral-100: 210 20% 96%;
+    --neutral-200: 210 16% 88%;
+    --neutral-300: 210 14% 76%;
+    --neutral-400: 210 12% 64%;
+    --neutral-500: 210 10% 52%;
+    --neutral-600: 210 12% 40%;
+    --neutral-700: 210 14% 28%;
+    --neutral-800: 210 16% 16%;
+    --neutral-900: 210 20% 8%;
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary-500)), hsl(var(--primary-600)));
@@ -174,7 +163,6 @@
     @apply border-2 border-primary text-primary bg-transparent rounded-xl px-8 py-3.5 font-semibold transition-all duration-300 hover:bg-primary hover:text-primary-foreground active:scale-[0.98];
   }
   
-  /* Section backgrounds - Setpoint style alternating */
   .section {
     @apply py-16 md:py-24 lg:py-32;
   }
@@ -182,49 +170,17 @@
   .section-sm {
     @apply py-12 md:py-16 lg:py-20;
   }
-
-  .section-light {
-    background: hsl(var(--light-bg));
-    color: hsl(var(--light-foreground));
-    border-bottom: 1px solid hsl(var(--neutral-200));
-  }
-
-  .section-light-alt {
-    background: hsl(var(--light-bg-alt));
-    color: hsl(var(--light-foreground));
-    border-bottom: 1px solid hsl(var(--neutral-200));
-  }
-
-  .section-dark {
-    background: hsl(var(--dark-bg));
-    color: hsl(var(--dark-foreground));
-    border-bottom: 1px solid hsl(var(--neutral-800));
-  }
-
-  .section-dark-alt {
-    background: hsl(var(--dark-bg-alt));
-    color: hsl(var(--dark-foreground));
-    border-bottom: 1px solid hsl(var(--neutral-700));
-  }
   
   .card-modern {
-    @apply bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-200/50 hover:border-primary/30;
+    @apply bg-white dark:bg-neutral-100 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-200 dark:border-neutral-200 hover:border-primary/20 dark:hover:border-primary/30;
   }
 
   .card-premium {
-    @apply bg-white/98 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200/60;
+    @apply bg-gradient-to-br from-white to-neutral-50 dark:from-neutral-100 dark:to-neutral-200 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-300;
   }
   
   .glass-card {
-    @apply bg-white/90 backdrop-blur-xl border border-white/30 rounded-2xl shadow-lg;
-  }
-
-  .divider-subtle {
-    @apply w-full h-px bg-gradient-to-r from-transparent via-neutral-300 to-transparent;
-  }
-
-  .divider-bold {
-    @apply w-full h-0.5 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20;
+    @apply bg-white/80 dark:bg-neutral-100/90 backdrop-blur-xl border border-white/20 dark:border-neutral-200/30 rounded-2xl shadow-lg;
   }
 
   .hero-gradient {
