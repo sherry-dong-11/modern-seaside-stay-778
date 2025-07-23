@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 const citiesData = [{
   id: 1,
   name: "Sydney",
@@ -42,22 +41,15 @@ const citiesData = [{
   state: "ACT",
   image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=600&fit=crop&crop=center"
 }];
-
 export default function ExploreCitiesSection() {
-  return (
-    <section className="bg-background my-0 py-0">
+  return <section className="bg-background my-0 py-0">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {citiesData.map(city => (
-            <div 
-              key={city.id} 
-              className="group relative overflow-hidden rounded-lg cursor-pointer h-80 transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]"
-            >
+          {citiesData.map(city => <div key={city.id} className="group relative overflow-hidden rounded-lg cursor-pointer h-80 transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
               {/* Full-bleed background image */}
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                style={{ backgroundImage: `url(${city.image})` }}
-              />
+              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{
+            backgroundImage: `url(${city.image})`
+          }} />
               
               {/* Default location overlay */}
               <div className="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 group-hover:opacity-0">
@@ -75,19 +67,13 @@ export default function ExploreCitiesSection() {
               <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               
               <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                <Button 
-                  variant="hero" 
-                  size="lg"
-                  className="text-white border-white/30 bg-white/10 hover:bg-white/20 backdrop-blur-sm shadow-2xl"
-                >
+                <Button variant="hero" size="lg" className="border-white/30 bg-white/10 hover:bg-white/20 backdrop-blur-sm shadow-2xl text-orange-600">
                   Explore {city.name}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
