@@ -106,7 +106,7 @@ export default function ModernHeroSection() {
 
       {/* Hero Content */}
       <div className="container relative z-20 text-center text-white">
-        <motion.div className="max-w-5xl mx-auto" initial={{
+        <motion.div className="max-w-3xl mx-auto" initial={{
         opacity: 0,
         y: 50
       }} animate={{
