@@ -40,15 +40,6 @@ const apartmentProperties: PropertyItem[] = [{
   parking: 0,
   price: "from A$401,000",
   image: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&h=600&fit=crop"
-}, {
-  id: "apt4",
-  name: "BLVD - Melbourne Square Stage 2",
-  address: "19 Hoff Boulevard, Southbank, VIC, 3006",
-  bedrooms: 1,
-  bathrooms: 1,
-  parking: 1,
-  price: "from A$524,000",
-  image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop"
 }];
 const townhouseProperties: PropertyItem[] = [{
   id: "th1",
@@ -78,15 +69,6 @@ const townhouseProperties: PropertyItem[] = [{
   price: "Contact agents",
   image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
   isContactAgent: true
-}, {
-  id: "th4",
-  name: "Sheahan Townhouses",
-  address: "Latrobe Avenue, Alphington, VIC, 3078",
-  bedrooms: 2,
-  bathrooms: 1,
-  parking: 0,
-  price: "from A$1,350,000",
-  image: sheahanTownhousesImage
 }];
 const houseLandProperties: PropertyItem[] = [{
   id: "hl1",
@@ -117,15 +99,6 @@ const houseLandProperties: PropertyItem[] = [{
   parking: 0,
   price: "from A$708,409",
   image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop"
-}, {
-  id: "hl4",
-  name: "Mambourin Estate - Urbane House and Land",
-  address: "2 Surround Drive, Mambourin, VIC, 3024",
-  bedrooms: 0,
-  bathrooms: 0,
-  parking: 0,
-  price: "from A$642,690",
-  image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&h=600&fit=crop"
 }];
 const PropertyCard = ({
   property
