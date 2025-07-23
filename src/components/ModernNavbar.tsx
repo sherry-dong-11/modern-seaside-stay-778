@@ -105,7 +105,7 @@ export default function ModernNavbar() {
             <motion.button 
               className={cn(
                 "text-sm font-medium transition-all duration-300 flex items-center gap-1 py-2 px-3 rounded-lg relative overflow-hidden whitespace-nowrap",
-                scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-orange-300"
+                scrolled ? "text-foreground hover:text-primary" : "text-slate-900 hover:text-primary"
               )}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -171,7 +171,7 @@ export default function ModernNavbar() {
                 to={link.path} 
                 className={cn(
                   "text-sm font-medium transition-all duration-300 py-2 px-3 rounded-lg relative overflow-hidden group whitespace-nowrap",
-                  scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-orange-300"
+                  scrolled ? "text-foreground hover:text-primary" : "text-slate-900 hover:text-primary"
                 )}
               >
                 <motion.div
@@ -195,7 +195,7 @@ export default function ModernNavbar() {
             <motion.button 
               className={cn(
                 "text-sm font-medium transition-all duration-300 flex items-center gap-1 py-2 px-3 rounded-lg relative overflow-hidden whitespace-nowrap",
-                scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-orange-300"
+                scrolled ? "text-foreground hover:text-primary" : "text-slate-900 hover:text-primary"
               )}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -257,10 +257,10 @@ export default function ModernNavbar() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-slate-900")}>
             <LanguageSelector />
           </div>
-          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-slate-900")}>
             <ThemeToggle />
           </div>
           <motion.div
@@ -275,17 +275,17 @@ export default function ModernNavbar() {
 
         {/* Mobile menu button */}
         <div className="lg:hidden flex items-center space-x-3">
-          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-slate-900")}>
             <LanguageSelector />
           </div>
-          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-white")}>
+          <div className={cn("transition-colors", scrolled ? "text-foreground" : "text-slate-900")}>
             <ThemeToggle />
           </div>
           <motion.button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className={cn(
               "p-2 rounded-lg transition-colors",
-              scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-orange-300"
+              scrolled ? "text-foreground hover:text-primary" : "text-slate-900 hover:text-primary"
             )}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
