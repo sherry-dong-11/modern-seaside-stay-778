@@ -74,6 +74,11 @@ export default {
 					700: 'hsl(var(--neutral-700))',
 					800: 'hsl(var(--neutral-800))',
 					900: 'hsl(var(--neutral-900))'
+				},
+				section: {
+					'warm-gray': 'hsl(var(--section-warm-gray))',
+					'off-black': 'hsl(var(--section-off-black))',
+					'charcoal': 'hsl(var(--section-charcoal))'
 				}
 			},
 			borderRadius: {
