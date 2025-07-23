@@ -132,57 +132,49 @@ const PropertyCard = ({
 }: {
   property: PropertyItem;
 }) => {
-  return (
-    <Card className="group cursor-pointer transition-all duration-300 hover:shadow-xl border border-border/10 bg-card h-full flex flex-col overflow-hidden">
+  return <Card className="group cursor-pointer transition-all duration-300 hover:shadow-lg border-0 bg-card h-full flex flex-col">
       <CardContent className="p-0 flex flex-col h-full">
-        {/* Image Section */}
-        <div className="relative overflow-hidden">
-          <img 
-            src={property.image} 
-            alt={property.name} 
-            className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" 
-          />
+        <div className="relative overflow-hidden rounded-lg">
+          <img src={property.image} alt={property.name} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
+          <button className="absolute top-3 right-3 p-2 bg-white/90 hover:bg-white rounded-full shadow-sm transition-colors">
+            <Heart className="w-4 h-4 text-muted-foreground hover:text-red-500" />
+          </button>
         </div>
         
-        {/* Content Section */}
-        <div className="p-6 flex flex-col flex-1 bg-background">
+        <div className="p-4 flex flex-col flex-1 bg-orange-50">
           <div className="flex-1 space-y-3">
-            <h3 className="font-bold text-xl text-foreground leading-tight">{property.name}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{property.address}</p>
+            <h3 className="font-semibold text-lg text-foreground">{property.name}</h3>
+            <p className="text-sm text-muted-foreground line-clamp-2 min-h-[2.5rem] leading-relaxed">{property.address}</p>
+            
+            <div className="h-6 flex items-center">
+              {(property.bedrooms > 0 || property.bathrooms > 0 || property.parking > 0) && <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  {property.bedrooms > 0 && <div className="flex items-center gap-1">
+                      <Bed className="w-4 h-4" />
+                      <span>{property.bedrooms}</span>
+                    </div>}
+                  {property.bathrooms > 0 && <div className="flex items-center gap-1">
+                      <Bath className="w-4 h-4" />
+                      <span>{property.bathrooms}</span>
+                    </div>}
+                  {property.parking > 0 && <div className="flex items-center gap-1">
+                      <Car className="w-4 h-4" />
+                      <span>{property.parking}</span>
+                    </div>}
+                </div>}
+            </div>
           </div>
           
-          {/* Bottom Section */}
-          <div className="pt-6 mt-auto">
+          <div className="pt-4 border-t border-border/20 mt-auto">
             <div className="flex items-center justify-between">
-              {/* Bedroom Info */}
-              <div className="flex items-center gap-2">
-                {(property.bedrooms > 0 || property.bathrooms > 0) && (
-                  <>
-                    <Bed className="w-5 h-5 text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">
-                      {property.bedrooms > 0 && property.bathrooms > 0 
-                        ? `${property.bedrooms} & ${property.bathrooms}`
-                        : property.bedrooms > 0 
-                        ? property.bedrooms
-                        : property.bathrooms
-                      }
-                    </span>
-                  </>
-                )}
-              </div>
-              
-              {/* Price */}
-              <div className="text-right">
-                <span className="font-bold text-lg text-foreground">
-                  {property.price}
-                </span>
-              </div>
+              <span className="text-sm text-muted-foreground font-medium">Price</span>
+              <span className="font-semibold text-orange-500 text-right truncate max-w-[60%]">
+                {property.price}
+              </span>
             </div>
           </div>
         </div>
       </CardContent>
-    </Card>
-  );
+    </Card>;
 };
 const CategorySection = ({
   title,
@@ -199,7 +191,7 @@ const CategorySection = ({
         </Button>
       </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {properties.map(property => <PropertyCard key={property.id} property={property} />)}
       </div>
     </div>;
