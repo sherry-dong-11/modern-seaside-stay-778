@@ -132,7 +132,7 @@ export default function Apartments() {
         <section className="py-8 border-b">
           <div className="container">
             {/* Main Filter Bar */}
-            <div className="flex flex-wrap gap-3 items-start animate-fade-in">
+            <div className="flex flex-wrap gap-3 items-center animate-fade-in">
               {/* Location Search Bar */}
               <div className="flex-1 min-w-[280px] relative">
                 <div className="relative flex">
@@ -149,36 +149,17 @@ export default function Apartments() {
                 </div>
               </div>
 
-              {/* Property Type and Price Range Section */}
-              <div className="flex flex-col gap-3">
-                {/* Property Type Toggle */}
-                <div className="flex bg-white border border-gray-200 rounded-lg overflow-hidden">
-                  <button className="px-4 py-3 text-sm font-medium bg-[#FF6A00] text-white">
-                    Apartment
-                  </button>
-                  <button className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50">
-                    House
-                  </button>
-                  <button className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50">
-                    Townhouse
-                  </button>
-                </div>
-
-                {/* Price Range Section */}
-                <div className="w-64">
-                  <label className="block text-sm font-medium mb-2">
-                    {t.apartments.filters.priceRange}: ${priceRange[0]} - ${priceRange[1]}
-                  </label>
-                  <Slider 
-                    defaultValue={[100, 350]} 
-                    min={100} 
-                    max={350} 
-                    step={10} 
-                    value={priceRange} 
-                    onValueChange={setPriceRange} 
-                    className="my-2" 
-                  />
-                </div>
+              {/* Property Type Toggle */}
+              <div className="flex bg-white border border-gray-200 rounded-lg overflow-hidden">
+                <button className="px-4 py-3 text-sm font-medium bg-[#FF6A00] text-white">
+                  Apartment
+                </button>
+                <button className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50">
+                  House
+                </button>
+                <button className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50">
+                  Townhouse
+                </button>
               </div>
 
               {/* Filter Buttons Row */}
@@ -261,6 +242,22 @@ export default function Apartments() {
                   )}
                 </SelectContent>
               </Select>
+            </div>
+
+            {/* Price Range Section */}
+            <div className="mt-6 max-w-sm animate-fade-in [animation-delay:200ms]">
+              <label className="block text-sm font-medium mb-2">
+                {t.apartments.filters.priceRange}: ${priceRange[0]} - ${priceRange[1]}
+              </label>
+              <Slider 
+                defaultValue={[100, 350]} 
+                min={100} 
+                max={350} 
+                step={10} 
+                value={priceRange} 
+                onValueChange={setPriceRange} 
+                className="my-4" 
+              />
             </div>
             
             {/* Results Summary */}
