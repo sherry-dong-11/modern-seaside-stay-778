@@ -42,63 +42,38 @@ const citiesData = [{
   image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=600&fit=crop&crop=center"
 }];
 export default function ExploreCitiesSection() {
-  return (
-    <section className="py-12">
+  return <section className="bg-background my-0 py-0">
       <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-            Explore States & Cities
-          </h2>
-          <p className="text-muted-foreground">
-            Discover premium properties across Australia's major cities
-          </p>
-        </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {citiesData.map(city => (
-            <div 
-              key={city.id} 
-              className="group relative overflow-hidden rounded-2xl cursor-pointer aspect-square transition-all duration-500 hover:shadow-tech hover:scale-[1.02] card-premium"
-            >
+          {citiesData.map(city => <div key={city.id} className="group relative overflow-hidden rounded-lg cursor-pointer aspect-square transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
               {/* Full-bleed background image */}
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" 
-                style={{ backgroundImage: `url(${city.image})` }} 
-              />
+              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{
+            backgroundImage: `url(${city.image})`
+          }} />
               
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
-              
-              {/* Location label overlay */}
-              <div className="absolute top-6 left-6">
-                <div className="glass-card px-3 py-1.5">
-                  <span className="text-white text-sm font-medium">{city.state}</span>
+              {/* Default location overlay */}
+              <div className="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 group-hover:opacity-0">
+                <div className="text-white">
+                  <h3 className="text-2xl font-bold mb-1 drop-shadow-lg">
+                    {city.name}
+                  </h3>
+                  <p className="text-lg font-medium drop-shadow-md opacity-90">
+                    {city.state}
+                  </p>
                 </div>
               </div>
               
-              {/* Default city name */}
-              <div className="absolute bottom-6 left-6 transition-opacity duration-300 group-hover:opacity-0">
-                <h3 className="text-2xl font-bold text-white drop-shadow-lg">
-                  {city.name}
-                </h3>
-              </div>
+              {/* Hover overlay and button */}
+              <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               
-              {/* Dark gradient on hover */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              
-              {/* Hover CTA */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                <Button 
-                  className="btn-primary text-lg px-8 py-4 rounded-full shadow-lg"
-                >
+                <Button variant="hero" size="lg" className="border-white/30 bg-white/10 hover:bg-white/20 backdrop-blur-sm shadow-2xl text-white">
                   Explore {city.name}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }

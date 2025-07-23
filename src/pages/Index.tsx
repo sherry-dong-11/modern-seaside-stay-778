@@ -89,62 +89,47 @@ export default function Index() {
       <ModernNavbar />
       
       <main className="flex-1 pt-20">
-        {/* Modern Hero Section - Dark */}
-        <div className="section-dark">
-          <ModernHeroSection />
-        </div>
+        {/* Modern Hero Section */}
+        <ModernHeroSection />
         
-        {/* Featured Properties - Dark */}
-        <div className="section-dark">
-          <FadeInSection>
-            <FeaturedPropertiesSection />
-          </FadeInSection>
-        </div>
+        {/* Featured Properties */}
+        <FadeInSection>
+          <FeaturedPropertiesSection />
+        </FadeInSection>
         
-        {/* Explore States / Cities - Light */}
-        <div className="section-light">
-          <FadeInSection>
-            <ExploreCitiesSection />
-          </FadeInSection>
-        </div>
+        {/* Explore States / Cities */}
+        <FadeInSection>
+          <ExploreCitiesSection />
+        </FadeInSection>
         
-        {/* Featured Categories - Dark */}
-        <div className="section-dark">
-          <FadeInSection>
-            <FeaturedCategoriesSection />
-          </FadeInSection>
-        </div>
+        {/* Featured Categories */}
+        <FadeInSection>
+          <FeaturedCategoriesSection />
+        </FadeInSection>
         
-        {/* Home Loan Calculator - Light */}
-        <div className="section-light">
-          <FadeInSection>
-            <HomeLoanCalculatorSection />
-          </FadeInSection>
-        </div>
+        {/* Home Loan Calculator */}
+        <FadeInSection>
+          <HomeLoanCalculatorSection />
+        </FadeInSection>
         
-        {/* Latest News - Dark */}
-        <div className="section-dark">
-          <FadeInSection>
-            <LatestNewsSection />
-          </FadeInSection>
-        </div>
+        {/* Latest News */}
+        <FadeInSection>
+          <LatestNewsSection />
+        </FadeInSection>
         
-        {/* Testimonials - Light */}
-        <div className="section-light">
-          <FadeInSection>
-            <TestimonialsSection />
-          </FadeInSection>
-        </div>
+        {/* Testimonials */}
+        <FadeInSection>
+          <TestimonialsSection />
+        </FadeInSection>
         
-        {/* CTA Section - Dark */}
-        <div className="section-dark">
-          <FadeInSection>
-            <section className="relative tech-gradient text-white overflow-hidden py-24">
-              {/* Background effects */}
-              <div className="absolute inset-0">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/15 rounded-full blur-3xl" />
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl" />
-              </div>
+        {/* CTA Section */}
+        <FadeInSection>
+          <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden py-24">
+            {/* Background effects */}
+            <div className="absolute inset-0">
+              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
+              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
+            </div>
             
             <div className="container relative z-10">
               <motion.div className="text-center max-w-4xl mx-auto" initial={{
@@ -269,7 +254,6 @@ export default function Index() {
             </div>
           </section>
         </FadeInSection>
-      </div>
       </main>
       
       <ModernFooter />
