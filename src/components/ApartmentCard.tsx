@@ -69,33 +69,41 @@ export default function ApartmentCard({ apartment }: { apartment: ApartmentProps
       </div>
       
       <div className="p-6 space-y-4">
-        <p className="text-muted-foreground line-clamp-2">{translatedDescription}</p>
-        
-        <div className="flex flex-wrap gap-2">
-          {apartment.features.slice(0, 3).map((feature, index) => (
-            <div 
-              key={index} 
-              className="flex items-center text-sm text-muted-foreground bg-muted px-3 py-1 rounded-full"
-            >
-              {feature === "Bathroom" && <Bath className="h-3.5 w-3.5 mr-1" />}
-              {feature === "Kitchen" && <Coffee className="h-3.5 w-3.5 mr-1" />}
-              {feature === "Wi-Fi" && <Wifi className="h-3.5 w-3.5 mr-1" />}
-              <span>{feature}</span>
-            </div>
-          ))}
-          {apartment.features.length > 3 && (
-            <div className="text-sm text-muted-foreground bg-muted px-3 py-1 rounded-full">
-              +{apartment.features.length - 3} {t.apartments.filters.more}
-            </div>
-          )}
+        {/* Hot badge */}
+        <div className="flex items-center justify-between">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-orange-500 text-white text-sm font-medium">
+            🔥 Hot
+          </div>
         </div>
         
-        <div className="flex items-end justify-between pt-2">
-          <div>
-            <span className="text-xl font-bold">${apartment.price}</span>
-            <span className="text-muted-foreground text-sm"> / {t.booking.summary.night}</span>
+        {/* Price */}
+        <div>
+          <span className="text-xl font-bold text-foreground">From ${apartment.price.toLocaleString()}</span>
+        </div>
+        
+        {/* Amenities */}
+        <div className="flex items-center gap-4 text-sm text-muted-foreground">
+          <div className="flex items-center">
+            <Users className="h-4 w-4 mr-1" />
+            <span>1 - {apartment.capacity}</span>
           </div>
-          <Button asChild className="btn-primary">
+          <div className="flex items-center">
+            <Bath className="h-4 w-4 mr-1" />
+            <span>1 - 2</span>
+          </div>
+          <div className="flex items-center">
+            <Coffee className="h-4 w-4 mr-1" />
+            <span>0 - 1</span>
+          </div>
+        </div>
+        
+        {/* Full address */}
+        <div className="text-muted-foreground">
+          <p>{apartment.location}</p>
+        </div>
+        
+        <div className="pt-2">
+          <Button asChild className="btn-primary w-full">
             <Link to={`/apartments/${apartment.id}`}>{t.apartments.filters.viewDetails}</Link>
           </Button>
         </div>
