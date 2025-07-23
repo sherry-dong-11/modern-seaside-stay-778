@@ -156,9 +156,9 @@ export default function Apartments() {
         {/* Filter Section */}
         <section className="py-8 border-b bg-gray-50 dark:bg-gray-900/20">
           <div className="container">
-            <div className="flex flex-wrap items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+            <div className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-x-auto">
               {/* Search Input */}
-              <div className="flex-1 min-w-[280px] relative">
+              <div className="flex-1 min-w-[300px] relative">
                 <Input
                   type="text"
                   placeholder="Suburb, Postcode Or Region"
