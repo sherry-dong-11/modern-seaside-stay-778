@@ -22,5 +22,15 @@ export default function ThemeToggle() {
       localStorage.setItem("theme", "dark");
     }
   };
-  return;
+  return (
+    <Button
+      variant="ghost"
+      size="icon"
+      onClick={toggleTheme}
+      className="text-muted-foreground hover:text-foreground transition-colors"
+    >
+      {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+      <span className="sr-only">Toggle theme</span>
+    </Button>
+  );
 }
