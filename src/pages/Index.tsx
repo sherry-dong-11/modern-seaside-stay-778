@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import ModernNavbar from "@/components/ModernNavbar";
 import ModernFooter from "@/components/ModernFooter";
 import ModernHeroSection from "@/components/ModernHeroSection";
+import FeaturedPropertiesSection from "@/components/FeaturedPropertiesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ExploreCitiesSection from "@/components/ExploreCitiesSection";
 import FeaturedCategoriesSection from "@/components/FeaturedCategoriesSection";
@@ -92,15 +93,9 @@ export default function Index() {
         <ModernHeroSection />
         
         {/* Featured Properties */}
-        <section ref={propertiesRef} className="py-8 md:py-12 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
-          {/* Background effects */}
-          <div className="absolute inset-0">
-            <div className="absolute top-1/4 left-0 w-72 h-72 bg-orange-500/5 rounded-full blur-3xl" />
-            <div className="absolute bottom-1/4 right-0 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl" />
-          </div>
-
-          
-        </section>
+        <FadeInSection>
+          <FeaturedPropertiesSection />
+        </FadeInSection>
         
         {/* Explore States / Cities */}
         <FadeInSection>
