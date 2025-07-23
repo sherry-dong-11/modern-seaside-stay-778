@@ -157,7 +157,7 @@ export default function Index() {
                   <span className="text-sm font-medium">Ready to Start?</span>
                 </motion.div>
 
-                <motion.h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent" initial={{
+                <motion.h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent" initial={{
                 opacity: 0,
                 y: 30
               }} whileInView={{
