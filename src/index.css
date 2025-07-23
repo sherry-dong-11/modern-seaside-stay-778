@@ -7,127 +7,149 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 40% 8%;
+    /* Tech-focused light theme */
+    --background: 0 0% 99%;
+    --foreground: 210 20% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 40% 8%;
+    --card-foreground: 210 20% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 40% 8%;
+    --popover-foreground: 210 20% 8%;
 
-    --primary: 25 95% 58%;
+    /* High-contrast orange primary */
+    --primary: 22 100% 51%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 98%;
-    --secondary-foreground: 210 40% 15%;
+    --secondary: 210 20% 97%;
+    --secondary-foreground: 210 20% 15%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 210 30% 45%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 15% 45%;
 
-    --accent: 25 95% 95%;
-    --accent-foreground: 25 95% 25%;
+    --accent: 22 100% 96%;
+    --accent-foreground: 22 100% 25%;
 
     --destructive: 0 85% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 88%;
-    --input: 210 20% 95%;
-    --ring: 25 95% 58%;
+    --border: 210 20% 90%;
+    --input: 210 20% 96%;
+    --ring: 22 100% 51%;
 
-    /* Premium design tokens */
-    --primary-50: 33 100% 96%;
-    --primary-100: 30 100% 90%;
-    --primary-200: 28 100% 82%;
-    --primary-500: 25 95% 58%;
-    --primary-600: 23 90% 52%;
-    --primary-900: 15 75% 25%;
+    /* Tech-savvy design tokens */
+    --primary-50: 25 100% 97%;
+    --primary-100: 24 100% 92%;
+    --primary-200: 23 100% 85%;
+    --primary-500: 22 100% 51%;
+    --primary-600: 20 95% 45%;
+    --primary-900: 15 80% 20%;
 
-    --neutral-50: 0 0% 98%;
+    /* High-contrast neutrals */
+    --neutral-50: 210 20% 98%;
     --neutral-100: 210 20% 96%;
-    --neutral-200: 210 16% 88%;
-    --neutral-300: 210 14% 76%;
-    --neutral-400: 210 12% 64%;
-    --neutral-500: 210 10% 52%;
-    --neutral-600: 210 12% 40%;
-    --neutral-700: 210 14% 28%;
-    --neutral-800: 210 16% 16%;
-    --neutral-900: 210 20% 8%;
+    --neutral-200: 210 16% 90%;
+    --neutral-300: 210 14% 78%;
+    --neutral-400: 210 12% 60%;
+    --neutral-500: 210 10% 48%;
+    --neutral-600: 210 12% 35%;
+    --neutral-700: 210 14% 25%;
+    --neutral-800: 210 16% 12%;
+    --neutral-900: 210 20% 6%;
 
-    /* Gradients */
+    /* Tech section backgrounds */
+    --section-dark: 210 20% 6%;
+    --section-dark-alt: 215 25% 8%;
+    --section-light: 210 20% 98%;
+    --section-light-alt: 0 0% 99%;
+
+    /* Tech-inspired gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary-500)), hsl(var(--primary-600)));
-    --gradient-subtle: linear-gradient(135deg, hsl(var(--neutral-50)), hsl(var(--primary-50)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-500) / 0.9), hsl(var(--primary-600) / 0.95));
+    --gradient-tech: linear-gradient(135deg, hsl(var(--section-dark)), hsl(var(--section-dark-alt)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--section-dark) / 0.95), hsl(var(--section-dark-alt) / 0.98));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--neutral-50)));
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(var(--neutral-900) / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(var(--neutral-900) / 0.1), 0 2px 4px -1px hsl(var(--neutral-900) / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(var(--neutral-900) / 0.1), 0 4px 6px -2px hsl(var(--neutral-900) / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(var(--neutral-900) / 0.1), 0 10px 10px -5px hsl(var(--neutral-900) / 0.04);
-    --shadow-primary: 0 10px 25px -3px hsl(var(--primary-500) / 0.2);
+    /* Enhanced shadows for tech feel */
+    --shadow-sm: 0 1px 2px 0 hsl(var(--neutral-900) / 0.08);
+    --shadow-md: 0 4px 6px -1px hsl(var(--neutral-900) / 0.12), 0 2px 4px -1px hsl(var(--neutral-900) / 0.08);
+    --shadow-lg: 0 10px 15px -3px hsl(var(--neutral-900) / 0.15), 0 4px 6px -2px hsl(var(--neutral-900) / 0.08);
+    --shadow-xl: 0 20px 25px -5px hsl(var(--neutral-900) / 0.15), 0 10px 10px -5px hsl(var(--neutral-900) / 0.06);
+    --shadow-primary: 0 8px 30px -3px hsl(var(--primary-500) / 0.25);
+    --shadow-tech: 0 25px 50px -12px hsl(var(--neutral-900) / 0.25);
 
     --radius: 0.75rem;
   }
 
   .dark {
-    --background: 210 20% 8%;
-    --foreground: 210 20% 98%;
+    /* Tech-focused dark theme */
+    --background: 210 20% 6%;
+    --foreground: 210 15% 98%;
 
-    --card: 210 20% 12%;
-    --card-foreground: 210 20% 98%;
+    --card: 210 18% 8%;
+    --card-foreground: 210 15% 98%;
 
-    --popover: 210 20% 12%;
-    --popover-foreground: 210 20% 98%;
+    --popover: 210 18% 8%;
+    --popover-foreground: 210 15% 98%;
 
-    --primary: 25 95% 58%;
+    /* High-contrast orange on dark */
+    --primary: 22 100% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 20% 15%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary: 210 18% 12%;
+    --secondary-foreground: 210 15% 95%;
 
-    --muted: 210 20% 15%;
-    --muted-foreground: 210 20% 65%;
+    --muted: 210 18% 12%;
+    --muted-foreground: 210 15% 65%;
 
-    --accent: 25 95% 15%;
-    --accent-foreground: 25 95% 85%;
+    --accent: 22 100% 15%;
+    --accent-foreground: 22 100% 85%;
 
     --destructive: 0 70% 55%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive-foreground: 210 15% 98%;
 
-    --border: 210 20% 20%;
-    --input: 210 20% 20%;
-    --ring: 25 95% 58%;
+    --border: 210 18% 18%;
+    --input: 210 18% 18%;
+    --ring: 22 100% 55%;
 
-    /* Dark mode premium tokens */
-    --primary-50: 15 75% 8%;
-    --primary-100: 18 80% 12%;
-    --primary-200: 20 85% 16%;
-    --primary-500: 25 95% 58%;
-    --primary-600: 27 98% 62%;
-    --primary-900: 33 100% 90%;
+    /* Dark mode tech tokens */
+    --primary-50: 15 80% 6%;
+    --primary-100: 18 85% 10%;
+    --primary-200: 20 90% 15%;
+    --primary-500: 22 100% 55%;
+    --primary-600: 24 100% 60%;
+    --primary-900: 25 100% 92%;
 
-    --neutral-50: 210 20% 8%;
-    --neutral-100: 210 18% 12%;
-    --neutral-200: 210 16% 16%;
-    --neutral-300: 210 14% 24%;
-    --neutral-400: 210 12% 36%;
-    --neutral-500: 210 10% 48%;
-    --neutral-600: 210 12% 60%;
-    --neutral-700: 210 14% 72%;
-    --neutral-800: 210 16% 84%;
-    --neutral-900: 210 20% 92%;
+    /* Dark mode high-contrast neutrals */
+    --neutral-50: 210 20% 6%;
+    --neutral-100: 210 18% 10%;
+    --neutral-200: 210 16% 15%;
+    --neutral-300: 210 14% 25%;
+    --neutral-400: 210 12% 40%;
+    --neutral-500: 210 10% 55%;
+    --neutral-600: 210 12% 70%;
+    --neutral-700: 210 14% 80%;
+    --neutral-800: 210 16% 88%;
+    --neutral-900: 210 20% 95%;
 
-    /* Dark gradients */
+    /* Dark section backgrounds */
+    --section-dark: 210 20% 4%;
+    --section-dark-alt: 215 25% 6%;
+    --section-light: 210 18% 10%;
+    --section-light-alt: 210 16% 12%;
+
+    /* Dark tech gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary-500)), hsl(var(--primary-600)));
-    --gradient-subtle: linear-gradient(135deg, hsl(var(--neutral-50)), hsl(var(--primary-50)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-500) / 0.9), hsl(var(--primary-600) / 0.95));
+    --gradient-tech: linear-gradient(135deg, hsl(var(--section-dark)), hsl(var(--section-dark-alt)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--section-dark) / 0.98), hsl(var(--section-dark-alt) / 0.95));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--section-light)));
 
-    /* Dark shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.2);
-    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
-    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -2px hsl(0 0% 0% / 0.2);
-    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.4), 0 10px 10px -5px hsl(0 0% 0% / 0.2);
-    --shadow-primary: 0 10px 25px -3px hsl(var(--primary-500) / 0.3);
+    /* Enhanced dark shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.4);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.5), 0 2px 4px -1px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.5), 0 4px 6px -2px hsl(0 0% 0% / 0.3);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.6), 0 10px 10px -5px hsl(0 0% 0% / 0.3);
+    --shadow-primary: 0 8px 30px -3px hsl(var(--primary-500) / 0.4);
+    --shadow-tech: 0 25px 50px -12px hsl(0 0% 0% / 0.6);
   }
 }
 
@@ -150,17 +172,29 @@
   .container {
     @apply px-4 md:px-6 lg:px-8 mx-auto max-w-7xl;
   }
+
+  /* Tech-focused sections */
+  .section-dark {
+    background: hsl(var(--section-dark));
+    color: hsl(var(--neutral-900));
+  }
+
+  .section-light {
+    background: hsl(var(--section-light));
+    color: hsl(var(--neutral-900));
+  }
   
+  /* Enhanced buttons for tech feel */
   .btn-primary {
-    @apply relative overflow-hidden bg-gradient-to-r from-primary to-primary-600 text-primary-foreground rounded-xl px-8 py-3.5 font-semibold transition-all duration-300 hover:shadow-primary active:scale-[0.98] before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity;
+    @apply relative overflow-hidden bg-gradient-to-r from-primary to-primary-600 text-primary-foreground rounded-xl px-8 py-3.5 font-semibold transition-all duration-300 shadow-lg shadow-primary/25 hover:shadow-primary hover:shadow-xl active:scale-[0.98] before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity;
   }
 
   .btn-secondary {
-    @apply bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-xl px-8 py-3.5 font-semibold transition-all duration-300 hover:bg-white/20 hover:border-white/30 active:scale-[0.98];
+    @apply bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-xl px-8 py-3.5 font-semibold transition-all duration-300 hover:bg-white/20 hover:border-white/30 hover:shadow-lg active:scale-[0.98];
   }
 
   .btn-outline {
-    @apply border-2 border-primary text-primary bg-transparent rounded-xl px-8 py-3.5 font-semibold transition-all duration-300 hover:bg-primary hover:text-primary-foreground active:scale-[0.98];
+    @apply border-2 border-primary text-primary bg-transparent rounded-xl px-8 py-3.5 font-semibold transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-lg active:scale-[0.98];
   }
   
   .section {
@@ -171,20 +205,25 @@
     @apply py-12 md:py-16 lg:py-20;
   }
   
+  /* Enhanced cards for tech aesthetic */
   .card-modern {
-    @apply bg-white dark:bg-neutral-100 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-200 dark:border-neutral-200 hover:border-primary/20 dark:hover:border-primary/30;
+    @apply bg-white dark:bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-200 dark:border-neutral-200 hover:border-primary/20 dark:hover:border-primary/30 hover:-translate-y-1;
   }
 
   .card-premium {
-    @apply bg-gradient-to-br from-white to-neutral-50 dark:from-neutral-100 dark:to-neutral-200 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-300;
+    @apply bg-white dark:bg-card rounded-2xl p-8 shadow-xl hover:shadow-tech transition-all duration-500 border border-neutral-200 dark:border-neutral-200 hover:border-primary/30 hover:-translate-y-2;
   }
   
   .glass-card {
-    @apply bg-white/80 dark:bg-neutral-100/90 backdrop-blur-xl border border-white/20 dark:border-neutral-200/30 rounded-2xl shadow-lg;
+    @apply bg-white/80 dark:bg-card/90 backdrop-blur-xl border border-white/20 dark:border-neutral-200/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300;
   }
 
   .hero-gradient {
     background: var(--gradient-hero);
+  }
+
+  .tech-gradient {
+    background: var(--gradient-tech);
   }
 
   .text-gradient {
@@ -192,7 +231,7 @@
   }
 
   .input-modern {
-    @apply w-full px-4 py-3 rounded-xl border border-neutral-200 dark:border-neutral-300 bg-white dark:bg-neutral-50 text-neutral-900 placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200;
+    @apply w-full px-4 py-3 rounded-xl border border-neutral-200 dark:border-neutral-300 bg-white dark:bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200;
   }
   
   .page-transition-enter {

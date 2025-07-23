@@ -43,15 +43,16 @@ export const HomeLoanCalculatorSection = () => {
       setStampDuty(calculated);
     }
   };
-  return <section className="py-8 bg-muted">
+  return (
+    <section className="py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="mb-6 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-2 text-left text-slate-950">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-foreground">
               Property Purchase Calculators
             </h2>
-            <p className="text-left text-base text-slate-500">
+            <p className="text-muted-foreground">
               Calculate your loan capacity and estimate stamp duty costs
             </p>
           </div>
@@ -60,11 +61,11 @@ export const HomeLoanCalculatorSection = () => {
           <div className="flex flex-col lg:flex-row gap-6">
             
             {/* Home Loan Calculator */}
-            <Card className="bg-card border border-border/20 shadow-lg rounded-xl flex-1 min-h-[480px]">
-              <CardContent className="p-3 lg:p-4 h-full flex flex-col">
+            <div className="card-premium hover:-translate-y-2 transition-all duration-500 flex-1 min-h-[480px]">
+              <div className="p-4 lg:p-6 h-full flex flex-col">
                 {/* Title */}
-                <div className="mb-3">
-                  <h3 className="text-primary font-semibold text-xl mb-1">
+                <div className="mb-6">
+                  <h3 className="text-primary font-semibold text-xl mb-2">
                     Home Loan Calculator
                   </h3>
                   <p className="text-sm text-muted-foreground">
@@ -72,9 +73,8 @@ export const HomeLoanCalculatorSection = () => {
                   </p>
                 </div>
 
-                {/* Form Section - White Card */}
-                <Card className="bg-white border border-gray-200 rounded-lg mb-3 flex-1">
-                  <CardContent className="p-3 lg:p-4">
+                {/* Form Section */}
+                <div className="bg-white dark:bg-card border border-neutral-200 dark:border-neutral-200 rounded-xl mb-4 flex-1 p-4 lg:p-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4 items-center">
                       {/* Property Price */}
                       <div className="space-y-1">
@@ -126,40 +126,39 @@ export const HomeLoanCalculatorSection = () => {
                         </button>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
+                </div>
 
                 {/* Result Block - Dark Background */}
-                <div className="bg-gray-800 text-white rounded-lg p-4 mt-auto">
+                <div className="tech-gradient text-white rounded-xl p-6 mt-auto">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {/* Left Side - Repayment */}
                     <div>
-                      <div className="text-sm text-gray-300 mb-1">Estimated repayment</div>
+                      <div className="text-sm text-neutral-300 mb-2">Estimated repayment</div>
                       <div className="text-2xl lg:text-3xl font-bold">
                         ${Math.round(calculateMonthlyRepayment()).toLocaleString()} /month
                       </div>
                     </div>
 
                     {/* Right Side - Contact */}
-                    <div className="space-y-2">
-                      <div className="text-sm text-gray-300">What's next?</div>
+                    <div className="space-y-3">
+                      <div className="text-sm text-neutral-300">What's next?</div>
                       
-                      <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200" size="sm">
+                      <Button className="w-full btn-primary" size="sm">
                         <Phone className="w-4 h-4 mr-2" />
                         Contact Agent
                       </Button>
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
             {/* Stamp Duty Calculator */}
-            <Card className="bg-card border border-border/20 shadow-lg rounded-xl flex-1 min-h-[480px]">
-              <CardContent className="p-4 lg:p-6 h-full flex flex-col">
+            <div className="card-premium hover:-translate-y-2 transition-all duration-500 flex-1 min-h-[480px]">
+              <div className="p-4 lg:p-6 h-full flex flex-col">
                 {/* Title */}
-                <div className="mb-4">
-                  <h3 className="text-primary font-semibold text-xl mb-1">
+                <div className="mb-6">
+                  <h3 className="text-primary font-semibold text-xl mb-2">
                     Stamp Duty Calculator
                   </h3>
                   <p className="text-sm text-muted-foreground">
@@ -230,14 +229,15 @@ export const HomeLoanCalculatorSection = () => {
 
                 {/* CTA Button - Aligned to bottom */}
                 <div className="pt-4">
-                  <Button onClick={calculateStampDuty} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-4 px-6 rounded-lg text-lg transition-colors duration-200" size="lg" disabled={!stampPropertyPrice || !state}>
+                  <Button onClick={calculateStampDuty} className="w-full btn-primary py-4 px-6 text-lg" size="lg" disabled={!stampPropertyPrice || !state}>
                     Calculate Stamp Duty
                   </Button>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };

@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Star } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { motion } from "framer-motion";
+
 interface Testimonial {
   id: number;
   name: string;
@@ -10,6 +10,7 @@ interface Testimonial {
   content: string;
   rating: number;
 }
+
 const testimonials: Testimonial[] = [{
   id: 1,
   name: "Sophia Martinez",
@@ -32,88 +33,121 @@ const testimonials: Testimonial[] = [{
   content: "We spent a wonderful week at this beachfront paradise. The sunrise views from our terrace were worth the trip alone. Exceptionally clean and beautifully designed spaces.",
   rating: 4
 }];
+
 export default function TestimonialsSection() {
-  const {
-    t
-  } = useLanguage();
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const nextTestimonial = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setActiveIndex(prev => (prev + 1) % testimonials.length);
-    setTimeout(() => {
-      setIsAnimating(false);
-    }, 500);
-  };
-  const prevTestimonial = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setActiveIndex(prev => (prev - 1 + testimonials.length) % testimonials.length);
-    setTimeout(() => {
-      setIsAnimating(false);
-    }, 500);
-  };
-  useEffect(() => {
-    const interval = setInterval(nextTestimonial, 8000);
-    return () => clearInterval(interval);
-  }, []);
-  return <section className="bg-muted py-8 sm:py-12 lg:py-[55px]">
+  const { t } = useLanguage();
+
+  return (
+    <section className="py-12">
       <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-8 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <motion.h2 
+            className="text-3xl md:text-4xl font-bold mb-4 text-foreground"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             {t.testimonials.title}
-          </h2>
-          <p className="text-muted-foreground">
+          </motion.h2>
+          <motion.p 
+            className="text-muted-foreground"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
             {t.testimonials.description}
-          </p>
+          </motion.p>
         </div>
         
-        <div className="relative max-w-4xl mx-auto">
-          <div className="relative min-h-[350px] sm:min-h-[400px] md:min-h-[300px]">
-            {testimonials.map((testimonial, index) => <div key={testimonial.id} className={cn("absolute inset-0 glass-card p-4 sm:p-6 md:p-8 lg:p-10 transition-all duration-500", activeIndex === index ? "opacity-100 translate-x-0 z-10" : index < activeIndex ? "opacity-0 -translate-x-full z-0" : "opacity-0 translate-x-full z-0")}>
-                <div className="flex flex-col md:flex-row gap-4 sm:gap-6 h-full">
-                  <div className="flex flex-col items-center md:items-start shrink-0">
-                    <div className="rounded-full overflow-hidden w-16 h-16 sm:w-20 sm:h-20 mb-3 sm:mb-4 border-2 border-primary">
-                      <img src={testimonial.avatar} alt={testimonial.name} className="w-full h-full object-cover" />
-                    </div>
-                    <div className="flex mb-2">
-                      {[...Array(5)].map((_, i) => <Star key={i} className={`h-3 w-3 sm:h-4 sm:w-4 ${i < testimonial.rating ? "fill-primary text-primary" : "text-muted-foreground"}`} />)}
-                    </div>
-                    <h4 className="text-base sm:text-lg font-semibold text-center md:text-left">{testimonial.name}</h4>
-                    <p className="text-xs sm:text-sm text-muted-foreground text-center md:text-left">{testimonial.location}</p>
+        {/* 2 Per Row Grid Layout */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {testimonials.slice(0, 2).map((testimonial, index) => (
+            <motion.div 
+              key={testimonial.id} 
+              className="card-premium group hover:-translate-y-2 transition-all duration-500"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+            >
+              <div className="flex flex-col gap-6">
+                {/* Header with Avatar and Rating */}
+                <div className="flex items-center gap-4">
+                  <div className="rounded-full overflow-hidden w-16 h-16 border-2 border-primary/20 group-hover:border-primary/40 transition-colors duration-300">
+                    <img 
+                      src={testimonial.avatar} 
+                      alt={testimonial.name} 
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" 
+                    />
                   </div>
-                  
-                  <div className="flex-1 flex items-center min-h-0">
-                    <blockquote className="italic text-muted-foreground text-sm sm:text-base text-center md:text-left leading-relaxed">
-                      "{testimonial.content}"
-                    </blockquote>
+                  <div className="flex-1">
+                    <div className="flex mb-2">
+                      {[...Array(5)].map((_, i) => (
+                        <Star 
+                          key={i} 
+                          className={`h-4 w-4 transition-colors duration-300 ${i < testimonial.rating ? "fill-primary text-primary" : "text-neutral-300"}`} 
+                        />
+                      ))}
+                    </div>
+                    <h4 className="text-lg font-semibold text-foreground">{testimonial.name}</h4>
+                    <p className="text-sm text-muted-foreground">{testimonial.location}</p>
                   </div>
                 </div>
-              </div>)}
-          </div>
-          
-          <div className="flex justify-between mt-8">
-            <button onClick={prevTestimonial} className="p-2 rounded-full bg-card hover:bg-muted border border-border transition-colors" disabled={isAnimating}>
-              <ChevronLeft className="h-5 w-5" />
-              <span className="sr-only">Previous testimonial</span>
-            </button>
-            
-            <div className="flex space-x-2">
-              {testimonials.map((_, index) => <button key={index} onClick={() => {
-              if (isAnimating) return;
-              setIsAnimating(true);
-              setActiveIndex(index);
-              setTimeout(() => setIsAnimating(false), 500);
-            }} className={`w-3 h-3 rounded-full transition-all ${activeIndex === index ? "bg-primary w-6" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"}`} aria-label={`Go to testimonial ${index + 1}`} />)}
-            </div>
-            
-            <button onClick={nextTestimonial} className="p-2 rounded-full bg-card hover:bg-muted border border-border transition-colors" disabled={isAnimating}>
-              <ChevronRight className="h-5 w-5" />
-              <span className="sr-only">Next testimonial</span>
-            </button>
-          </div>
+                
+                {/* Testimonial Content */}
+                <blockquote className="text-muted-foreground leading-relaxed">
+                  "{testimonial.content}"
+                </blockquote>
+              </div>
+            </motion.div>
+          ))}
         </div>
+        
+        {/* Third testimonial in full width if exists */}
+        {testimonials.length > 2 && (
+          <div className="mt-8">
+            <motion.div 
+              className="card-premium group hover:-translate-y-2 transition-all duration-500 max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+            >
+              <div className="flex flex-col md:flex-row gap-6">
+                <div className="flex flex-col items-center md:items-start shrink-0">
+                  <div className="rounded-full overflow-hidden w-20 h-20 mb-4 border-2 border-primary/20 group-hover:border-primary/40 transition-colors duration-300">
+                    <img 
+                      src={testimonials[2].avatar} 
+                      alt={testimonials[2].name} 
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" 
+                    />
+                  </div>
+                  <div className="flex mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star 
+                        key={i} 
+                        className={`h-4 w-4 transition-colors duration-300 ${i < testimonials[2].rating ? "fill-primary text-primary" : "text-neutral-300"}`} 
+                      />
+                    ))}
+                  </div>
+                  <h4 className="text-lg font-semibold text-foreground text-center md:text-left">{testimonials[2].name}</h4>
+                  <p className="text-sm text-muted-foreground text-center md:text-left">{testimonials[2].location}</p>
+                </div>
+                
+                <div className="flex-1 flex items-center">
+                  <blockquote className="text-muted-foreground text-center md:text-left leading-relaxed">
+                    "{testimonials[2].content}"
+                  </blockquote>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
       </div>
-    </section>;
+    </section>
+  );
 }
