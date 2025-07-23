@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import ModernNavbar from "@/components/ModernNavbar";
+import PacasoNavbar from "@/components/PacasoNavbar";
 import ModernFooter from "@/components/ModernFooter";
-import ModernHeroSection from "@/components/ModernHeroSection";
+import PacasoHeroSection from "@/components/PacasoHeroSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ExploreCitiesSection from "@/components/ExploreCitiesSection";
 import FeaturedCategoriesSection from "@/components/FeaturedCategoriesSection";
@@ -83,14 +83,14 @@ export default function Index() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <ModernNavbar />
+      <PacasoNavbar />
       
-      <main className="flex-1 pt-20">
-        {/* Modern Hero Section */}
-        <ModernHeroSection />
+      <main className="flex-1">
+        {/* Pacaso Hero Section */}
+        <PacasoHeroSection />
         
         {/* Featured Properties */}
-        <section ref={propertiesRef} className="py-8 md:py-12 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
+        <section id="featured" ref={propertiesRef} className="py-16 md:py-24 bg-white dark:bg-neutral-900 relative overflow-hidden">
           {/* Background effects */}
           <div className="absolute inset-0">
             <div className="absolute top-1/4 left-0 w-72 h-72 bg-orange-500/5 rounded-full blur-3xl" />

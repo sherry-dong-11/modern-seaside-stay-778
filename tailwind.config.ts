@@ -74,6 +74,10 @@ export default {
 					700: 'hsl(var(--neutral-700))',
 					800: 'hsl(var(--neutral-800))',
 					900: 'hsl(var(--neutral-900))'
+				},
+				sea: {
+					DEFAULT: 'hsl(var(--primary))',
+					dark: 'hsl(var(--primary-600))'
 				}
 			},
 			borderRadius: {
