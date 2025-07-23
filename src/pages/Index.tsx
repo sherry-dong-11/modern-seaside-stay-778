@@ -85,50 +85,85 @@ export default function Index() {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
-  return <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col bg-background">
       <ModernNavbar />
       
       <main className="flex-1 pt-20">
-        {/* Modern Hero Section */}
-        <ModernHeroSection />
+        {/* Modern Hero Section - Dark */}
+        <div className="section-dark">
+          <ModernHeroSection />
+        </div>
         
-        {/* Featured Properties */}
+        {/* Divider */}
+        <div className="divider-bold"></div>
+        
+        {/* Featured Properties - Light */}
         <FadeInSection>
-          <FeaturedPropertiesSection />
+          <div className="section section-light">
+            <FeaturedPropertiesSection />
+          </div>
         </FadeInSection>
         
-        {/* Explore States / Cities */}
+        {/* Divider */}
+        <div className="divider-subtle"></div>
+        
+        {/* Explore States / Cities - Light Sand */}
         <FadeInSection>
-          <ExploreCitiesSection />
+          <div className="section section-light-alt">
+            <ExploreCitiesSection />
+          </div>
         </FadeInSection>
         
-        {/* Featured Categories */}
+        {/* Divider */}
+        <div className="divider-bold"></div>
+        
+        {/* Featured Categories - Dark Alt */}
         <FadeInSection>
-          <FeaturedCategoriesSection />
+          <div className="section section-dark-alt">
+            <FeaturedCategoriesSection />
+          </div>
         </FadeInSection>
         
-        {/* Home Loan Calculator */}
+        {/* Divider */}
+        <div className="divider-subtle"></div>
+        
+        {/* Home Loan Calculator - Light */}
         <FadeInSection>
-          <HomeLoanCalculatorSection />
+          <div className="section section-light">
+            <HomeLoanCalculatorSection />
+          </div>
         </FadeInSection>
         
-        {/* Latest News */}
+        {/* Divider */}
+        <div className="divider-bold"></div>
+        
+        {/* Latest News - Light Sand */}
         <FadeInSection>
-          <LatestNewsSection />
+          <div className="section section-light-alt">
+            <LatestNewsSection />
+          </div>
         </FadeInSection>
         
-        {/* Testimonials */}
+        {/* Divider */}
+        <div className="divider-subtle"></div>
+        
+        {/* Testimonials - Dark */}
         <FadeInSection>
-          <TestimonialsSection />
+          <div className="section section-dark">
+            <TestimonialsSection />
+          </div>
         </FadeInSection>
         
-        {/* CTA Section */}
+        {/* Divider */}
+        <div className="divider-bold"></div>
+        
+        {/* CTA Section - Dark Alt */}
         <FadeInSection>
-          <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden py-24">
+          <section className="relative section-dark-alt overflow-hidden py-24">
             {/* Background effects */}
             <div className="absolute inset-0">
-              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
-              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
+              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/15 rounded-full blur-3xl" />
             </div>
             
             <div className="container relative z-10">
@@ -153,11 +188,11 @@ export default function Index() {
                 delay: 0.2,
                 duration: 0.6
               }} className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20">
-                  <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  <span className="text-sm font-medium">Ready to Start?</span>
+                  <Star className="w-4 h-4 fill-primary text-primary" />
+                  <span className="text-sm font-bold text-white">Ready to Start?</span>
                 </motion.div>
 
-                <motion.h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent" initial={{
+                <motion.h2 className="text-4xl md:text-5xl font-bold mb-6 text-white" initial={{
                 opacity: 0,
                 y: 30
               }} whileInView={{
@@ -170,7 +205,7 @@ export default function Index() {
                   Ready to Find Your Dream Home?
                 </motion.h2>
                 
-                <motion.p className="text-xl text-gray-300 mb-12 leading-relaxed" initial={{
+                <motion.p className="text-xl text-gray-300 mb-12 leading-relaxed font-medium" initial={{
                 opacity: 0,
                 y: 30
               }} whileInView={{
@@ -198,7 +233,7 @@ export default function Index() {
                 }} whileTap={{
                   scale: 0.95
                 }}>
-                    <Button size="lg" className="bg-white text-slate-900 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                       <BookOpen className="w-5 h-5 mr-2" />
                       New Build Purchase Guide
                     </Button>
@@ -208,7 +243,7 @@ export default function Index() {
                 }} whileTap={{
                   scale: 0.95
                 }}>
-                    <Button size="lg" variant="outline" className="border-white/30 text-black hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg font-semibold rounded-full">
+                    <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg font-bold rounded-xl border-2">
                       <MessageCircle className="w-5 h-5 mr-2" />
                       Chat with AI Expert
                     </Button>
@@ -234,7 +269,7 @@ export default function Index() {
                 }, {
                   icon: CheckCircle2,
                   text: "Verified properties"
-                }].map((feature, index) => <motion.div key={index} className="flex flex-col items-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300" initial={{
+                }].map((feature, index) => <motion.div key={index} className="flex flex-col items-center p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 shadow-lg" initial={{
                   opacity: 0,
                   y: 20
                 }} whileInView={{
@@ -246,8 +281,8 @@ export default function Index() {
                 }} whileHover={{
                   y: -5
                 }}>
-                      <feature.icon className="w-8 h-8 text-green-400 mb-3" />
-                      <span className="text-gray-300 font-medium">{feature.text}</span>
+                      <feature.icon className="w-8 h-8 text-primary mb-4" />
+                      <span className="text-gray-200 font-semibold">{feature.text}</span>
                     </motion.div>)}
                 </motion.div>
               </motion.div>
