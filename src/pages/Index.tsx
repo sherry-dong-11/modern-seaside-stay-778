@@ -92,47 +92,35 @@ export default function Index() {
         {/* Modern Hero Section */}
         <ModernHeroSection />
         
-        {/* Featured Properties - Light Section */}
-        <section className="section section-light section-divider">
-          <FadeInSection>
-            <FeaturedPropertiesSection />
-          </FadeInSection>
-        </section>
+        {/* Featured Properties */}
+        <FadeInSection>
+          <FeaturedPropertiesSection />
+        </FadeInSection>
         
-        {/* Explore States / Cities - Dark Section */}
-        <section className="section section-dark section-divider-dark">
-          <FadeInSection>
-            <ExploreCitiesSection />
-          </FadeInSection>
-        </section>
+        {/* Explore States / Cities */}
+        <FadeInSection>
+          <ExploreCitiesSection />
+        </FadeInSection>
         
-        {/* Featured Categories - Light Section */}
-        <section className="section section-light section-divider">
-          <FadeInSection>
-            <FeaturedCategoriesSection />
-          </FadeInSection>
-        </section>
+        {/* Featured Categories */}
+        <FadeInSection>
+          <FeaturedCategoriesSection />
+        </FadeInSection>
         
-        {/* Home Loan Calculator - Charcoal Section */}
-        <section className="section section-charcoal section-divider-dark">
-          <FadeInSection>
-            <HomeLoanCalculatorSection />
-          </FadeInSection>
-        </section>
+        {/* Home Loan Calculator */}
+        <FadeInSection>
+          <HomeLoanCalculatorSection />
+        </FadeInSection>
         
-        {/* Latest News - Light Section */}
-        <section className="section section-light section-divider">
-          <FadeInSection>
-            <LatestNewsSection />
-          </FadeInSection>
-        </section>
+        {/* Latest News */}
+        <FadeInSection>
+          <LatestNewsSection />
+        </FadeInSection>
         
-        {/* Testimonials - Dark Section */}
-        <section className="section section-dark section-divider-dark">
-          <FadeInSection>
-            <TestimonialsSection />
-          </FadeInSection>
-        </section>
+        {/* Testimonials */}
+        <FadeInSection>
+          <TestimonialsSection />
+        </FadeInSection>
         
         {/* CTA Section */}
         <FadeInSection>
