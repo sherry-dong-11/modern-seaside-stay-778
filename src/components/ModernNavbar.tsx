@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
@@ -10,10 +10,14 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ModernNavbar() {
   const { t } = useLanguage();
+  const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [newHomeDropdownOpen, setNewHomeDropdownOpen] = useState(false);
   const [professionalsDropdownOpen, setProfessionalsDropdownOpen] = useState(false);
+
+  // Check if we're on a content page (not homepage)
+  const isContentPage = location.pathname !== "/";
 
   const newHomeDropdownItems = [
     { name: "Apartments", path: "/apartments" },
@@ -105,6 +109,7 @@ export default function ModernNavbar() {
             <motion.button 
               className={cn(
                 "text-sm font-medium transition-all duration-300 flex items-center gap-1 py-2 px-3 rounded-lg relative overflow-hidden whitespace-nowrap",
+                isContentPage ? "text-slate-900 hover:text-primary" : 
                 scrolled ? "text-slate-900 hover:text-primary" : "text-white hover:text-orange-300"
               )}
               whileHover={{ scale: 1.05 }}
@@ -171,6 +176,7 @@ export default function ModernNavbar() {
                 to={link.path} 
                 className={cn(
                   "text-sm font-medium transition-all duration-300 py-2 px-3 rounded-lg relative overflow-hidden group whitespace-nowrap",
+                  isContentPage ? "text-slate-900 hover:text-primary" :
                   scrolled ? "text-slate-900 hover:text-primary" : "text-white hover:text-orange-300"
                 )}
               >
@@ -195,6 +201,7 @@ export default function ModernNavbar() {
             <motion.button 
               className={cn(
                 "text-sm font-medium transition-all duration-300 flex items-center gap-1 py-2 px-3 rounded-lg relative overflow-hidden whitespace-nowrap",
+                isContentPage ? "text-slate-900 hover:text-primary" :
                 scrolled ? "text-slate-900 hover:text-primary" : "text-white hover:text-orange-300"
               )}
               whileHover={{ scale: 1.05 }}
@@ -257,10 +264,10 @@ export default function ModernNavbar() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          <div className={cn("transition-colors", scrolled ? "text-slate-900" : "text-white")}>
+          <div className={cn("transition-colors", isContentPage ? "text-slate-900" : scrolled ? "text-slate-900" : "text-white")}>
             <LanguageSelector />
           </div>
-          <div className={cn("transition-colors", scrolled ? "text-slate-900" : "text-white")}>
+          <div className={cn("transition-colors", isContentPage ? "text-slate-900" : scrolled ? "text-slate-900" : "text-white")}>
             <ThemeToggle />
           </div>
           <motion.div
@@ -275,16 +282,17 @@ export default function ModernNavbar() {
 
         {/* Mobile menu button */}
         <div className="lg:hidden flex items-center space-x-3">
-          <div className={cn("transition-colors", scrolled ? "text-slate-900" : "text-white")}>
+          <div className={cn("transition-colors", isContentPage ? "text-slate-900" : scrolled ? "text-slate-900" : "text-white")}>
             <LanguageSelector />
           </div>
-          <div className={cn("transition-colors", scrolled ? "text-slate-900" : "text-white")}>
+          <div className={cn("transition-colors", isContentPage ? "text-slate-900" : scrolled ? "text-slate-900" : "text-white")}>
             <ThemeToggle />
           </div>
           <motion.button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className={cn(
               "p-2 rounded-lg transition-colors",
+              isContentPage ? "text-slate-900 hover:text-primary" :
               scrolled ? "text-slate-900 hover:text-primary" : "text-white hover:text-orange-300"
             )}
             whileHover={{ scale: 1.05 }}
