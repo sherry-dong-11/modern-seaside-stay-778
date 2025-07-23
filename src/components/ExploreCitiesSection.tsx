@@ -67,7 +67,7 @@ export default function ExploreCitiesSection() {
               <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               
               <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                <Button variant="hero" size="lg" className="border-white/30 bg-white/10 hover:bg-white/20 backdrop-blur-sm shadow-2xl text-orange-600">
+                <Button variant="hero" size="lg" className="border-white/30 bg-white/10 hover:bg-white/20 backdrop-blur-sm shadow-2xl text-white">
                   Explore {city.name}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
