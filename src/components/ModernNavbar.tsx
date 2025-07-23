@@ -267,7 +267,7 @@ export default function ModernNavbar() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button asChild className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+            <Button asChild className="btn-primary">
               <Link to="/booking">{t.nav.bookNow}</Link>
             </Button>
           </motion.div>
@@ -425,7 +425,7 @@ export default function ModernNavbar() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
                 >
-                  <Button asChild className="w-full bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white border-0">
+                  <Button asChild className="w-full btn-primary">
                     <Link to="/booking" onClick={() => setMobileMenuOpen(false)}>
                       {t.nav.bookNow}
                     </Link>
