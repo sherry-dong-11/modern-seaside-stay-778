@@ -58,94 +58,62 @@ export default function TestimonialsSection() {
     const interval = setInterval(nextTestimonial, 8000);
     return () => clearInterval(interval);
   }, []);
-  return (
-    <section className="section-sm bg-soft-grey">
+  return <section className="bg-muted py-8 sm:py-12 lg:py-[55px]">
       <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-charcoal">
+        <div className="text-center max-w-3xl mx-auto mb-8 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">
             {t.testimonials.title}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground">
             {t.testimonials.description}
           </p>
         </div>
-
+        
         <div className="relative max-w-4xl mx-auto">
-          {/* Testimonials */}
-          <div className="overflow-hidden rounded-2xl">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-            >
-              {testimonials.map((testimonial, index) => (
-                <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
-                  <div className="testimonial-card">
-                    <div className="flex items-start mb-6">
-                      <img
-                        src={testimonial.avatar}
-                        alt={testimonial.name}
-                        className="w-16 h-16 rounded-full mr-4 object-cover border-2 border-neutral-200"
-                      />
-                      <div className="flex-1">
-                        <h3 className="font-semibold text-charcoal text-lg mb-1">
-                          {testimonial.name}
-                        </h3>
-                        <p className="text-muted-foreground text-sm mb-3">
-                          {testimonial.location}
-                        </p>
-                        <div className="flex">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 fill-orange text-orange" />
-                          ))}
-                        </div>
-                      </div>
+          <div className="relative min-h-[350px] sm:min-h-[400px] md:min-h-[300px]">
+            {testimonials.map((testimonial, index) => <div key={testimonial.id} className={cn("absolute inset-0 glass-card p-4 sm:p-6 md:p-8 lg:p-10 transition-all duration-500", activeIndex === index ? "opacity-100 translate-x-0 z-10" : index < activeIndex ? "opacity-0 -translate-x-full z-0" : "opacity-0 translate-x-full z-0")}>
+                <div className="flex flex-col md:flex-row gap-4 sm:gap-6 h-full">
+                  <div className="flex flex-col items-center md:items-start shrink-0">
+                    <div className="rounded-full overflow-hidden w-16 h-16 sm:w-20 sm:h-20 mb-3 sm:mb-4 border-2 border-primary">
+                      <img src={testimonial.avatar} alt={testimonial.name} className="w-full h-full object-cover" />
                     </div>
-                    <blockquote className="text-neutral-700 dark:text-neutral-300 text-lg leading-relaxed italic">
+                    <div className="flex mb-2">
+                      {[...Array(5)].map((_, i) => <Star key={i} className={`h-3 w-3 sm:h-4 sm:w-4 ${i < testimonial.rating ? "fill-primary text-primary" : "text-muted-foreground"}`} />)}
+                    </div>
+                    <h4 className="text-base sm:text-lg font-semibold text-center md:text-left">{testimonial.name}</h4>
+                    <p className="text-xs sm:text-sm text-muted-foreground text-center md:text-left">{testimonial.location}</p>
+                  </div>
+                  
+                  <div className="flex-1 flex items-center min-h-0">
+                    <blockquote className="italic text-muted-foreground text-sm sm:text-base text-center md:text-left leading-relaxed">
                       "{testimonial.content}"
                     </blockquote>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>)}
           </div>
-
-          {/* Navigation buttons */}
-          <button
-            onClick={prevTestimonial}
-            disabled={isAnimating}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 fintech-card p-3 rounded-full hover:shadow-lg transition-all disabled:opacity-50"
-          >
-            <ChevronLeft className="w-5 h-5 text-charcoal" />
-          </button>
-          <button
-            onClick={nextTestimonial}
-            disabled={isAnimating}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 fintech-card p-3 rounded-full hover:shadow-lg transition-all disabled:opacity-50"
-          >
-            <ChevronRight className="w-5 h-5 text-charcoal" />
-          </button>
-
-          {/* Pagination indicators */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  if (!isAnimating) {
-                    setActiveIndex(index);
-                  }
-                }}
-                className={cn(
-                  "w-3 h-3 rounded-full transition-colors",
-                  index === activeIndex
-                    ? "bg-orange"
-                    : "bg-neutral-300 hover:bg-neutral-400"
-                )}
-              />
-            ))}
+          
+          <div className="flex justify-between mt-8">
+            <button onClick={prevTestimonial} className="p-2 rounded-full bg-card hover:bg-muted border border-border transition-colors" disabled={isAnimating}>
+              <ChevronLeft className="h-5 w-5" />
+              <span className="sr-only">Previous testimonial</span>
+            </button>
+            
+            <div className="flex space-x-2">
+              {testimonials.map((_, index) => <button key={index} onClick={() => {
+              if (isAnimating) return;
+              setIsAnimating(true);
+              setActiveIndex(index);
+              setTimeout(() => setIsAnimating(false), 500);
+            }} className={`w-3 h-3 rounded-full transition-all ${activeIndex === index ? "bg-primary w-6" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"}`} aria-label={`Go to testimonial ${index + 1}`} />)}
+            </div>
+            
+            <button onClick={nextTestimonial} className="p-2 rounded-full bg-card hover:bg-muted border border-border transition-colors" disabled={isAnimating}>
+              <ChevronRight className="h-5 w-5" />
+              <span className="sr-only">Next testimonial</span>
+            </button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }

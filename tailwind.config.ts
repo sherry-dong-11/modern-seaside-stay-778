@@ -20,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'heading': ['Manrope', 'Inter', 'sans-serif'],
-				'body': ['Inter', 'sans-serif'],
+				'playfair': ['Playfair Display', 'serif'],
+				'inter': ['Inter', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -74,15 +74,7 @@ export default {
 					700: 'hsl(var(--neutral-700))',
 					800: 'hsl(var(--neutral-800))',
 					900: 'hsl(var(--neutral-900))'
-				},
-				charcoal: 'hsl(var(--charcoal))',
-				orange: {
-					DEFAULT: 'hsl(var(--orange))',
-					dark: 'hsl(var(--orange-dark))',
-					light: 'hsl(var(--orange-light))'
-				},
-				'warm-white': 'hsl(var(--warm-white))',
-				'soft-grey': 'hsl(var(--soft-grey))'
+				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
