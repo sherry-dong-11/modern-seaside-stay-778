@@ -133,7 +133,7 @@ export default function FeaturedPropertiesSection() {
             <div className="flex">
               {featuredProperties.map((property) => (
                 <div key={property.id} className="flex-[0_0_100%] min-w-0 px-4">
-                  <div className="group relative bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+                  <div className="group relative bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
                     {/* Image Container */}
                     <div className="relative aspect-[16/9] overflow-hidden">
                       <img
