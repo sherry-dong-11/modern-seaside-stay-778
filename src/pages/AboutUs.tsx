@@ -2,7 +2,20 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Users, Award, Home, Calendar, MapPin, Phone, Mail } from "lucide-react";
+import { 
+  Target, 
+  Lightbulb, 
+  Heart, 
+  Users, 
+  MapPin, 
+  Building, 
+  Compass, 
+  Sparkles,
+  ArrowRight,
+  CheckCircle,
+  Mail,
+  Phone
+} from "lucide-react";
 import ModernNavbar from "@/components/ModernNavbar";
 import ModernFooter from "@/components/ModernFooter";
 import FadeInSection from "@/components/FadeInSection";
@@ -11,38 +24,38 @@ import { Link } from "react-router-dom";
 export default function AboutUs() {
   const { t } = useLanguage();
 
-  const stats = [
-    { icon: Home, number: "500+", label: "Properties Managed" },
-    { icon: Users, number: "10K+", label: "Happy Customers" },
-    { icon: Award, number: "15+", label: "Years Experience" },
-    { icon: Calendar, number: "24/7", label: "Customer Support" }
+  const values = [
+    {
+      icon: Heart,
+      title: "Thoughtful Development",
+      description: "Every community we create is designed with intention, considering how spaces bring people together and enhance daily life."
+    },
+    {
+      icon: Lightbulb,
+      title: "Intelligent Tools",
+      description: "We leverage cutting-edge technology to streamline your journey, making property discovery and selection effortless."
+    },
+    {
+      icon: Compass,
+      title: "Clear Information",
+      description: "Transparency is at our core. We provide comprehensive, honest information to help you make informed decisions."
+    },
+    {
+      icon: Sparkles,
+      title: "Inspiring Journey",
+      description: "Finding your new home should feel exciting, not overwhelming. We make every step of the process inspiring and enjoyable."
+    }
   ];
 
-  const teamMembers = [
-    {
-      name: "Sarah Johnson",
-      role: "CEO & Founder",
-      image: "/lovable-uploads/45e89a4e-b7de-45de-9bb3-c273d5f1e5c1.png",
-      description: "With over 15 years in real estate, Sarah leads our vision of making quality housing accessible to everyone."
-    },
-    {
-      name: "Michael Chen",
-      role: "Head of Operations",
-      image: "/lovable-uploads/656753f9-a816-4923-ae1b-085d43457414.png",
-      description: "Michael ensures smooth operations and exceptional service delivery across all our properties."
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Customer Experience Director",
-      image: "/lovable-uploads/76685c20-ccdc-4df4-90d5-dfe3498fbbf6.png",
-      description: "Emily leads our customer-first approach, ensuring every resident feels at home."
-    },
-    {
-      name: "David Kim",
-      role: "Property Development Manager",
-      image: "/lovable-uploads/ec1d0529-2ae8-4481-8329-b97ea749e03f.png",
-      description: "David oversees our expansion and ensures all properties meet our high standards."
-    }
+  const achievements = [
+    { number: "50+", label: "Communities Across Australia" },
+    { number: "15K+", label: "Happy Residents" },
+    { number: "98%", label: "Customer Satisfaction" },
+    { number: "24/7", label: "Support Available" }
+  ];
+
+  const locations = [
+    "Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide", "Gold Coast"
   ];
 
   return (
@@ -50,34 +63,79 @@ export default function AboutUs() {
       <ModernNavbar />
       
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-4">
-          <FadeInSection className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-sea bg-clip-text text-transparent">
-              About Our Story
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              We're passionate about creating exceptional living experiences through premium properties, 
-              innovative technology, and unmatched customer service.
-            </p>
-            <Badge variant="secondary" className="mb-8">
-              Trusted Since 2009
+      <section className="relative pt-24 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-sea/5 to-background"></div>
+        <div className="container mx-auto px-4 relative">
+          <FadeInSection className="text-center max-w-5xl mx-auto">
+            <Badge variant="secondary" className="mb-6">
+              Connecting Communities Across Australia
             </Badge>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+              We're here to <span className="bg-gradient-to-r from-primary to-sea bg-clip-text text-transparent">connect people</span> with thoughtfully developed communities
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-4xl mx-auto">
+              Using intelligent tools and clear information to make the journey to your new home feel inspiring.
+            </p>
+            <Button asChild variant="heroSolid" size="lg" className="group">
+              <Link to="/apartments">
+                Explore Communities
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
           </FadeInSection>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-muted/30">
+      {/* Mission Statement */}
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <FadeInSection key={index} delay={index * 0.1} className="text-center">
-                <Card className="p-6 hover:shadow-lg transition-shadow">
+          <FadeInSection className="text-center max-w-4xl mx-auto">
+            <Target className="h-16 w-16 text-primary mx-auto mb-8" />
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Mission</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+              We're here to connect people with thoughtfully developed communities across Australia. 
+              Using intelligent tools and clear information to make the journey to your new home feel inspiring.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="text-center">
+                <Building className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="font-semibold mb-2">Thoughtful Communities</h3>
+                <p className="text-muted-foreground text-sm">Carefully planned spaces that foster connection and wellbeing</p>
+              </div>
+              <div className="text-center">
+                <Lightbulb className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="font-semibold mb-2">Smart Technology</h3>
+                <p className="text-muted-foreground text-sm">Intelligent tools that simplify your property search</p>
+              </div>
+              <div className="text-center">
+                <Heart className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="font-semibold mb-2">Inspiring Experience</h3>
+                <p className="text-muted-foreground text-sm">Making your journey to a new home feel exciting and effortless</p>
+              </div>
+            </div>
+          </FadeInSection>
+        </div>
+      </section>
+
+      {/* Our Values */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <FadeInSection className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">What Drives Us</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Our values shape every decision we make and every community we develop, 
+              ensuring your experience is exceptional from start to finish.
+            </p>
+          </FadeInSection>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {values.map((value, index) => (
+              <FadeInSection key={index} delay={index * 0.1}>
+                <Card className="p-8 h-full hover:shadow-lg transition-all duration-300 group">
                   <CardContent className="p-0">
-                    <stat.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-                    <div className="text-3xl font-bold text-primary mb-2">{stat.number}</div>
-                    <div className="text-sm text-muted-foreground">{stat.label}</div>
+                    <value.icon className="h-12 w-12 text-primary mb-6 group-hover:scale-110 transition-transform" />
+                    <h3 className="text-xl font-semibold mb-4">{value.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{value.description}</p>
                   </CardContent>
                 </Card>
               </FadeInSection>
@@ -86,109 +144,151 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-16">
+      {/* Achievements */}
+      <section className="py-20 bg-gradient-to-r from-primary/5 to-sea/5">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <FadeInSection className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Impact</h2>
+            <p className="text-xl text-muted-foreground">
+              Building communities that matter, one home at a time
+            </p>
+          </FadeInSection>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {achievements.map((achievement, index) => (
+              <FadeInSection key={index} delay={index * 0.1} className="text-center">
+                <div className="bg-background/80 backdrop-blur-sm rounded-lg p-6 hover:bg-background transition-colors">
+                  <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                    {achievement.number}
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    {achievement.label}
+                  </div>
+                </div>
+              </FadeInSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Locations */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <FadeInSection className="text-center mb-12">
+            <MapPin className="h-16 w-16 text-primary mx-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Across Australia</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+              From vibrant city centres to peaceful coastal communities, we're creating 
+              thoughtfully developed spaces in Australia's most desirable locations.
+            </p>
+          </FadeInSection>
+          
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {locations.map((location, index) => (
+              <FadeInSection key={index} delay={index * 0.05}>
+                <Badge variant="outline" className="px-4 py-2 text-sm">
+                  <MapPin className="h-3 w-3 mr-2" />
+                  {location}
+                </Badge>
+              </FadeInSection>
+            ))}
+          </div>
+
+          <FadeInSection className="text-center">
+            <Button asChild variant="outline" size="lg">
+              <Link to="/contact">
+                Find Communities Near You
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </FadeInSection>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeInSection direction="left">
-              <img 
-                src="/lovable-uploads/45e89a4e-b7de-45de-9bb3-c273d5f1e5c1.png" 
-                alt="Our mission" 
-                className="rounded-lg shadow-lg"
-              />
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">
+                Why Choose Our Communities?
+              </h2>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold mb-2">Intelligent Design</h3>
+                    <p className="text-muted-foreground">Every aspect of our communities is thoughtfully planned to enhance your lifestyle and foster meaningful connections.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold mb-2">Transparent Process</h3>
+                    <p className="text-muted-foreground">No hidden fees, no surprises. We provide clear, comprehensive information throughout your journey.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold mb-2">Ongoing Support</h3>
+                    <p className="text-muted-foreground">Our relationship doesn't end at move-in. We're here to support you throughout your residency.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold mb-2">Community Focus</h3>
+                    <p className="text-muted-foreground">We create spaces where neighbours become friends and communities thrive.</p>
+                  </div>
+                </div>
+              </div>
             </FadeInSection>
+            
             <FadeInSection direction="right">
-              <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                We believe everyone deserves a place they can truly call home. Our mission is to provide 
-                exceptional rental properties that combine comfort, convenience, and community. Through 
-                innovative technology and personalized service, we make the rental experience seamless 
-                and enjoyable.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Award className="h-5 w-5 text-primary" />
-                  <span>Quality properties in prime locations</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Users className="h-5 w-5 text-primary" />
-                  <span>Dedicated customer support team</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Home className="h-5 w-5 text-primary" />
-                  <span>Transparent and fair pricing</span>
-                </div>
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80" 
+                  alt="Modern Australian community" 
+                  className="rounded-2xl shadow-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
               </div>
             </FadeInSection>
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <FadeInSection className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-6">Meet Our Team</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our experienced team is dedicated to providing you with exceptional service 
-              and making your rental experience extraordinary.
-            </p>
-          </FadeInSection>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <FadeInSection key={index} delay={index * 0.1}>
-                <Card className="text-center hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                    />
-                    <h3 className="font-semibold mb-2">{member.name}</h3>
-                    <Badge variant="secondary" className="mb-3">{member.role}</Badge>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {member.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </FadeInSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA Section */}
-      <section className="py-16">
+      {/* CTA Section */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <FadeInSection className="text-center">
-            <Card className="max-w-4xl mx-auto p-8 bg-gradient-to-r from-primary/5 to-sea/5">
+            <Card className="max-w-4xl mx-auto p-12 bg-gradient-to-br from-primary/10 to-sea/10 border-0">
               <CardContent className="p-0">
-                <h2 className="text-3xl font-bold mb-6">Ready to Find Your Perfect Home?</h2>
-                <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  Let our team help you discover the perfect rental property that meets all your needs. 
-                  Contact us today to get started.
+                <Users className="h-16 w-16 text-primary mx-auto mb-8" />
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                  Ready to Find Your Community?
+                </h2>
+                <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+                  Let us help you discover a thoughtfully developed community where you'll love to call home. 
+                  Your inspiring journey starts here.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
                   <div className="flex items-center space-x-2 text-muted-foreground">
-                    <Phone className="h-4 w-4" />
-                    <span>+1 (555) 123-4567</span>
+                    <Phone className="h-5 w-5" />
+                    <span>1800 SETPOINT</span>
                   </div>
                   <div className="flex items-center space-x-2 text-muted-foreground">
-                    <Mail className="h-4 w-4" />
-                    <span>hello@rentalcompany.com</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-muted-foreground">
-                    <MapPin className="h-4 w-4" />
-                    <span>Downtown Office Center</span>
+                    <Mail className="h-5 w-5" />
+                    <span>hello@setpoint.com.au</span>
                   </div>
                 </div>
-                <div className="mt-8 space-x-4">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild variant="heroSolid" size="lg">
-                    <Link to="/contact">Contact Us</Link>
+                    <Link to="/apartments">Explore Communities</Link>
                   </Button>
                   <Button asChild variant="outline" size="lg">
-                    <Link to="/apartments">View Properties</Link>
+                    <Link to="/contact">Get In Touch</Link>
                   </Button>
                 </div>
               </CardContent>
