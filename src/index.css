@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 30 28% 15%;
 
-    --primary: 25 100% 50%; /* #FF6A00 - main brand orange */
+    --primary: 25 85% 55%; /* Medium orange for general use */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 35 25% 94%; /* #F2F0ED - module background */
@@ -35,12 +35,12 @@
     --input: 210 20% 95%;
     --ring: 25 95% 58%;
 
-    /* Premium design tokens */
-    --primary-50: 25 100% 97%; /* #FFE8D9 light orange */
-    --primary-100: 25 100% 92%; /* Light orange gradient */
-    --primary-200: 34 75% 85%; /* #FFD4A8 auxiliary warm beige */
-    --primary-500: 25 100% 50%; /* #FF6A00 main brand orange */
-    --primary-600: 25 95% 45%; /* Darker orange */
+    /* Premium design tokens - Dark to Light Orange Gradient */
+    --primary-50: 25 100% 97%; /* Very light orange */
+    --primary-100: 25 100% 85%; /* Light orange */
+    --primary-200: 25 90% 75%; /* Medium light orange */
+    --primary-500: 25 85% 55%; /* Medium orange */
+    --primary-600: 25 80% 40%; /* Dark orange */
     --primary-900: 25 75% 25%; /* Very dark orange */
 
     --neutral-50: 0 0% 98%;
@@ -54,10 +54,10 @@
     --neutral-800: 210 16% 16%;
     --neutral-900: 210 20% 8%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary-500)), hsl(var(--primary-600)));
-    --gradient-subtle: linear-gradient(135deg, hsl(var(--neutral-50)), hsl(var(--primary-50)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-500) / 0.9), hsl(var(--primary-600) / 0.95));
+    /* Gradients - Dark Orange to Light Orange */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary-600)), hsl(var(--primary-100)));
+    --gradient-subtle: linear-gradient(135deg, hsl(var(--primary-600)), hsl(var(--primary-200)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-600) / 0.9), hsl(var(--primary-100) / 0.95));
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(var(--neutral-900) / 0.05);
@@ -79,7 +79,7 @@
     --popover: 210 20% 12%;
     --popover-foreground: 210 20% 98%;
 
-    --primary: 25 95% 58%;
+    --primary: 25 85% 55%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 20% 15%;
@@ -98,13 +98,13 @@
     --input: 210 20% 20%;
     --ring: 25 95% 58%;
 
-    /* Dark mode premium tokens */
-    --primary-50: 15 75% 8%;
-    --primary-100: 18 80% 12%;
-    --primary-200: 20 85% 16%;
-    --primary-500: 25 95% 58%;
-    --primary-600: 27 98% 62%;
-    --primary-900: 33 100% 90%;
+    /* Dark mode premium tokens - Dark to Light Orange */
+    --primary-50: 25 40% 15%; /* Dark orange for dark mode */
+    --primary-100: 25 60% 25%; /* Medium dark orange */
+    --primary-200: 25 70% 35%; /* Medium orange */
+    --primary-500: 25 85% 55%; /* Medium orange */
+    --primary-600: 25 80% 40%; /* Dark orange */
+    --primary-900: 25 100% 85%; /* Light orange for dark mode text */
 
     --neutral-50: 210 20% 8%;
     --neutral-100: 210 18% 12%;
@@ -117,10 +117,10 @@
     --neutral-800: 210 16% 84%;
     --neutral-900: 210 20% 92%;
 
-    /* Dark gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary-500)), hsl(var(--primary-600)));
-    --gradient-subtle: linear-gradient(135deg, hsl(var(--neutral-50)), hsl(var(--primary-50)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-500) / 0.9), hsl(var(--primary-600) / 0.95));
+    /* Dark gradients - Dark Orange to Light Orange */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary-600)), hsl(var(--primary-900)));
+    --gradient-subtle: linear-gradient(135deg, hsl(var(--primary-600)), hsl(var(--primary-200)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-600) / 0.9), hsl(var(--primary-900) / 0.95));
 
     /* Dark shadows */
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.2);
@@ -152,7 +152,7 @@
   }
   
   .btn-primary {
-    @apply relative overflow-hidden bg-gradient-to-r from-primary to-primary-600 text-primary-foreground rounded-xl px-8 py-3.5 font-semibold transition-all duration-300 hover:shadow-primary active:scale-[0.98] before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity;
+    @apply relative overflow-hidden bg-gradient-to-r from-primary-600 to-primary-100 text-primary-foreground rounded-xl px-8 py-3.5 font-semibold transition-all duration-300 hover:shadow-primary active:scale-[0.98] before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity;
   }
 
   .btn-secondary {
@@ -188,7 +188,7 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-primary-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-600 to-primary-100 bg-clip-text text-transparent;
   }
 
   .input-modern {
