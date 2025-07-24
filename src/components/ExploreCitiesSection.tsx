@@ -42,9 +42,13 @@ const citiesData = [{
   image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=600&fit=crop&crop=center"
 }];
 export default function ExploreCitiesSection() {
-  return <section className="bg-background py-12">
-      <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+  return <section className="bg-background py-8 sm:py-12">
+      <div className="container px-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Explore Australian Cities</h2>
+          <p className="text-muted-foreground text-sm sm:text-base">Discover premium properties across Australia's major cities</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-7xl mx-auto">
           {citiesData.map(city => <div key={city.id} className="group relative overflow-hidden rounded-lg cursor-pointer aspect-square transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
               {/* Full-bleed background image */}
               <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{
@@ -52,12 +56,12 @@ export default function ExploreCitiesSection() {
           }} />
               
               {/* Default location overlay */}
-              <div className="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 group-hover:opacity-0">
+              <div className="absolute inset-0 flex items-end justify-start p-3 sm:p-4 md:p-6 transition-opacity duration-300 group-hover:opacity-0">
                 <div className="text-white">
-                  <h3 className="text-2xl font-bold mb-1 drop-shadow-lg">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 drop-shadow-lg">
                     {city.name}
                   </h3>
-                  <p className="text-lg font-medium drop-shadow-md opacity-90">
+                  <p className="text-sm sm:text-base md:text-lg font-medium drop-shadow-md opacity-90">
                     {city.state}
                   </p>
                 </div>
@@ -67,9 +71,10 @@ export default function ExploreCitiesSection() {
               <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               
               <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                <Button variant="hero" size="lg" className="border-white/30 bg-white/10 hover:bg-white/20 backdrop-blur-sm shadow-2xl text-white">
-                  Explore {city.name}
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button variant="hero" size="lg" className="border-white/30 bg-white/10 hover:bg-white/20 backdrop-blur-sm shadow-2xl text-white text-sm sm:text-base px-3 sm:px-6 md:px-8 py-2 sm:py-3">
+                  <span className="hidden sm:inline">Explore {city.name}</span>
+                  <span className="sm:hidden">Explore</span>
+                  <ArrowRight className="ml-1 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Button>
               </div>
             </div>)}

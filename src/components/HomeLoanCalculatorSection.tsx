@@ -43,11 +43,11 @@ export const HomeLoanCalculatorSection = () => {
       setStampDuty(calculated);
     }
   };
-  return <section className="py-8 bg-muted">
+  return <section className="py-8 sm:py-12 bg-muted">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="mb-6 text-center">
+          <div className="mb-6 sm:mb-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-2 text-left text-slate-950">
               Property Purchase Calculators
             </h2>
