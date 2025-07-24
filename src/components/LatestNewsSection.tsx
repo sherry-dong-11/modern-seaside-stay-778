@@ -23,43 +23,68 @@ const newsArticles = [{
   headline: "Great News for Victorian Homebuyers: Stamp Duty Discount Extended Another 12 Months"
 }];
 export function LatestNewsSection() {
-  return <section className="py-12 bg-gray-50/50">
-      <div className="container">
+  return <section className="py-8 sm:py-12 lg:py-16 bg-gray-50/50">
+      <div className="container px-4">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 sm:mb-8">
           <div className="text-center sm:text-left mb-4 sm:mb-0">
-            <h2 className="text-foreground mb-2 text-4xl font-bold">
+            <h2 
+              className="text-foreground mb-2 font-bold"
+              style={{ fontSize: 'clamp(1.5rem, 5vw, 2.5rem)' }}
+            >
               Latest News
             </h2>
-            <p className="text-muted-foreground">Insights into the Australian new development & real estate market</p>
+            <p 
+              className="text-muted-foreground max-w-lg"
+              style={{ fontSize: 'clamp(0.875rem, 2.5vw, 1rem)' }}
+            >
+              Insights into the Australian new development & real estate market
+            </p>
           </div>
-          <Button variant="ghost" className="text-primary hover:text-primary/90 self-center sm:self-auto">
-            Browse all news
+          <Button 
+            variant="ghost" 
+            className="text-primary hover:text-primary/90 self-center sm:self-auto text-sm sm:text-base"
+          >
+            <span className="hidden sm:inline">Browse all news</span>
+            <span className="sm:hidden">View all</span>
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
 
         {/* News Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {newsArticles.map(article => <Card key={article.id} className="group cursor-pointer hover:shadow-xl transition-all duration-300 border-0 shadow-sm hover:-translate-y-1">
               <CardContent className="p-0">
                 {/* Article Image */}
                 <div className="relative overflow-hidden rounded-t-lg">
-                  <img src={article.image} alt={article.headline} className="w-full h-[180px] object-cover group-hover:scale-110 transition-transform duration-300" />
+                  <img 
+                    src={article.image} 
+                    alt={article.headline} 
+                    className="w-full h-[160px] sm:h-[180px] object-cover group-hover:scale-110 transition-transform duration-300" 
+                  />
                 </div>
                 
                 {/* Article Content */}
-                <div className="p-4">
-                  <p className="text-sm text-muted-foreground mb-2">
+                <div className="p-3 sm:p-4">
+                  <p 
+                    className="text-muted-foreground mb-2"
+                    style={{ fontSize: 'clamp(0.75rem, 2vw, 0.875rem)' }}
+                  >
                     {article.date}
                   </p>
-                  <h3 className="text-base leading-tight text-foreground group-hover:text-primary transition-colors line-clamp-3 font-semibold">
+                  <h3 
+                    className="leading-tight text-foreground group-hover:text-primary transition-colors line-clamp-3 font-semibold"
+                    style={{ fontSize: 'clamp(0.875rem, 2.5vw, 1rem)' }}
+                  >
                     {article.headline}
                   </h3>
                   
                   {/* Read More on Hover */}
                   <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                    <span className="text-primary text-sm font-medium inline-flex items-center">
+                    <span 
+                      className="text-primary font-medium inline-flex items-center"
+                      style={{ fontSize: 'clamp(0.75rem, 2vw, 0.875rem)' }}
+                    >
                       Read more
                       <ArrowRight className="ml-1 h-3 w-3" />
                     </span>

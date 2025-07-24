@@ -116,13 +116,19 @@ export default function FeaturedPropertiesSection() {
   }, [emblaApi, onInit, onSelect]);
 
   return (
-    <section className="py-6 bg-background">
+    <section className="py-8 sm:py-12 lg:py-16 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 
+            className="font-bold mb-2 sm:mb-4"
+            style={{ fontSize: 'clamp(1.75rem, 5vw, 2.5rem)' }}
+          >
             Featured Properties
           </h2>
-          <p className="text-muted-foreground">
+          <p 
+            className="text-muted-foreground max-w-2xl mx-auto"
+            style={{ fontSize: 'clamp(0.875rem, 2.5vw, 1rem)' }}
+          >
             Discover our handpicked selection of premium properties
           </p>
         </div>
@@ -152,36 +158,42 @@ export default function FeaturedPropertiesSection() {
                     </div>
 
                     {/* Details Section */}
-                    <div className="bg-white p-6">
-                      <div className="flex items-center justify-between flex-wrap gap-4">
-                        {/* Left Side - Property Details */}
-                        <div className="flex-1 min-w-0">
-                          <h4 className="text-xl font-semibold text-foreground mb-1">
+                    <div className="bg-white p-4 sm:p-6">
+                      <div className="space-y-4">
+                        {/* Property Name & Address */}
+                        <div>
+                          <h4 
+                            className="font-semibold text-foreground mb-2"
+                            style={{ fontSize: 'clamp(1rem, 3vw, 1.25rem)' }}
+                          >
                             {property.name}
                           </h4>
-                          <p className="text-muted-foreground text-sm mb-4">
+                          <p 
+                            className="text-muted-foreground mb-4 line-clamp-2"
+                            style={{ fontSize: 'clamp(0.75rem, 2vw, 0.875rem)' }}
+                          >
                             {property.address}
                           </p>
+                        </div>
                           
-                          {/* Amenities */}
-                          <div className="flex items-center gap-6 text-muted-foreground">
-                            <div className="flex items-center gap-1">
-                              <Bed className="h-4 w-4" />
-                              <span className="text-sm font-medium">{property.bedrooms}</span>
-                            </div>
-                            <div className="flex items-center gap-1">
-                              <Bath className="h-4 w-4" />
-                              <span className="text-sm font-medium">{property.bathrooms}</span>
-                            </div>
-                            <div className="flex items-center gap-1">
-                              <Car className="h-4 w-4" />
-                              <span className="text-sm font-medium">{property.parking}</span>
-                            </div>
+                        {/* Amenities */}
+                        <div className="flex items-center gap-4 sm:gap-6 text-muted-foreground flex-wrap">
+                          <div className="flex items-center gap-1">
+                            <Bed className="h-4 w-4" />
+                            <span className="text-sm font-medium">{property.bedrooms}</span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <Bath className="h-4 w-4" />
+                            <span className="text-sm font-medium">{property.bathrooms}</span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <Car className="h-4 w-4" />
+                            <span className="text-sm font-medium">{property.parking}</span>
                           </div>
                         </div>
 
-                        {/* Right Side - Type & Price */}
-                        <div className="flex flex-col items-end gap-3">
+                        {/* Type & Price */}
+                        <div className="flex items-center justify-between pt-4 border-t border-border/20">
                           <Badge 
                             variant="secondary" 
                             className="bg-orange-100 text-orange-800 hover:bg-orange-200 px-3 py-1 text-xs font-medium"
@@ -189,7 +201,10 @@ export default function FeaturedPropertiesSection() {
                             {property.type}
                           </Badge>
                           <div className="text-right">
-                            <p className="text-2xl font-semibold text-orange-600">
+                            <p 
+                              className="font-semibold text-orange-600"
+                              style={{ fontSize: 'clamp(1rem, 3vw, 1.5rem)' }}
+                            >
                               {property.price}
                             </p>
                           </div>
@@ -207,18 +222,18 @@ export default function FeaturedPropertiesSection() {
             variant="outline"
             size="icon"
             onClick={scrollPrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white border-border/20 backdrop-blur-sm shadow-lg"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white border-border/20 backdrop-blur-sm shadow-lg w-10 h-10 sm:w-12 sm:h-12"
           >
-            <ChevronLeft className="h-5 w-5" />
+            <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
           
           <Button
             variant="outline"
             size="icon"
             onClick={scrollNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white border-border/20 backdrop-blur-sm shadow-lg"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white border-border/20 backdrop-blur-sm shadow-lg w-10 h-10 sm:w-12 sm:h-12"
           >
-            <ChevronRight className="h-5 w-5" />
+            <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
 
           {/* Pagination Dots */}
