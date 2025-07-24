@@ -7,82 +7,82 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Slider } from "@/components/ui/slider";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-// Townhouse data based on the reference image
+// House & Land data based on the reference image
 const allApartments: ApartmentProps[] = [
   {
-    id: "sheahan-townhouses",
-    name: "Sheahan Townhouses",
-    description: "Modern townhouses in a prime location with contemporary design and quality finishes.",
-    price: 1350000,
-    capacity: 3,
-    size: 180,
-    image: "https://images.unsplash.com/photo-1433832597046-4f10e10ac764?w=800&h=600&fit=crop",
-    location: "Latrobe Avenue, Alphington VIC 3078",
-    features: ["2-3 Bedrooms", "1-2 Bathrooms", "0 Car Space", "Modern Kitchen", "Private Courtyard"]
+    id: "officer-central",
+    name: "Officer Central - Urbane House and Land",
+    description: "Modern house and land packages in the growing Officer community with quality construction.",
+    price: 750000,
+    capacity: 4,
+    size: 200,
+    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=600&fit=crop",
+    location: "45 Rix Road, Officer VIC 3809",
+    features: ["3-4 Bedrooms", "1-2 Bathrooms", "1-2 Car Space", "House & Land Package", "Modern Design"]
   },
   {
-    id: "taylors-estate",
-    name: "Taylors Estate",
-    description: "Spacious family townhouses with generous living areas and outdoor spaces.",
-    price: 655050,
+    id: "minta-estate",
+    name: "Minta Estate - Urbane House and Land",
+    description: "Premium house and land packages in established Berwick with family-friendly amenities.",
+    price: 692404,
     capacity: 4,
     size: 220,
-    image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=800&h=600&fit=crop",
-    location: "1200 Taylors Road, Fraser Rise VIC 3336",
-    features: ["4+ Bedrooms", "2+ Bathrooms", "2+ Car Space", "Master Suite", "Multiple Living Areas"]
+    image: "https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?w=800&h=600&fit=crop",
+    location: "67 Soldiers Road, Berwick VIC 3806",
+    features: ["3-4 Bedrooms", "1-2 Bathrooms", "1-2 Car Space", "Family Community", "Quality Finishes"]
   },
   {
-    id: "tobias-avenue",
-    name: "33 Tobias Avenue",
-    description: "Premium townhouse in prestigious Glen Waverley with exceptional finishes.",
-    price: 1700000,
+    id: "hillgrove-rockbank",
+    name: "Hillgrove - Rockbank",
+    description: "Contact agents for more information about this exclusive house and land development.",
+    price: 850000,
     capacity: 4,
     size: 250,
-    image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?w=800&h=600&fit=crop",
-    location: "Glen Waverley VIC 3150",
-    features: ["4 Bedrooms", "3 Bathrooms", "2 Car Space", "Designer Kitchen", "Premium Bathrooms"]
+    image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=800&h=600&fit=crop",
+    location: "Greenpoint Drive, Rockbank VIC 3335",
+    features: ["Contact Required", "New Development", "Modern Architecture", "Family Oriented"]
   },
   {
-    id: "ferntree-gully-station",
-    name: "30-32 Station St Ferntree Gully",
-    description: "Contact agents for more information about this exclusive development.",
-    price: 850000,
-    capacity: 2,
-    size: 150,
-    image: "https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?w=800&h=600&fit=crop",
-    location: "30-32 Station Street, Ferntree Gully VIC 3156",
-    features: ["Contact Required", "Prime Location", "Modern Design", "Quality Finishes"]
+    id: "warehouse-maughan",
+    name: "Warehouse - 1 Maughan Way",
+    description: "Unique warehouse conversion opportunity in Cranbourne West. Contact agents for details.",
+    price: 950000,
+    capacity: 3,
+    size: 180,
+    image: "https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?w=800&h=600&fit=crop",
+    location: "1 Maughan Way, Cranbourne West VIC 3977",
+    features: ["Contact Required", "Unique Property", "Industrial Style", "Investment Opportunity"]
   },
   {
-    id: "brunswick-townhouses",
-    name: "Brunswick Modern Townhouses",
-    description: "Contemporary townhouses with sustainable design and modern amenities.",
-    price: 980000,
+    id: "cranbourne-estate",
+    name: "Cranbourne Family Estate",
+    description: "Spacious family homes in growing Cranbourne with modern amenities and community facilities.",
+    price: 720000,
+    capacity: 4,
+    size: 210,
+    image: "https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?w=800&h=600&fit=crop",
+    location: "Cranbourne VIC 3977",
+    features: ["4 Bedrooms", "2 Bathrooms", "2 Car Space", "Community Hub", "Modern Kitchen"]
+  },
+  {
+    id: "pakenham-springs",
+    name: "Pakenham Springs",
+    description: "Contemporary house and land packages in vibrant Pakenham with excellent connectivity.",
+    price: 680000,
     capacity: 3,
     size: 190,
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
-    location: "Brunswick VIC 3056",
-    features: ["3 Bedrooms", "2 Bathrooms", "1 Car Space", "Sustainable Design", "Rooftop Terrace"]
-  },
-  {
-    id: "richmond-heritage",
-    name: "Richmond Heritage Townhouses",
-    description: "Heritage-style townhouses combining classic charm with modern convenience.",
-    price: 1250000,
-    capacity: 3,
-    size: 200,
-    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
-    location: "Richmond VIC 3121",
-    features: ["3 Bedrooms", "2 Bathrooms", "1 Car Space", "Heritage Features", "Modern Renovation"]
+    image: "https://images.unsplash.com/photo-1551038247-3d9af20df552?w=800&h=600&fit=crop",
+    location: "Pakenham VIC 3810",
+    features: ["3-4 Bedrooms", "2 Bathrooms", "2 Car Space", "Train Station Nearby", "Shopping Centers"]
   }
 ];
 
-export default function Townhouses() {
+export default function HouseLand() {
   const { t } = useLanguage();
   const [filteredApartments, setFilteredApartments] = useState<ApartmentProps[]>(allApartments);
   const [capacityFilter, setCapacityFilter] = useState<string>("all");
   const [locationFilter, setLocationFilter] = useState<string>("all");
-  const [priceRange, setPriceRange] = useState<number[]>([600000, 1800000]);
+  const [priceRange, setPriceRange] = useState<number[]>([650000, 1000000]);
 
   useEffect(() => {
     // Scroll to top when component mounts
@@ -144,10 +144,10 @@ export default function Townhouses() {
                 <button className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50">
                   Apartment
                 </button>
-                <button className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50">
+                <button className="px-4 py-3 text-sm font-medium bg-[#FF6A00] text-white">
                   House
                 </button>
-                <button className="px-4 py-3 text-sm font-medium bg-[#FF6A00] text-white">
+                <button className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50">
                   Townhouse
                 </button>
               </div>
@@ -185,7 +185,7 @@ export default function Townhouses() {
                   onClick={() => {
                     setCapacityFilter("all");
                     setLocationFilter("all");
-                    setPriceRange([600000, 1800000]);
+                    setPriceRange([650000, 1000000]);
                   }}
                   className="h-12 px-3 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow flex items-center gap-2"
                 >
@@ -240,9 +240,9 @@ export default function Townhouses() {
                 {t.apartments.filters.priceRange}: ${priceRange[0].toLocaleString()} - ${priceRange[1].toLocaleString()}
               </label>
               <Slider 
-                defaultValue={[600000, 1800000]} 
-                min={600000} 
-                max={1800000} 
+                defaultValue={[650000, 1000000]} 
+                min={650000} 
+                max={1000000} 
                 step={10000} 
                 value={priceRange} 
                 onValueChange={setPriceRange} 
@@ -266,7 +266,7 @@ export default function Townhouses() {
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
               <div>
                 <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                  Townhouses For Sale & other Off the Plan Properties nearby
+                  House & Land For Sale & other Off the Plan Properties nearby
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400">
                   Showing {filteredApartments.length} out of {allApartments.length} projects available on Yephome
@@ -308,7 +308,7 @@ export default function Townhouses() {
                   onClick={() => {
                     setCapacityFilter("all");
                     setLocationFilter("all");
-                    setPriceRange([600000, 1800000]);
+                    setPriceRange([650000, 1000000]);
                   }}
                 >
                   {t.apartments.filters.resetFilters}
