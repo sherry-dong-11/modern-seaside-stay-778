@@ -124,14 +124,14 @@ export default function Index() {
         
         {/* CTA Section */}
         <FadeInSection>
-          <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden py-12 sm:py-16 lg:py-24">
+          <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden py-24">
             {/* Background effects */}
             <div className="absolute inset-0">
-              <div className="absolute top-1/4 left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-orange-500/10 rounded-full blur-3xl" />
-              <div className="absolute bottom-1/4 right-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-pink-500/10 rounded-full blur-3xl" />
+              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
+              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
             </div>
             
-            <div className="container relative z-10 px-4">
+            <div className="container relative z-10">
               <motion.div className="text-center max-w-4xl mx-auto" initial={{
               opacity: 0,
               y: 40
@@ -152,49 +152,38 @@ export default function Index() {
               }} transition={{
                 delay: 0.2,
                 duration: 0.6
-              }} className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 border border-white/20">
+              }} className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20">
                   <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  <span 
-                    className="font-medium"
-                    style={{ fontSize: 'clamp(0.75rem, 2vw, 0.875rem)' }}
-                  >
-                    Ready to Start?
-                  </span>
+                  <span className="text-sm font-medium">Ready to Start?</span>
                 </motion.div>
 
-                <motion.h2 
-                  className="font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent" 
-                  style={{ fontSize: 'clamp(1.5rem, 5vw, 2.5rem)' }}
-                  initial={{
-                  opacity: 0,
-                  y: 30
-                }} whileInView={{
-                  opacity: 1,
-                  y: 0
-                }} transition={{
-                  delay: 0.4,
-                  duration: 0.8
-                }}>
+                <motion.h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent" initial={{
+                opacity: 0,
+                y: 30
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                delay: 0.4,
+                duration: 0.8
+              }}>
                   Ready to Find Your Dream Home?
                 </motion.h2>
                 
-                <motion.p 
-                  className="text-gray-300 mb-8 sm:mb-12 leading-relaxed max-w-2xl mx-auto" 
-                  style={{ fontSize: 'clamp(0.875rem, 2.5vw, 1.25rem)' }}
-                  initial={{
-                  opacity: 0,
-                  y: 30
-                }} whileInView={{
-                  opacity: 1,
-                  y: 0
-                }} transition={{
-                  delay: 0.6,
-                  duration: 0.8
-                }}>
+                <motion.p className="text-xl text-gray-300 mb-12 leading-relaxed" initial={{
+                opacity: 0,
+                y: 30
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                delay: 0.6,
+                duration: 0.8
+              }}>
                   Join thousands of satisfied buyers who found their perfect property with us
                 </motion.p>
                 
-                <motion.div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16" initial={{
+                <motion.div className="flex flex-col sm:flex-row gap-6 justify-center mb-16" initial={{
                 opacity: 0,
                 y: 30
               }} whileInView={{
@@ -209,14 +198,9 @@ export default function Index() {
                 }} whileTap={{
                   scale: 0.95
                 }}>
-                    <Button 
-                      size="lg" 
-                      className="bg-white text-slate-900 hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto"
-                      style={{ fontSize: 'clamp(0.875rem, 2.5vw, 1.125rem)' }}
-                    >
-                      <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                      <span className="hidden sm:inline">New Build Purchase Guide</span>
-                      <span className="sm:hidden">Purchase Guide</span>
+                    <Button size="lg" className="bg-white text-slate-900 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                      <BookOpen className="w-5 h-5 mr-2" />
+                      New Build Purchase Guide
                     </Button>
                   </motion.div>
                   <motion.div whileHover={{
@@ -224,20 +208,14 @@ export default function Index() {
                 }} whileTap={{
                   scale: 0.95
                 }}>
-                    <Button 
-                      size="lg" 
-                      variant="outline" 
-                      className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 font-semibold rounded-full w-full sm:w-auto"
-                      style={{ fontSize: 'clamp(0.875rem, 2.5vw, 1.125rem)' }}
-                    >
-                      <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                      <span className="hidden sm:inline">Chat with AI Expert</span>
-                      <span className="sm:hidden">Chat Expert</span>
+                    <Button size="lg" variant="outline" className="border-white/30 text-black hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg font-semibold rounded-full">
+                      <MessageCircle className="w-5 h-5 mr-2" />
+                      Chat with AI Expert
                     </Button>
                   </motion.div>
                 </motion.div>
                 
-                <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 text-center" initial={{
+                <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center" initial={{
                 opacity: 0,
                 y: 30
               }} whileInView={{
@@ -256,7 +234,7 @@ export default function Index() {
                 }, {
                   icon: CheckCircle2,
                   text: "Verified properties"
-                }].map((feature, index) => <motion.div key={index} className="flex flex-col items-center p-4 sm:p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300" initial={{
+                }].map((feature, index) => <motion.div key={index} className="flex flex-col items-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300" initial={{
                   opacity: 0,
                   y: 20
                 }} whileInView={{
@@ -268,13 +246,8 @@ export default function Index() {
                 }} whileHover={{
                   y: -5
                 }}>
-                      <feature.icon className="w-6 h-6 sm:w-8 sm:h-8 text-green-400 mb-2 sm:mb-3" />
-                      <span 
-                        className="text-gray-300 font-medium"
-                        style={{ fontSize: 'clamp(0.75rem, 2vw, 1rem)' }}
-                      >
-                        {feature.text}
-                      </span>
+                      <feature.icon className="w-8 h-8 text-green-400 mb-3" />
+                      <span className="text-gray-300 font-medium">{feature.text}</span>
                     </motion.div>)}
                 </motion.div>
               </motion.div>

@@ -43,51 +43,39 @@ export const HomeLoanCalculatorSection = () => {
       setStampDuty(calculated);
     }
   };
-  return <section className="py-8 sm:py-12 lg:py-16 bg-muted">
+  return <section className="py-8 bg-muted">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="mb-6 sm:mb-8 text-center sm:text-left">
-            <h2 
-              className="font-bold mb-2 text-slate-950"
-              style={{ fontSize: 'clamp(1.5rem, 5vw, 2.5rem)' }}
-            >
+          <div className="mb-6 text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-2 text-left text-slate-950">
               Property Purchase Calculators
             </h2>
-            <p 
-              className="text-slate-500"
-              style={{ fontSize: 'clamp(0.875rem, 2.5vw, 1rem)' }}
-            >
+            <p className="text-left text-base text-slate-500">
               Calculate your loan capacity and estimate stamp duty costs
             </p>
           </div>
 
           {/* Dual Calculator Layout - Flex for consistent heights */}
-          <div className="flex flex-col xl:flex-row gap-6">
+          <div className="flex flex-col lg:flex-row gap-6">
             
             {/* Home Loan Calculator */}
-            <Card className="bg-card border border-border/20 shadow-lg rounded-xl flex-1 min-h-[450px] sm:min-h-[480px]">
-              <CardContent className="p-4 lg:p-6 h-full flex flex-col">
+            <Card className="bg-card border border-border/20 shadow-lg rounded-xl flex-1 min-h-[480px]">
+              <CardContent className="p-3 lg:p-4 h-full flex flex-col">
                 {/* Title */}
-                <div className="mb-4">
-                  <h3 
-                    className="text-primary font-semibold mb-1"
-                    style={{ fontSize: 'clamp(1rem, 3vw, 1.25rem)' }}
-                  >
+                <div className="mb-3">
+                  <h3 className="text-primary font-semibold text-xl mb-1">
                     Home Loan Calculator
                   </h3>
-                  <p 
-                    className="text-muted-foreground"
-                    style={{ fontSize: 'clamp(0.75rem, 2vw, 0.875rem)' }}
-                  >
+                  <p className="text-sm text-muted-foreground">
                     Calculate your monthly repayments
                   </p>
                 </div>
 
                 {/* Form Section - White Card */}
-                <Card className="bg-white border border-gray-200 rounded-lg mb-4 flex-1">
-                  <CardContent className="p-4 lg:p-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4 items-center">
+                <Card className="bg-white border border-gray-200 rounded-lg mb-3 flex-1">
+                  <CardContent className="p-3 lg:p-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4 items-center">
                       {/* Property Price */}
                       <div className="space-y-1">
                         <Label className="text-xs font-medium text-gray-600">Estimated Property Price</Label>
@@ -142,34 +130,21 @@ export const HomeLoanCalculatorSection = () => {
                 </Card>
 
                 {/* Result Block - Dark Background */}
-                <div className="bg-gray-800 text-white rounded-lg p-4 lg:p-6 mt-auto">
-                  <div className="grid grid-cols-1 gap-4">
-                    {/* Repayment */}
-                    <div className="text-center sm:text-left">
-                      <div 
-                        className="text-gray-300 mb-1"
-                        style={{ fontSize: 'clamp(0.75rem, 2vw, 0.875rem)' }}
-                      >
-                        Estimated repayment
-                      </div>
-                      <div 
-                        className="font-bold"
-                        style={{ fontSize: 'clamp(1.25rem, 4vw, 2rem)' }}
-                      >
+                <div className="bg-gray-800 text-white rounded-lg p-4 mt-auto">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {/* Left Side - Repayment */}
+                    <div>
+                      <div className="text-sm text-gray-300 mb-1">Estimated repayment</div>
+                      <div className="text-2xl lg:text-3xl font-bold">
                         ${Math.round(calculateMonthlyRepayment()).toLocaleString()} /month
                       </div>
                     </div>
 
-                    {/* Contact */}
+                    {/* Right Side - Contact */}
                     <div className="space-y-2">
-                      <div 
-                        className="text-gray-300"
-                        style={{ fontSize: 'clamp(0.75rem, 2vw, 0.875rem)' }}
-                      >
-                        What's next?
-                      </div>
+                      <div className="text-sm text-gray-300">What's next?</div>
                       
-                      <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200">
+                      <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200" size="sm">
                         <Phone className="w-4 h-4 mr-2" />
                         Contact Agent
                       </Button>
@@ -180,20 +155,14 @@ export const HomeLoanCalculatorSection = () => {
             </Card>
 
             {/* Stamp Duty Calculator */}
-            <Card className="bg-card border border-border/20 shadow-lg rounded-xl flex-1 min-h-[450px] sm:min-h-[480px]">
+            <Card className="bg-card border border-border/20 shadow-lg rounded-xl flex-1 min-h-[480px]">
               <CardContent className="p-4 lg:p-6 h-full flex flex-col">
                 {/* Title */}
                 <div className="mb-4">
-                  <h3 
-                    className="text-primary font-semibold mb-1"
-                    style={{ fontSize: 'clamp(1rem, 3vw, 1.25rem)' }}
-                  >
+                  <h3 className="text-primary font-semibold text-xl mb-1">
                     Stamp Duty Calculator
                   </h3>
-                  <p 
-                    className="text-muted-foreground"
-                    style={{ fontSize: 'clamp(0.75rem, 2vw, 0.875rem)' }}
-                  >
+                  <p className="text-sm text-muted-foreground">
                     Estimate your stamp duty costs
                   </p>
                 </div>
