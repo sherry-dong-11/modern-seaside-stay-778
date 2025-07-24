@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
 import { useLanguage } from "@/contexts/LanguageContext";
+import australianHouse1 from "@/assets/australian-house-1.jpg";
+import australianHouse2 from "@/assets/australian-house-2.jpg";
+import australianHouse3 from "@/assets/australian-house-3.jpg";
 
 // House & Land data based on the reference image
 const allApartments: ApartmentProps[] = [
@@ -16,7 +19,7 @@ const allApartments: ApartmentProps[] = [
     price: 750000,
     capacity: 4,
     size: 200,
-    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=600&fit=crop",
+    image: australianHouse1,
     location: "45 Rix Road, Officer VIC 3809",
     features: ["3-4 Bedrooms", "1-2 Bathrooms", "1-2 Car Space", "House & Land Package", "Modern Design"]
   },
@@ -27,7 +30,7 @@ const allApartments: ApartmentProps[] = [
     price: 692404,
     capacity: 4,
     size: 220,
-    image: "https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?w=800&h=600&fit=crop",
+    image: australianHouse2,
     location: "67 Soldiers Road, Berwick VIC 3806",
     features: ["3-4 Bedrooms", "1-2 Bathrooms", "1-2 Car Space", "Family Community", "Quality Finishes"]
   },
@@ -38,7 +41,7 @@ const allApartments: ApartmentProps[] = [
     price: 850000,
     capacity: 4,
     size: 250,
-    image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=800&h=600&fit=crop",
+    image: australianHouse3,
     location: "Greenpoint Drive, Rockbank VIC 3335",
     features: ["Contact Required", "New Development", "Modern Architecture", "Family Oriented"]
   },
@@ -49,7 +52,7 @@ const allApartments: ApartmentProps[] = [
     price: 950000,
     capacity: 3,
     size: 180,
-    image: "https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?w=800&h=600&fit=crop",
+    image: australianHouse1,
     location: "1 Maughan Way, Cranbourne West VIC 3977",
     features: ["Contact Required", "Unique Property", "Industrial Style", "Investment Opportunity"]
   },
@@ -60,7 +63,7 @@ const allApartments: ApartmentProps[] = [
     price: 720000,
     capacity: 4,
     size: 210,
-    image: "https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?w=800&h=600&fit=crop",
+    image: australianHouse2,
     location: "Cranbourne VIC 3977",
     features: ["4 Bedrooms", "2 Bathrooms", "2 Car Space", "Community Hub", "Modern Kitchen"]
   },
@@ -71,7 +74,7 @@ const allApartments: ApartmentProps[] = [
     price: 680000,
     capacity: 3,
     size: 190,
-    image: "https://images.unsplash.com/photo-1551038247-3d9af20df552?w=800&h=600&fit=crop",
+    image: australianHouse3,
     location: "Pakenham VIC 3810",
     features: ["3-4 Bedrooms", "2 Bathrooms", "2 Car Space", "Train Station Nearby", "Shopping Centers"]
   }

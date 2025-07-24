@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
 import { useLanguage } from "@/contexts/LanguageContext";
+import australianTownhouse1 from "@/assets/australian-townhouse-1.jpg";
+import australianTownhouse2 from "@/assets/australian-townhouse-2.jpg";
+import australianTownhouse3 from "@/assets/australian-townhouse-3.jpg";
 
 // Townhouse data based on the reference image
 const allApartments: ApartmentProps[] = [
@@ -16,7 +19,7 @@ const allApartments: ApartmentProps[] = [
     price: 1350000,
     capacity: 3,
     size: 180,
-    image: "https://images.unsplash.com/photo-1433832597046-4f10e10ac764?w=800&h=600&fit=crop",
+    image: australianTownhouse1,
     location: "Latrobe Avenue, Alphington VIC 3078",
     features: ["2-3 Bedrooms", "1-2 Bathrooms", "0 Car Space", "Modern Kitchen", "Private Courtyard"]
   },
@@ -27,7 +30,7 @@ const allApartments: ApartmentProps[] = [
     price: 655050,
     capacity: 4,
     size: 220,
-    image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=800&h=600&fit=crop",
+    image: australianTownhouse2,
     location: "1200 Taylors Road, Fraser Rise VIC 3336",
     features: ["4+ Bedrooms", "2+ Bathrooms", "2+ Car Space", "Master Suite", "Multiple Living Areas"]
   },
@@ -38,7 +41,7 @@ const allApartments: ApartmentProps[] = [
     price: 1700000,
     capacity: 4,
     size: 250,
-    image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?w=800&h=600&fit=crop",
+    image: australianTownhouse3,
     location: "Glen Waverley VIC 3150",
     features: ["4 Bedrooms", "3 Bathrooms", "2 Car Space", "Designer Kitchen", "Premium Bathrooms"]
   },
@@ -49,7 +52,7 @@ const allApartments: ApartmentProps[] = [
     price: 850000,
     capacity: 2,
     size: 150,
-    image: "https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?w=800&h=600&fit=crop",
+    image: australianTownhouse1,
     location: "30-32 Station Street, Ferntree Gully VIC 3156",
     features: ["Contact Required", "Prime Location", "Modern Design", "Quality Finishes"]
   },
@@ -60,7 +63,7 @@ const allApartments: ApartmentProps[] = [
     price: 980000,
     capacity: 3,
     size: 190,
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+    image: australianTownhouse2,
     location: "Brunswick VIC 3056",
     features: ["3 Bedrooms", "2 Bathrooms", "1 Car Space", "Sustainable Design", "Rooftop Terrace"]
   },
@@ -71,7 +74,7 @@ const allApartments: ApartmentProps[] = [
     price: 1250000,
     capacity: 3,
     size: 200,
-    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+    image: australianTownhouse3,
     location: "Richmond VIC 3121",
     features: ["3 Bedrooms", "2 Bathrooms", "1 Car Space", "Heritage Features", "Modern Renovation"]
   }
