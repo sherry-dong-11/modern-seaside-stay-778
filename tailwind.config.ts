@@ -74,6 +74,18 @@ export default {
 					700: 'hsl(var(--neutral-700))',
 					800: 'hsl(var(--neutral-800))',
 					900: 'hsl(var(--neutral-900))'
+				},
+				slate: {
+					50: 'hsl(var(--slate-50))',
+					100: 'hsl(var(--slate-100))',
+					200: 'hsl(var(--slate-200))',
+					300: 'hsl(var(--slate-300))',
+					400: 'hsl(var(--slate-400))',
+					500: 'hsl(var(--slate-500))',
+					600: 'hsl(var(--slate-600))',
+					700: 'hsl(var(--slate-700))',
+					800: 'hsl(var(--slate-800))',
+					900: 'hsl(var(--slate-900))'
 				}
 			},
 			borderRadius: {
