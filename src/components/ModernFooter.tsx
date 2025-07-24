@@ -274,7 +274,7 @@ export default function ModernFooter() {
       y: 0
     }} transition={{
       delay: 2
-    }} className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50 bg-orange-500 hover:bg-orange-400">
+    }} className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50">
         <ArrowUp className="w-5 h-5" />
       </motion.button>
     </footer>;
