@@ -119,7 +119,7 @@ export default function FeaturedPropertiesSection() {
     <section className="py-6 bg-background">
       <div className="container mx-auto px-4">
         <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-normal mb-4 text-left">
+          <h2 className="text-4xl font-bold mb-4 text-left">
             Discover Our Featured Homes
           </h2>
           <div className="w-full h-px bg-border"></div>
