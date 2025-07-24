@@ -148,13 +148,13 @@ export default function Index() {
                 
                 <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
                   <div>
-                    <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg font-semibold rounded-full">
+                    <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-accent backdrop-blur-sm px-8 py-4 text-lg font-semibold rounded-full">
                       <BookOpen className="w-5 h-5 mr-2" />
                       New Build Purchase Guide
                     </Button>
                   </div>
                   <div>
-                    <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg font-semibold rounded-full">
+                    <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-accent backdrop-blur-sm px-8 py-4 text-lg font-semibold rounded-full">
                       <MessageCircle className="w-5 h-5 mr-2" />
                       Chat with AI Expert
                     </Button>
