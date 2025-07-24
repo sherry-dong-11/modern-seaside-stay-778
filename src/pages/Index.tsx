@@ -209,7 +209,7 @@ export default function Index() {
                 }} whileTap={{
                   scale: 0.95
                 }}>
-                    <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-semibold rounded-full w-full sm:w-auto">
+                    <Button size="lg" variant="outline" className="border-white/30 text-black hover:bg-white/10 backdrop-blur-sm px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-semibold rounded-full w-full sm:w-auto">
                       <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                       <span className="hidden sm:inline">Chat with AI Expert</span>
                       <span className="sm:hidden">AI Expert</span>
