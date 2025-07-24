@@ -139,7 +139,7 @@ export default function Index() {
               opacity: 1,
               y: 0
             }} transition={{
-              duration: 0.8
+              duration: 0.4
             }} viewport={{
               once: true
             }}>
@@ -150,8 +150,8 @@ export default function Index() {
                 opacity: 1,
                 scale: 1
               }} transition={{
-                delay: 0.2,
-                duration: 0.6
+                delay: 0.1,
+                duration: 0.3
               }} className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20">
                   <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                   <span className="text-sm font-medium">Ready to Start?</span>
@@ -164,8 +164,8 @@ export default function Index() {
                 opacity: 1,
                 y: 0
               }} transition={{
-                delay: 0.4,
-                duration: 0.8
+                delay: 0.2,
+                duration: 0.4
               }}>
                   Ready to Find Your Dream Home?
                 </motion.h2>
@@ -177,8 +177,8 @@ export default function Index() {
                 opacity: 1,
                 y: 0
               }} transition={{
-                delay: 0.6,
-                duration: 0.8
+                delay: 0.3,
+                duration: 0.4
               }}>
                   Join thousands of satisfied buyers who found their perfect property with us
                 </motion.p>
@@ -190,8 +190,8 @@ export default function Index() {
                 opacity: 1,
                 y: 0
               }} transition={{
-                delay: 0.8,
-                duration: 0.8
+                delay: 0.4,
+                duration: 0.4
               }}>
                   <motion.div whileHover={{
                   scale: 1.05
@@ -222,8 +222,8 @@ export default function Index() {
                 opacity: 1,
                 y: 0
               }} transition={{
-                delay: 1,
-                duration: 0.8
+                delay: 0.5,
+                duration: 0.4
               }}>
                   {[{
                   icon: CheckCircle2,
@@ -241,8 +241,8 @@ export default function Index() {
                   opacity: 1,
                   y: 0
                 }} transition={{
-                  delay: 1.2 + index * 0.1,
-                  duration: 0.6
+                  delay: 0.6 + index * 0.05,
+                  duration: 0.3
                 }} whileHover={{
                   y: -5
                 }}>
