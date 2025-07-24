@@ -117,11 +117,7 @@ export default function Apartments() {
               {/* Location Search Bar */}
               <div className="flex-1 min-w-[280px] relative">
                 <div className="relative flex">
-                  <input
-                    type="text"
-                    placeholder="Suburb, Postcode Or Region"
-                    className="flex-1 h-12 px-4 bg-gray-50 border border-gray-200 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  />
+                  <input type="text" placeholder="Suburb, Postcode Or Region" className="flex-1 h-12 px-4 bg-gray-50 border border-gray-200 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" />
                   <button className="h-12 px-4 bg-[#FF6A00] hover:bg-[#E55A00] text-white rounded-r-lg flex items-center justify-center transition-colors">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607z" />
@@ -172,14 +168,11 @@ export default function Apartments() {
                 </button>
 
                 {/* Reset Button */}
-                <button 
-                  onClick={() => {
-                    setCapacityFilter("all");
-                    setLocationFilter("all");
-                    setPriceRange([300000, 800000]);
-                  }}
-                  className="h-12 px-3 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow flex items-center gap-2"
-                >
+                <button onClick={() => {
+                setCapacityFilter("all");
+                setLocationFilter("all");
+                setPriceRange([300000, 800000]);
+              }} className="h-12 px-3 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow flex items-center gap-2">
                   <svg className="w-5 h-5 text-[#2E2E2E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                   </svg>
@@ -218,9 +211,7 @@ export default function Apartments() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">{t.apartments.filters.allLocations}</SelectItem>
-                  {locations.filter(loc => loc !== "all").map(location => 
-                    <SelectItem key={location} value={location}>{location}</SelectItem>
-                  )}
+                  {locations.filter(loc => loc !== "all").map(location => <SelectItem key={location} value={location}>{location}</SelectItem>)}
                 </SelectContent>
               </Select>
             </div>
@@ -230,15 +221,7 @@ export default function Apartments() {
               <label className="block text-sm font-medium mb-2">
                 {t.apartments.filters.priceRange}: ${priceRange[0].toLocaleString()} - ${priceRange[1].toLocaleString()}
               </label>
-              <Slider 
-                defaultValue={[300000, 800000]} 
-                min={300000} 
-                max={800000} 
-                step={10000} 
-                value={priceRange} 
-                onValueChange={setPriceRange} 
-                className="my-4" 
-              />
+              <Slider defaultValue={[300000, 800000]} min={300000} max={800000} step={10000} value={priceRange} onValueChange={setPriceRange} className="my-4" />
             </div>
             
             {/* Results Summary */}
@@ -256,9 +239,7 @@ export default function Apartments() {
             {/* Section Header */}
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
               <div>
-                <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                  Projects For Sale & other Off the Plan Properties nearby
-                </h2>
+                <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-2">Apartments For Sale & other Off the Plan Properties nearby</h2>
                 <p className="text-gray-600 dark:text-gray-400">
                   Showing {filteredApartments.length} out of {allApartments.length} projects available on Yephome
                 </p>
