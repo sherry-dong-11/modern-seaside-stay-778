@@ -76,10 +76,14 @@ export default function AboutUs() {
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-4xl mx-auto">
               Using intelligent tools and clear information to make the journey to your new home feel inspiring.
             </p>
-            <Button asChild variant="heroSolid" size="lg" className="group">
+            <Button asChild variant="heroSolid" size="lg" className="group relative overflow-hidden bg-gradient-to-r from-primary to-sea hover:from-primary-dark hover:to-sea-dark transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-primary/25 px-12 py-4 text-lg font-semibold">
               <Link to="/apartments">
-                Explore Communities
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <span className="relative z-10 flex items-center">
+                  <Sparkles className="mr-3 h-6 w-6 animate-pulse" />
+                  Explore Communities
+                  <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
             </Button>
           </FadeInSection>
