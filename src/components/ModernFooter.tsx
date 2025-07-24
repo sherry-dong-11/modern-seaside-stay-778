@@ -4,19 +4,25 @@ import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
-
 export default function ModernFooter() {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, {
+    once: true
+  });
   const currentYear = new Date().getFullYear();
-
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: {
+      opacity: 0
+    },
     visible: {
       opacity: 1,
       transition: {
@@ -25,18 +31,21 @@ export default function ModernFooter() {
       }
     }
   };
-
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: {
+      opacity: 0,
+      y: 30
+    },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" as const }
+      transition: {
+        duration: 0.6,
+        ease: "easeOut" as const
+      }
     }
   };
-
-  return (
-    <footer ref={ref} className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+  return <footer ref={ref} className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
@@ -45,59 +54,54 @@ export default function ModernFooter() {
 
       <div className="relative z-10">
         {/* Main footer content */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="container pt-20 pb-12"
-        >
+        <motion.div variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"} className="container pt-20 pb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Company info */}
             <motion.div variants={itemVariants} className="space-y-6">
               <div>
-                <img 
-                  src="/lovable-uploads/ec1d0529-2ae8-4481-8329-b97ea749e03f.png" 
-                  alt="YEPHOME" 
-                  className="h-10 w-auto mb-6 brightness-0 invert"
-                />
+                <img src="/lovable-uploads/ec1d0529-2ae8-4481-8329-b97ea749e03f.png" alt="YEPHOME" className="h-10 w-auto mb-6 brightness-0 invert" />
               </div>
               
               <div className="flex flex-col space-y-4">
-                <Link 
-                  to="/about" 
-                  className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group"
-                >
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group">
                   <span className="group-hover:translate-x-1 transition-transform duration-300">About us</span>
                 </Link>
-                <Link 
-                  to="/faq" 
-                  className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group"
-                >
+                <Link to="/faq" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group">
                   <span className="group-hover:translate-x-1 transition-transform duration-300">FAQ's</span>
                 </Link>
               </div>
 
               {/* Social links */}
                <div className="flex space-x-4">
-                {[
-                  { icon: Facebook, href: "#", name: "Facebook" },
-                  { icon: Instagram, href: "#", name: "Instagram" },
-                  { icon: Linkedin, href: "#", name: "LinkedIn" }
-                ].map((social, index) => (
-                  <motion.a
-                    key={social.name}
-                    href={social.href}
-                    className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-gray-300 hover:text-white hover:bg-orange-500/20 transition-all duration-300"
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ delay: 0.8 + index * 0.1 }}
-                  >
+                {[{
+                icon: Facebook,
+                href: "#",
+                name: "Facebook"
+              }, {
+                icon: Instagram,
+                href: "#",
+                name: "Instagram"
+              }, {
+                icon: Linkedin,
+                href: "#",
+                name: "LinkedIn"
+              }].map((social, index) => <motion.a key={social.name} href={social.href} className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-gray-300 hover:text-white hover:bg-orange-500/20 transition-all duration-300" whileHover={{
+                scale: 1.1,
+                y: -2
+              }} whileTap={{
+                scale: 0.95
+              }} initial={{
+                opacity: 0,
+                y: 20
+              }} animate={isInView ? {
+                opacity: 1,
+                y: 0
+              } : {}} transition={{
+                delay: 0.8 + index * 0.1
+              }}>
                     <social.icon size={18} />
                     <span className="sr-only">{social.name}</span>
-                  </motion.a>
-                ))}
+                  </motion.a>)}
               </div>
             </motion.div>
             
@@ -108,29 +112,36 @@ export default function ModernFooter() {
                 <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full" />
               </h4>
               <ul className="space-y-4">
-                {[
-                  { name: "New Home", path: "/apartments" },
-                  { name: "Sold", path: "/sold" },
-                  { name: "Virtual Tours", path: "/virtual-tours" },
-                  { name: "Insights", path: "/insights" },
-                  { name: "Professionals", path: "/for-developers" }
-                ].map((link, index) => (
-                  <motion.li
-                    key={link.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ delay: 0.5 + index * 0.1 }}
-                  >
-                    <Link 
-                      to={link.path} 
-                      className="text-gray-300 hover:text-white transition-colors duration-300 group flex items-center"
-                    >
+                {[{
+                name: "New Home",
+                path: "/apartments"
+              }, {
+                name: "Sold",
+                path: "/sold"
+              }, {
+                name: "Virtual Tours",
+                path: "/virtual-tours"
+              }, {
+                name: "Insights",
+                path: "/insights"
+              }, {
+                name: "Professionals",
+                path: "/for-developers"
+              }].map((link, index) => <motion.li key={link.name} initial={{
+                opacity: 0,
+                x: -20
+              }} animate={isInView ? {
+                opacity: 1,
+                x: 0
+              } : {}} transition={{
+                delay: 0.5 + index * 0.1
+              }}>
+                    <Link to={link.path} className="text-gray-300 hover:text-white transition-colors duration-300 group flex items-center">
                       <span className="group-hover:translate-x-1 transition-transform duration-300">
                         {link.name}
                       </span>
                     </Link>
-                  </motion.li>
-                ))}
+                  </motion.li>)}
               </ul>
             </motion.div>
             
@@ -182,24 +193,19 @@ export default function ModernFooter() {
                 {t.footer.newsletterDesc}
               </p>
               
-              <motion.form 
-                className="space-y-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.8 }}
-              >
+              <motion.form className="space-y-4" initial={{
+              opacity: 0,
+              y: 20
+            }} animate={isInView ? {
+              opacity: 1,
+              y: 0
+            } : {}} transition={{
+              delay: 0.8
+            }}>
                 <div className="relative">
-                  <input 
-                    type="email" 
-                    placeholder={t.footer.yourEmail}
-                    className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder:text-gray-400 focus:outline-none focus:border-orange-500/50 focus:bg-white/15 transition-all duration-300"
-                    required 
-                  />
+                  <input type="email" placeholder={t.footer.yourEmail} className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder:text-gray-400 focus:outline-none focus:border-orange-500/50 focus:bg-white/15 transition-all duration-300" required />
                 </div>
-                <Button 
-                  type="submit" 
-                  className="w-full bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white border-0 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                >
+                <Button type="submit" className="w-full bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white border-0 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg">
                   {t.footer.subscribe}
                 </Button>
               </motion.form>
@@ -208,41 +214,42 @@ export default function ModernFooter() {
         </motion.div>
         
         {/* Bottom section */}
-        <motion.div 
-          className="border-t border-white/10"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ delay: 1 }}
-        >
+        <motion.div className="border-t border-white/10" initial={{
+        opacity: 0
+      }} animate={isInView ? {
+        opacity: 1
+      } : {}} transition={{
+        delay: 1
+      }}>
           <div className="container py-8">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-              <motion.p 
-                className="text-gray-400 text-sm"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 1.2 }}
-              >
+              <motion.p className="text-gray-400 text-sm" initial={{
+              opacity: 0,
+              y: 20
+            }} animate={isInView ? {
+              opacity: 1,
+              y: 0
+            } : {}} transition={{
+              delay: 1.2
+            }}>
                 &copy; {currentYear} YEPHOME. All rights reserved.
               </motion.p>
               
-              <motion.div 
-                className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-8"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 1.4 }}
-              >
-                <Link 
-                  to="/privacy-policy" 
-                  className="text-gray-400 hover:text-white transition-colors text-sm group"
-                >
+              <motion.div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-8" initial={{
+              opacity: 0,
+              y: 20
+            }} animate={isInView ? {
+              opacity: 1,
+              y: 0
+            } : {}} transition={{
+              delay: 1.4
+            }}>
+                <Link to="/privacy-policy" className="text-gray-400 hover:text-white transition-colors text-sm group">
                   <span className="group-hover:underline underline-offset-4 decoration-orange-500">
                     Privacy Policy
                   </span>
                 </Link>
-                <Link 
-                  to="/terms-conditions" 
-                  className="text-gray-400 hover:text-white transition-colors text-sm group"
-                >
+                <Link to="/terms-conditions" className="text-gray-400 hover:text-white transition-colors text-sm group">
                   <span className="group-hover:underline underline-offset-4 decoration-orange-500">
                     Terms & Conditions
                   </span>
@@ -254,17 +261,21 @@ export default function ModernFooter() {
       </div>
 
       {/* Scroll to top button */}
-      <motion.button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50"
-        whileHover={{ scale: 1.1, y: -2 }}
-        whileTap={{ scale: 0.95 }}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2 }}
-      >
+      <motion.button onClick={scrollToTop} whileHover={{
+      scale: 1.1,
+      y: -2
+    }} whileTap={{
+      scale: 0.95
+    }} initial={{
+      opacity: 0,
+      y: 50
+    }} animate={{
+      opacity: 1,
+      y: 0
+    }} transition={{
+      delay: 2
+    }} className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50 bg-orange-500 hover:bg-orange-400">
         <ArrowUp className="w-5 h-5" />
       </motion.button>
-    </footer>
-  );
+    </footer>;
 }
