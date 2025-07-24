@@ -6,26 +6,25 @@ import FadeInSection from "@/components/FadeInSection";
 import { useState, useEffect } from "react";
 import { ChevronUp, HelpCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 export default function FAQ() {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const [showBackToTop, setShowBackToTop] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 400);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <ModernNavbar />
       
       <main className="pt-20">
@@ -33,10 +32,7 @@ export default function FAQ() {
         <section className="py-16 px-4 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
           <div className="max-w-4xl mx-auto text-center">
             <FadeInSection>
-              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
-                <HelpCircle className="w-4 h-4" />
-                Frequently Asked Questions
-              </div>
+              
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                 {t.contact.faq}
               </h1>
@@ -53,12 +49,8 @@ export default function FAQ() {
             <FadeInSection delay={0.2}>
               <Accordion type="single" collapsible className="w-full">
                 <div className="grid gap-4">
-                  {Object.values(t.contact.questions).map((faq, index) => (
-                    <FadeInSection key={index} delay={0.1 * index}>
-                      <AccordionItem 
-                        value={`item-${index}`}
-                        className="border border-border rounded-xl px-6 bg-card hover:shadow-lg transition-all duration-300 hover:border-primary/20"
-                      >
+                  {Object.values(t.contact.questions).map((faq, index) => <FadeInSection key={index} delay={0.1 * index}>
+                      <AccordionItem value={`item-${index}`} className="border border-border rounded-xl px-6 bg-card hover:shadow-lg transition-all duration-300 hover:border-primary/20">
                         <AccordionTrigger className="text-left text-lg font-semibold text-foreground hover:text-primary group">
                           <div className="flex items-start gap-3">
                             <Star className="w-5 h-5 text-primary mt-0.5 opacity-60 group-hover:opacity-100 transition-opacity" />
@@ -69,8 +61,7 @@ export default function FAQ() {
                           {faq.answer}
                         </AccordionContent>
                       </AccordionItem>
-                    </FadeInSection>
-                  ))}
+                    </FadeInSection>)}
                 </div>
               </Accordion>
             </FadeInSection>
@@ -106,18 +97,11 @@ export default function FAQ() {
         </section>
 
         {/* Back to Top Button */}
-        {showBackToTop && (
-          <Button
-            onClick={scrollToTop}
-            className="fixed bottom-8 right-8 rounded-full w-12 h-12 shadow-lg hover:shadow-xl transition-all duration-300 z-50"
-            size="icon"
-          >
+        {showBackToTop && <Button onClick={scrollToTop} className="fixed bottom-8 right-8 rounded-full w-12 h-12 shadow-lg hover:shadow-xl transition-all duration-300 z-50" size="icon">
             <ChevronUp className="h-5 w-5" />
-          </Button>
-        )}
+          </Button>}
       </main>
       
       <ModernFooter />
-    </div>
-  );
+    </div>;
 }
