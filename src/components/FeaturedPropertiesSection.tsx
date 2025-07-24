@@ -116,13 +116,13 @@ export default function FeaturedPropertiesSection() {
   }, [emblaApi, onInit, onSelect]);
 
   return (
-    <section className="py-8 sm:py-12 bg-background">
+    <section className="py-6 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">
             Featured Properties
           </h2>
-          <p className="text-muted-foreground text-sm sm:text-base">
+          <p className="text-muted-foreground">
             Discover our handpicked selection of premium properties
           </p>
         </div>
@@ -144,52 +144,52 @@ export default function FeaturedPropertiesSection() {
                       
                       {/* Property Name Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent" />
-                      <div className="absolute top-4 sm:top-6 md:top-8 left-4 sm:left-6 md:left-8">
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-light text-white tracking-wide drop-shadow-lg">
+                      <div className="absolute top-8 left-8">
+                        <h3 className="text-4xl font-light text-white tracking-wide drop-shadow-lg">
                           {property.name}
                         </h3>
                       </div>
                     </div>
 
                     {/* Details Section */}
-                    <div className="bg-white p-4 sm:p-6">
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div className="bg-white p-6">
+                      <div className="flex items-center justify-between flex-wrap gap-4">
                         {/* Left Side - Property Details */}
                         <div className="flex-1 min-w-0">
-                          <h4 className="text-lg sm:text-xl font-semibold text-foreground mb-1">
+                          <h4 className="text-xl font-semibold text-foreground mb-1">
                             {property.name}
                           </h4>
-                          <p className="text-muted-foreground text-xs sm:text-sm mb-3 sm:mb-4 break-words">
+                          <p className="text-muted-foreground text-sm mb-4">
                             {property.address}
                           </p>
                           
                           {/* Amenities */}
-                          <div className="flex items-center gap-4 sm:gap-6 text-muted-foreground">
+                          <div className="flex items-center gap-6 text-muted-foreground">
                             <div className="flex items-center gap-1">
-                              <Bed className="h-3 w-3 sm:h-4 sm:w-4" />
-                              <span className="text-xs sm:text-sm font-medium">{property.bedrooms}</span>
+                              <Bed className="h-4 w-4" />
+                              <span className="text-sm font-medium">{property.bedrooms}</span>
                             </div>
                             <div className="flex items-center gap-1">
-                              <Bath className="h-3 w-3 sm:h-4 sm:w-4" />
-                              <span className="text-xs sm:text-sm font-medium">{property.bathrooms}</span>
+                              <Bath className="h-4 w-4" />
+                              <span className="text-sm font-medium">{property.bathrooms}</span>
                             </div>
                             <div className="flex items-center gap-1">
-                              <Car className="h-3 w-3 sm:h-4 sm:w-4" />
-                              <span className="text-xs sm:text-sm font-medium">{property.parking}</span>
+                              <Car className="h-4 w-4" />
+                              <span className="text-sm font-medium">{property.parking}</span>
                             </div>
                           </div>
                         </div>
 
                         {/* Right Side - Type & Price */}
-                        <div className="flex flex-row sm:flex-col items-center sm:items-end justify-between sm:justify-start gap-2 sm:gap-3">
+                        <div className="flex flex-col items-end gap-3">
                           <Badge 
                             variant="secondary" 
-                            className="bg-orange-100 text-orange-800 hover:bg-orange-200 px-2 sm:px-3 py-1 text-xs font-medium"
+                            className="bg-orange-100 text-orange-800 hover:bg-orange-200 px-3 py-1 text-xs font-medium"
                           >
                             {property.type}
                           </Badge>
                           <div className="text-right">
-                            <p className="text-lg sm:text-xl md:text-2xl font-semibold text-orange-600">
+                            <p className="text-2xl font-semibold text-orange-600">
                               {property.price}
                             </p>
                           </div>
@@ -207,18 +207,18 @@ export default function FeaturedPropertiesSection() {
             variant="outline"
             size="icon"
             onClick={scrollPrev}
-            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white border-border/20 backdrop-blur-sm shadow-lg w-8 h-8 sm:w-10 sm:h-10"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white border-border/20 backdrop-blur-sm shadow-lg"
           >
-            <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
+            <ChevronLeft className="h-5 w-5" />
           </Button>
           
           <Button
             variant="outline"
             size="icon"
             onClick={scrollNext}
-            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white border-border/20 backdrop-blur-sm shadow-lg w-8 h-8 sm:w-10 sm:h-10"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white border-border/20 backdrop-blur-sm shadow-lg"
           >
-            <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
+            <ChevronRight className="h-5 w-5" />
           </Button>
 
           {/* Pagination Dots */}

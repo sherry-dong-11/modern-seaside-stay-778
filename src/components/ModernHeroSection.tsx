@@ -132,7 +132,7 @@ export default function ModernHeroSection() {
           </motion.div>
 
           {/* Main heading with staggered animation */}
-          <motion.h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 leading-tight sm:leading-[0.9] px-4" initial={{
+          <motion.h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[0.9]" initial={{
           opacity: 0
         }} animate={{
           opacity: 1
@@ -150,7 +150,7 @@ export default function ModernHeroSection() {
             delay: 0.6,
             duration: 0.8,
             ease: "easeOut"
-          }} className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium">
+          }} className="block text-4xl md:text-5xl font-medium lg:text-6xl">
               Find Your Perfect
             </motion.span>
             <motion.span initial={{
@@ -163,7 +163,7 @@ export default function ModernHeroSection() {
             delay: 0.8,
             duration: 0.8,
             ease: "easeOut"
-          }} className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium">New Home</motion.span>
+          }} className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent md:text-5xl lg:text-6xl font-bold text-6xl">New Home</motion.span>
           </motion.h1>
 
 
@@ -177,17 +177,16 @@ export default function ModernHeroSection() {
         }} transition={{
           delay: 1.2,
           duration: 0.6
-        }} className="max-w-3xl mx-auto mb-8 sm:mb-12 px-4">
-            <div className="relative p-2 sm:p-3 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl">
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+        }} className="max-w-3xl mx-auto mb-12">
+            <div className="relative p-2 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl">
+              <div className="flex flex-col md:flex-row gap-3">
                 <div className="flex-1 relative">
-                  <Search className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 text-white/60 h-4 w-4 sm:h-5 sm:w-5" />
-                  <Input placeholder="Search by suburb, postcode..." className="pl-10 sm:pl-12 bg-transparent border-none text-white placeholder:text-white/60 text-sm sm:text-base lg:text-lg h-12 sm:h-14 focus:ring-0" />
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60 h-5 w-5" />
+                  <Input placeholder="Search by suburb, postcode, or development name..." className="pl-12 bg-transparent border-none text-white placeholder:text-white/60 text-lg h-14 focus:ring-0" />
                 </div>
-                <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white px-4 sm:px-6 lg:px-8 h-12 sm:h-14 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl text-sm sm:text-base whitespace-nowrap">
-                  <Search className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
-                  <span className="hidden sm:inline">Search Properties</span>
-                  <span className="sm:hidden">Search</span>
+                <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white px-8 h-14 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                  <Search className="w-5 h-5 mr-2" />
+                  Search Properties
                 </Button>
               </div>
             </div>
@@ -197,7 +196,7 @@ export default function ModernHeroSection() {
       </div>
 
       {/* Floating Stats */}
-      <motion.div className="absolute bottom-2 sm:bottom-4 md:bottom-6 lg:bottom-8 left-0 right-0 z-20" initial={{
+      <motion.div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-0 right-0 z-20" initial={{
       opacity: 0,
       y: 50
     }} animate={{
@@ -207,8 +206,8 @@ export default function ModernHeroSection() {
       delay: 1.6,
       duration: 0.8
     }}>
-        <div className="container px-2 sm:px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-1 sm:gap-2 md:gap-3 lg:gap-4 max-w-5xl mx-auto">
+        <div className="container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 max-w-5xl mx-auto px-4">
             {stats.map((stat, index) => <motion.div key={index} initial={{
             opacity: 0,
             y: 30
@@ -219,12 +218,12 @@ export default function ModernHeroSection() {
             delay: 1.8 + index * 0.1,
             duration: 0.6
           }} whileHover={{
-            scale: 1.02,
-            y: -2
+            scale: 1.05,
+            y: -5
           }} className="bg-white/10 backdrop-blur-xl p-2 sm:p-3 md:p-4 text-center text-white rounded-lg sm:rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer">
-                <stat.icon className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6 lg:w-8 lg:h-8 mx-auto mb-1 sm:mb-2 text-orange-400" />
-                <div className="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl font-bold mb-0 sm:mb-1 leading-tight">{stat.number}</div>
-                <div className="text-xs sm:text-xs md:text-sm text-white/80 leading-tight">{stat.label}</div>
+                <stat.icon className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 mx-auto mb-1 sm:mb-2 md:mb-3 text-orange-400" />
+                <div className="text-sm sm:text-xl md:text-2xl lg:text-3xl font-bold mb-0 sm:mb-1">{stat.number}</div>
+                <div className="text-xs sm:text-sm text-white/80 leading-tight">{stat.label}</div>
               </motion.div>)}
           </div>
         </div>
