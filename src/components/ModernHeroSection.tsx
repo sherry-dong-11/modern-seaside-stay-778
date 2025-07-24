@@ -163,7 +163,7 @@ export default function ModernHeroSection() {
             delay: 0.8,
             duration: 0.8,
             ease: "easeOut"
-          }} className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">New Home</motion.span>
+          }} className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium">New Home</motion.span>
           </motion.h1>
 
 
