@@ -152,7 +152,7 @@ export default function FeaturedPropertiesSection() {
                     </div>
 
                     {/* Details Section */}
-                    <div className="bg-orange-50 p-6">
+                    <div className="bg-white p-6">
                       <div className="flex items-center justify-between flex-wrap gap-4">
                         {/* Left Side - Property Details */}
                         <div className="flex-1 min-w-0">
