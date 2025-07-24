@@ -132,99 +132,36 @@ export default function Index() {
             </div>
             
             <div className="container relative z-10">
-              <motion.div className="text-center max-w-4xl mx-auto" initial={{
-              opacity: 0,
-              y: 40
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.4
-            }} viewport={{
-              once: true
-            }}>
-                <motion.div initial={{
-                opacity: 0,
-                scale: 0.9
-              }} whileInView={{
-                opacity: 1,
-                scale: 1
-              }} transition={{
-                delay: 0.1,
-                duration: 0.3
-              }} className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20">
+              <div className="text-center max-w-4xl mx-auto">
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20">
                   <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                   <span className="text-sm font-medium">Ready to Start?</span>
-                </motion.div>
+                </div>
 
-                <motion.h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent" initial={{
-                opacity: 0,
-                y: 30
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                delay: 0.2,
-                duration: 0.4
-              }}>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                   Ready to Find Your Dream Home?
-                </motion.h2>
+                </h2>
                 
-                <motion.p className="text-xl text-gray-300 mb-12 leading-relaxed" initial={{
-                opacity: 0,
-                y: 30
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                delay: 0.3,
-                duration: 0.4
-              }}>
+                <p className="text-xl text-gray-300 mb-12 leading-relaxed">
                   Join thousands of satisfied buyers who found their perfect property with us
-                </motion.p>
+                </p>
                 
-                <motion.div className="flex flex-col sm:flex-row gap-6 justify-center mb-16" initial={{
-                opacity: 0,
-                y: 30
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                delay: 0.4,
-                duration: 0.4
-              }}>
-                  <motion.div whileHover={{
-                  scale: 1.05
-                }} whileTap={{
-                  scale: 0.95
-                }}>
+                <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+                  <div>
                     <Button size="lg" className="bg-white text-slate-900 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                       <BookOpen className="w-5 h-5 mr-2" />
                       New Build Purchase Guide
                     </Button>
-                  </motion.div>
-                  <motion.div whileHover={{
-                  scale: 1.05
-                }} whileTap={{
-                  scale: 0.95
-                }}>
+                  </div>
+                  <div>
                     <Button size="lg" variant="outline" className="border-white/30 text-black hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg font-semibold rounded-full">
                       <MessageCircle className="w-5 h-5 mr-2" />
                       Chat with AI Expert
                     </Button>
-                  </motion.div>
-                </motion.div>
+                  </div>
+                </div>
                 
-                <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center" initial={{
-                opacity: 0,
-                y: 30
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                delay: 0.5,
-                duration: 0.4
-              }}>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                   {[{
                   icon: CheckCircle2,
                   text: "No fees for buyers"
@@ -234,23 +171,12 @@ export default function Index() {
                 }, {
                   icon: CheckCircle2,
                   text: "Verified properties"
-                }].map((feature, index) => <motion.div key={index} className="flex flex-col items-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300" initial={{
-                  opacity: 0,
-                  y: 20
-                }} whileInView={{
-                  opacity: 1,
-                  y: 0
-                }} transition={{
-                  delay: 0.6 + index * 0.05,
-                  duration: 0.3
-                }} whileHover={{
-                  y: -5
-                }}>
+                }].map((feature, index) => <div key={index} className="flex flex-col items-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
                       <feature.icon className="w-8 h-8 text-green-400 mb-3" />
                       <span className="text-gray-300 font-medium">{feature.text}</span>
-                    </motion.div>)}
-                </motion.div>
-              </motion.div>
+                    </div>)}
+                </div>
+              </div>
             </div>
           </section>
         </FadeInSection>
