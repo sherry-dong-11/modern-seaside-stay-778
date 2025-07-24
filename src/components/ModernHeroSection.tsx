@@ -51,37 +51,26 @@ export default function ModernHeroSection() {
   return (
     <motion.section 
       ref={containerRef}
-      className="relative min-h-screen flex items-start justify-center overflow-hidden -mt-20 pt-24 sm:pt-28 md:pt-32 pb-20 sm:pb-24 md:pb-32"
+      className="relative min-h-screen flex items-start justify-center overflow-hidden -mt-20 pt-24 sm:pt-28 md:pt-32 pb-20 sm:pb-24 md:pb-32 bg-background"
       style={{ opacity }}
     >
-      {/* Animated Background */}
+      {/* Dynamic gradient overlay that responds to mouse */}
       <motion.div 
         className="absolute inset-0 z-0"
-        style={{ y, scale }}
-      >
-        <div 
-          className="w-full h-full bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        />
-        
-        {/* Dynamic gradient overlay that responds to mouse */}
-        <motion.div 
-          className="absolute inset-0"
-          style={{
-            background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, 
-              rgba(0,0,0,0.4) 0%, 
-              rgba(0,0,0,0.7) 50%, 
-              rgba(0,0,0,0.8) 100%)`
-          }}
-          animate={{
-            background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, 
-              rgba(0,0,0,0.4) 0%, 
-              rgba(0,0,0,0.7) 50%, 
-              rgba(0,0,0,0.8) 100%)`
-          }}
-          transition={{ duration: 0.3 }}
-        />
-      </motion.div>
+        style={{
+          background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, 
+            rgba(255,156,0,0.1) 0%, 
+            rgba(36,49,89,0.3) 30%, 
+            rgba(36,49,89,0.8) 100%)`
+        }}
+        animate={{
+          background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, 
+            rgba(255,156,0,0.1) 0%, 
+            rgba(36,49,89,0.3) 30%, 
+            rgba(36,49,89,0.8) 100%)`
+        }}
+        transition={{ duration: 0.3 }}
+      />
 
       {/* Floating particles */}
       <div className="absolute inset-0 z-10 pointer-events-none">
@@ -110,7 +99,7 @@ export default function ModernHeroSection() {
       </div>
 
       {/* Hero Content */}
-      <div className="container relative z-20 text-center text-white">
+      <div className="container relative z-20 text-center text-foreground">
         <motion.div 
           className="max-w-5xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
@@ -130,7 +119,7 @@ export default function ModernHeroSection() {
 
           {/* Main heading with staggered animation */}
           <motion.h1 
-            className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[0.9]"
+            className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[0.9] text-gradient"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
@@ -141,15 +130,23 @@ export default function ModernHeroSection() {
               transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
               className="block text-4xl md:text-5xl lg:text-6xl"
             >
-              Find Your Perfect
+              Start building wealth for
             </motion.span>
             <motion.span
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
-              className="block text-gradient text-4xl md:text-5xl lg:text-6xl"
+              className="block text-4xl md:text-5xl lg:text-6xl"
             >
-              New Home
+              wherever your journey takes
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.0, duration: 0.8, ease: "easeOut" }}
+              className="block text-4xl md:text-5xl lg:text-6xl"
+            >
+              you
             </motion.span>
           </motion.h1>
 
