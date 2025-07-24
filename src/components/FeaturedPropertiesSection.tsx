@@ -122,9 +122,6 @@ export default function FeaturedPropertiesSection() {
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
             Discover Our Featured Homes
           </h2>
-          <p className="text-muted-foreground">
-            Discover our handpicked selection of premium properties
-          </p>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
