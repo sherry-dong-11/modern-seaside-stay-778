@@ -12,7 +12,20 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
+    <div className="min-h-screen bg-background flex flex-col">
+      {/* Header with logo */}
+      <div className="w-full p-4">
+        <Link to="/" className="inline-flex items-center">
+          <img 
+            src="/lovable-uploads/45e89a4e-b7de-45de-9bb3-c273d5f1e5c1.png" 
+            alt="YEP" 
+            className="h-8 w-auto"
+          />
+        </Link>
+      </div>
+      
+      {/* Login form centered */}
+      <div className="flex-1 flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
         <CardContent className="p-8">
           <div className="text-center mb-8">
@@ -115,6 +128,7 @@ export default function Login() {
           </div>
         </CardContent>
       </Card>
+      </div>
     </div>
   );
 }
