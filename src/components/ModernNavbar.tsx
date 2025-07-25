@@ -1,7 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, User } from "lucide-react";
+import LoginDialog from "./LoginDialog";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSelector from "./LanguageSelector";
@@ -274,9 +275,12 @@ export default function ModernNavbar() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button asChild className="btn-primary">
-              <Link to="/booking">{t.nav.bookNow}</Link>
-            </Button>
+            <LoginDialog>
+              <Button className="btn-primary">
+                <User className="h-4 w-4 mr-2" />
+                Login / Sign up
+              </Button>
+            </LoginDialog>
           </motion.div>
         </motion.div>
 
@@ -433,11 +437,12 @@ export default function ModernNavbar() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
                 >
-                  <Button asChild className="w-full btn-primary">
-                    <Link to="/booking" onClick={() => setMobileMenuOpen(false)}>
-                      {t.nav.bookNow}
-                    </Link>
-                  </Button>
+                  <LoginDialog>
+                    <Button className="w-full btn-primary" onClick={() => setMobileMenuOpen(false)}>
+                      <User className="h-4 w-4 mr-2" />
+                      Login / Sign up
+                    </Button>
+                  </LoginDialog>
                 </motion.div>
               </div>
             </motion.div>
