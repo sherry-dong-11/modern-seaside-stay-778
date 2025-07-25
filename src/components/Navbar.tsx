@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSelector from "./LanguageSelector";
@@ -183,8 +183,10 @@ export default function Navbar() {
           <div className={cn("transition-colors", !isHomepage ? "text-foreground" : (scrolled ? "text-foreground" : "text-white"))}>
             <ThemeToggle />
           </div>
-          <Button asChild className="btn-primary">
-            <Link to="/booking">{t.nav.bookNow}</Link>
+          <Button asChild variant="ghost" size="icon" className="rounded-full">
+            <Link to="/login">
+              <User className="h-5 w-5" />
+            </Link>
           </Button>
         </div>
 
@@ -260,9 +262,10 @@ export default function Navbar() {
               </ul>
             </div>
             
-            <Button asChild className="w-full btn-primary mt-6">
-              <Link to="/booking" onClick={() => setMobileMenuOpen(false)}>
-                {t.nav.bookNow}
+            <Button asChild className="w-full" variant="outline">
+              <Link to="/login" onClick={() => setMobileMenuOpen(false)}>
+                <User className="h-4 w-4 mr-2" />
+                Login / Sign up
               </Link>
             </Button>
           </div>
