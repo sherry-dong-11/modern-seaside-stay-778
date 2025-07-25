@@ -16,6 +16,7 @@ import FAQ from "./pages/FAQ";
 import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Create a react-query client
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/apartments" element={<Apartments />} />
