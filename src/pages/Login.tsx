@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Chrome } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -35,15 +36,16 @@ export default function Login() {
           </div>
 
           <div className="space-y-6">
-            {/* Sign in with email button */}
+            {/* Continue with Google button */}
             <Button 
-              className="w-full h-12 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg"
+              className="w-full h-12 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg flex items-center justify-center gap-2"
               onClick={() => {
-                // This would handle the email signup/signin logic
-                console.log("Sign in with email clicked");
+                // This would handle Google authentication
+                console.log("Continue with Google clicked");
               }}
             >
-              {isSignUp ? "Sign up with email" : "Sign in with email"}
+              <Chrome className="h-5 w-5" />
+              Continue with Google
             </Button>
 
             <div className="relative">
