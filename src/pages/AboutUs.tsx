@@ -2,64 +2,47 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { 
-  Target, 
-  Lightbulb, 
-  Heart, 
-  Users, 
-  MapPin, 
-  Building, 
-  Compass, 
-  Sparkles,
-  ArrowRight,
-  CheckCircle,
-  Mail,
-  Phone
-} from "lucide-react";
+import { Target, Lightbulb, Heart, Users, MapPin, Building, Compass, Sparkles, ArrowRight, CheckCircle, Mail, Phone } from "lucide-react";
 import ModernNavbar from "@/components/ModernNavbar";
 import ModernFooter from "@/components/ModernFooter";
 import FadeInSection from "@/components/FadeInSection";
 import { Link } from "react-router-dom";
-
 export default function AboutUs() {
-  const { t } = useLanguage();
-
-  const values = [
-    {
-      icon: Heart,
-      title: "Thoughtful Development",
-      description: "Every community we create is designed with intention, considering how spaces bring people together and enhance daily life."
-    },
-    {
-      icon: Lightbulb,
-      title: "Intelligent Tools",
-      description: "We leverage cutting-edge technology to streamline your journey, making property discovery and selection effortless."
-    },
-    {
-      icon: Compass,
-      title: "Clear Information",
-      description: "Transparency is at our core. We provide comprehensive, honest information to help you make informed decisions."
-    },
-    {
-      icon: Sparkles,
-      title: "Inspiring Journey",
-      description: "Finding your new home should feel exciting, not overwhelming. We make every step of the process inspiring and enjoyable."
-    }
-  ];
-
-  const achievements = [
-    { number: "50+", label: "Communities Across Australia" },
-    { number: "15K+", label: "Happy Residents" },
-    { number: "98%", label: "Customer Satisfaction" },
-    { number: "24/7", label: "Support Available" }
-  ];
-
-  const locations = [
-    "Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide", "Gold Coast"
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const {
+    t
+  } = useLanguage();
+  const values = [{
+    icon: Heart,
+    title: "Thoughtful Development",
+    description: "Every community we create is designed with intention, considering how spaces bring people together and enhance daily life."
+  }, {
+    icon: Lightbulb,
+    title: "Intelligent Tools",
+    description: "We leverage cutting-edge technology to streamline your journey, making property discovery and selection effortless."
+  }, {
+    icon: Compass,
+    title: "Clear Information",
+    description: "Transparency is at our core. We provide comprehensive, honest information to help you make informed decisions."
+  }, {
+    icon: Sparkles,
+    title: "Inspiring Journey",
+    description: "Finding your new home should feel exciting, not overwhelming. We make every step of the process inspiring and enjoyable."
+  }];
+  const achievements = [{
+    number: "50+",
+    label: "Communities Across Australia"
+  }, {
+    number: "15K+",
+    label: "Happy Residents"
+  }, {
+    number: "98%",
+    label: "Customer Satisfaction"
+  }, {
+    number: "24/7",
+    label: "Support Available"
+  }];
+  const locations = ["Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide", "Gold Coast"];
+  return <div className="min-h-screen bg-background">
       <ModernNavbar />
       
       {/* Hero Section */}
@@ -67,9 +50,7 @@ export default function AboutUs() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-sea/5 to-background"></div>
         <div className="container mx-auto px-4 relative">
           <FadeInSection className="text-center max-w-5xl mx-auto">
-            <Badge variant="secondary" className="mb-6">
-              Connecting Communities Across Australia
-            </Badge>
+            
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
               We're here to <span className="bg-gradient-to-r from-primary to-sea bg-clip-text text-transparent">connect people</span> with thoughtfully developed communities
             </h1>
@@ -133,8 +114,7 @@ export default function AboutUs() {
           </FadeInSection>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
-              <FadeInSection key={index} delay={index * 0.1}>
+            {values.map((value, index) => <FadeInSection key={index} delay={index * 0.1}>
                 <Card className="p-8 h-full hover:shadow-lg transition-all duration-300 group">
                   <CardContent className="p-0">
                     <value.icon className="h-12 w-12 text-primary mb-6 group-hover:scale-110 transition-transform" />
@@ -142,8 +122,7 @@ export default function AboutUs() {
                     <p className="text-muted-foreground leading-relaxed">{value.description}</p>
                   </CardContent>
                 </Card>
-              </FadeInSection>
-            ))}
+              </FadeInSection>)}
           </div>
         </div>
       </section>
@@ -159,8 +138,7 @@ export default function AboutUs() {
           </FadeInSection>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
-              <FadeInSection key={index} delay={index * 0.1} className="text-center">
+            {achievements.map((achievement, index) => <FadeInSection key={index} delay={index * 0.1} className="text-center">
                 <div className="bg-background/80 backdrop-blur-sm rounded-lg p-6 hover:bg-background transition-colors">
                   <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                     {achievement.number}
@@ -169,8 +147,7 @@ export default function AboutUs() {
                     {achievement.label}
                   </div>
                 </div>
-              </FadeInSection>
-            ))}
+              </FadeInSection>)}
           </div>
         </div>
       </section>
@@ -188,14 +165,12 @@ export default function AboutUs() {
           </FadeInSection>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {locations.map((location, index) => (
-              <FadeInSection key={index} delay={index * 0.05}>
+            {locations.map((location, index) => <FadeInSection key={index} delay={index * 0.05}>
                 <Badge variant="outline" className="px-4 py-2 text-sm">
                   <MapPin className="h-3 w-3 mr-2" />
                   {location}
                 </Badge>
-              </FadeInSection>
-            ))}
+              </FadeInSection>)}
           </div>
 
           <FadeInSection className="text-center">
@@ -251,11 +226,7 @@ export default function AboutUs() {
             
             <FadeInSection direction="right">
               <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80" 
-                  alt="Modern Australian community" 
-                  className="rounded-2xl shadow-2xl"
-                />
+                <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80" alt="Modern Australian community" className="rounded-2xl shadow-2xl" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
               </div>
             </FadeInSection>
@@ -289,7 +260,7 @@ export default function AboutUs() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild variant="heroSolid" size="lg">
-                    <Link to="/apartments">Explore Communities</Link>
+                    
                   </Button>
                   <Button asChild variant="outline" size="lg">
                     <Link to="/contact">Get In Touch</Link>
@@ -302,6 +273,5 @@ export default function AboutUs() {
       </section>
 
       <ModernFooter />
-    </div>
-  );
+    </div>;
 }
