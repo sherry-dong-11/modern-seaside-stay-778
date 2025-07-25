@@ -151,7 +151,7 @@ export default function FeaturedPropertiesSection() {
 
                     {/* Details Section */}
                     <div className="bg-white p-6">
-                      <div className="flex items-center justify-between flex-wrap gap-4">
+                      <div className="flex items-start justify-between flex-col sm:flex-row gap-4 sm:gap-6">
                         {/* Left Side - Property Details */}
                         <div className="flex-1 min-w-0">
                           <h4 className="text-xl font-semibold text-foreground mb-1">
@@ -179,14 +179,14 @@ export default function FeaturedPropertiesSection() {
                         </div>
 
                         {/* Right Side - Type & Price */}
-                        <div className="flex flex-col items-end gap-3">
+                        <div className="flex flex-col sm:items-end items-start gap-3 sm:text-right text-left w-full sm:w-auto">
                           <Badge 
                             variant="secondary" 
                             className="bg-orange-100 text-orange-800 hover:bg-orange-200 px-3 py-1 text-xs font-medium"
                           >
                             {property.type}
                           </Badge>
-                          <div className="text-right">
+                          <div className="sm:text-right text-left w-full">
                             <p className="text-2xl font-semibold text-orange-600">
                               {property.price}
                             </p>
