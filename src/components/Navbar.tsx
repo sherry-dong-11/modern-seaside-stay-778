@@ -5,6 +5,7 @@ import { Menu, X, ChevronDown, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSelector from "./LanguageSelector";
+import LoginDialog from "./LoginDialog";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -183,11 +184,11 @@ export default function Navbar() {
           <div className={cn("transition-colors", !isHomepage ? "text-foreground" : (scrolled ? "text-foreground" : "text-white"))}>
             <ThemeToggle />
           </div>
-          <Button asChild variant="ghost" size="icon" className="rounded-full">
-            <Link to="/login">
+          <LoginDialog>
+            <Button variant="ghost" size="icon" className="rounded-full">
               <User className="h-5 w-5" />
-            </Link>
-          </Button>
+            </Button>
+          </LoginDialog>
         </div>
 
         {/* Mobile Navigation */}
@@ -262,12 +263,12 @@ export default function Navbar() {
               </ul>
             </div>
             
-            <Button asChild className="w-full" variant="outline">
-              <Link to="/login" onClick={() => setMobileMenuOpen(false)}>
+            <LoginDialog>
+              <Button className="w-full" variant="outline">
                 <User className="h-4 w-4 mr-2" />
                 Login / Sign up
-              </Link>
-            </Button>
+              </Button>
+            </LoginDialog>
           </div>
         </div>
       </div>

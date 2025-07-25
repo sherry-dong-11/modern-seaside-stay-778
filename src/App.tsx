@@ -8,7 +8,7 @@ import Index from "./pages/Index";
 import Apartments from "./pages/Apartments";
 import Townhouses from "./pages/Townhouses";
 import HouseLand from "./pages/HouseLand";
-import Login from "./pages/Login";
+
 import BookingPage from "./pages/BookingPage";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
@@ -34,7 +34,6 @@ const App = () => (
             <Route path="/apartments" element={<Apartments />} />
             <Route path="/townhouses" element={<Townhouses />} />
             <Route path="/house-land" element={<HouseLand />} />
-            <Route path="/login" element={<Login />} />
             <Route path="/booking" element={<BookingPage />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
