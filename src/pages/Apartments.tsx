@@ -139,7 +139,10 @@ export default function Apartments() {
                 >
                   House
                 </button>
-                <button className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50">
+                <button 
+                  className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50"
+                  onClick={() => navigate('/townhouses')}
+                >
                   Townhouse
                 </button>
               </div>
