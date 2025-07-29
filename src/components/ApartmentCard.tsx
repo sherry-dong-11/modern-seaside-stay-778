@@ -65,7 +65,7 @@ export default function ApartmentCard({
         <div className="flex items-end justify-between pt-2">
           <div>
             <span className="text-xl font-bold">From ${apartment.price}</span>
-            <span className="text-muted-foreground text-sm"> / {t.booking.summary.night}</span>
+            
           </div>
           <Button asChild className="btn-primary">
             <Link to={`/apartments/${apartment.id}`}>{t.apartments.filters.viewDetails}</Link>
