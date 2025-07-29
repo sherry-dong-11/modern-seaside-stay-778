@@ -90,7 +90,7 @@ export default function Footer() {
             </p>
             <form className="flex flex-col space-y-2">
               <input type="email" placeholder={t.footer.yourEmail} className="rounded-md px-4 py-2 bg-muted text-foreground" required />
-              <button type="submit" className="btn-primary mt-2">
+              <button type="submit" className="bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white px-4 py-2 rounded-md font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg mt-2">
                 {t.footer.subscribe}
               </button>
             </form>

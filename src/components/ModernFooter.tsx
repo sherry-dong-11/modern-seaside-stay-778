@@ -145,7 +145,7 @@ export default function ModernFooter() {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white border-0 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="w-full bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white border-0 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   {t.footer.subscribe}
                 </Button>
