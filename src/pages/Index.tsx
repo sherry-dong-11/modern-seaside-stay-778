@@ -124,7 +124,7 @@ export default function Index() {
         
         {/* CTA Section */}
         <FadeInSection>
-          <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden py-24">
+          <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden py-12">
             {/* Background effects */}
             <div className="absolute inset-0">
               <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />

@@ -95,7 +95,7 @@ export default function FeaturedPropertiesSection() {
       emblaApi.off("select", onSelect);
     };
   }, [emblaApi, onInit, onSelect]);
-  return <section className="py-6 bg-background">
+  return <section className="py-3 bg-background">
       <div className="container mx-auto px-4">
         <div className="mb-12">
           <h2 className="mb-4 text-left font-light text-3xl">
