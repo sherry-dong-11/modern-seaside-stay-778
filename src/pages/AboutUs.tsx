@@ -255,7 +255,7 @@ export default function AboutUs() {
                   </div>
                   <div className="flex items-center space-x-2 text-muted-foreground">
                     <Mail className="h-5 w-5" />
-                    <span>hello@setpoint.com.au</span>
+                    <span>info@yephom.io</span>
                   </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
