@@ -110,7 +110,7 @@ export default function Apartments() {
       <main className="flex-1 pt-20">
         
         {/* Filter Section */}
-        <section className="py-8 border-b">
+        <section className="border-b py-[10px]">
           <div className="container">
             {/* Main Filter Bar */}
             <div className="flex flex-wrap gap-3 items-center animate-fade-in">
@@ -226,9 +226,7 @@ export default function Apartments() {
             
             {/* Results Summary */}
             <div className="flex justify-between items-center mt-4 animate-fade-in [animation-delay:300ms]">
-              <p className="text-muted-foreground">
-                {t.apartments.filters.showing} {filteredApartments.length} {t.apartments.filters.of} {allApartments.length} {t.apartments.filters.accommodations}
-              </p>
+              
             </div>
           </div>
         </section>
