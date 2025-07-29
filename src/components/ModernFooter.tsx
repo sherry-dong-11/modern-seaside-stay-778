@@ -3,20 +3,18 @@ import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
-
 export default function ModernFooter() {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const currentYear = new Date().getFullYear();
-  
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   };
-
-  return (
-    <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+  return <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
@@ -44,20 +42,22 @@ export default function ModernFooter() {
 
               {/* Social links */}
               <div className="flex space-x-4">
-                {[
-                  { icon: Facebook, href: "#", name: "Facebook" },
-                  { icon: Instagram, href: "#", name: "Instagram" },
-                  { icon: Linkedin, href: "#", name: "LinkedIn" }
-                ].map((social) => (
-                  <a 
-                    key={social.name} 
-                    href={social.href} 
-                    className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-gray-300 hover:text-white hover:bg-orange-500/20 transition-all duration-300"
-                  >
+                {[{
+                icon: Facebook,
+                href: "#",
+                name: "Facebook"
+              }, {
+                icon: Instagram,
+                href: "#",
+                name: "Instagram"
+              }, {
+                icon: Linkedin,
+                href: "#",
+                name: "LinkedIn"
+              }].map(social => <a key={social.name} href={social.href} className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-gray-300 hover:text-white hover:bg-orange-500/20 transition-all duration-300">
                     <social.icon size={18} />
                     <span className="sr-only">{social.name}</span>
-                  </a>
-                ))}
+                  </a>)}
               </div>
             </div>
             
@@ -68,21 +68,28 @@ export default function ModernFooter() {
                 <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full" />
               </h4>
               <ul className="space-y-4">
-                {[
-                  { name: "New Home", path: "/apartments" },
-                  { name: "Sold", path: "/sold" },
-                  { name: "Virtual Tours", path: "/virtual-tours" },
-                  { name: "Insights", path: "/insights" },
-                  { name: "Professionals", path: "/for-developers" }
-                ].map((link) => (
-                  <li key={link.name}>
+                {[{
+                name: "New Home",
+                path: "/apartments"
+              }, {
+                name: "Sold",
+                path: "/sold"
+              }, {
+                name: "Virtual Tours",
+                path: "/virtual-tours"
+              }, {
+                name: "Insights",
+                path: "/insights"
+              }, {
+                name: "Professionals",
+                path: "/for-developers"
+              }].map(link => <li key={link.name}>
                     <Link to={link.path} className="text-gray-300 hover:text-white transition-colors duration-300 group flex items-center">
                       <span className="group-hover:translate-x-1 transition-transform duration-300">
                         {link.name}
                       </span>
                     </Link>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
             
@@ -104,14 +111,7 @@ export default function ModernFooter() {
                   </div>
                 </div>
                 
-                <div className="flex items-center group">
-                  <div className="w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center mr-4 group-hover:bg-orange-500/30 transition-colors">
-                    <Phone className="w-3 h-3 text-orange-400" />
-                  </div>
-                  <a href="tel:+61381234567" className="text-gray-300 hover:text-white transition-colors text-sm">
-                    +61 3 8123 4567
-                  </a>
-                </div>
+                
                 
                 <div className="flex items-center group">
                   <div className="w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center mr-4 group-hover:bg-orange-500/30 transition-colors">
@@ -136,17 +136,9 @@ export default function ModernFooter() {
               
               <form className="space-y-4">
                 <div className="relative">
-                  <input 
-                    type="email" 
-                    placeholder={t.footer.yourEmail} 
-                    className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder:text-gray-400 focus:outline-none focus:border-orange-500/50 focus:bg-white/15 transition-all duration-300" 
-                    required 
-                  />
+                  <input type="email" placeholder={t.footer.yourEmail} className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder:text-gray-400 focus:outline-none focus:border-orange-500/50 focus:bg-white/15 transition-all duration-300" required />
                 </div>
-                <Button 
-                  type="submit" 
-                  className="w-full bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white border-0 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                >
+                <Button type="submit" className="w-full bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white border-0 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg">
                   {t.footer.subscribe}
                 </Button>
               </form>
@@ -180,12 +172,8 @@ export default function ModernFooter() {
       </div>
 
       {/* Scroll to top button */}
-      <button 
-        onClick={scrollToTop} 
-        className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50"
-      >
+      <button onClick={scrollToTop} className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50">
         <ArrowUp className="w-5 h-5" />
       </button>
-    </footer>
-  );
+    </footer>;
 }
