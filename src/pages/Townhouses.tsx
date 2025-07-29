@@ -11,82 +11,75 @@ import australianTownhouse2 from "@/assets/australian-townhouse-2.jpg";
 import australianTownhouse3 from "@/assets/australian-townhouse-3.jpg";
 
 // Townhouse data based on the reference image
-const allApartments: ApartmentProps[] = [
-  {
-    id: "sheahan-townhouses",
-    name: "Sheahan Townhouses",
-    description: "Modern townhouses in a prime location with contemporary design and quality finishes.",
-    price: 1350000,
-    capacity: 3,
-    size: 180,
-    image: australianTownhouse1,
-    location: "Latrobe Avenue, Alphington VIC 3078",
-    features: ["2-3 Bedrooms", "1-2 Bathrooms", "0 Car Space", "Modern Kitchen", "Private Courtyard"]
-  },
-  {
-    id: "taylors-estate",
-    name: "Taylors Estate",
-    description: "Spacious family townhouses with generous living areas and outdoor spaces.",
-    price: 655050,
-    capacity: 4,
-    size: 220,
-    image: australianTownhouse2,
-    location: "1200 Taylors Road, Fraser Rise VIC 3336",
-    features: ["4+ Bedrooms", "2+ Bathrooms", "2+ Car Space", "Master Suite", "Multiple Living Areas"]
-  },
-  {
-    id: "tobias-avenue",
-    name: "33 Tobias Avenue",
-    description: "Premium townhouse in prestigious Glen Waverley with exceptional finishes.",
-    price: 1700000,
-    capacity: 4,
-    size: 250,
-    image: australianTownhouse3,
-    location: "Glen Waverley VIC 3150",
-    features: ["4 Bedrooms", "3 Bathrooms", "2 Car Space", "Designer Kitchen", "Premium Bathrooms"]
-  },
-  {
-    id: "ferntree-gully-station",
-    name: "30-32 Station St Ferntree Gully",
-    description: "Contact agents for more information about this exclusive development.",
-    price: 850000,
-    capacity: 2,
-    size: 150,
-    image: australianTownhouse1,
-    location: "30-32 Station Street, Ferntree Gully VIC 3156",
-    features: ["Contact Required", "Prime Location", "Modern Design", "Quality Finishes"]
-  },
-  {
-    id: "brunswick-townhouses",
-    name: "Brunswick Modern Townhouses",
-    description: "Contemporary townhouses with sustainable design and modern amenities.",
-    price: 980000,
-    capacity: 3,
-    size: 190,
-    image: australianTownhouse2,
-    location: "Brunswick VIC 3056",
-    features: ["3 Bedrooms", "2 Bathrooms", "1 Car Space", "Sustainable Design", "Rooftop Terrace"]
-  },
-  {
-    id: "richmond-heritage",
-    name: "Richmond Heritage Townhouses",
-    description: "Heritage-style townhouses combining classic charm with modern convenience.",
-    price: 1250000,
-    capacity: 3,
-    size: 200,
-    image: australianTownhouse3,
-    location: "Richmond VIC 3121",
-    features: ["3 Bedrooms", "2 Bathrooms", "1 Car Space", "Heritage Features", "Modern Renovation"]
-  }
-];
-
+const allApartments: ApartmentProps[] = [{
+  id: "sheahan-townhouses",
+  name: "Sheahan Townhouses",
+  description: "Modern townhouses in a prime location with contemporary design and quality finishes.",
+  price: 1350000,
+  capacity: 3,
+  size: 180,
+  image: australianTownhouse1,
+  location: "Latrobe Avenue, Alphington VIC 3078",
+  features: ["2-3 Bedrooms", "1-2 Bathrooms", "0 Car Space", "Modern Kitchen", "Private Courtyard"]
+}, {
+  id: "taylors-estate",
+  name: "Taylors Estate",
+  description: "Spacious family townhouses with generous living areas and outdoor spaces.",
+  price: 655050,
+  capacity: 4,
+  size: 220,
+  image: australianTownhouse2,
+  location: "1200 Taylors Road, Fraser Rise VIC 3336",
+  features: ["4+ Bedrooms", "2+ Bathrooms", "2+ Car Space", "Master Suite", "Multiple Living Areas"]
+}, {
+  id: "tobias-avenue",
+  name: "33 Tobias Avenue",
+  description: "Premium townhouse in prestigious Glen Waverley with exceptional finishes.",
+  price: 1700000,
+  capacity: 4,
+  size: 250,
+  image: australianTownhouse3,
+  location: "Glen Waverley VIC 3150",
+  features: ["4 Bedrooms", "3 Bathrooms", "2 Car Space", "Designer Kitchen", "Premium Bathrooms"]
+}, {
+  id: "ferntree-gully-station",
+  name: "30-32 Station St Ferntree Gully",
+  description: "Contact agents for more information about this exclusive development.",
+  price: 850000,
+  capacity: 2,
+  size: 150,
+  image: australianTownhouse1,
+  location: "30-32 Station Street, Ferntree Gully VIC 3156",
+  features: ["Contact Required", "Prime Location", "Modern Design", "Quality Finishes"]
+}, {
+  id: "brunswick-townhouses",
+  name: "Brunswick Modern Townhouses",
+  description: "Contemporary townhouses with sustainable design and modern amenities.",
+  price: 980000,
+  capacity: 3,
+  size: 190,
+  image: australianTownhouse2,
+  location: "Brunswick VIC 3056",
+  features: ["3 Bedrooms", "2 Bathrooms", "1 Car Space", "Sustainable Design", "Rooftop Terrace"]
+}, {
+  id: "richmond-heritage",
+  name: "Richmond Heritage Townhouses",
+  description: "Heritage-style townhouses combining classic charm with modern convenience.",
+  price: 1250000,
+  capacity: 3,
+  size: 200,
+  image: australianTownhouse3,
+  location: "Richmond VIC 3121",
+  features: ["3 Bedrooms", "2 Bathrooms", "1 Car Space", "Heritage Features", "Modern Renovation"]
+}];
 export default function Townhouses() {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const [filteredApartments, setFilteredApartments] = useState<ApartmentProps[]>(allApartments);
   const [capacityFilter, setCapacityFilter] = useState<string>("all");
   const [locationFilter, setLocationFilter] = useState<string>("all");
   const [priceRange, setPriceRange] = useState<number[]>([600000, 1800000]);
-
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
@@ -114,9 +107,7 @@ export default function Townhouses() {
 
   // Get unique locations for filter
   const locations = ["all", ...new Set(allApartments.map(apt => apt.location))];
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navbar />
       
       <main className="flex-1 pt-20">
@@ -129,11 +120,7 @@ export default function Townhouses() {
               {/* Location Search Bar */}
               <div className="flex-1 min-w-[280px] relative">
                 <div className="relative flex">
-                  <input
-                    type="text"
-                    placeholder="Suburb, Postcode Or Region"
-                    className="flex-1 h-12 px-4 bg-gray-50 border border-gray-200 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  />
+                  <input type="text" placeholder="Suburb, Postcode Or Region" className="flex-1 h-12 px-4 bg-gray-50 border border-gray-200 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" />
                   <button className="h-12 px-4 bg-[#FF6A00] hover:bg-[#E55A00] text-white rounded-r-lg flex items-center justify-center transition-colors">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607z" />
@@ -184,14 +171,11 @@ export default function Townhouses() {
                 </button>
 
                 {/* Reset Button */}
-                <button 
-                  onClick={() => {
-                    setCapacityFilter("all");
-                    setLocationFilter("all");
-                    setPriceRange([600000, 1800000]);
-                  }}
-                  className="h-12 px-3 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow flex items-center gap-2"
-                >
+                <button onClick={() => {
+                setCapacityFilter("all");
+                setLocationFilter("all");
+                setPriceRange([600000, 1800000]);
+              }} className="h-12 px-3 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow flex items-center gap-2">
                   <svg className="w-5 h-5 text-[#2E2E2E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                   </svg>
@@ -230,9 +214,7 @@ export default function Townhouses() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">{t.apartments.filters.allLocations}</SelectItem>
-                  {locations.filter(loc => loc !== "all").map(location => 
-                    <SelectItem key={location} value={location}>{location}</SelectItem>
-                  )}
+                  {locations.filter(loc => loc !== "all").map(location => <SelectItem key={location} value={location}>{location}</SelectItem>)}
                 </SelectContent>
               </Select>
             </div>
@@ -242,15 +224,7 @@ export default function Townhouses() {
               <label className="block text-sm font-medium mb-2">
                 {t.apartments.filters.priceRange}: ${priceRange[0].toLocaleString()} - ${priceRange[1].toLocaleString()}
               </label>
-              <Slider 
-                defaultValue={[600000, 1800000]} 
-                min={600000} 
-                max={1800000} 
-                step={10000} 
-                value={priceRange} 
-                onValueChange={setPriceRange} 
-                className="my-4" 
-              />
+              <Slider defaultValue={[600000, 1800000]} min={600000} max={1800000} step={10000} value={priceRange} onValueChange={setPriceRange} className="my-4" />
             </div>
             
             {/* Results Summary */}
@@ -263,7 +237,7 @@ export default function Townhouses() {
         </section>
         
         {/* Properties Grid */}
-        <section className="section">
+        <section className="section py-[25px]">
           <div className="container">
             {/* Section Header */}
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
@@ -290,39 +264,27 @@ export default function Townhouses() {
               </div>
             </div>
 
-            {filteredApartments.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                {filteredApartments.map((apartment, index) => (
-                  <div 
-                    key={apartment.id} 
-                    className="animate-fade-in" 
-                    style={{ animationDelay: `${(index + 1) * 100}ms` }}
-                  >
+            {filteredApartments.length > 0 ? <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                {filteredApartments.map((apartment, index) => <div key={apartment.id} className="animate-fade-in" style={{
+              animationDelay: `${(index + 1) * 100}ms`
+            }}>
                     <ApartmentCard apartment={apartment} />
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-12 animate-fade-in">
+                  </div>)}
+              </div> : <div className="text-center py-12 animate-fade-in">
                 <h3 className="text-xl font-semibold mb-2">{t.apartments.filters.noMatch}</h3>
                 <p className="text-muted-foreground mb-6">{t.apartments.filters.adjustFilters}</p>
-                <Button 
-                  variant="outline" 
-                  onClick={() => {
-                    setCapacityFilter("all");
-                    setLocationFilter("all");
-                    setPriceRange([600000, 1800000]);
-                  }}
-                >
+                <Button variant="outline" onClick={() => {
+              setCapacityFilter("all");
+              setLocationFilter("all");
+              setPriceRange([600000, 1800000]);
+            }}>
                   {t.apartments.filters.resetFilters}
                 </Button>
-              </div>
-            )}
+              </div>}
           </div>
         </section>
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 }
