@@ -78,7 +78,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-2 text-primary" />
-                <span className="text-muted-foreground">info@yephome.com.au</span>
+                <span className="text-muted-foreground">info@yephome.io</span>
               </li>
             </ul>
           </div>
