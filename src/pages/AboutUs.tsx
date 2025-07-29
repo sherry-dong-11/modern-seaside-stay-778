@@ -189,9 +189,7 @@ export default function AboutUs() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeInSection direction="left">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                Why Choose Our Communities?
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">Why Choose Us?</h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
@@ -211,7 +209,7 @@ export default function AboutUs() {
                   <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold mb-2">Ongoing Support</h3>
-                    <p className="text-muted-foreground">Our relationship doesn't end at move-in. We're here to support you throughout your residency.</p>
+                    <p className="text-muted-foreground">We offer seamless support from both AI-powered chatbots and human agents — ensuring you get fast, reliable help whenever you need it.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
