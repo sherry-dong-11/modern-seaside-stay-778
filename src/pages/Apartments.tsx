@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ApartmentCard, { ApartmentProps } from "@/components/ApartmentCard";
@@ -70,6 +71,7 @@ const allApartments: ApartmentProps[] = [{
   features: ["1-2 Bedrooms", "1-2 Bathrooms", "0-1 Car Space", "Sky Gardens", "Concierge"]
 }];
 export default function Apartments() {
+  const navigate = useNavigate();
   const {
     t
   } = useLanguage();
@@ -131,7 +133,10 @@ export default function Apartments() {
                 <button className="px-4 py-3 text-sm font-medium bg-[#FF6A00] text-white">
                   Apartment
                 </button>
-                <button className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50">
+                <button 
+                  className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50"
+                  onClick={() => navigate('/house-land')}
+                >
                   House
                 </button>
                 <button className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50">
