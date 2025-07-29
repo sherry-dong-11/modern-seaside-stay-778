@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ApartmentCard, { ApartmentProps } from "@/components/ApartmentCard";
@@ -73,6 +74,7 @@ const allApartments: ApartmentProps[] = [{
   features: ["3-4 Bedrooms", "2 Bathrooms", "2 Car Space", "Train Station Nearby", "Shopping Centers"]
 }];
 export default function HouseLand() {
+  const navigate = useNavigate();
   const {
     t
   } = useLanguage();
@@ -131,13 +133,19 @@ export default function HouseLand() {
 
               {/* Property Type Toggle */}
               <div className="flex bg-white border border-gray-200 rounded-lg overflow-hidden">
-                <button className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50">
+                <button 
+                  className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50"
+                  onClick={() => navigate('/apartments')}
+                >
                   Apartment
                 </button>
                 <button className="px-4 py-3 text-sm font-medium bg-[#FF6A00] text-white">
                   House
                 </button>
-                <button className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50">
+                <button 
+                  className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50"
+                  onClick={() => navigate('/townhouses')}
+                >
                   Townhouse
                 </button>
               </div>
