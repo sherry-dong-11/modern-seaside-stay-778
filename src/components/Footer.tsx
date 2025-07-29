@@ -6,132 +6,94 @@ export default function Footer() {
     t
   } = useLanguage();
   const currentYear = new Date().getFullYear();
-   <div className="container pt-20 pb-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {/* Company info */}
-            <div className="space-y-6">
-              <div>
-                <img src="/lovable-uploads/ec1d0529-2ae8-4481-8329-b97ea749e03f.png" alt="YEPHOME" className="h-10 w-auto mb-6 brightness-0 invert" />
-              </div>
-              
-              <div className="flex flex-col space-y-4">
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <span className="group-hover:translate-x-1 transition-transform duration-300">About us</span>
-                </Link>
-                <Link to="/faq" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <span className="group-hover:translate-x-1 transition-transform duration-300">FAQ's</span>
-                </Link>
-              </div>
-
-              {/* Social links */}
-              <div className="flex space-x-4">
-                {[
-                  { icon: Facebook, href: "#", name: "Facebook" },
-                  { icon: Instagram, href: "#", name: "Instagram" },
-                  { icon: Linkedin, href: "#", name: "LinkedIn" }
-                ].map((social) => (
-                  <a 
-                    key={social.name} 
-                    href={social.href} 
-                    className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-gray-300 hover:text-white hover:bg-orange-500/20 transition-all duration-300"
-                  >
-                    <social.icon size={18} />
-                    <span className="sr-only">{social.name}</span>
-                  </a>
-                ))}
-              </div>
+  return <footer className="bg-card text-card-foreground pt-16 pb-8 border-t">
+      <div className="container">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="animate-fade-in [animation-delay:100ms] mx-[8px]">
+            <img src="/lovable-uploads/ec1d0529-2ae8-4481-8329-b97ea749e03f.png" alt="YEPHOME" className="h-8 w-auto mb-4" />
+            <div className="flex flex-col space-y-3">
+              <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors text-base">
+                About us
+              </Link>
+              <Link to="/faq" className="text-muted-foreground hover:text-primary transition-colors text-base">
+                FAQ's
+              </Link>
             </div>
-            
-            {/* Quick Links */}
-            <div className="space-y-6">
-              <h4 className="text-xl font-bold text-white mb-6 relative">
-                {t.footer.quickLinks}
-                <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full" />
-              </h4>
-              <ul className="space-y-4">
-                {[
-                  { name: "New Home", path: "/apartments" },
-                  { name: "Sold", path: "/sold" },
-                  { name: "Virtual Tours", path: "/virtual-tours" },
-                  { name: "Insights", path: "/insights" },
-                  { name: "Professionals", path: "/for-developers" }
-                ].map((link) => (
-                  <li key={link.name}>
-                    <Link to={link.path} className="text-gray-300 hover:text-white transition-colors duration-300 group flex items-center">
-                      <span className="group-hover:translate-x-1 transition-transform duration-300">
-                        {link.name}
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+            <div className="flex space-x-4 my-[40px] mx-0">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Facebook size={20} />
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Instagram size={20} />
+                <span className="sr-only">Instagram</span>
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Twitter size={20} />
+                <span className="sr-only">Twitter</span>
+              </a>
             </div>
-            
-            {/* Contact */}
-            <div className="space-y-6">
-              <h4 className="text-xl font-bold text-white mb-6 relative">
-                {t.footer.contact}
-                <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full" />
-              </h4>
-              <div className="space-y-4">
-                <div className="flex items-start group">
-                  <div className="w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center mr-4 mt-1 group-hover:bg-orange-500/30 transition-colors">
-                    <MapPin className="w-3 h-3 text-orange-400" />
-                  </div>
-                  <div className="text-gray-300 text-sm leading-relaxed">
-                    Level 12, 120 Collins Street<br />
-                    Melbourne, VIC 3000<br />
-                    Australia
-                  </div>
-                </div>
-                
-                <div className="flex items-center group">
-                  <div className="w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center mr-4 group-hover:bg-orange-500/30 transition-colors">
-                    <Phone className="w-3 h-3 text-orange-400" />
-                  </div>
-                  <a href="tel:+61381234567" className="text-gray-300 hover:text-white transition-colors text-sm">
-                    +61 3 8123 4567
-                  </a>
-                </div>
-                
-                <div className="flex items-center group">
-                  <div className="w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center mr-4 group-hover:bg-orange-500/30 transition-colors">
-                    <Mail className="w-3 h-3 text-orange-400" />
-                  </div>
-                  <a href="mailto:info@yephome.com.au" className="text-gray-300 hover:text-white transition-colors text-sm">
-                    info@yephome.com.au
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-            {/* Newsletter */}
-            <div className="space-y-6">
-              <h4 className="text-xl font-bold text-white mb-6 relative">
-                {t.footer.newsletter}
-                <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full" />
-              </h4>
-              <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                {t.footer.newsletterDesc}
-              </p>
-              
-              <form className="space-y-4">
-                <div className="relative">
-                  <input 
-                    type="email" 
-                    placeholder={t.footer.yourEmail} 
-                    className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder:text-gray-400 focus:outline-none focus:border-orange-500/50 focus:bg-white/15 transition-all duration-300" 
-                    required 
-                  />
-                </div>
-                <Button 
-                  type="submit" 
-                  className="w-full bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white border-0 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                >
-                  {t.footer.subscribe}
-                </Button>
-              </form>
-            </div>
+          </div>
+          
+          <div className="animate-fade-in [animation-delay:200ms] mx-[8px]">
+            <h4 className="text-xl font-bold mb-4">{t.footer.quickLinks}</h4>
+            <ul className="space-y-2 mx-[4px]">
+              {[{
+              name: "New Home",
+              path: "/apartments"
+            }, {
+              name: "Sold",
+              path: "/sold"
+            }, {
+              name: "Virtual Tours",
+              path: "/virtual-tours"
+            }, {
+              name: "Insights",
+              path: "/insights"
+            }, {
+              name: "Professionals",
+              path: "/for-developers"
+            }].map(link => <li key={link.name}>
+                  <Link to={link.path} className="text-muted-foreground hover:text-primary transition-colors">
+                    {link.name}
+                  </Link>
+                </li>)}
+            </ul>
+          </div>
+          
+          <div className="animate-fade-in [animation-delay:300ms] mx-[8px]">
+            <h4 className="text-xl font-bold mb-4 mx-0 my-0 px-0">{t.footer.contact}</h4>
+            <ul className="space-y-3 mx-0">
+              <li className="flex items-start">
+                <MapPin className="w-5 h-5 mr-2 mt-0.5 text-primary" />
+                <span className="text-muted-foreground">
+                  Level 12, 120 Collins Street<br />
+                  Melbourne, VIC 3000<br />
+                  Australia
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Phone className="w-5 h-5 mr-2 text-primary" />
+                <span className="text-muted-foreground">+61 3 8123 4567</span>
+              </li>
+              <li className="flex items-center">
+                <Mail className="w-5 h-5 mr-2 text-primary" />
+                <span className="text-muted-foreground">info@yephome.com.au</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="animate-fade-in [animation-delay:400ms] mx-[5px]">
+            <h4 className="text-xl font-bold mb-4">{t.footer.newsletter}</h4>
+            <p className="text-muted-foreground mb-4">
+              {t.footer.newsletterDesc}
+            </p>
+            <form className="flex flex-col space-y-2">
+              <input type="email" placeholder={t.footer.yourEmail} className="rounded-md px-4 py-2 bg-muted text-foreground" required />
+              <button type="submit" className="bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white px-4 py-2 rounded-md font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg mt-2">
+                {t.footer.subscribe}
+              </button>
+            </form>
           </div>
         </div>
         
