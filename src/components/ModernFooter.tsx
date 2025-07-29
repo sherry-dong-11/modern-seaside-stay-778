@@ -117,9 +117,7 @@ export default function ModernFooter() {
                   <div className="w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center mr-4 group-hover:bg-orange-500/30 transition-colors">
                     <Mail className="w-3 h-3 text-orange-400" />
                   </div>
-                  <a href="mailto:info@yephome.com.au" className="text-gray-300 hover:text-white transition-colors text-sm">
-                    info@yephome.com.au
-                  </a>
+                  <a href="mailto:info@yephome.com.au" className="text-gray-300 hover:text-white transition-colors text-sm">info@yephome.io</a>
                 </div>
               </div>
             </div>
