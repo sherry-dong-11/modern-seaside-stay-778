@@ -234,7 +234,7 @@ export default function Apartments() {
         </section>
         
         {/* Properties Grid */}
-        <section className="section">
+        <section className="section py-[25px]">
           <div className="container">
             {/* Section Header */}
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
