@@ -11,82 +11,75 @@ import australianHouse2 from "@/assets/australian-house-2.jpg";
 import australianHouse3 from "@/assets/australian-house-3.jpg";
 
 // House & Land data based on the reference image
-const allApartments: ApartmentProps[] = [
-  {
-    id: "officer-central",
-    name: "Officer Central - Urbane House and Land",
-    description: "Modern house and land packages in the growing Officer community with quality construction.",
-    price: 750000,
-    capacity: 4,
-    size: 200,
-    image: australianHouse1,
-    location: "45 Rix Road, Officer VIC 3809",
-    features: ["3-4 Bedrooms", "1-2 Bathrooms", "1-2 Car Space", "House & Land Package", "Modern Design"]
-  },
-  {
-    id: "minta-estate",
-    name: "Minta Estate - Urbane House and Land",
-    description: "Premium house and land packages in established Berwick with family-friendly amenities.",
-    price: 692404,
-    capacity: 4,
-    size: 220,
-    image: australianHouse2,
-    location: "67 Soldiers Road, Berwick VIC 3806",
-    features: ["3-4 Bedrooms", "1-2 Bathrooms", "1-2 Car Space", "Family Community", "Quality Finishes"]
-  },
-  {
-    id: "hillgrove-rockbank",
-    name: "Hillgrove - Rockbank",
-    description: "Contact agents for more information about this exclusive house and land development.",
-    price: 850000,
-    capacity: 4,
-    size: 250,
-    image: australianHouse3,
-    location: "Greenpoint Drive, Rockbank VIC 3335",
-    features: ["Contact Required", "New Development", "Modern Architecture", "Family Oriented"]
-  },
-  {
-    id: "warehouse-maughan",
-    name: "Warehouse - 1 Maughan Way",
-    description: "Unique warehouse conversion opportunity in Cranbourne West. Contact agents for details.",
-    price: 950000,
-    capacity: 3,
-    size: 180,
-    image: australianHouse1,
-    location: "1 Maughan Way, Cranbourne West VIC 3977",
-    features: ["Contact Required", "Unique Property", "Industrial Style", "Investment Opportunity"]
-  },
-  {
-    id: "cranbourne-estate",
-    name: "Cranbourne Family Estate",
-    description: "Spacious family homes in growing Cranbourne with modern amenities and community facilities.",
-    price: 720000,
-    capacity: 4,
-    size: 210,
-    image: australianHouse2,
-    location: "Cranbourne VIC 3977",
-    features: ["4 Bedrooms", "2 Bathrooms", "2 Car Space", "Community Hub", "Modern Kitchen"]
-  },
-  {
-    id: "pakenham-springs",
-    name: "Pakenham Springs",
-    description: "Contemporary house and land packages in vibrant Pakenham with excellent connectivity.",
-    price: 680000,
-    capacity: 3,
-    size: 190,
-    image: australianHouse3,
-    location: "Pakenham VIC 3810",
-    features: ["3-4 Bedrooms", "2 Bathrooms", "2 Car Space", "Train Station Nearby", "Shopping Centers"]
-  }
-];
-
+const allApartments: ApartmentProps[] = [{
+  id: "officer-central",
+  name: "Officer Central - Urbane House and Land",
+  description: "Modern house and land packages in the growing Officer community with quality construction.",
+  price: 750000,
+  capacity: 4,
+  size: 200,
+  image: australianHouse1,
+  location: "45 Rix Road, Officer VIC 3809",
+  features: ["3-4 Bedrooms", "1-2 Bathrooms", "1-2 Car Space", "House & Land Package", "Modern Design"]
+}, {
+  id: "minta-estate",
+  name: "Minta Estate - Urbane House and Land",
+  description: "Premium house and land packages in established Berwick with family-friendly amenities.",
+  price: 692404,
+  capacity: 4,
+  size: 220,
+  image: australianHouse2,
+  location: "67 Soldiers Road, Berwick VIC 3806",
+  features: ["3-4 Bedrooms", "1-2 Bathrooms", "1-2 Car Space", "Family Community", "Quality Finishes"]
+}, {
+  id: "hillgrove-rockbank",
+  name: "Hillgrove - Rockbank",
+  description: "Contact agents for more information about this exclusive house and land development.",
+  price: 850000,
+  capacity: 4,
+  size: 250,
+  image: australianHouse3,
+  location: "Greenpoint Drive, Rockbank VIC 3335",
+  features: ["Contact Required", "New Development", "Modern Architecture", "Family Oriented"]
+}, {
+  id: "warehouse-maughan",
+  name: "Warehouse - 1 Maughan Way",
+  description: "Unique warehouse conversion opportunity in Cranbourne West. Contact agents for details.",
+  price: 950000,
+  capacity: 3,
+  size: 180,
+  image: australianHouse1,
+  location: "1 Maughan Way, Cranbourne West VIC 3977",
+  features: ["Contact Required", "Unique Property", "Industrial Style", "Investment Opportunity"]
+}, {
+  id: "cranbourne-estate",
+  name: "Cranbourne Family Estate",
+  description: "Spacious family homes in growing Cranbourne with modern amenities and community facilities.",
+  price: 720000,
+  capacity: 4,
+  size: 210,
+  image: australianHouse2,
+  location: "Cranbourne VIC 3977",
+  features: ["4 Bedrooms", "2 Bathrooms", "2 Car Space", "Community Hub", "Modern Kitchen"]
+}, {
+  id: "pakenham-springs",
+  name: "Pakenham Springs",
+  description: "Contemporary house and land packages in vibrant Pakenham with excellent connectivity.",
+  price: 680000,
+  capacity: 3,
+  size: 190,
+  image: australianHouse3,
+  location: "Pakenham VIC 3810",
+  features: ["3-4 Bedrooms", "2 Bathrooms", "2 Car Space", "Train Station Nearby", "Shopping Centers"]
+}];
 export default function HouseLand() {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const [filteredApartments, setFilteredApartments] = useState<ApartmentProps[]>(allApartments);
   const [capacityFilter, setCapacityFilter] = useState<string>("all");
   const [locationFilter, setLocationFilter] = useState<string>("all");
   const [priceRange, setPriceRange] = useState<number[]>([650000, 1000000]);
-
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
@@ -114,9 +107,7 @@ export default function HouseLand() {
 
   // Get unique locations for filter
   const locations = ["all", ...new Set(allApartments.map(apt => apt.location))];
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navbar />
       
       <main className="flex-1 pt-20">
@@ -129,11 +120,7 @@ export default function HouseLand() {
               {/* Location Search Bar */}
               <div className="flex-1 min-w-[280px] relative">
                 <div className="relative flex">
-                  <input
-                    type="text"
-                    placeholder="Suburb, Postcode Or Region"
-                    className="flex-1 h-12 px-4 bg-gray-50 border border-gray-200 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  />
+                  <input type="text" placeholder="Suburb, Postcode Or Region" className="flex-1 h-12 px-4 bg-gray-50 border border-gray-200 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" />
                   <button className="h-12 px-4 bg-[#FF6A00] hover:bg-[#E55A00] text-white rounded-r-lg flex items-center justify-center transition-colors">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607z" />
@@ -184,14 +171,11 @@ export default function HouseLand() {
                 </button>
 
                 {/* Reset Button */}
-                <button 
-                  onClick={() => {
-                    setCapacityFilter("all");
-                    setLocationFilter("all");
-                    setPriceRange([650000, 1000000]);
-                  }}
-                  className="h-12 px-3 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow flex items-center gap-2"
-                >
+                <button onClick={() => {
+                setCapacityFilter("all");
+                setLocationFilter("all");
+                setPriceRange([650000, 1000000]);
+              }} className="h-12 px-3 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow flex items-center gap-2">
                   <svg className="w-5 h-5 text-[#2E2E2E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                   </svg>
@@ -230,9 +214,7 @@ export default function HouseLand() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">{t.apartments.filters.allLocations}</SelectItem>
-                  {locations.filter(loc => loc !== "all").map(location => 
-                    <SelectItem key={location} value={location}>{location}</SelectItem>
-                  )}
+                  {locations.filter(loc => loc !== "all").map(location => <SelectItem key={location} value={location}>{location}</SelectItem>)}
                 </SelectContent>
               </Select>
             </div>
@@ -242,15 +224,7 @@ export default function HouseLand() {
               <label className="block text-sm font-medium mb-2">
                 {t.apartments.filters.priceRange}: ${priceRange[0].toLocaleString()} - ${priceRange[1].toLocaleString()}
               </label>
-              <Slider 
-                defaultValue={[650000, 1000000]} 
-                min={650000} 
-                max={1000000} 
-                step={10000} 
-                value={priceRange} 
-                onValueChange={setPriceRange} 
-                className="my-4" 
-              />
+              <Slider defaultValue={[650000, 1000000]} min={650000} max={1000000} step={10000} value={priceRange} onValueChange={setPriceRange} className="my-4" />
             </div>
             
             {/* Results Summary */}
@@ -263,7 +237,7 @@ export default function HouseLand() {
         </section>
         
         {/* Properties Grid */}
-        <section className="section">
+        <section className="section py-[25px]">
           <div className="container">
             {/* Section Header */}
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
@@ -290,39 +264,27 @@ export default function HouseLand() {
               </div>
             </div>
 
-            {filteredApartments.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                {filteredApartments.map((apartment, index) => (
-                  <div 
-                    key={apartment.id} 
-                    className="animate-fade-in" 
-                    style={{ animationDelay: `${(index + 1) * 100}ms` }}
-                  >
+            {filteredApartments.length > 0 ? <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                {filteredApartments.map((apartment, index) => <div key={apartment.id} className="animate-fade-in" style={{
+              animationDelay: `${(index + 1) * 100}ms`
+            }}>
                     <ApartmentCard apartment={apartment} />
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-12 animate-fade-in">
+                  </div>)}
+              </div> : <div className="text-center py-12 animate-fade-in">
                 <h3 className="text-xl font-semibold mb-2">{t.apartments.filters.noMatch}</h3>
                 <p className="text-muted-foreground mb-6">{t.apartments.filters.adjustFilters}</p>
-                <Button 
-                  variant="outline" 
-                  onClick={() => {
-                    setCapacityFilter("all");
-                    setLocationFilter("all");
-                    setPriceRange([650000, 1000000]);
-                  }}
-                >
+                <Button variant="outline" onClick={() => {
+              setCapacityFilter("all");
+              setLocationFilter("all");
+              setPriceRange([650000, 1000000]);
+            }}>
                   {t.apartments.filters.resetFilters}
                 </Button>
-              </div>
-            )}
+              </div>}
           </div>
         </section>
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 }
