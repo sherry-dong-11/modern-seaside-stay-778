@@ -1,6 +1,7 @@
 import { Heart, Bed, Bath, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 import sheahanTownhousesImage from "@/assets/sheahan-townhouses.jpg";
 interface PropertyItem {
   id: string;
@@ -156,10 +157,26 @@ const CategorySection = ({
   title: string;
   properties: PropertyItem[];
 }) => {
+  const navigate = useNavigate();
+  
+  const handleShowAll = () => {
+    if (title === "New Apartments") {
+      navigate("/apartments");
+    } else if (title === "New Townhouses") {
+      navigate("/townhouses");
+    } else if (title === "House & Land") {
+      navigate("/house-land");
+    }
+  };
+
   return <div className="mb-12">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold text-foreground">{title}</h2>
-        <Button variant="ghost" className="text-orange-500 hover:text-orange-600 p-0">
+        <Button 
+          variant="ghost" 
+          className="text-orange-500 hover:text-orange-600 p-0"
+          onClick={handleShowAll}
+        >
           Show all
         </Button>
       </div>

@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 const newsArticles = [{
   id: 1,
   image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800&h=600&fit=crop",
@@ -23,6 +24,12 @@ const newsArticles = [{
   headline: "Great News for Victorian Homebuyers: Stamp Duty Discount Extended Another 12 Months"
 }];
 export function LatestNewsSection() {
+  const navigate = useNavigate();
+
+  const handleBrowseAllNews = () => {
+    navigate("/blog");
+  };
+
   return <section className="py-6 bg-gray-50/50">
       <div className="container">
         {/* Section Header */}
@@ -33,7 +40,11 @@ export function LatestNewsSection() {
             </h2>
             <p className="text-muted-foreground">Insights into the Australian new development & real estate market</p>
           </div>
-          <Button variant="ghost" className="text-primary hover:text-primary/90 self-center sm:self-auto">
+          <Button 
+            variant="ghost" 
+            className="text-primary hover:text-primary/90 self-center sm:self-auto"
+            onClick={handleBrowseAllNews}
+          >
             Browse all news
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
