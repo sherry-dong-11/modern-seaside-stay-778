@@ -133,16 +133,10 @@ export default function Apartments() {
                 <button className="px-4 py-3 text-sm font-medium bg-[#FF6A00] text-white">
                   Apartment
                 </button>
-                <button 
-                  className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50"
-                  onClick={() => navigate('/house-land')}
-                >
+                <button className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50" onClick={() => navigate('/house-land')}>
                   House
                 </button>
-                <button 
-                  className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50"
-                  onClick={() => navigate('/townhouses')}
-                >
+                <button className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50" onClick={() => navigate('/townhouses')}>
                   Townhouse
                 </button>
               </div>
@@ -245,7 +239,7 @@ export default function Apartments() {
             {/* Section Header */}
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
               <div>
-                <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-2">Apartments For Sale & other Off the Plan Properties nearby</h2>
+                <h2 className="lg:text-3xl font-bold mb-2 text-2xl text-gray-900">Apartments For Sale & other Off the Plan Properties nearby</h2>
                 <p className="text-gray-600 dark:text-gray-400">
                   Showing {filteredApartments.length} out of {allApartments.length} projects available on Yephome
                 </p>
