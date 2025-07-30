@@ -86,9 +86,7 @@ export default function FAQ() {
                     </a>
                   </Button>
                   <Button variant="outline" size="lg" className="text-base" asChild>
-                    <a href="tel:+39-123-456-789">
-                      Call Now
-                    </a>
+                    
                   </Button>
                 </div>
               </div>
