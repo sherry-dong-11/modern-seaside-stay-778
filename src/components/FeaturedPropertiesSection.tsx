@@ -98,7 +98,7 @@ export default function FeaturedPropertiesSection() {
   return <section className="py-3 bg-background">
       <div className="container mx-auto px-4">
         <div className="mb-12">
-          <h2 className="mb-4 text-left text-3xl font-semibold">
+          <h2 className="mb-4 text-left font-semibold text-3xl">
             Discover Our Featured Homes
           </h2>
           <div className="w-full h-px bg-border"></div>

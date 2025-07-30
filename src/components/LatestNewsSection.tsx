@@ -25,26 +25,20 @@ const newsArticles = [{
 }];
 export function LatestNewsSection() {
   const navigate = useNavigate();
-
   const handleBrowseAllNews = () => {
     navigate("/blog");
   };
-
   return <section className="py-6 bg-gray-50/50">
       <div className="container">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
           <div className="text-center sm:text-left mb-4 sm:mb-0">
-            <h2 className="text-foreground mb-2 text-4xl font-bold">
+            <h2 className="text-foreground mb-2 text-3xl font-semibold">
               Latest News
             </h2>
             <p className="text-muted-foreground">Insights into the Australian new development & real estate market</p>
           </div>
-          <Button 
-            variant="ghost" 
-            className="text-primary hover:text-primary/90 self-center sm:self-auto"
-            onClick={handleBrowseAllNews}
-          >
+          <Button variant="ghost" className="text-primary hover:text-primary/90 self-center sm:self-auto" onClick={handleBrowseAllNews}>
             Browse all news
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>

@@ -158,7 +158,6 @@ const CategorySection = ({
   properties: PropertyItem[];
 }) => {
   const navigate = useNavigate();
-  
   const handleShowAll = () => {
     if (title === "New Apartments") {
       navigate("/apartments");
@@ -168,15 +167,10 @@ const CategorySection = ({
       navigate("/house-land");
     }
   };
-
   return <div className="mb-12">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-foreground">{title}</h2>
-        <Button 
-          variant="ghost" 
-          className="text-orange-500 hover:text-orange-600 p-0"
-          onClick={handleShowAll}
-        >
+        <h2 className="text-foreground text-2xl font-semibold">{title}</h2>
+        <Button variant="ghost" className="text-orange-500 hover:text-orange-600 p-0" onClick={handleShowAll}>
           Show all
         </Button>
       </div>
