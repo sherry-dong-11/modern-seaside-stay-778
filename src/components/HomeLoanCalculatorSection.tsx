@@ -48,7 +48,7 @@ export const HomeLoanCalculatorSection = () => {
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="mb-6 text-center">
-            <h2 className="lg:text-4xl mb-2 text-left text-slate-950 font-semibold text-2xl">
+            <h2 className="lg:text-4xl mb-2 text-left font-semibold text-2xl text-inherit">
               Property Purchase Calculators
             </h2>
             <p className="text-left text-base text-slate-500">
