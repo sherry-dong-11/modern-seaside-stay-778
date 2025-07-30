@@ -133,16 +133,10 @@ export default function Townhouses() {
 
               {/* Property Type Toggle */}
               <div className="flex bg-white border border-gray-200 rounded-lg overflow-hidden">
-                <button 
-                  className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50"
-                  onClick={() => navigate('/apartments')}
-                >
+                <button className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50" onClick={() => navigate('/apartments')}>
                   Apartment
                 </button>
-                <button 
-                  className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50"
-                  onClick={() => navigate('/house-land')}
-                >
+                <button className="px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50" onClick={() => navigate('/house-land')}>
                   House
                 </button>
                 <button className="px-4 py-3 text-sm font-medium bg-[#FF6A00] text-white">
@@ -248,7 +242,7 @@ export default function Townhouses() {
             {/* Section Header */}
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
               <div>
-                <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                <h2 className="text-2xl lg:text-3xl mb-2 font-semibold text-gray-900">
                   Townhouses For Sale & other Off the Plan Properties nearby
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400">
