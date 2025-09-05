@@ -74,7 +74,16 @@ export default {
 					700: 'hsl(var(--neutral-700))',
 					800: 'hsl(var(--neutral-800))',
 					900: 'hsl(var(--neutral-900))'
-				}
+				},
+				sea: {
+					DEFAULT: 'hsl(var(--sea))',
+					dark: 'hsl(var(--sea-dark))'
+				},
+				gold: {
+					DEFAULT: 'hsl(var(--gold))',
+					dark: 'hsl(var(--gold-dark))'
+				},
+				platinum: 'hsl(var(--platinum))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -127,6 +136,16 @@ export default {
 					'0%': { boxShadow: '0 0 5px rgba(30, 136, 229, 0.5)' },
 					'50%': { boxShadow: '0 0 20px rgba(30, 136, 229, 0.8)' },
 					'100%': { boxShadow: '0 0 5px rgba(30, 136, 229, 0.5)' }
+				},
+				'luxury-glow': {
+					'0%': { boxShadow: '0 0 20px rgba(251, 191, 36, 0.3)' },
+					'50%': { boxShadow: '0 0 40px rgba(251, 191, 36, 0.6)' },
+					'100%': { boxShadow: '0 0 20px rgba(251, 191, 36, 0.3)' }
+				},
+				'premium-float': {
+					'0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+					'33%': { transform: 'translateY(-10px) rotate(1deg)' },
+					'66%': { transform: 'translateY(-5px) rotate(-1deg)' }
 				}
 			},
 			animation: {
@@ -140,7 +159,9 @@ export default {
 				'float': 'float 6s ease-in-out infinite',
 				'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
 				'wave': 'wave 12s -2s linear infinite',
-				'button-glow': 'button-glow 3s ease-in-out infinite'
+				'button-glow': 'button-glow 3s ease-in-out infinite',
+				'luxury-glow': 'luxury-glow 4s ease-in-out infinite',
+				'premium-float': 'premium-float 8s ease-in-out infinite'
 			}
 		}
 	},

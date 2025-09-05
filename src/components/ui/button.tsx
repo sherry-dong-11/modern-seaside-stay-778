@@ -21,6 +21,8 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         hero: "bg-white/20 text-white backdrop-blur-sm border border-white/30 hover:bg-white/30 dark:bg-black/30 dark:border-white/10 dark:hover:bg-black/40 transition-all duration-300 shadow-lg hover:shadow-xl",
         heroSolid: "bg-sea text-white hover:bg-sea-dark dark:bg-sea-dark dark:hover:bg-sea transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02]",
+        premium: "bg-gradient-to-r from-primary via-sea to-gold text-white border-0 hover:from-primary-600 hover:via-sea-dark hover:to-gold-dark transition-all duration-500 shadow-luxury hover:shadow-premium hover:scale-[1.02] backdrop-blur-sm",
+        luxury: "bg-gradient-to-r from-gold to-primary text-white border border-gold/30 hover:from-gold-dark hover:to-primary-600 transition-all duration-500 shadow-luxury hover:shadow-premium hover:scale-[1.02] backdrop-blur-sm relative overflow-hidden",
       },
       size: {
         default: "h-10 px-4 py-2",
