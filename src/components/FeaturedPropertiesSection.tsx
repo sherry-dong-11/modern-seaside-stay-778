@@ -127,17 +127,17 @@ export default function FeaturedPropertiesSection() {
                       
                       {/* Premium overlay with enhanced gradient */}
                       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40" />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <h3 className="text-5xl md:text-6xl font-light text-white tracking-wide text-center">
-                          {property.name}
-                        </h3>
+                      <div className="absolute top-8 left-8">
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl px-6 py-3 border border-white/20">
+                          <h3 className="text-3xl font-light text-white tracking-wide">
+                            {property.name}
+                          </h3>
+                        </div>
                       </div>
                       
                       {/* Premium badge */}
                       <div className="absolute top-8 right-8">
-                        <div className="bg-primary-500/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium border border-primary-400/30">
-                          Featured
-                        </div>
+                        
                       </div>
                     </div>
 
@@ -172,12 +172,9 @@ export default function FeaturedPropertiesSection() {
 
                         {/* Right Side - Type & Price */}
                         <div className="flex flex-col sm:items-end items-start gap-3 sm:text-right text-left w-full sm:w-auto">
-                          <div className="relative">
-                            <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-primary-600 rounded-xl blur-sm opacity-40"></div>
-                            <Badge variant="secondary" className="relative bg-white/95 backdrop-blur-md text-primary-900 border border-white/50 px-5 py-2.5 text-xs font-bold rounded-xl shadow-2xl tracking-wider uppercase">
-                              {property.type}
-                            </Badge>
-                          </div>
+                          <Badge variant="secondary" className="bg-gradient-to-r from-primary-100 to-primary-50 text-primary-800 border border-primary-200/50 px-4 py-2 text-sm font-medium rounded-full shadow-sm bg-orange-500">
+                            {property.type}
+                          </Badge>
                           <div className="sm:text-right text-left w-full">
                             <p className="text-3xl font-light text-primary-600 tracking-tight">
                               {property.price}
