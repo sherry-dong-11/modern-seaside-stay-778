@@ -168,7 +168,12 @@ export default function Index() {
                 }, {
                   icon: CheckCircle2,
                   text: "Verified properties"
-                }].map((feature, index) => {})}
+                }].map((feature, index) => (
+                    <div key={index} className="flex flex-col items-center gap-3">
+                      <feature.icon className="w-6 h-6 text-green-400" />
+                      <span className="text-gray-300">{feature.text}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
