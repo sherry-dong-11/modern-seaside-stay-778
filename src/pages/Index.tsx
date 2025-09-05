@@ -151,9 +151,9 @@ export default function Index() {
                     
                   </div>
                   <div>
-                    <Button size="lg" variant="outline" className="border-border text-foreground backdrop-blur-sm text-lg font-semibold rounded-full bg-zinc-100 mx-0 px-[37px] py-[31px]">
+                    <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-lg font-bold rounded-full px-12 py-6 border-0">
                       <MessageCircle className="w-5 h-5 mr-2" />
-                      Chat with AI Expert
+                      Register Now
                     </Button>
                   </div>
                 </div>
@@ -168,7 +168,12 @@ export default function Index() {
                 }, {
                   icon: CheckCircle2,
                   text: "Verified properties"
-                }].map((feature, index) => {})}
+                }].map((feature, index) => (
+                    <div key={index} className="flex flex-col items-center">
+                      <feature.icon className="w-6 h-6 text-green-400 mb-2" />
+                      <span className="text-gray-300">{feature.text}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
