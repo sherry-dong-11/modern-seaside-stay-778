@@ -126,7 +126,7 @@ export default function Index() {
         <FadeInSection>
           <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden py-12">
             {/* Background effects */}
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 py-[24px] my-0">
               <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
               <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
             </div>
@@ -151,9 +151,9 @@ export default function Index() {
                     
                   </div>
                   <div>
-                    <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-lg font-bold rounded-full px-12 py-6 border-0">
+                    <Button size="lg" variant="outline" className="border-border text-foreground backdrop-blur-sm text-lg font-semibold rounded-full bg-zinc-100 mx-0 px-[37px] py-[31px]">
                       <MessageCircle className="w-5 h-5 mr-2" />
-                      Register Now
+                      Chat with AI Expert
                     </Button>
                   </div>
                 </div>
@@ -168,12 +168,7 @@ export default function Index() {
                 }, {
                   icon: CheckCircle2,
                   text: "Verified properties"
-                }].map((feature, index) => (
-                    <div key={index} className="flex flex-col items-center">
-                      <feature.icon className="w-6 h-6 text-green-400 mb-2" />
-                      <span className="text-gray-300">{feature.text}</span>
-                    </div>
-                  ))}
+                }].map((feature, index) => {})}
                 </div>
               </div>
             </div>
