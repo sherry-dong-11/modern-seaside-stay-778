@@ -142,9 +142,7 @@ export default function Index() {
                   Ready to Find Your Dream Home?
                 </h2>
                 
-                <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-                  Join thousands of satisfied buyers who found their perfect property with us
-                </p>
+                <p className="text-xl text-gray-300 mb-12 leading-relaxed">Join us to find out about new listings and access exclusive content</p>
                 
                 <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
                   <div>
