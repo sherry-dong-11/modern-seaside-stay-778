@@ -34,7 +34,7 @@ export default function ModernNavbar() {
   const navLinks = [
     { name: "Sold", path: "/sold" },
     { name: "Virtual Tours", path: "/virtual-tours" },
-    { name: "Insights", path: "/insights" }
+    { name: "Market Trend", path: "/market-trend" }
   ];
 
   useEffect(() => {
