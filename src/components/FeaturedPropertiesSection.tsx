@@ -127,12 +127,10 @@ export default function FeaturedPropertiesSection() {
                       
                       {/* Premium overlay with enhanced gradient */}
                       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40" />
-                      <div className="absolute top-8 left-8">
-                        <div className="bg-white/10 backdrop-blur-md rounded-2xl px-6 py-3 border border-white/20">
-                          <h3 className="text-3xl font-light text-white tracking-wide">
-                            {property.name}
-                          </h3>
-                        </div>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <h3 className="text-5xl md:text-6xl font-light text-white tracking-wide text-center">
+                          {property.name}
+                        </h3>
                       </div>
                       
                       {/* Premium badge */}
