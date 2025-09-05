@@ -139,11 +139,11 @@ export default function Index() {
                 </div>
 
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                  Ready to Find Your Dream Home?
+                  NEVER MISS OUT ON YOUR DREAM PROPERTY
                 </h2>
                 
                 <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-                  Join thousands of satisfied buyers who found their perfect property with us
+                  Register Now to find out about new listings and access exclusive content
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
