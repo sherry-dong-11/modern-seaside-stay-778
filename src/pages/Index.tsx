@@ -139,22 +139,19 @@ export default function Index() {
                 </div>
 
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                  NEVER MISS OUT ON YOUR DREAM PROPERTY
+                  Ready to Find Your Dream Home?
                 </h2>
                 
                 <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-                  Register Now to find out about new listings and access exclusive content
+                  Join thousands of satisfied buyers who found their perfect property with us
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
                   <div>
-                    <Button size="lg" variant="outline" className="border-border text-foreground backdrop-blur-sm px-8 py-4 text-lg font-semibold rounded-full bg-zinc-100">
-                      <BookOpen className="w-5 h-5 mr-2" />
-                      New Build Purchase Guide
-                    </Button>
+                    
                   </div>
                   <div>
-                    <Button size="lg" variant="outline" className="border-border text-foreground backdrop-blur-sm px-8 py-4 text-lg font-semibold rounded-full bg-zinc-100">
+                    <Button size="lg" variant="outline" className="border-border text-foreground backdrop-blur-sm text-lg font-semibold rounded-full bg-zinc-100 mx-0 px-[37px] py-[31px]">
                       <MessageCircle className="w-5 h-5 mr-2" />
                       Chat with AI Expert
                     </Button>
@@ -171,10 +168,7 @@ export default function Index() {
                 }, {
                   icon: CheckCircle2,
                   text: "Verified properties"
-                }].map((feature, index) => <div key={index} className="flex flex-col items-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <feature.icon className="w-8 h-8 text-green-400 mb-3" />
-                      <span className="text-gray-300 font-medium">{feature.text}</span>
-                    </div>)}
+                }].map((feature, index) => {})}
                 </div>
               </div>
             </div>
