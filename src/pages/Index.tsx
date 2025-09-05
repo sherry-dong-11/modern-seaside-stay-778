@@ -151,7 +151,7 @@ export default function Index() {
                     
                   </div>
                   <div>
-                    <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white backdrop-blur-sm text-lg font-semibold rounded-full mx-0 px-[37px] py-[31px] border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white backdrop-blur-sm text-lg font-semibold rounded-full mx-0 px-[37px] py-[31px] border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                       Register Now
                     </Button>
                   </div>
