@@ -95,36 +95,56 @@ export default function FeaturedPropertiesSection() {
       emblaApi.off("select", onSelect);
     };
   }, [emblaApi, onInit, onSelect]);
-  return <section className="py-3 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="mb-12">
-          <h2 className="mb-4 text-left font-semibold text-2xl">
-            Discover Our Featured Homes
+  return <section className="py-20 bg-gradient-to-br from-background via-neutral-50/30 to-primary-50/20 relative overflow-hidden">
+      {/* Premium background effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(var(--primary-rgb)/0.1),transparent_50%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(var(--primary-rgb)/0.05),transparent_50%)] pointer-events-none" />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="mb-16 text-center">
+          <div className="inline-flex items-center gap-2 bg-primary-50/50 backdrop-blur-sm rounded-full px-6 py-2 mb-6 border border-primary-100/50">
+            <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
+            <span className="text-sm font-medium text-primary-700">Premium Collection</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-light text-foreground mb-4 tracking-tight">
+            Discover Our <span className="text-primary-600 font-medium">Featured Homes</span>
           </h2>
-          <div className="w-full h-px bg-border"></div>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Handpicked luxury properties that represent the pinnacle of modern living
+          </p>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto mt-8 rounded-full"></div>
         </div>
 
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-6xl mx-auto">
           {/* Carousel */}
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {featuredProperties.map(property => <div key={property.id} className="flex-[0_0_100%] min-w-0 px-4">
-                  <div className="group relative bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                  <div className="group relative bg-card rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 border border-primary-100/20">
                     {/* Image Container */}
                     <div className="relative aspect-[16/9] overflow-hidden">
                       <img src={property.image} alt={property.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                       
-                      {/* Property Name Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent" />
+                      {/* Premium overlay with enhanced gradient */}
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40" />
                       <div className="absolute top-8 left-8">
-                        <h3 className="text-4xl font-light text-white tracking-wide drop-shadow-lg">
-                          {property.name}
-                        </h3>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl px-6 py-3 border border-white/20">
+                          <h3 className="text-3xl font-light text-white tracking-wide">
+                            {property.name}
+                          </h3>
+                        </div>
+                      </div>
+                      
+                      {/* Premium badge */}
+                      <div className="absolute top-8 right-8">
+                        <div className="bg-primary-500/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium border border-primary-400/30">
+                          Featured
+                        </div>
                       </div>
                     </div>
 
-                    {/* Details Section */}
-                    <div className="bg-white p-6">
+                    {/* Premium Details Section */}
+                    <div className="bg-gradient-to-br from-white to-neutral-50/50 p-8 border-t border-primary-100/20">
                       <div className="flex items-start justify-between flex-col sm:flex-row gap-4 sm:gap-6">
                         {/* Left Side - Property Details */}
                         <div className="flex-1 min-w-0">
@@ -154,13 +174,14 @@ export default function FeaturedPropertiesSection() {
 
                         {/* Right Side - Type & Price */}
                         <div className="flex flex-col sm:items-end items-start gap-3 sm:text-right text-left w-full sm:w-auto">
-                          <Badge variant="secondary" className="bg-orange-100 text-orange-800 hover:bg-orange-200 px-3 py-1 text-xs font-medium">
+                          <Badge variant="secondary" className="bg-gradient-to-r from-primary-100 to-primary-50 text-primary-800 border border-primary-200/50 px-4 py-2 text-sm font-medium rounded-full shadow-sm">
                             {property.type}
                           </Badge>
                           <div className="sm:text-right text-left w-full">
-                            <p className="text-2xl font-semibold text-orange-600">
+                            <p className="text-3xl font-light text-primary-600 tracking-tight">
                               {property.price}
                             </p>
+                            <p className="text-sm text-muted-foreground mt-1">Starting from</p>
                           </div>
                         </div>
                       </div>
