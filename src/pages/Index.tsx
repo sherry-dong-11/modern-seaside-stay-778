@@ -157,23 +157,6 @@ export default function Index() {
                   </div>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                  {[{
-                  icon: CheckCircle2,
-                  text: "No fees for buyers"
-                }, {
-                  icon: CheckCircle2,
-                  text: "Expert guidance"
-                }, {
-                  icon: CheckCircle2,
-                  text: "Verified properties"
-                }].map((feature, index) => (
-                    <div key={index} className="flex flex-col items-center gap-3">
-                      <feature.icon className="w-6 h-6 text-green-400" />
-                      <span className="text-gray-300">{feature.text}</span>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
           </section>
