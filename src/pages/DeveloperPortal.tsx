@@ -151,7 +151,7 @@ export default function DeveloperPortal() {
               
               {/* Right Side - Reporting Module */}
               <div className="order-1 lg:order-2">
-                <div className="bg-background rounded-xl shadow-lg p-6 border animate-fade-in hover-scale transition-all duration-300 hover:shadow-xl">
+                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 overflow-hidden group hover:shadow-2xl hover:scale-[1.02] transition-all duration-500">
                   <div className="flex items-center justify-between mb-6">
                      <div className="flex items-center gap-2">
                        <h3 className="font-bold text-xl">Reporting</h3>
