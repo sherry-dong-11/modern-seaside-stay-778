@@ -369,7 +369,7 @@ export default function DeveloperPortal() {
                         <div className="flex items-start gap-4">
                           <div className="relative">
                             <div className="w-12 h-12 bg-gradient-to-br from-primary to-sea rounded-full flex items-center justify-center animate-pulse flex-shrink-0 shadow-lg">
-                              <span className="text-white text-sm font-bold">EW</span>
+                              <span className="text-white text-sm font-bold">B</span>
                             </div>
                             <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-bounce"></div>
                           </div>
