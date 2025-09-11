@@ -106,12 +106,10 @@ export default function FeaturedPropertiesSection() {
             <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
             <span className="text-sm font-medium text-primary-700">Premium Collection</span>
           </div>
-          <h2 className="text-4xl text-foreground mb-4 tracking-tight font-medium md:text-5xl">
+          <h2 className="text-4xl text-foreground mb-4 tracking-tight font-medium md:text-4xl">
             Discover Our <span className="font-medium text-orange-500">Featured Homes</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Handpicked luxury properties that represent the pinnacle of modern living
-          </p>
+          
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto mt-8 rounded-full"></div>
         </div>
 
