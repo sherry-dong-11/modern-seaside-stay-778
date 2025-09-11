@@ -212,18 +212,14 @@ export default function ModernNavbar() {
           }} whileTap={{
             scale: 0.95
           }}>
-              <motion.div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-pink-500/10 rounded-lg opacity-0" whileHover={{
-              opacity: 1
-            }} transition={{
-              duration: 0.3
-            }} />
-              <span className="relative z-10">Professionals</span>
+              
+              
               <motion.div animate={{
               rotate: professionalsDropdownOpen ? 180 : 0
             }} transition={{
               duration: 0.3
             }}>
-                <ChevronDown className="h-4 w-4" />
+                
               </motion.div>
             </motion.button>
             
