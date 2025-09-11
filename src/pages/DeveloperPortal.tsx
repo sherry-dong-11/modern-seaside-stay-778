@@ -11,75 +11,75 @@ import { Link } from "react-router-dom";
 export default function DeveloperPortal() {
   const { t } = useLanguage();
 
-  const apis = [
+  const services = [
     {
       icon: Database,
-      title: "Property Data API",
-      description: "Access comprehensive property listings, pricing data, and market analytics",
-      version: "v2.1",
+      title: "Off-the-Plan Property Marketing",
+      description: "Showcase your new developments on Australia's largest off-the-plan property platform",
+      version: "Premium",
       status: "Active"
     },
     {
       icon: Globe,
-      title: "Location Services API",
-      description: "Geocoding, mapping, and neighborhood data services",
-      version: "v1.8", 
+      title: "Digital Marketing Solutions",
+      description: "Comprehensive digital marketing services for property developers and agents",
+      version: "Enterprise", 
       status: "Active"
     },
     {
       icon: Shield,
-      title: "Authentication API",
-      description: "Secure user authentication and authorization management",
-      version: "v3.0",
-      status: "Beta"
+      title: "Lead Qualification System",
+      description: "Advanced lead qualification with SMS verified contacts and buyer tracking",
+      version: "Pro",
+      status: "Active"
     },
     {
       icon: Zap,
-      title: "Real-time Updates API",
-      description: "WebSocket connections for live property updates and notifications",
-      version: "v1.5",
+      title: "Real-time Analytics Portal",
+      description: "Live reporting dashboard for campaign insights and buyer interactions",
+      version: "Analytics+",
       status: "Active"
     }
   ];
 
-  const tools = [
+  const solutions = [
     {
       icon: Terminal,
-      title: "CLI Tools",
-      description: "Command line interface for rapid development and deployment"
+      title: "Developer Portal Access",
+      description: "Comprehensive portal for managing listings, leads, and campaign performance"
     },
     {
       icon: Code,
-      title: "SDK Libraries",
-      description: "Pre-built libraries for JavaScript, Python, PHP, and .NET"
+      title: "Content Creation Services",
+      description: "Professional content and storytelling to showcase your developments"
     },
     {
       icon: GitBranch,
-      title: "Code Samples",
-      description: "Ready-to-use code examples and integration templates"
+      title: "Market Insights Reports",
+      description: "Industry research, market trends, and buyer behavior analytics"
     },
     {
       icon: Book,
-      title: "Documentation",
-      description: "Comprehensive guides, tutorials, and API reference"
+      title: "Training & Support",
+      description: "Comprehensive training programs and dedicated account management"
     }
   ];
 
-  const features = [
+  const advantages = [
     {
       icon: Cpu,
-      title: "High Performance",
-      description: "99.9% uptime with sub-100ms response times globally"
+      title: "Targeted Audience",
+      description: "100% of our audience is specifically looking for new apartments & townhouses"
     },
     {
       icon: Network,
-      title: "Scalable Infrastructure", 
-      description: "Auto-scaling architecture to handle any volume of requests"
+      title: "Qualified Leads Only", 
+      description: "Every lead comes with SMS verified contact details and buyer qualification"
     },
     {
       icon: Lock,
-      title: "Enterprise Security",
-      description: "SOC 2 Type II compliant with end-to-end encryption"
+      title: "Pay-per-Lead Model",
+      description: "Only pay when we connect you to qualified, interested property buyers"
     }
   ];
 
@@ -97,64 +97,64 @@ export default function DeveloperPortal() {
               Developer Platform
             </Badge>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-              Build the future of <span className="bg-gradient-to-r from-primary to-sea bg-clip-text text-transparent">property technology</span>
+              The best place to sell <span className="bg-gradient-to-r from-primary to-sea bg-clip-text text-transparent">new and off-the-plan property</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-4xl mx-auto">
-              Powerful APIs, comprehensive tools, and detailed documentation to integrate property data and services into your applications.
+              Showcase your projects on Australia's largest audience and platform dedicated to off-the-plan apartment and townhouse buyers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="group relative overflow-hidden bg-gradient-to-r from-primary to-sea hover:from-primary-dark hover:to-sea-dark px-8 py-4 text-lg font-semibold">
                 <Code className="mr-3 h-6 w-6" />
-                Get API Keys
+                Log into Portal
                 <ExternalLink className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
               <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold">
                 <Book className="mr-3 h-6 w-6" />
-                View Documentation
+                Audience & Services
               </Button>
             </div>
           </FadeInSection>
         </div>
       </section>
 
-      {/* APIs Section */}
+      {/* Services Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <FadeInSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Available APIs</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Robust, well-documented APIs that power modern property applications
+              Comprehensive marketing solutions for property developers and industry professionals
             </p>
           </FadeInSection>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {apis.map((api, index) => (
+            {services.map((service, index) => (
               <FadeInSection key={index} delay={index * 0.1}>
                 <Card className="p-6 h-full hover:shadow-lg transition-all duration-300 group">
                   <CardHeader className="p-0 pb-4">
                     <div className="flex items-start justify-between">
-                      <api.icon className="h-12 w-12 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                      <service.icon className="h-12 w-12 text-primary mb-4 group-hover:scale-110 transition-transform" />
                       <div className="flex items-center gap-2">
-                        <Badge variant={api.status === "Active" ? "default" : "secondary"} className="text-xs">
-                          {api.status}
+                        <Badge variant={service.status === "Active" ? "default" : "secondary"} className="text-xs">
+                          {service.status}
                         </Badge>
                         <Badge variant="outline" className="text-xs">
-                          {api.version}
+                          {service.version}
                         </Badge>
                       </div>
                     </div>
-                    <CardTitle className="text-xl">{api.title}</CardTitle>
+                    <CardTitle className="text-xl">{service.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="p-0">
-                    <p className="text-muted-foreground leading-relaxed mb-4">{api.description}</p>
+                    <p className="text-muted-foreground leading-relaxed mb-4">{service.description}</p>
                     <div className="flex gap-2">
                       <Button variant="outline" size="sm">
                         <Book className="h-4 w-4 mr-2" />
-                        Docs
+                        Learn More
                       </Button>
                       <Button variant="outline" size="sm">
                         <Terminal className="h-4 w-4 mr-2" />
-                        Try It
+                        Get Started
                       </Button>
                     </div>
                   </CardContent>
@@ -165,27 +165,27 @@ export default function DeveloperPortal() {
         </div>
       </section>
 
-      {/* Developer Tools */}
+      {/* Solutions */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <FadeInSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Developer Tools</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Complete Solutions</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Everything you need to build, test, and deploy applications quickly
+              Everything you need to successfully market and sell off-the-plan properties
             </p>
           </FadeInSection>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {tools.map((tool, index) => (
+            {solutions.map((solution, index) => (
               <FadeInSection key={index} delay={index * 0.1}>
                 <Card className="p-6 text-center hover:shadow-lg transition-all duration-300 group">
                   <CardContent className="p-0">
-                    <tool.icon className="h-12 w-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                    <h3 className="text-lg font-semibold mb-3">{tool.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{tool.description}</p>
+                    <solution.icon className="h-12 w-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                    <h3 className="text-lg font-semibold mb-3">{solution.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{solution.description}</p>
                     <Button variant="outline" size="sm" className="w-full">
                       <Download className="h-4 w-4 mr-2" />
-                      Download
+                      Learn More
                     </Button>
                   </CardContent>
                 </Card>
@@ -195,24 +195,24 @@ export default function DeveloperPortal() {
         </div>
       </section>
 
-      {/* Features */}
+      {/* Why Choose Us */}
       <section className="py-20 bg-gradient-to-r from-primary/5 to-sea/5">
         <div className="container mx-auto px-4">
           <FadeInSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Platform Features</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Our Platform</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Enterprise-grade infrastructure built for modern applications
+              The established portals not getting it done? Here's why we're different.
             </p>
           </FadeInSection>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {advantages.map((advantage, index) => (
               <FadeInSection key={index} delay={index * 0.1}>
                 <div className="text-center">
                   <div className="bg-background/80 backdrop-blur-sm rounded-xl p-8 hover:bg-background transition-colors">
-                    <feature.icon className="h-16 w-16 text-primary mx-auto mb-6" />
-                    <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                    <advantage.icon className="h-16 w-16 text-primary mx-auto mb-6" />
+                    <h3 className="text-xl font-semibold mb-4">{advantage.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{advantage.description}</p>
                   </div>
                 </div>
               </FadeInSection>
@@ -221,47 +221,36 @@ export default function DeveloperPortal() {
         </div>
       </section>
 
-      {/* Code Example */}
+      {/* Success Stories */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <FadeInSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Quick Start</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Australia's #1 Off-the-Plan Property Marketplace</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Get started with our APIs in minutes
+              Join leading developers who trust our platform to showcase their projects
             </p>
           </FadeInSection>
           
-          <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             <FadeInSection>
-              <Card className="bg-slate-900 text-white">
-                <CardHeader>
-                  <CardTitle className="text-lg flex items-center">
-                    <Terminal className="h-5 w-5 mr-2" />
-                    Property Search API Example
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <pre className="text-sm overflow-x-auto">
-                    <code>{`// Initialize the API client
-const yepApi = new YEPPropertyAPI({
-  apiKey: 'your-api-key',
-  environment: 'production'
-});
-
-// Search for properties
-const properties = await yepApi.properties.search({
-  location: 'Sydney, NSW',
-  propertyType: 'apartment',
-  priceRange: { min: 500000, max: 1000000 },
-  bedrooms: { min: 2 }
-});
-
-console.log(\`Found \${properties.length} properties\`);
-properties.forEach(property => {
-  console.log(\`\${property.address} - $\${property.price}\`);
-});`}</code>
-                  </pre>
-                </CardContent>
+              <Card className="p-8 text-center">
+                <div className="text-4xl font-bold text-primary mb-2">100%</div>
+                <h3 className="text-lg font-semibold mb-2">Dedicated Audience</h3>
+                <p className="text-muted-foreground">All visitors are specifically looking for new apartments & townhouses</p>
+              </Card>
+            </FadeInSection>
+            <FadeInSection delay={0.1}>
+              <Card className="p-8 text-center">
+                <div className="text-4xl font-bold text-primary mb-2">24/7</div>
+                <h3 className="text-lg font-semibold mb-2">Live Reporting</h3>
+                <p className="text-muted-foreground">Real-time campaign insights and buyer interaction tracking</p>
+              </Card>
+            </FadeInSection>
+            <FadeInSection delay={0.2}>
+              <Card className="p-8 text-center">
+                <div className="text-4xl font-bold text-primary mb-2">SMS</div>
+                <h3 className="text-lg font-semibold mb-2">Verified Leads</h3>
+                <p className="text-muted-foreground">Every lead comes with verified contact details</p>
               </Card>
             </FadeInSection>
           </div>
@@ -276,18 +265,18 @@ properties.forEach(property => {
               <CardContent className="p-0">
                 <Code className="h-16 w-16 text-primary mx-auto mb-8" />
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Ready to Start Building?
+                  Ready to Showcase Your Development?
                 </h2>
                 <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  Join thousands of developers already building amazing property applications with our platform.
+                  Join Australia's leading property developers who trust our platform to connect with qualified buyers.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" className="bg-gradient-to-r from-primary to-sea hover:from-primary-dark hover:to-sea-dark px-8 py-4 text-lg font-semibold">
                     <Code className="mr-3 h-6 w-6" />
-                    Get Started Free
+                    Start for Free
                   </Button>
                   <Button asChild variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold">
-                    <Link to="/contact">Contact Sales</Link>
+                    <Link to="/contact">Book a Demo</Link>
                   </Button>
                 </div>
               </CardContent>
