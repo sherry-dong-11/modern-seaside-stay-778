@@ -128,7 +128,7 @@ export default function DeveloperPortal() {
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
                     <p className="text-lg text-muted-foreground">
-                      Access live reporting for real time campaign insights
+                      Gain real-time insights into campaign performance and buyer demand to drive faster sales
                     </p>
                   </div>
                 </div>
