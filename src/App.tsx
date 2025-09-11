@@ -14,6 +14,7 @@ import Amenities from "./pages/Amenities";
 import Blog from "./pages/Blog";
 import FAQ from "./pages/FAQ";
 import AboutUs from "./pages/AboutUs";
+import DeveloperPortal from "./pages/DeveloperPortal";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import ScrollToTop from "./components/ScrollToTop";
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/developer-portal" element={<DeveloperPortal />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
