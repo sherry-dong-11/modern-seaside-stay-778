@@ -375,7 +375,7 @@ export default function DeveloperPortal() {
                           </div>
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2 mb-1">
-                              <h4 className="font-semibold">Emma Wilson</h4>
+                              <h4 className="font-semibold">Buyer</h4>
                               <Badge className="bg-red-100 text-red-700 text-xs">Hot Lead</Badge>
                             </div>
                             <p className="text-sm text-muted-foreground">emma.wilson@email.com</p>
