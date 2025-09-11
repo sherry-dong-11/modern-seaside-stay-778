@@ -367,7 +367,7 @@ export default function DeveloperPortal() {
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
                     <p className="text-lg text-muted-foreground">
-                      Track buyer interactions so you contact at the perfect time
+                      Track buyer interests and reach out at the right moment
                     </p>
                   </div>
                 </div>
