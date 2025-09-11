@@ -187,70 +187,67 @@ export default function DeveloperPortal() {
                   
                   <div className="grid grid-cols-2 gap-8">
                     {/* Dynamic Bar Chart */}
-                    <div className="relative h-40 flex items-end justify-center gap-2 px-2 py-4">
+                    <div className="relative h-40 flex items-end justify-center gap-4 px-2 py-4">
+                      {/* Q1 Group */}
                       <div className="flex flex-col items-center gap-1">
-                        <div 
-                          className="w-12 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
-                          style={{
-                            height: '80px',
-                            animationDelay: '0s'
-                          }}
-                        ></div>
+                        <div className="flex items-end gap-0">
+                          <div 
+                            className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
+                            style={{
+                              height: '80px',
+                              animationDelay: '0s'
+                            }}
+                          ></div>
+                          <div 
+                            className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                            style={{
+                              height: '45px',
+                              animationDelay: '0.3s'
+                            }}
+                          ></div>
+                        </div>
                         <div className="text-xs text-muted-foreground">Q1</div>
                       </div>
                       
+                      {/* Q2 Group */}
                       <div className="flex flex-col items-center gap-1">
-                        <div 
-                          className="w-12 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
-                          style={{
-                            height: '45px',
-                            animationDelay: '0.3s'
-                          }}
-                        ></div>
-                        <div className="text-xs text-muted-foreground">Q1</div>
-                      </div>
-                      
-                      <div className="flex flex-col items-center gap-1">
-                        <div 
-                          className="w-12 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
-                          style={{
-                            height: '120px',
-                            animationDelay: '0.6s'
-                          }}
-                        ></div>
+                        <div className="flex items-end gap-0">
+                          <div 
+                            className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
+                            style={{
+                              height: '120px',
+                              animationDelay: '0.6s'
+                            }}
+                          ></div>
+                          <div 
+                            className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                            style={{
+                              height: '60px',
+                              animationDelay: '0.9s'
+                            }}
+                          ></div>
+                        </div>
                         <div className="text-xs text-muted-foreground">Q2</div>
                       </div>
                       
+                      {/* Q3 Group */}
                       <div className="flex flex-col items-center gap-1">
-                        <div 
-                          className="w-12 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
-                          style={{
-                            height: '60px',
-                            animationDelay: '0.9s'
-                          }}
-                        ></div>
-                        <div className="text-xs text-muted-foreground">Q2</div>
-                      </div>
-                      
-                      <div className="flex flex-col items-center gap-1">
-                        <div 
-                          className="w-12 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
-                          style={{
-                            height: '95px',
-                            animationDelay: '1.2s'
-                          }}
-                        ></div>
-                        <div className="text-xs text-muted-foreground">Q3</div>
-                      </div>
-                      
-                      <div className="flex flex-col items-center gap-1">
-                        <div 
-                          className="w-12 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
-                          style={{
-                            height: '35px',
-                            animationDelay: '1.5s'
-                          }}
-                        ></div>
+                        <div className="flex items-end gap-0">
+                          <div 
+                            className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
+                            style={{
+                              height: '95px',
+                              animationDelay: '1.2s'
+                            }}
+                          ></div>
+                          <div 
+                            className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                            style={{
+                              height: '35px',
+                              animationDelay: '1.5s'
+                            }}
+                          ></div>
+                        </div>
                         <div className="text-xs text-muted-foreground">Q3</div>
                       </div>
                     </div>
