@@ -169,14 +169,79 @@ export default function DeveloperPortal() {
                   </div>
                   
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-3">
-                      <div className="bg-gradient-to-r from-pink-400 to-purple-600 h-20 rounded-lg animate-pulse"></div>
-                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 h-16 rounded-lg animate-pulse" style={{
-                      animationDelay: '0.5s'
-                    }}></div>
-                      <div className="bg-gradient-to-r from-pink-400 to-red-500 h-12 rounded-lg animate-pulse" style={{
-                      animationDelay: '1s'
-                    }}></div>
+                    <div className="relative h-32 flex items-end justify-center gap-3 px-4">
+                      {/* Bar 1 */}
+                      <div className="flex flex-col items-center gap-1">
+                        <div 
+                          className="w-8 bg-gradient-to-t from-pink-400 to-pink-500 rounded-t-sm animate-grow-up"
+                          style={{
+                            height: '60px',
+                            animationDelay: '0s'
+                          }}
+                        ></div>
+                        <div className="text-xs text-muted-foreground">Q1</div>
+                      </div>
+                      
+                      {/* Bar 2 */}
+                      <div className="flex flex-col items-center gap-1">
+                        <div 
+                          className="w-8 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                          style={{
+                            height: '35px',
+                            animationDelay: '0.3s'
+                          }}
+                        ></div>
+                        <div className="text-xs text-muted-foreground">Q1</div>
+                      </div>
+                      
+                      {/* Bar 3 */}
+                      <div className="flex flex-col items-center gap-1">
+                        <div 
+                          className="w-8 bg-gradient-to-t from-pink-400 to-pink-500 rounded-t-sm animate-grow-up"
+                          style={{
+                            height: '80px',
+                            animationDelay: '0.6s'
+                          }}
+                        ></div>
+                        <div className="text-xs text-muted-foreground">Q2</div>
+                      </div>
+                      
+                      {/* Bar 4 */}
+                      <div className="flex flex-col items-center gap-1">
+                        <div 
+                          className="w-8 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                          style={{
+                            height: '42px',
+                            animationDelay: '0.9s'
+                          }}
+                        ></div>
+                        <div className="text-xs text-muted-foreground">Q2</div>
+                      </div>
+                      
+                      {/* Bar 5 */}
+                      <div className="flex flex-col items-center gap-1">
+                        <div 
+                          className="w-8 bg-gradient-to-t from-pink-400 to-pink-500 rounded-t-sm animate-grow-up"
+                          style={{
+                            height: '50px',
+                            animationDelay: '1.2s'
+                          }}
+                        ></div>
+                        <div className="text-xs text-muted-foreground">Q3</div>
+                      </div>
+                      
+                      {/* Bar 6 */}
+                      <div className="flex flex-col items-center gap-1">
+                        <div 
+                          className="w-8 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                          style={{
+                            height: '28px',
+                            animationDelay: '1.5s'
+                          }}
+                        ></div>
+                        <div className="text-xs text-muted-foreground">Q3</div>
+                      </div>
+                      
                     </div>
                     <div className="flex items-center justify-center">
                       <div className="relative w-24 h-24">
