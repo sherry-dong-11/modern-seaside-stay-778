@@ -332,7 +332,9 @@ export default function DeveloperPortal() {
                             <p className="text-sm text-muted-foreground">2 Bed / 2 Bath / 1 Car</p>
                             <p className="text-sm text-muted-foreground">85m² / $720,000</p>
                           </div>
-                          <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center animate-bounce flex-shrink-0">
+                        </div>
+                        <div className="flex justify-center mt-4">
+                          <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center animate-bounce">
                             <div className="w-0 h-0 border-l-4 border-l-white border-y-2 border-y-transparent"></div>
                           </div>
                         </div>
