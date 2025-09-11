@@ -171,7 +171,7 @@ export default function ModernFooter() {
 
       {/* Scroll to top button */}
       <button onClick={scrollToTop} className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50">
-        <ArrowUp className="w-5 h-5" />
+        <ArrowUp className="w-5 h-5 text-orange-500" />
       </button>
     </footer>;
 }
