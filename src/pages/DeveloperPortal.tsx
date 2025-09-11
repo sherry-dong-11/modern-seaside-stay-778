@@ -2,7 +2,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Code, Database, Zap, Shield, Globe, GitBranch, Terminal, Book, Download, ExternalLink, Cpu, Network, Lock } from "lucide-react";
+import { Code, Database, Zap, Shield, Globe, GitBranch, Terminal, Book, Download, ExternalLink, Cpu, Network, Lock, Calendar, ChevronDown } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import ModernNavbar from "@/components/ModernNavbar";
 import ModernFooter from "@/components/ModernFooter";
 import FadeInSection from "@/components/FadeInSection";
@@ -153,20 +154,32 @@ export default function DeveloperPortal() {
                   
                   <div className="flex gap-4 mb-6">
                     <div className="flex-1">
-                      <input 
-                        type="text" 
-                        value="Urban Village + 5 projects" 
-                        readOnly
-                        className="w-full px-3 py-2 border border-muted rounded-lg bg-muted/50 text-sm"
-                      />
+                      <Select defaultValue="urban-village">
+                        <SelectTrigger className="w-full bg-background border-muted">
+                          <SelectValue placeholder="Select project" />
+                        </SelectTrigger>
+                        <SelectContent className="bg-background border border-muted shadow-lg z-50">
+                          <SelectItem value="urban-village">Urban Village + 5 projects</SelectItem>
+                          <SelectItem value="city-central">City Central + 3 projects</SelectItem>
+                          <SelectItem value="harbour-view">Harbour View + 7 projects</SelectItem>
+                          <SelectItem value="riverside">Riverside Development + 2 projects</SelectItem>
+                          <SelectItem value="all-projects">All Projects</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
                     <div className="flex-1">
-                      <input 
-                        type="text" 
-                        value="16/06/2023 - 16/08/2023" 
-                        readOnly
-                        className="w-full px-3 py-2 border border-muted rounded-lg bg-muted/50 text-sm"
-                      />
+                      <Select defaultValue="current-quarter">
+                        <SelectTrigger className="w-full bg-background border-muted">
+                          <SelectValue placeholder="Select date range" />
+                        </SelectTrigger>
+                        <SelectContent className="bg-background border border-muted shadow-lg z-50">
+                          <SelectItem value="current-quarter">16/06/2023 - 16/08/2023</SelectItem>
+                          <SelectItem value="last-quarter">16/03/2023 - 15/06/2023</SelectItem>
+                          <SelectItem value="last-6-months">16/02/2023 - 16/08/2023</SelectItem>
+                          <SelectItem value="this-year">01/01/2023 - 31/12/2023</SelectItem>
+                          <SelectItem value="custom">Custom Date Range</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
                   </div>
                   
