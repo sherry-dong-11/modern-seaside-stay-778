@@ -258,51 +258,25 @@ export default function DeveloperPortal() {
                       <div className="relative w-32 h-32">
                         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                           {/* Blue section (50%) */}
-                          <circle
-                            cx="50"
-                            cy="50"
-                            r="40"
-                            fill="none"
-                            stroke="rgb(59 130 246)"
-                            strokeWidth="20"
-                            strokeDasharray="0 251.2"
-                            className="animate-[spin_2s_ease-out_forwards]"
-                            style={{
-                              strokeDasharray: '125.6 251.2',
-                              animationDelay: '0.5s'
-                            }}
+                          <path
+                            d="M 50,10 A 40,40 0 0,1 90,50 L 50,50 Z"
+                            fill="rgb(59 130 246)"
+                            className="opacity-0 animate-fade-in"
+                            style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}
                           />
                           {/* Pink section (30%) */}
-                          <circle
-                            cx="50"
-                            cy="50"
-                            r="40"
-                            fill="none"
-                            stroke="rgb(236 72 153)"
-                            strokeWidth="20"
-                            strokeDasharray="0 251.2"
-                            strokeDashoffset="-125.6"
-                            className="animate-[spin_2s_ease-out_forwards]"
-                            style={{
-                              strokeDasharray: '75.36 251.2',
-                              animationDelay: '1s'
-                            }}
+                          <path
+                            d="M 90,50 A 40,40 0 0,1 62,86 L 50,50 Z"
+                            fill="rgb(236 72 153)"
+                            className="opacity-0 animate-fade-in"
+                            style={{ animationDelay: '1s', animationFillMode: 'forwards' }}
                           />
                           {/* Orange section (20%) */}
-                          <circle
-                            cx="50"
-                            cy="50"
-                            r="40"
-                            fill="none"
-                            stroke="rgb(251 146 60)"
-                            strokeWidth="20"
-                            strokeDasharray="0 251.2"
-                            strokeDashoffset="-200.96"
-                            className="animate-[spin_2s_ease-out_forwards]"
-                            style={{
-                              strokeDasharray: '50.24 251.2',
-                              animationDelay: '1.5s'
-                            }}
+                          <path
+                            d="M 62,86 A 40,40 0 0,1 50,10 L 50,50 Z"
+                            fill="rgb(251 146 60)"
+                            className="opacity-0 animate-fade-in"
+                            style={{ animationDelay: '1.5s', animationFillMode: 'forwards' }}
                           />
                         </svg>
                       </div>
