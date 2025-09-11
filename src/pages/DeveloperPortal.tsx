@@ -141,122 +141,159 @@ export default function DeveloperPortal() {
               </div>
               
               <div className="order-1 lg:order-2">
-                <div className="bg-background rounded-xl shadow-lg p-6 border py-[18px]">
+                <div className="bg-background rounded-xl shadow-lg p-6 border">
                   <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center gap-2">
-                      <div className="flex gap-1">
-                        <div className="w-1 h-8 bg-primary rounded-full animate-pulse"></div>
-                        <div className="w-1 h-8 bg-primary/60 rounded-full animate-pulse" style={{
-                        animationDelay: '0.2s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/40 rounded-full animate-pulse" style={{
-                        animationDelay: '0.4s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/20 rounded-full animate-pulse" style={{
-                        animationDelay: '0.6s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/10 rounded-full animate-pulse" style={{
-                        animationDelay: '0.8s'
-                      }}></div>
-                      </div>
-                      <h3 className="text-xl font-semibold">Reporting</h3>
-                    </div>
+                    <h3 className="text-2xl font-bold">Reporting</h3>
                     <div className="flex gap-2">
-                      <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">SUMMARY</span>
-                      <span className="px-3 py-1 bg-muted text-muted-foreground text-sm rounded-full">PROJECTS</span>
-                      <span className="px-3 py-1 bg-muted text-muted-foreground text-sm rounded-full">LEADS</span>
+                      <span className="px-4 py-2 bg-primary text-primary-foreground text-sm rounded-lg font-medium">SUMMARY</span>
+                      <span className="px-4 py-2 bg-muted text-muted-foreground text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">PROJECTS</span>
+                      <span className="px-4 py-2 bg-muted text-muted-foreground text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">LEADS</span>
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="relative h-32 flex items-end justify-center gap-3 px-4">
-                      {/* Bar 1 */}
+                  <div className="flex gap-4 mb-6">
+                    <div className="flex-1">
+                      <input 
+                        type="text" 
+                        value="Urban Village + 5 projects" 
+                        readOnly
+                        className="w-full px-3 py-2 border border-muted rounded-lg bg-muted/50 text-sm"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <input 
+                        type="text" 
+                        value="16/06/2023 - 16/08/2023" 
+                        readOnly
+                        className="w-full px-3 py-2 border border-muted rounded-lg bg-muted/50 text-sm"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-8">
+                    {/* Dynamic Bar Chart */}
+                    <div className="relative h-40 flex items-end justify-center gap-3 px-4">
                       <div className="flex flex-col items-center gap-1">
                         <div 
-                          className="w-8 bg-gradient-to-t from-pink-400 to-pink-500 rounded-t-sm animate-grow-up"
+                          className="w-12 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
                           style={{
-                            height: '60px',
+                            height: '80px',
                             animationDelay: '0s'
                           }}
                         ></div>
                         <div className="text-xs text-muted-foreground">Q1</div>
                       </div>
                       
-                      {/* Bar 2 */}
                       <div className="flex flex-col items-center gap-1">
                         <div 
-                          className="w-8 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                          className="w-12 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
                           style={{
-                            height: '35px',
+                            height: '45px',
                             animationDelay: '0.3s'
                           }}
                         ></div>
                         <div className="text-xs text-muted-foreground">Q1</div>
                       </div>
                       
-                      {/* Bar 3 */}
                       <div className="flex flex-col items-center gap-1">
                         <div 
-                          className="w-8 bg-gradient-to-t from-pink-400 to-pink-500 rounded-t-sm animate-grow-up"
+                          className="w-12 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
                           style={{
-                            height: '80px',
+                            height: '120px',
                             animationDelay: '0.6s'
                           }}
                         ></div>
                         <div className="text-xs text-muted-foreground">Q2</div>
                       </div>
                       
-                      {/* Bar 4 */}
                       <div className="flex flex-col items-center gap-1">
                         <div 
-                          className="w-8 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                          className="w-12 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
                           style={{
-                            height: '42px',
+                            height: '60px',
                             animationDelay: '0.9s'
                           }}
                         ></div>
                         <div className="text-xs text-muted-foreground">Q2</div>
                       </div>
                       
-                      {/* Bar 5 */}
                       <div className="flex flex-col items-center gap-1">
                         <div 
-                          className="w-8 bg-gradient-to-t from-pink-400 to-pink-500 rounded-t-sm animate-grow-up"
+                          className="w-12 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
                           style={{
-                            height: '50px',
+                            height: '95px',
                             animationDelay: '1.2s'
                           }}
                         ></div>
                         <div className="text-xs text-muted-foreground">Q3</div>
                       </div>
                       
-                      {/* Bar 6 */}
                       <div className="flex flex-col items-center gap-1">
                         <div 
-                          className="w-8 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                          className="w-12 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
                           style={{
-                            height: '28px',
+                            height: '35px',
                             animationDelay: '1.5s'
                           }}
                         ></div>
                         <div className="text-xs text-muted-foreground">Q3</div>
                       </div>
-                      
                     </div>
+                    
+                    {/* Dynamic Pie Chart */}
                     <div className="flex items-center justify-center">
-                      <div className="relative w-24 h-24">
-                        <div className="absolute inset-0 rounded-full border-8 border-blue-200"></div>
-                        <div className="absolute inset-0 rounded-full border-8 border-blue-500 border-t-transparent animate-spin"></div>
-                        <div className="absolute inset-2 rounded-full border-8 border-pink-200"></div>
-                        <div className="absolute inset-2 rounded-full border-8 border-pink-500 border-b-transparent animate-spin" style={{
-                        animationDirection: 'reverse'
-                      }}></div>
+                      <div className="relative w-32 h-32">
+                        <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                          {/* Blue section (50%) */}
+                          <circle
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            fill="none"
+                            stroke="rgb(59 130 246)"
+                            strokeWidth="20"
+                            strokeDasharray="0 251.2"
+                            className="animate-[spin_2s_ease-out_forwards]"
+                            style={{
+                              strokeDasharray: '125.6 251.2',
+                              animationDelay: '0.5s'
+                            }}
+                          />
+                          {/* Pink section (30%) */}
+                          <circle
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            fill="none"
+                            stroke="rgb(236 72 153)"
+                            strokeWidth="20"
+                            strokeDasharray="0 251.2"
+                            strokeDashoffset="-125.6"
+                            className="animate-[spin_2s_ease-out_forwards]"
+                            style={{
+                              strokeDasharray: '75.36 251.2',
+                              animationDelay: '1s'
+                            }}
+                          />
+                          {/* Orange section (20%) */}
+                          <circle
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            fill="none"
+                            stroke="rgb(251 146 60)"
+                            strokeWidth="20"
+                            strokeDasharray="0 251.2"
+                            strokeDashoffset="-200.96"
+                            className="animate-[spin_2s_ease-out_forwards]"
+                            style={{
+                              strokeDasharray: '50.24 251.2',
+                              animationDelay: '1.5s'
+                            }}
+                          />
+                        </svg>
                       </div>
                     </div>
-                  </div>
-                  
-                  <div className="mt-4 text-sm text-muted-foreground">
-                    Urban Village • 5 projects | 10/05/2023 - 16/08/2023
                   </div>
                 </div>
               </div>
