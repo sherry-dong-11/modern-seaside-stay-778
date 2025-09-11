@@ -70,17 +70,17 @@ export default function ModernHeroSection() {
         backgroundImage: `url(${heroImage})`
       }} />
         
-        {/* Dynamic gradient overlay that responds to mouse */}
+        {/* Subtle gradient overlay for better text readability */}
         <motion.div className="absolute inset-0" style={{
         background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, 
-              rgba(0,0,0,0.4) 0%, 
-              rgba(0,0,0,0.7) 50%, 
-              rgba(0,0,0,0.8) 100%)`
+              rgba(0,0,0,0.1) 0%, 
+              rgba(0,0,0,0.2) 50%, 
+              rgba(0,0,0,0.3) 100%)`
       }} animate={{
         background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, 
-              rgba(0,0,0,0.4) 0%, 
-              rgba(0,0,0,0.7) 50%, 
-              rgba(0,0,0,0.8) 100%)`
+              rgba(0,0,0,0.1) 0%, 
+              rgba(0,0,0,0.2) 50%, 
+              rgba(0,0,0,0.3) 100%)`
       }} transition={{
         duration: 0.3
       }} />
