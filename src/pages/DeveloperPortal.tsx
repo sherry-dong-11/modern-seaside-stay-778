@@ -351,7 +351,7 @@ export default function DeveloperPortal() {
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
                     <p className="text-lg text-muted-foreground">
-                      Reduce the risk on your marketing investment
+                      Get verified buyer enquiries with real intent
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
