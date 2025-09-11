@@ -31,7 +31,7 @@ export default function ModernFooter() {
                 <img src="/lovable-uploads/ec1d0529-2ae8-4481-8329-b97ea749e03f.png" alt="YEPHOME" className="h-10 w-auto mb-6 brightness-0 invert" />
               </div>
               
-              <div className="flex flex-col space-y-4 py-0 my-[2px] mx-[7px]">
+              <div className="flex flex-col space-y-2">
                 <Link to="/about" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group">
                   
                 </Link>
