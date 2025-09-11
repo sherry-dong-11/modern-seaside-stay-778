@@ -153,24 +153,9 @@ export default function DeveloperPortal() {
               <div className="order-1 lg:order-2">
                 <div className="bg-background rounded-xl shadow-lg p-6 border">
                   <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center gap-2">
-                       <div className="flex gap-1">
-                         <div className="w-1 h-8 bg-gradient-to-t from-primary to-primary/60 rounded-full animate-pulse"></div>
-                         <div className="w-1 h-8 bg-gradient-to-t from-primary/60 to-primary/40 rounded-full animate-pulse" style={{
-                         animationDelay: '0.2s'
-                       }}></div>
-                         <div className="w-1 h-8 bg-gradient-to-t from-primary/40 to-primary/20 rounded-full animate-pulse" style={{
-                         animationDelay: '0.4s'
-                       }}></div>
-                         <div className="w-1 h-8 bg-gradient-to-t from-primary/20 to-primary/10 rounded-full animate-pulse" style={{
-                         animationDelay: '0.6s'
-                       }}></div>
-                         <div className="w-1 h-8 bg-gradient-to-t from-primary/10 to-transparent rounded-full animate-pulse" style={{
-                         animationDelay: '0.8s'
-                       }}></div>
-                      </div>
-                      <h3 className="font-bold text-xl">Reporting</h3>
-                    </div>
+                     <div className="flex items-center gap-2">
+                       <h3 className="font-bold text-xl">Reporting</h3>
+                     </div>
                     <div className="flex gap-2">
                       <span className="px-4 py-2 bg-primary text-primary-foreground text-sm rounded-lg font-medium">SUMMARY</span>
                       <span className="px-4 py-2 bg-muted text-muted-foreground text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">PROJECTS</span>
