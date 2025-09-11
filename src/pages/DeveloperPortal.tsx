@@ -301,39 +301,41 @@ export default function DeveloperPortal() {
                       <h3 className="text-xl font-semibold">Leads</h3>
                     </div>
                     
-                    <div className="space-y-2 mb-4">
-                      <div className="flex justify-between text-sm font-medium border-b pb-2">
-                        <span>DATE</span>
-                        <span>BUYER</span>
-                        <span>CONTACT</span>
-                        <span>PROPERTY TYPE</span>
+                    <div className="flex gap-4">
+                      <div className="flex-1 space-y-2">
+                        <div className="flex justify-between text-sm font-medium border-b pb-2">
+                          <span>DATE</span>
+                          <span>BUYER</span>
+                          <span>CONTACT</span>
+                          <span>PROPERTY TYPE</span>
+                        </div>
+                        {[...Array(6)].map((_, i) => <div key={i} className="flex justify-between items-center py-2 border-b last:border-b-0 animate-fade-in" style={{
+                        animationDelay: `${i * 0.2}s`
+                      }}>
+                            <div className="w-16 h-3 bg-muted rounded animate-pulse"></div>
+                            <div className="w-20 h-3 bg-muted rounded animate-pulse"></div>
+                            <div className="w-24 h-3 bg-muted rounded animate-pulse"></div>
+                            <div className="w-20 h-3 bg-muted rounded animate-pulse"></div>
+                          </div>)}
                       </div>
-                      {[...Array(6)].map((_, i) => <div key={i} className="flex justify-between items-center py-2 border-b last:border-b-0 animate-fade-in" style={{
-                      animationDelay: `${i * 0.2}s`
-                    }}>
-                          <div className="w-16 h-3 bg-muted rounded animate-pulse"></div>
-                          <div className="w-20 h-3 bg-muted rounded animate-pulse"></div>
-                          <div className="w-24 h-3 bg-muted rounded animate-pulse"></div>
-                          <div className="w-20 h-3 bg-muted rounded animate-pulse"></div>
-                        </div>)}
-                    </div>
-                  </div>
-                  
-                  <div className="bg-muted/50 p-4 border-t">
-                    <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center animate-pulse">
-                        <span className="text-white text-sm font-bold">AB</span>
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold">Alex Buyer</h4>
-                        <p className="text-sm text-muted-foreground">jamie.buyer@samplemail.com</p>
-                        <p className="text-sm text-muted-foreground">+61 400 000 000</p>
-                        <p className="text-sm text-muted-foreground">First-time Home Buyer</p>
-                        <p className="text-sm text-muted-foreground">2 Bed / 2 Bath / 1 Car</p>
-                        <p className="text-sm text-muted-foreground">85m² / $720,000</p>
-                      </div>
-                      <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center animate-bounce">
-                        <div className="w-0 h-0 border-l-4 border-l-white border-y-2 border-y-transparent"></div>
+                      
+                      <div className="w-80 bg-muted/50 p-4 rounded-lg border-l">
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center animate-pulse flex-shrink-0">
+                            <span className="text-white text-sm font-bold">AB</span>
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h4 className="font-semibold">Alex Buyer</h4>
+                            <p className="text-sm text-muted-foreground">jamie.buyer@samplemail.com</p>
+                            <p className="text-sm text-muted-foreground">+61 400 000 000</p>
+                            <p className="text-sm text-muted-foreground">First-time Home Buyer</p>
+                            <p className="text-sm text-muted-foreground">2 Bed / 2 Bath / 1 Car</p>
+                            <p className="text-sm text-muted-foreground">85m² / $720,000</p>
+                          </div>
+                          <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center animate-bounce flex-shrink-0">
+                            <div className="w-0 h-0 border-l-4 border-l-white border-y-2 border-y-transparent"></div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
