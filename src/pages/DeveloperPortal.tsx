@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import ModernNavbar from "@/components/ModernNavbar";
 import ModernFooter from "@/components/ModernFooter";
 import FadeInSection from "@/components/FadeInSection";
+import PartnersSection from "@/components/PartnersSection";
 import { Link } from "react-router-dom";
 export default function DeveloperPortal() {
   const {
@@ -95,6 +96,11 @@ export default function DeveloperPortal() {
           </FadeInSection>
         </div>
       </section>
+
+      {/* Partners Section */}
+      <FadeInSection>
+        <PartnersSection />
+      </FadeInSection>
 
       {/* Live Reporting Service */}
       <section className="bg-muted/30 py-0">
