@@ -359,7 +359,7 @@ export default function DeveloperPortal() {
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
                     <p className="text-lg text-muted-foreground">
-                      Every Apartments.com.au lead comes with an SMS verified phone number
+                      Every YepHome lead is AI-qualified and contact-ready
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
