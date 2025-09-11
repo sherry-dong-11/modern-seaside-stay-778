@@ -156,32 +156,16 @@ export default function DeveloperPortal() {
                   
                   <div className="flex gap-4 mb-6">
                     <div className="flex-1">
-                      <Select defaultValue="urban-village">
-                        <SelectTrigger className="w-full bg-background border-muted">
-                          <SelectValue placeholder="Select project" />
-                        </SelectTrigger>
-                        <SelectContent className="bg-background border border-muted shadow-lg z-50">
-                          <SelectItem value="urban-village">Urban Village + 5 projects</SelectItem>
-                          <SelectItem value="city-central">City Central + 3 projects</SelectItem>
-                          <SelectItem value="harbour-view">Harbour View + 7 projects</SelectItem>
-                          <SelectItem value="riverside">Riverside Development + 2 projects</SelectItem>
-                          <SelectItem value="all-projects">All Projects</SelectItem>
-                        </SelectContent>
-                      </Select>
+                      <div className="w-full bg-background border border-muted rounded-md px-3 py-2 flex items-center justify-between">
+                        <span className="text-sm">Urban Village + 5 projects</span>
+                        <ChevronDown className="h-4 w-4 text-muted-foreground" />
+                      </div>
                     </div>
                     <div className="flex-1">
-                      <Select defaultValue="current-quarter">
-                        <SelectTrigger className="w-full bg-background border-muted">
-                          <SelectValue placeholder="Select date range" />
-                        </SelectTrigger>
-                        <SelectContent className="bg-background border border-muted shadow-lg z-50">
-                          <SelectItem value="current-quarter">16/06/2023 - 16/08/2023</SelectItem>
-                          <SelectItem value="last-quarter">16/03/2023 - 15/06/2023</SelectItem>
-                          <SelectItem value="last-6-months">16/02/2023 - 16/08/2023</SelectItem>
-                          <SelectItem value="this-year">01/01/2023 - 31/12/2023</SelectItem>
-                          <SelectItem value="custom">Custom Date Range</SelectItem>
-                        </SelectContent>
-                      </Select>
+                      <div className="w-full bg-background border border-muted rounded-md px-3 py-2 flex items-center justify-between">
+                        <span className="text-sm">16/06/2023 - 16/08/2023</span>
+                        <ChevronDown className="h-4 w-4 text-muted-foreground" />
+                      </div>
                     </div>
                   </div>
                   
