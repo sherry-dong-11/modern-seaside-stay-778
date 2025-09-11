@@ -256,35 +256,52 @@ export default function DeveloperPortal() {
                     {/* Dynamic Pie Chart */}
                     <div className="flex items-center justify-center">
                       <div className="relative w-32 h-32">
-                        <svg className="w-full h-full" viewBox="0 0 100 100">
+                        <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                           {/* Blue section (50%) */}
-                          <path
-                            d="M 50 50 L 50 10 A 40 40 0 0 1 90 50 Z"
-                            fill="rgb(59 130 246)"
-                            className="opacity-0 animate-fade-in"
+                          <circle
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            fill="none"
+                            stroke="rgb(59 130 246)"
+                            strokeWidth="20"
+                            strokeDasharray="0 251.2"
+                            className="animate-[spin_2s_ease-out_forwards]"
                             style={{
-                              animationDelay: '0.5s',
-                              animationFillMode: 'forwards'
+                              strokeDasharray: '125.6 251.2',
+                              animationDelay: '0.5s'
                             }}
                           />
                           {/* Pink section (30%) */}
-                          <path
-                            d="M 50 50 L 90 50 A 40 40 0 0 1 62 86 Z"
-                            fill="rgb(236 72 153)"
-                            className="opacity-0 animate-fade-in"
+                          <circle
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            fill="none"
+                            stroke="rgb(236 72 153)"
+                            strokeWidth="20"
+                            strokeDasharray="0 251.2"
+                            strokeDashoffset="-125.6"
+                            className="animate-[spin_2s_ease-out_forwards]"
                             style={{
-                              animationDelay: '1s',
-                              animationFillMode: 'forwards'
+                              strokeDasharray: '75.36 251.2',
+                              animationDelay: '1s'
                             }}
                           />
                           {/* Orange section (20%) */}
-                          <path
-                            d="M 50 50 L 62 86 A 40 40 0 0 1 50 10 Z"
-                            fill="rgb(251 146 60)"
-                            className="opacity-0 animate-fade-in"
+                          <circle
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            fill="none"
+                            stroke="rgb(251 146 60)"
+                            strokeWidth="20"
+                            strokeDasharray="0 251.2"
+                            strokeDashoffset="-200.96"
+                            className="animate-[spin_2s_ease-out_forwards]"
                             style={{
-                              animationDelay: '1.5s',
-                              animationFillMode: 'forwards'
+                              strokeDasharray: '50.24 251.2',
+                              animationDelay: '1.5s'
                             }}
                           />
                         </svg>
