@@ -80,7 +80,7 @@ export default function DeveloperPortal() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
               The smartest way to market and sell <span className="bg-gradient-to-r from-primary to-sea bg-clip-text text-transparent">new developments</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-4xl mx-auto md:text-xl">
               Showcase your projects on YepHome — Australia's data-driven platform that connects you with serious off-the-plan buyers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -184,20 +184,14 @@ export default function DeveloperPortal() {
                       {/* Q1 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
-                          <div 
-                            className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
-                            style={{
-                              height: '80px',
-                              animationDelay: '0s'
-                            }}
-                          ></div>
-                          <div 
-                            className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
-                            style={{
-                              height: '45px',
-                              animationDelay: '0.3s'
-                            }}
-                          ></div>
+                          <div className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
+                          height: '80px',
+                          animationDelay: '0s'
+                        }}></div>
+                          <div className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
+                          height: '45px',
+                          animationDelay: '0.3s'
+                        }}></div>
                         </div>
                         <div className="text-xs text-muted-foreground">Q1</div>
                       </div>
@@ -205,20 +199,14 @@ export default function DeveloperPortal() {
                       {/* Q2 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
-                          <div 
-                            className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
-                            style={{
-                              height: '120px',
-                              animationDelay: '0.6s'
-                            }}
-                          ></div>
-                          <div 
-                            className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
-                            style={{
-                              height: '60px',
-                              animationDelay: '0.9s'
-                            }}
-                          ></div>
+                          <div className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
+                          height: '120px',
+                          animationDelay: '0.6s'
+                        }}></div>
+                          <div className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
+                          height: '60px',
+                          animationDelay: '0.9s'
+                        }}></div>
                         </div>
                         <div className="text-xs text-muted-foreground">Q2</div>
                       </div>
@@ -226,20 +214,14 @@ export default function DeveloperPortal() {
                       {/* Q3 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
-                          <div 
-                            className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
-                            style={{
-                              height: '95px',
-                              animationDelay: '1.2s'
-                            }}
-                          ></div>
-                          <div 
-                            className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
-                            style={{
-                              height: '35px',
-                              animationDelay: '1.5s'
-                            }}
-                          ></div>
+                          <div className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
+                          height: '95px',
+                          animationDelay: '1.2s'
+                        }}></div>
+                          <div className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
+                          height: '35px',
+                          animationDelay: '1.5s'
+                        }}></div>
                         </div>
                         <div className="text-xs text-muted-foreground">Q3</div>
                       </div>
@@ -250,26 +232,20 @@ export default function DeveloperPortal() {
                       <div className="relative w-40 h-40">
                         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                           {/* Blue section (50%) - 180 degrees */}
-                          <path
-                            d="M 50,50 L 50,10 A 40,40 0 1,1 50,90 Z"
-                            fill="rgb(59 130 246)"
-                            className="opacity-0 animate-fade-in"
-                            style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}
-                          />
+                          <path d="M 50,50 L 50,10 A 40,40 0 1,1 50,90 Z" fill="rgb(59 130 246)" className="opacity-0 animate-fade-in" style={{
+                          animationDelay: '0.5s',
+                          animationFillMode: 'forwards'
+                        }} />
                           {/* Pink section (30%) - 108 degrees */}
-                          <path
-                            d="M 50,50 L 50,90 A 40,40 0 0,1 11.27,69.44 Z"
-                            fill="rgb(236 72 153)"
-                            className="opacity-0 animate-fade-in"
-                            style={{ animationDelay: '1s', animationFillMode: 'forwards' }}
-                          />
+                          <path d="M 50,50 L 50,90 A 40,40 0 0,1 11.27,69.44 Z" fill="rgb(236 72 153)" className="opacity-0 animate-fade-in" style={{
+                          animationDelay: '1s',
+                          animationFillMode: 'forwards'
+                        }} />
                           {/* Orange section (20%) - 72 degrees */}
-                          <path
-                            d="M 50,50 L 11.27,69.44 A 40,40 0 0,1 50,10 Z"
-                            fill="rgb(251 146 60)"
-                            className="opacity-0 animate-fade-in"
-                            style={{ animationDelay: '1.5s', animationFillMode: 'forwards' }}
-                          />
+                          <path d="M 50,50 L 11.27,69.44 A 40,40 0 0,1 50,10 Z" fill="rgb(251 146 60)" className="opacity-0 animate-fade-in" style={{
+                          animationDelay: '1.5s',
+                          animationFillMode: 'forwards'
+                        }} />
                         </svg>
                       </div>
                     </div>
