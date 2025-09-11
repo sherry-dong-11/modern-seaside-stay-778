@@ -187,7 +187,7 @@ export default function DeveloperPortal() {
                   
                   <div className="grid grid-cols-2 gap-8">
                     {/* Dynamic Bar Chart */}
-                    <div className="relative h-40 flex items-end justify-center gap-4 px-2 py-4">
+                    <div className="relative h-40 flex items-end justify-center gap-4 px-2 py-4 ml-4">
                       {/* Q1 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
