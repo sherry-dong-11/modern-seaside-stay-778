@@ -564,22 +564,6 @@ export default function DeveloperPortal() {
                         </div>
                       </div>
                     </div>
-                    
-                    {/* Development tools mockup */}
-                    <div className="mt-4 grid grid-cols-3 gap-2">
-                      <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-2 rounded text-center group-hover:shadow-md transition-all duration-300">
-                        <div className="text-lg text-green-600">⚡</div>
-                        <div className="text-xs text-green-600/70">Fast Deploy</div>
-                      </div>
-                      <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-2 rounded text-center group-hover:shadow-md transition-all duration-300">
-                        <div className="text-lg text-blue-600">📱</div>
-                        <div className="text-xs text-blue-600/70">Mobile Ready</div>
-                      </div>
-                      <div className="bg-gradient-to-br from-purple-50 to-violet-50 p-2 rounded text-center group-hover:shadow-md transition-all duration-300">
-                        <div className="text-lg text-purple-600">🎨</div>
-                        <div className="text-xs text-purple-600/70">Custom Design</div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
