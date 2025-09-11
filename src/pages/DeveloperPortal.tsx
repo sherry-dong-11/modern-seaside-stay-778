@@ -208,7 +208,7 @@ export default function DeveloperPortal() {
                           animationDelay: '0.3s'
                         }}></div>
                         </div>
-                        <div className="text-xs text-muted-foreground">Q1</div>
+                        
                       </div>
                       
                       {/* Q2 Group */}
@@ -223,7 +223,7 @@ export default function DeveloperPortal() {
                           animationDelay: '0.9s'
                         }}></div>
                         </div>
-                        <div className="text-xs text-muted-foreground">Q2</div>
+                        
                       </div>
                       
                       {/* Q3 Group */}
@@ -238,7 +238,7 @@ export default function DeveloperPortal() {
                           animationDelay: '1.5s'
                         }}></div>
                         </div>
-                        <div className="text-xs text-muted-foreground">Q3</div>
+                        
                       </div>
                     </div>
                     
