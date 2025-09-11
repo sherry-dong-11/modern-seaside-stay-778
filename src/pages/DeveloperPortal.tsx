@@ -7,84 +7,66 @@ import ModernNavbar from "@/components/ModernNavbar";
 import ModernFooter from "@/components/ModernFooter";
 import FadeInSection from "@/components/FadeInSection";
 import { Link } from "react-router-dom";
-
 export default function DeveloperPortal() {
-  const { t } = useLanguage();
-
-  const services = [
-    {
-      icon: Database,
-      title: "Off-the-Plan Property Marketing",
-      description: "Showcase your new developments on Australia's largest off-the-plan property platform",
-      version: "Premium",
-      status: "Active"
-    },
-    {
-      icon: Globe,
-      title: "Digital Marketing Solutions",
-      description: "Comprehensive digital marketing services for property developers and agents",
-      version: "Enterprise", 
-      status: "Active"
-    },
-    {
-      icon: Shield,
-      title: "Lead Qualification System",
-      description: "Advanced lead qualification with SMS verified contacts and buyer tracking",
-      version: "Pro",
-      status: "Active"
-    },
-    {
-      icon: Zap,
-      title: "Real-time Analytics Portal",
-      description: "Live reporting dashboard for campaign insights and buyer interactions",
-      version: "Analytics+",
-      status: "Active"
-    }
-  ];
-
-  const solutions = [
-    {
-      icon: Terminal,
-      title: "Developer Portal Access",
-      description: "Comprehensive portal for managing listings, leads, and campaign performance"
-    },
-    {
-      icon: Code,
-      title: "Content Creation Services",
-      description: "Professional content and storytelling to showcase your developments"
-    },
-    {
-      icon: GitBranch,
-      title: "Market Insights Reports",
-      description: "Industry research, market trends, and buyer behavior analytics"
-    },
-    {
-      icon: Book,
-      title: "Training & Support",
-      description: "Comprehensive training programs and dedicated account management"
-    }
-  ];
-
-  const advantages = [
-    {
-      icon: Cpu,
-      title: "Targeted Audience",
-      description: "100% of our audience is specifically looking for new apartments & townhouses"
-    },
-    {
-      icon: Network,
-      title: "Qualified Leads Only", 
-      description: "Every lead comes with SMS verified contact details and buyer qualification"
-    },
-    {
-      icon: Lock,
-      title: "Pay-per-Lead Model",
-      description: "Only pay when we connect you to qualified, interested property buyers"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const {
+    t
+  } = useLanguage();
+  const services = [{
+    icon: Database,
+    title: "Off-the-Plan Property Marketing",
+    description: "Showcase your new developments on Australia's largest off-the-plan property platform",
+    version: "Premium",
+    status: "Active"
+  }, {
+    icon: Globe,
+    title: "Digital Marketing Solutions",
+    description: "Comprehensive digital marketing services for property developers and agents",
+    version: "Enterprise",
+    status: "Active"
+  }, {
+    icon: Shield,
+    title: "Lead Qualification System",
+    description: "Advanced lead qualification with SMS verified contacts and buyer tracking",
+    version: "Pro",
+    status: "Active"
+  }, {
+    icon: Zap,
+    title: "Real-time Analytics Portal",
+    description: "Live reporting dashboard for campaign insights and buyer interactions",
+    version: "Analytics+",
+    status: "Active"
+  }];
+  const solutions = [{
+    icon: Terminal,
+    title: "Developer Portal Access",
+    description: "Comprehensive portal for managing listings, leads, and campaign performance"
+  }, {
+    icon: Code,
+    title: "Content Creation Services",
+    description: "Professional content and storytelling to showcase your developments"
+  }, {
+    icon: GitBranch,
+    title: "Market Insights Reports",
+    description: "Industry research, market trends, and buyer behavior analytics"
+  }, {
+    icon: Book,
+    title: "Training & Support",
+    description: "Comprehensive training programs and dedicated account management"
+  }];
+  const advantages = [{
+    icon: Cpu,
+    title: "Targeted Audience",
+    description: "100% of our audience is specifically looking for new apartments & townhouses"
+  }, {
+    icon: Network,
+    title: "Qualified Leads Only",
+    description: "Every lead comes with SMS verified contact details and buyer qualification"
+  }, {
+    icon: Lock,
+    title: "Pay-per-Lead Model",
+    description: "Only pay when we connect you to qualified, interested property buyers"
+  }];
+  return <div className="min-h-screen bg-background">
       <ModernNavbar />
       
       {/* Hero Section */}
@@ -92,10 +74,7 @@ export default function DeveloperPortal() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-sea/5 to-background"></div>
         <div className="container mx-auto px-4 relative">
           <FadeInSection className="text-center max-w-5xl mx-auto">
-            <Badge variant="outline" className="mb-6 px-4 py-2 text-sm">
-              <Code className="h-4 w-4 mr-2" />
-              Developer Platform
-            </Badge>
+            
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
               The best place to sell <span className="bg-gradient-to-r from-primary to-sea bg-clip-text text-transparent">new and off-the-plan property</span>
             </h1>
@@ -128,8 +107,7 @@ export default function DeveloperPortal() {
           </FadeInSection>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <FadeInSection key={index} delay={index * 0.1}>
+            {services.map((service, index) => <FadeInSection key={index} delay={index * 0.1}>
                 <Card className="p-6 h-full hover:shadow-lg transition-all duration-300 group">
                   <CardHeader className="p-0 pb-4">
                     <div className="flex items-start justify-between">
@@ -159,8 +137,7 @@ export default function DeveloperPortal() {
                     </div>
                   </CardContent>
                 </Card>
-              </FadeInSection>
-            ))}
+              </FadeInSection>)}
           </div>
         </div>
       </section>
@@ -176,8 +153,7 @@ export default function DeveloperPortal() {
           </FadeInSection>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {solutions.map((solution, index) => (
-              <FadeInSection key={index} delay={index * 0.1}>
+            {solutions.map((solution, index) => <FadeInSection key={index} delay={index * 0.1}>
                 <Card className="p-6 text-center hover:shadow-lg transition-all duration-300 group">
                   <CardContent className="p-0">
                     <solution.icon className="h-12 w-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
@@ -189,8 +165,7 @@ export default function DeveloperPortal() {
                     </Button>
                   </CardContent>
                 </Card>
-              </FadeInSection>
-            ))}
+              </FadeInSection>)}
           </div>
         </div>
       </section>
@@ -206,8 +181,7 @@ export default function DeveloperPortal() {
           </FadeInSection>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {advantages.map((advantage, index) => (
-              <FadeInSection key={index} delay={index * 0.1}>
+            {advantages.map((advantage, index) => <FadeInSection key={index} delay={index * 0.1}>
                 <div className="text-center">
                   <div className="bg-background/80 backdrop-blur-sm rounded-xl p-8 hover:bg-background transition-colors">
                     <advantage.icon className="h-16 w-16 text-primary mx-auto mb-6" />
@@ -215,8 +189,7 @@ export default function DeveloperPortal() {
                     <p className="text-muted-foreground leading-relaxed">{advantage.description}</p>
                   </div>
                 </div>
-              </FadeInSection>
-            ))}
+              </FadeInSection>)}
           </div>
         </div>
       </section>
@@ -286,6 +259,5 @@ export default function DeveloperPortal() {
       </section>
 
       <ModernFooter />
-    </div>
-  );
+    </div>;
 }
