@@ -510,64 +510,10 @@ export default function DeveloperPortal() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gradient-to-r from-primary/5 to-sea/5">
-        <div className="container mx-auto px-4">
-          <FadeInSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Our Platform</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              The established portals not getting it done? Here's why we're different.
-            </p>
-          </FadeInSection>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {advantages.map((advantage, index) => <FadeInSection key={index} delay={index * 0.1}>
-                <div className="text-center">
-                  <div className="bg-background/80 backdrop-blur-sm rounded-xl p-8 hover:bg-background transition-colors">
-                    <advantage.icon className="h-16 w-16 text-primary mx-auto mb-6" />
-                    <h3 className="text-xl font-semibold mb-4">{advantage.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{advantage.description}</p>
-                  </div>
-                </div>
-              </FadeInSection>)}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Success Stories */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <FadeInSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Australia's #1 Off-the-Plan Property Marketplace</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Join leading developers who trust our platform to showcase their projects
-            </p>
-          </FadeInSection>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <FadeInSection>
-              <Card className="p-8 text-center">
-                <div className="text-4xl font-bold text-primary mb-2">100%</div>
-                <h3 className="text-lg font-semibold mb-2">Dedicated Audience</h3>
-                <p className="text-muted-foreground">All visitors are specifically looking for new apartments & townhouses</p>
-              </Card>
-            </FadeInSection>
-            <FadeInSection delay={0.1}>
-              <Card className="p-8 text-center">
-                <div className="text-4xl font-bold text-primary mb-2">24/7</div>
-                <h3 className="text-lg font-semibold mb-2">Live Reporting</h3>
-                <p className="text-muted-foreground">Real-time campaign insights and buyer interaction tracking</p>
-              </Card>
-            </FadeInSection>
-            <FadeInSection delay={0.2}>
-              <Card className="p-8 text-center">
-                <div className="text-4xl font-bold text-primary mb-2">SMS</div>
-                <h3 className="text-lg font-semibold mb-2">Verified Leads</h3>
-                <p className="text-muted-foreground">Every lead comes with verified contact details</p>
-              </Card>
-            </FadeInSection>
-          </div>
-        </div>
-      </section>
+      
 
       {/* CTA Section */}
       <section className="py-20 bg-muted/30">
@@ -575,7 +521,7 @@ export default function DeveloperPortal() {
           <FadeInSection className="text-center">
             <Card className="max-w-4xl mx-auto p-12 bg-gradient-to-br from-primary/10 to-sea/10 border-0">
               <CardContent className="p-0">
-                <Code className="h-16 w-16 text-primary mx-auto mb-8" />
+                
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Ready to Showcase Your Development?
                 </h2>
@@ -583,10 +529,7 @@ export default function DeveloperPortal() {
                   Join Australia's leading property developers who trust our platform to connect with qualified buyers.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 px-8 py-4 text-lg font-semibold">
-                    <Code className="mr-3 h-6 w-6" />
-                    Start for Free
-                  </Button>
+                  
                   <Button asChild variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold">
                     <Link to="/contact">Book a Demo</Link>
                   </Button>
