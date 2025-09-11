@@ -467,36 +467,6 @@ export default function DeveloperPortal() {
               <div>
                 <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-sea/10 overflow-hidden group hover:shadow-2xl hover:scale-[1.02] transition-all duration-500">
                   <div className="p-6">
-                    {/* Enhanced header with development status */}
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="flex items-center gap-3">
-                        <div className="flex gap-1">
-                          <div className="w-1 h-8 bg-gradient-to-t from-sea to-sea/60 rounded-full animate-pulse"></div>
-                          <div className="w-1 h-8 bg-gradient-to-t from-sea/60 to-sea/40 rounded-full animate-pulse" style={{
-                          animationDelay: '0.2s'
-                        }}></div>
-                          <div className="w-1 h-8 bg-gradient-to-t from-sea/40 to-sea/20 rounded-full animate-pulse" style={{
-                          animationDelay: '0.4s'
-                        }}></div>
-                          <div className="w-1 h-8 bg-gradient-to-t from-sea/20 to-sea/10 rounded-full animate-pulse" style={{
-                          animationDelay: '0.6s'
-                        }}></div>
-                          <div className="w-1 h-8 bg-gradient-to-t from-sea/10 to-transparent rounded-full animate-pulse" style={{
-                          animationDelay: '0.8s'
-                        }}></div>
-                        </div>
-                        <h3 className="text-xl font-bold bg-gradient-to-r from-sea to-primary bg-clip-text text-transparent">Website Builder</h3>
-                      </div>
-                      <div className="flex gap-2">
-                        <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-200 transition-colors">
-                          <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse mr-1"></div>
-                          Building
-                        </Badge>
-                        <Badge variant="secondary" className="bg-green-100 text-green-700">
-                          98% Complete
-                        </Badge>
-                      </div>
-                    </div>
                     
                     {/* Enhanced browser mockup with realistic content */}
                     <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-lg p-4 border border-slate-200">
