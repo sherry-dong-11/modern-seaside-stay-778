@@ -187,7 +187,7 @@ export default function DeveloperPortal() {
                     </div>
                     <div className="flex-1">
                       <div className="w-full bg-background border border-muted rounded-md px-3 py-2 flex items-center justify-between">
-                        <span className="text-sm">16/06/2023 - 16/08/2023</span>
+                        <span className="text-sm">10/08/2025 - 10/09/2025</span>
                         <ChevronDown className="h-4 w-4 text-muted-foreground" />
                       </div>
                     </div>
