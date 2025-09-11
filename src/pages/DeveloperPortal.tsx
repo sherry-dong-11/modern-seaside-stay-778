@@ -169,33 +169,14 @@ export default function DeveloperPortal() {
                   </div>
                   
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <div className="flex items-end justify-between h-24 gap-2">
-                        <div className="flex flex-col items-center flex-1">
-                          <div className="bg-gradient-to-t from-primary to-primary/60 rounded-t animate-pulse" 
-                               style={{height: '80%', width: '100%', animationDelay: '0s'}}></div>
-                          <span className="text-xs text-muted-foreground mt-1">Q1</span>
-                        </div>
-                        <div className="flex flex-col items-center flex-1">
-                          <div className="bg-gradient-to-t from-sea to-sea/60 rounded-t animate-pulse" 
-                               style={{height: '65%', width: '100%', animationDelay: '0.2s'}}></div>
-                          <span className="text-xs text-muted-foreground mt-1">Q2</span>
-                        </div>
-                        <div className="flex flex-col items-center flex-1">
-                          <div className="bg-gradient-to-t from-primary to-primary/60 rounded-t animate-pulse" 
-                               style={{height: '90%', width: '100%', animationDelay: '0.4s'}}></div>
-                          <span className="text-xs text-muted-foreground mt-1">Q3</span>
-                        </div>
-                        <div className="flex flex-col items-center flex-1">
-                          <div className="bg-gradient-to-t from-sea to-sea/60 rounded-t animate-pulse" 
-                               style={{height: '75%', width: '100%', animationDelay: '0.6s'}}></div>
-                          <span className="text-xs text-muted-foreground mt-1">Q4</span>
-                        </div>
-                      </div>
-                      <div className="flex justify-between text-xs text-muted-foreground pt-2 border-t">
-                        <span>Leads</span>
-                        <span>Conversions</span>
-                      </div>
+                    <div className="space-y-3">
+                      <div className="bg-gradient-to-r from-pink-400 to-purple-600 h-20 rounded-lg animate-pulse"></div>
+                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 h-16 rounded-lg animate-pulse" style={{
+                      animationDelay: '0.5s'
+                    }}></div>
+                      <div className="bg-gradient-to-r from-pink-400 to-red-500 h-12 rounded-lg animate-pulse" style={{
+                      animationDelay: '1s'
+                    }}></div>
                     </div>
                     <div className="flex items-center justify-center">
                       <div className="relative w-24 h-24">
