@@ -106,7 +106,7 @@ export default function DeveloperPortal() {
       <section className="bg-muted/30 py-0">
         <div className="container mx-auto px-[28px] pt-16 pb-4 py-[43px]">
           <FadeInSection className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-6 py-0 text-left md:text-5xl">Our Services</h2>
+            <h2 className="text-3xl font-bold mb-6 py-0 text-left md:text-4xl">Our Services</h2>
           </FadeInSection>
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
