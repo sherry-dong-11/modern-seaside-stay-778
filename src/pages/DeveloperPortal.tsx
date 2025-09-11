@@ -397,19 +397,19 @@ export default function DeveloperPortal() {
                       <div className="flex gap-1">
                         <div className="w-1 h-8 bg-primary rounded-full animate-pulse"></div>
                         <div className="w-1 h-8 bg-primary/60 rounded-full animate-pulse" style={{
-                          animationDelay: '0.2s'
-                        }}></div>
+                        animationDelay: '0.2s'
+                      }}></div>
                         <div className="w-1 h-8 bg-primary/40 rounded-full animate-pulse" style={{
-                          animationDelay: '0.4s'
-                        }}></div>
+                        animationDelay: '0.4s'
+                      }}></div>
                         <div className="w-1 h-8 bg-primary/20 rounded-full animate-pulse" style={{
-                          animationDelay: '0.6s'
-                        }}></div>
+                        animationDelay: '0.6s'
+                      }}></div>
                         <div className="w-1 h-8 bg-primary/10 rounded-full animate-pulse" style={{
-                          animationDelay: '0.8s'
-                        }}></div>
+                        animationDelay: '0.8s'
+                      }}></div>
                       </div>
-                      <h3 className="text-xl font-semibold">Custom Website</h3>
+                      <h3 className="text-xl font-semibold">Custom Project Website</h3>
                     </div>
                     
                     {/* Browser mockup */}
@@ -429,35 +429,33 @@ export default function DeveloperPortal() {
                       <div className="bg-background rounded-lg p-4 space-y-4">
                         <div className="h-6 bg-gradient-to-r from-primary to-sea rounded animate-pulse"></div>
                         <div className="grid grid-cols-3 gap-2">
-                          <div className="h-16 bg-muted rounded animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                          <div className="h-16 bg-muted rounded animate-pulse" style={{ animationDelay: '0.4s' }}></div>
-                          <div className="h-16 bg-muted rounded animate-pulse" style={{ animationDelay: '0.6s' }}></div>
+                          <div className="h-16 bg-muted rounded animate-pulse" style={{
+                          animationDelay: '0.2s'
+                        }}></div>
+                          <div className="h-16 bg-muted rounded animate-pulse" style={{
+                          animationDelay: '0.4s'
+                        }}></div>
+                          <div className="h-16 bg-muted rounded animate-pulse" style={{
+                          animationDelay: '0.6s'
+                        }}></div>
                         </div>
                         <div className="space-y-2">
                           <div className="h-3 bg-muted rounded animate-pulse"></div>
-                          <div className="h-3 bg-muted rounded w-3/4 animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                          <div className="h-3 bg-muted rounded w-3/4 animate-pulse" style={{
+                          animationDelay: '0.2s'
+                        }}></div>
                         </div>
                         <div className="flex gap-2">
                           <div className="h-8 bg-primary/20 rounded px-4 animate-pulse"></div>
-                          <div className="h-8 bg-sea/20 rounded px-4 animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                          <div className="h-8 bg-sea/20 rounded px-4 animate-pulse" style={{
+                          animationDelay: '0.2s'
+                        }}></div>
                         </div>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="bg-primary/5 p-4 border-t">
-                    <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center animate-pulse">
-                        <Globe className="h-5 w-5 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold">Professional Website Design</h4>
-                        <p className="text-sm text-muted-foreground">Custom-built for your development</p>
-                        <p className="text-sm text-muted-foreground">Integrated with YepHome platform</p>
-                        <p className="text-sm text-muted-foreground">Mobile-responsive & SEO optimized</p>
-                      </div>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
               
