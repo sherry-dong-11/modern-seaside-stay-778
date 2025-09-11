@@ -115,7 +115,7 @@ export default function ModernHeroSection() {
       }} transition={{
         duration: 1,
         ease: "easeOut"
-      }} className="max-w-5xl mx-auto my-[73px]">
+      }} className="max-w-5xl mx-auto my-[60px] py-[14px]">
           {/* Premium badge */}
           <motion.div initial={{
           opacity: 0,
