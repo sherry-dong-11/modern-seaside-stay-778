@@ -520,7 +520,7 @@ export default function DeveloperPortal() {
                         <div className="space-y-0">
                           {/* Hero section mockup */}
                           <div className="relative h-24 bg-gradient-to-r from-primary to-sea p-4 flex items-center justify-center">
-                            <div className="text-white text-lg font-bold animate-fade-in">Luxury Waterfront Living</div>
+                            <div className="text-white text-lg font-bold animate-fade-in">YOUR PROJECT</div>
                             <div className="absolute top-2 right-2 w-16 h-3 bg-white/20 rounded animate-pulse"></div>
                           </div>
                           
