@@ -136,7 +136,7 @@ export default function ModernFooter() {
                 <div className="relative">
                   <input type="email" placeholder={t.footer.yourEmail} className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder:text-gray-400 focus:outline-none focus:border-orange-500/50 focus:bg-white/15 transition-all duration-300" required />
                 </div>
-                <Button type="submit" className="w-full bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white border-0 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 text-white border-0 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg">
                   {t.footer.subscribe}
                 </Button>
               </form>
