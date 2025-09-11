@@ -81,7 +81,7 @@ export default function DeveloperPortal() {
               The smartest way to market and sell <span className="bg-gradient-to-r from-primary to-sea bg-clip-text text-transparent">new developments</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-4xl mx-auto">
-              Showcase your projects on Australia's largest audience and platform dedicated to off-the-plan apartment and townhouse buyers.
+              Showcase your projects on YepHome — Australia's data-driven platform that connects you with serious off-the-plan buyers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="group relative overflow-hidden bg-gradient-to-r from-primary to-sea hover:from-primary-dark hover:to-sea-dark px-8 py-4 text-lg font-semibold">
