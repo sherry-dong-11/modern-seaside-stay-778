@@ -153,7 +153,7 @@ export default function DeveloperPortal() {
               
               {/* Right Side - Reporting Module */}
               <div className="order-1 lg:order-2">
-                <div className="bg-background rounded-xl shadow-lg p-6 border">
+                <div className="bg-orange-50 dark:bg-orange-950/20 rounded-xl shadow-lg p-6 border">
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-2">
                       <div className="flex gap-1">
