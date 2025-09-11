@@ -171,7 +171,7 @@ export default function DeveloperPortal() {
                         animationDelay: '0.8s'
                       }}></div>
                       </div>
-                      <h3 className="text-2xl font-bold">Reporting</h3>
+                      <h3 className="font-bold text-xl">Reporting</h3>
                     </div>
                     <div className="flex gap-2">
                       <span className="px-4 py-2 bg-primary text-primary-foreground text-sm rounded-lg font-medium">SUMMARY</span>
