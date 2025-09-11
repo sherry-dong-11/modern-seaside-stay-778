@@ -117,7 +117,7 @@ export default function FeaturedPropertiesSection() {
           {/* Carousel */}
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
-              {featuredProperties.map(property => <div key={property.id} className="flex-[0_0_100%] min-w-0 px-4">
+              {featuredProperties.map(property => <div key={property.id} className="flex-[0_0_85%] min-w-0 px-4">
                   <div className="group relative bg-card rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 border border-primary-100/20">
                     {/* Image Container */}
                     <div className="relative aspect-[16/9] overflow-hidden">
