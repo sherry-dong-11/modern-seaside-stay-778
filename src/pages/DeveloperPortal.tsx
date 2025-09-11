@@ -107,7 +107,7 @@ export default function DeveloperPortal() {
               {/* Left Side - Text Content */}
               <div className="order-2 lg:order-1">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Is your cost per lead getting out of control?
+                  Access Live Reporting for Real-Time Buyer Insights
                 </h2>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
