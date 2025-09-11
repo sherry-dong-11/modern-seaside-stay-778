@@ -104,6 +104,7 @@ export default function DeveloperPortal() {
           </FadeInSection>
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+              {/* Left Side - Text Content */}
               <div className="order-2 lg:order-1">
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
@@ -141,6 +142,7 @@ export default function DeveloperPortal() {
                 </div>
               </div>
               
+              {/* Right Side - Reporting Module */}
               <div className="order-1 lg:order-2">
                 <div className="bg-background rounded-xl shadow-lg p-6 border">
                   <div className="flex items-center justify-between mb-6">
