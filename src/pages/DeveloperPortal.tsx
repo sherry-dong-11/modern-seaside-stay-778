@@ -378,7 +378,7 @@ export default function DeveloperPortal() {
                               <h4 className="font-semibold">Buyer</h4>
                               <Badge className="bg-red-100 text-red-700 text-xs">Hot Lead</Badge>
                             </div>
-                            <p className="text-sm text-muted-foreground">emma.wilson@email.com</p>
+                            <p className="text-sm text-muted-foreground">buyer@email.com</p>
                             <p className="text-sm text-muted-foreground">+61 412 345 678</p>
                             <div className="mt-3 space-y-1">
                               <div className="flex items-center gap-2">
