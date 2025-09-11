@@ -184,7 +184,7 @@ export default function ModernHeroSection() {
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60 h-5 w-5" />
                   <Input placeholder="Search by suburb, postcode, or development name..." className="pl-12 bg-transparent border-none text-white placeholder:text-white/60 text-lg h-14 focus:ring-0" />
                 </div>
-                <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white px-8 h-14 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 h-14 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <Search className="w-5 h-5 mr-2" />
                   Search Properties
                 </Button>
