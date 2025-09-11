@@ -423,54 +423,19 @@ export default function DeveloperPortal() {
                         </div>
                       </div>
                       
-                      {/* Property showcase with enquiry form */}
+                      {/* Website content mockup */}
                       <div className="bg-background rounded-lg p-4 space-y-4">
-                        <div className="flex gap-6">
-                          {/* Property image */}
-                          <div className="flex-1">
-                            <img 
-                              src="/lovable-uploads/7c92edf9-776f-4998-81d5-b250983c55cf.png" 
-                              alt="Luxury apartment interior with modern design" 
-                              className="w-full h-64 object-cover rounded-lg"
-                            />
-                          </div>
-                          
-                          {/* Enquire Now form */}
-                          <div className="w-80 bg-muted/50 rounded-lg p-4">
-                            <h3 className="text-lg font-semibold mb-4 text-center">ENQUIRE NOW</h3>
-                            <form className="space-y-3">
-                              <input 
-                                type="text" 
-                                placeholder="Name:" 
-                                className="w-full px-3 py-2 rounded border border-border bg-background text-sm"
-                              />
-                              <input 
-                                type="email" 
-                                placeholder="Email:" 
-                                className="w-full px-3 py-2 rounded border border-border bg-background text-sm"
-                              />
-                              <input 
-                                type="tel" 
-                                placeholder="Phone:" 
-                                className="w-full px-3 py-2 rounded border border-border bg-background text-sm"
-                              />
-                              <select className="w-full px-3 py-2 rounded border border-border bg-background text-sm">
-                                <option>Interested In:</option>
-                                <option>1 Bedroom</option>
-                                <option>2 Bedroom</option>
-                                <option>3 Bedroom</option>
-                              </select>
-                              <button 
-                                type="submit" 
-                                className="w-full bg-orange-400 hover:bg-orange-500 text-white font-medium py-2 rounded transition-colors"
-                              >
-                                SUBMIT
-                              </button>
-                            </form>
-                            <p className="text-xs text-muted-foreground mt-2 text-center">
-                              Your personal information is secure and will not be shared.
-                            </p>
-                          </div>
+                        <div className="h-6 bg-gradient-to-r from-primary to-sea rounded animate-pulse"></div>
+                        <div className="grid grid-cols-3 gap-2">
+                          <div className="h-16 bg-muted rounded animate-pulse" style={{
+                          animationDelay: '0.2s'
+                        }}></div>
+                          <div className="h-16 bg-muted rounded animate-pulse" style={{
+                          animationDelay: '0.4s'
+                        }}></div>
+                          <div className="h-16 bg-muted rounded animate-pulse" style={{
+                          animationDelay: '0.6s'
+                        }}></div>
                         </div>
                         <div className="space-y-2">
                           <div className="h-3 bg-muted rounded animate-pulse"></div>
