@@ -507,7 +507,7 @@ export default function DeveloperPortal() {
                           <div className="w-3 h-3 bg-green-400 rounded-full hover:bg-green-500 transition-colors cursor-pointer"></div>
                         </div>
                         <div className="flex-1 bg-white rounded px-3 py-1 text-sm text-muted-foreground border shadow-sm">
-                          <span className="text-green-600">🔒</span> luxuryapartments.com.au
+                          <span className="text-green-600">🔒</span> yourproject.com.au
                         </div>
                         <div className="flex gap-1">
                           <div className="w-4 h-4 bg-slate-300 rounded hover:bg-slate-400 transition-colors cursor-pointer"></div>
