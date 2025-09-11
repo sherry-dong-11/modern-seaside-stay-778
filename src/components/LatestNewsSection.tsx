@@ -33,7 +33,7 @@ export function LatestNewsSection() {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
           <div className="text-center sm:text-left mb-4 sm:mb-0">
-            <h2 className="text-foreground mb-2 font-semibold text-3xl">
+            <h2 className="text-foreground mb-2 font-semibold text-2xl">
               Latest News
             </h2>
             <p className="text-muted-foreground">Insights into the Australian new development & real estate market</p>
