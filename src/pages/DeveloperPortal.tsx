@@ -273,66 +273,116 @@ export default function DeveloperPortal() {
       </section>
 
       {/* Lead Management Service */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-sea/5 to-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent"></div>
+        <div className="container mx-auto px-4 relative">
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="bg-background rounded-xl shadow-lg border overflow-hidden">
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-6">
-                      <div className="flex gap-1">
-                        <div className="w-1 h-8 bg-primary rounded-full animate-pulse"></div>
-                        <div className="w-1 h-8 bg-primary/60 rounded-full animate-pulse" style={{
-                        animationDelay: '0.2s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/40 rounded-full animate-pulse" style={{
-                        animationDelay: '0.4s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/20 rounded-full animate-pulse" style={{
-                        animationDelay: '0.6s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/10 rounded-full animate-pulse" style={{
-                        animationDelay: '0.8s'
-                      }}></div>
-                      </div>
-                      <h3 className="text-xl font-semibold">Leads</h3>
-                    </div>
-                    
-                    <div className="flex gap-4">
-                      <div className="flex-1 space-y-2">
-                        <div className="flex justify-between text-sm font-medium border-b pb-2">
-                          <span>DATE</span>
-                          <span>BUYER</span>
-                          <span>EMAIL</span>
+              <div className="group">
+                <div className="bg-background rounded-xl shadow-xl border border-primary/10 overflow-hidden hover:shadow-2xl hover:border-primary/20 transition-all duration-500 hover:scale-[1.02]">
+                  {/* Header with enhanced animations */}
+                  <div className="bg-gradient-to-r from-primary/10 to-sea/10 p-6 border-b">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="flex gap-1">
+                          <div className="w-2 h-10 bg-gradient-to-t from-primary to-primary/60 rounded-full animate-pulse"></div>
+                          <div className="w-2 h-10 bg-gradient-to-t from-sea to-sea/60 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                          <div className="w-2 h-10 bg-gradient-to-t from-primary/60 to-primary/40 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
                         </div>
-                        {[...Array(6)].map((_, i) => <div key={i} className="flex justify-between items-center py-2 border-b last:border-b-0 animate-fade-in" style={{
-                        animationDelay: `${i * 0.2}s`
-                      }}>
-                            <div className="w-16 h-3 bg-muted rounded animate-pulse"></div>
-                            <div className="w-20 h-3 bg-muted rounded animate-pulse"></div>
-                            <div className="w-24 h-3 bg-muted rounded animate-pulse"></div>
-                          </div>)}
+                        <div>
+                          <h3 className="text-xl font-bold bg-gradient-to-r from-primary to-sea bg-clip-text text-transparent">Leads Dashboard</h3>
+                          <div className="flex items-center gap-2 mt-1">
+                            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                            <span className="text-sm text-muted-foreground">Live Updates</span>
+                          </div>
+                        </div>
+                      </div>
+                      {/* Stats badges */}
+                      <div className="flex gap-2">
+                        <Badge variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                          <span className="animate-pulse">●</span> 23 Active
+                        </Badge>
+                        <Badge variant="outline" className="border-sea/30 text-sea">
+                          +12 Today
+                        </Badge>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex gap-6">
+                      {/* Left side - Lead list with enhanced animations */}
+                      <div className="flex-1 space-y-3">
+                        <div className="flex justify-between text-xs font-semibold text-muted-foreground border-b pb-2 uppercase tracking-wide">
+                          <span>Date</span>
+                          <span>Contact</span>
+                          <span>Status</span>
+                        </div>
+                        {[
+                          { name: "Sarah Chen", email: "s.chen@email.com", status: "Hot", color: "bg-red-500", date: "Oct 12" },
+                          { name: "Michael Wong", email: "m.wong@email.com", status: "Warm", color: "bg-orange-500", date: "Oct 11" },
+                          { name: "Emma Davis", email: "e.davis@email.com", status: "New", color: "bg-blue-500", date: "Oct 11" },
+                          { name: "James Liu", email: "j.liu@email.com", status: "Qualified", color: "bg-green-500", date: "Oct 10" },
+                          { name: "Lisa Park", email: "l.park@email.com", status: "Hot", color: "bg-red-500", date: "Oct 10" }
+                        ].map((lead, i) => (
+                          <div key={i} className="flex justify-between items-center py-3 px-2 rounded-lg hover:bg-primary/5 transition-all duration-300 cursor-pointer group/lead animate-fade-in border border-transparent hover:border-primary/10" style={{animationDelay: `${i * 0.1}s`}}>
+                            <span className="text-sm font-medium text-muted-foreground group-hover/lead:text-foreground transition-colors">{lead.date}</span>
+                            <div className="text-center">
+                              <div className="text-sm font-semibold group-hover/lead:text-primary transition-colors">{lead.name}</div>
+                              <div className="text-xs text-muted-foreground">{lead.email}</div>
+                            </div>
+                            <Badge className={`${lead.color} text-white text-xs px-2 py-1 group-hover/lead:scale-110 transition-transform`}>
+                              {lead.status}
+                            </Badge>
+                          </div>
+                        ))}
                       </div>
                       
-                      <div className="w-80 bg-muted/50 p-4 rounded-lg border-l">
-                        <div className="flex items-start gap-4">
-                          <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center animate-pulse flex-shrink-0">
-                            <span className="text-white text-sm font-bold">AB</span>
+                      {/* Right side - Enhanced lead detail card */}
+                      <div className="w-80 bg-gradient-to-br from-muted/50 to-muted/30 p-5 rounded-xl border border-primary/10 shadow-inner">
+                        <div className="flex items-start gap-4 mb-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-primary to-sea rounded-full flex items-center justify-center animate-pulse flex-shrink-0 shadow-lg">
+                            <span className="text-white text-sm font-bold">SC</span>
                           </div>
                           <div className="flex-1 min-w-0">
-                            <h4 className="font-semibold">Alex Buyer</h4>
-                            <p className="text-sm text-muted-foreground my-[8px]">jamie.buyer@samplemail.com</p>
-                            <p className="text-sm text-muted-foreground my-[8px]">+61 400 000 000</p>
-                            <p className="text-sm text-muted-foreground my-[8px]">First-time Home Buyer</p>
-                            <p className="text-sm text-muted-foreground my-[8px]">2 Bed / 2 Bath / 1 Car</p>
-                            <p className="text-sm text-muted-foreground my-[8px]">85m² / $720,000</p>
+                            <h4 className="font-bold text-lg text-foreground">Sarah Chen</h4>
+                            <p className="text-sm text-primary font-medium">s.chen@email.com</p>
+                            <p className="text-sm text-muted-foreground">+61 400 123 456</p>
+                          </div>
+                          <div className="flex flex-col gap-1">
+                            <Badge className="bg-red-500 text-white text-xs">Hot Lead</Badge>
+                            <Badge variant="outline" className="text-xs border-primary/30">Verified</Badge>
                           </div>
                         </div>
-                        <div className="flex justify-center mt-6">
-                          <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center animate-bounce">
-                            <div className="w-0 h-0 border-l-4 border-l-white border-y-2 border-y-transparent"></div>
+                        
+                        {/* Enhanced lead details */}
+                        <div className="space-y-3 mb-4">
+                          <div className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                            <span className="text-sm text-muted-foreground">First-time Home Buyer</span>
                           </div>
+                          <div className="bg-background/60 rounded-lg p-3 space-y-2">
+                            <div className="flex justify-between">
+                              <span className="text-sm font-medium">Preference:</span>
+                              <span className="text-sm text-primary">2 Bed / 2 Bath</span>
+                            </div>
+                            <div className="flex justify-between">
+                              <span className="text-sm font-medium">Budget:</span>
+                              <span className="text-sm text-green-600 font-semibold">$720,000</span>
+                            </div>
+                            <div className="flex justify-between">
+                              <span className="text-sm font-medium">Size:</span>
+                              <span className="text-sm">85m² min</span>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* Enhanced action button */}
+                        <div className="flex justify-center">
+                          <Button size="sm" className="bg-gradient-to-r from-primary to-sea hover:from-primary/90 hover:to-sea/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 group">
+                            Contact Now
+                            <div className="ml-2 w-0 h-0 border-l-4 border-l-white border-y-2 border-y-transparent group-hover:translate-x-1 transition-transform"></div>
+                          </Button>
                         </div>
                       </div>
                     </div>
@@ -383,77 +433,122 @@ export default function DeveloperPortal() {
       </section>
 
       {/* Custom Website Service */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-br from-sea/5 via-primary/5 to-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_70%)]"></div>
+        <div className="container mx-auto px-4 relative">
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* Left Side - Website Mockup */}
-              <div>
-                <div className="bg-background rounded-xl shadow-lg border overflow-hidden">
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-6">
-                      <div className="flex gap-1">
-                        <div className="w-1 h-8 bg-primary rounded-full animate-pulse"></div>
-                        <div className="w-1 h-8 bg-primary/60 rounded-full animate-pulse" style={{
-                        animationDelay: '0.2s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/40 rounded-full animate-pulse" style={{
-                        animationDelay: '0.4s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/20 rounded-full animate-pulse" style={{
-                        animationDelay: '0.6s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/10 rounded-full animate-pulse" style={{
-                        animationDelay: '0.8s'
-                      }}></div>
-                      </div>
-                      <h3 className="text-xl font-semibold">Custom Website</h3>
-                    </div>
-                    
-                    {/* Browser mockup */}
-                    <div className="bg-muted/50 rounded-lg p-4">
-                      <div className="flex items-center gap-2 mb-4">
+              {/* Left Side - Enhanced Website Mockup */}
+              <div className="group">
+                <div className="bg-background rounded-xl shadow-xl border border-sea/10 overflow-hidden hover:shadow-2xl hover:border-sea/20 transition-all duration-500 hover:scale-[1.02]">
+                  {/* Header with enhanced design */}
+                  <div className="bg-gradient-to-r from-sea/10 to-primary/10 p-6 border-b">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
                         <div className="flex gap-1">
-                          <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                          <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                          <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                          <div className="w-2 h-10 bg-gradient-to-t from-sea to-sea/60 rounded-full animate-pulse"></div>
+                          <div className="w-2 h-10 bg-gradient-to-t from-primary to-primary/60 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                          <div className="w-2 h-10 bg-gradient-to-t from-sea/60 to-sea/40 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
                         </div>
-                        <div className="flex-1 bg-background rounded px-3 py-1 text-sm text-muted-foreground">
-                          yourproject.com.au
+                        <div>
+                          <h3 className="text-xl font-bold bg-gradient-to-r from-sea to-primary bg-clip-text text-transparent">Website Builder</h3>
+                          <div className="flex items-center gap-2 mt-1">
+                            <Badge variant="secondary" className="bg-green-100 text-green-700 text-xs">
+                              <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse mr-1"></div>
+                              Live
+                            </Badge>
+                          </div>
                         </div>
                       </div>
-                      
-                      {/* Website content mockup */}
-                      <div className="bg-background rounded-lg p-4 space-y-4">
-                        <div className="h-6 bg-gradient-to-r from-primary to-sea rounded animate-pulse"></div>
-                        <div className="grid grid-cols-3 gap-2">
-                          <div className="h-16 bg-muted rounded animate-pulse" style={{
-                          animationDelay: '0.2s'
-                        }}></div>
-                          <div className="h-16 bg-muted rounded animate-pulse" style={{
-                          animationDelay: '0.4s'
-                        }}></div>
-                          <div className="h-16 bg-muted rounded animate-pulse" style={{
-                          animationDelay: '0.6s'
-                        }}></div>
-                        </div>
-                        <div className="space-y-2">
-                          <div className="h-3 bg-muted rounded animate-pulse"></div>
-                          <div className="h-3 bg-muted rounded w-3/4 animate-pulse" style={{
-                          animationDelay: '0.2s'
-                        }}></div>
-                        </div>
-                        <div className="flex gap-2">
-                          <div className="h-8 bg-primary/20 rounded px-4 animate-pulse"></div>
-                          <div className="h-8 bg-sea/20 rounded px-4 animate-pulse" style={{
-                          animationDelay: '0.2s'
-                        }}></div>
-                        </div>
+                      {/* Performance indicators */}
+                      <div className="flex gap-2">
+                        <Badge variant="outline" className="border-sea/30 text-sea text-xs">99% Uptime</Badge>
+                        <Badge variant="secondary" className="bg-primary/10 text-primary text-xs">Fast Load</Badge>
                       </div>
                     </div>
                   </div>
                   
-                  
+                  <div className="p-6">
+                    {/* Enhanced Browser mockup */}
+                    <div className="bg-gradient-to-br from-muted/30 to-muted/50 rounded-xl p-5 shadow-inner border border-primary/10">
+                      <div className="flex items-center gap-3 mb-5">
+                        <div className="flex gap-2">
+                          <div className="w-3 h-3 bg-red-400 rounded-full shadow-sm hover:scale-110 transition-transform cursor-pointer"></div>
+                          <div className="w-3 h-3 bg-yellow-400 rounded-full shadow-sm hover:scale-110 transition-transform cursor-pointer"></div>
+                          <div className="w-3 h-3 bg-green-400 rounded-full shadow-sm hover:scale-110 transition-transform cursor-pointer"></div>
+                        </div>
+                        <div className="flex-1 bg-background rounded-lg px-4 py-2 text-sm text-muted-foreground shadow-inner border border-muted/50 flex items-center gap-2">
+                          <Lock className="w-3 h-3 text-green-500" />
+                          <span className="font-mono">yourproject.com.au</span>
+                          <Badge variant="secondary" className="ml-auto text-xs bg-green-100 text-green-700">Secure</Badge>
+                        </div>
+                      </div>
+                      
+                      {/* Enhanced Website content mockup with scroll simulation */}
+                      <div className="bg-background rounded-xl p-5 space-y-4 shadow-lg border border-primary/5 max-h-80 overflow-hidden relative group/content">
+                        {/* Hero section */}
+                        <div className="space-y-3">
+                          <div className="h-8 bg-gradient-to-r from-primary via-sea to-primary rounded-lg animate-pulse shadow-sm"></div>
+                          <div className="grid grid-cols-4 gap-3">
+                            <div className="h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg animate-pulse shadow-sm hover:shadow-md transition-shadow" style={{animationDelay: '0.1s'}}></div>
+                            <div className="h-20 bg-gradient-to-br from-sea/20 to-sea/10 rounded-lg animate-pulse shadow-sm hover:shadow-md transition-shadow" style={{animationDelay: '0.2s'}}></div>
+                            <div className="h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg animate-pulse shadow-sm hover:shadow-md transition-shadow" style={{animationDelay: '0.3s'}}></div>
+                            <div className="h-20 bg-gradient-to-br from-sea/20 to-sea/10 rounded-lg animate-pulse shadow-sm hover:shadow-md transition-shadow" style={{animationDelay: '0.4s'}}></div>
+                          </div>
+                        </div>
+                        
+                        {/* Content sections */}
+                        <div className="space-y-3">
+                          <div className="space-y-2">
+                            <div className="h-4 bg-gradient-to-r from-muted to-muted/70 rounded animate-pulse"></div>
+                            <div className="h-4 bg-gradient-to-r from-muted to-muted/70 rounded w-4/5 animate-pulse" style={{animationDelay: '0.1s'}}></div>
+                            <div className="h-4 bg-gradient-to-r from-muted to-muted/70 rounded w-3/5 animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                          </div>
+                          
+                          {/* Interactive buttons */}
+                          <div className="flex gap-3 pt-2">
+                            <div className="h-10 bg-gradient-to-r from-primary to-primary/80 rounded-lg px-6 animate-pulse shadow-md hover:shadow-lg transition-shadow flex items-center justify-center">
+                              <span className="text-white text-sm font-medium">View Apartments</span>
+                            </div>
+                            <div className="h-10 bg-gradient-to-r from-sea to-sea/80 rounded-lg px-6 animate-pulse shadow-md hover:shadow-lg transition-shadow flex items-center justify-center" style={{animationDelay: '0.2s'}}>
+                              <span className="text-white text-sm font-medium">Book Inspection</span>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* Additional content that appears to scroll */}
+                        <div className="space-y-3 opacity-70">
+                          <div className="grid grid-cols-2 gap-3">
+                            <div className="h-16 bg-gradient-to-br from-muted/60 to-muted/40 rounded-lg animate-pulse"></div>
+                            <div className="h-16 bg-gradient-to-br from-muted/60 to-muted/40 rounded-lg animate-pulse" style={{animationDelay: '0.1s'}}></div>
+                          </div>
+                          <div className="space-y-2">
+                            <div className="h-3 bg-muted/60 rounded animate-pulse"></div>
+                            <div className="h-3 bg-muted/60 rounded w-3/4 animate-pulse" style={{animationDelay: '0.1s'}}></div>
+                          </div>
+                        </div>
+                        
+                        {/* Scroll indicator */}
+                        <div className="absolute right-2 top-2 bottom-2 w-1 bg-muted/30 rounded-full">
+                          <div className="w-full h-8 bg-primary/60 rounded-full animate-pulse"></div>
+                        </div>
+                      </div>
+                      
+                      {/* Code preview panel */}
+                      <div className="mt-4 bg-gray-900 rounded-lg p-4 text-xs text-green-400 font-mono shadow-inner">
+                        <div className="flex items-center gap-2 mb-2">
+                          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                          <span className="text-green-300">Deploying...</span>
+                          <Badge variant="secondary" className="ml-auto bg-green-900 text-green-200 text-xs">97% Complete</Badge>
+                        </div>
+                        <div className="space-y-1 opacity-70">
+                          <div>✓ Building optimized bundle...</div>
+                          <div>✓ Compressing assets...</div>
+                          <div className="animate-pulse">→ Deploying to CDN...</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               
