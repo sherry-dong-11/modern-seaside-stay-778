@@ -285,7 +285,7 @@ export default function ModernNavbar() {
           scale: 0.95
         }}>
             <LoginDialog>
-              <Button className="btn-primary">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white border-0">
                 <User className="h-4 w-4 mr-2" />
                 Login / Sign up
               </Button>
@@ -435,7 +435,7 @@ export default function ModernNavbar() {
               delay: 0.5
             }}>
                   <LoginDialog>
-                    <Button className="w-full btn-primary" onClick={() => setMobileMenuOpen(false)}>
+                    <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white border-0" onClick={() => setMobileMenuOpen(false)}>
                       <User className="h-4 w-4 mr-2" />
                       Login / Sign up
                     </Button>
