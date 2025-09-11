@@ -61,13 +61,13 @@ const PartnersSection = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
-            TRUSTED <span className="text-primary">PARTNERS</span>
+          <h2 className="text-3xl font-bold text-white mb-4">
+            TRUSTED <span className="text-orange-500">PARTNERS</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-gray-300 max-w-2xl mx-auto">
             Partnering with Australia's leading property developers and industry leaders
           </p>
         </div>
@@ -82,9 +82,9 @@ const PartnersSection = () => {
             {partners.map((partner, index) => (
               <div
                 key={`first-${index}`}
-                className="flex-shrink-0 w-40 h-20 flex items-center justify-center bg-background rounded-lg border border-border hover:border-primary/20 transition-all duration-300 hover:shadow-md group cursor-pointer"
+                className="flex-shrink-0 w-40 h-20 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:border-orange-500/50 transition-all duration-300 hover:shadow-md group cursor-pointer"
               >
-                <span className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                <span className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-300">
                   {partner.name}
                 </span>
               </div>
@@ -94,9 +94,9 @@ const PartnersSection = () => {
             {partners.map((partner, index) => (
               <div
                 key={`second-${index}`}
-                className="flex-shrink-0 w-40 h-20 flex items-center justify-center bg-background rounded-lg border border-border hover:border-primary/20 transition-all duration-300 hover:shadow-md group cursor-pointer"
+                className="flex-shrink-0 w-40 h-20 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:border-orange-500/50 transition-all duration-300 hover:shadow-md group cursor-pointer"
               >
-                <span className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                <span className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-300">
                   {partner.name}
                 </span>
               </div>
@@ -104,8 +104,8 @@ const PartnersSection = () => {
           </div>
           
           {/* Gradient overlays for fade effect */}
-          <div className="absolute top-0 left-0 w-16 h-full bg-gradient-to-r from-muted/30 to-transparent pointer-events-none" />
-          <div className="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-muted/30 to-transparent pointer-events-none" />
+          <div className="absolute top-0 left-0 w-16 h-full bg-gradient-to-r from-slate-900 to-transparent pointer-events-none" />
+          <div className="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-slate-900 to-transparent pointer-events-none" />
         </div>
       </div>
     </section>
