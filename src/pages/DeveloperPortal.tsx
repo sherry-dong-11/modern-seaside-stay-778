@@ -84,7 +84,7 @@ export default function DeveloperPortal() {
               Showcase your projects on YepHome — Australia's data-driven platform that connects you with serious off-the-plan buyers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="group relative overflow-hidden bg-gradient-to-r from-primary to-sea hover:from-primary-dark hover:to-sea-dark px-8 py-4 text-lg font-semibold">
+              <Button size="lg" className="group relative overflow-hidden bg-primary hover:bg-primary/90 px-8 py-4 text-lg font-semibold">
                 Log into Portal
                 <ExternalLink className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
@@ -142,7 +142,7 @@ export default function DeveloperPortal() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <Button className="bg-gradient-to-r from-primary to-sea hover:from-primary-dark hover:to-sea-dark">
+                  <Button className="bg-primary hover:bg-primary/90">
                     Start for free
                   </Button>
                   <Button variant="outline">
@@ -375,7 +375,7 @@ export default function DeveloperPortal() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <Button className="bg-gradient-to-r from-primary to-sea hover:from-primary-dark hover:to-sea-dark">
+                  <Button className="bg-primary hover:bg-primary/90">
                     Start for free
                   </Button>
                   <Button variant="outline">
@@ -498,7 +498,7 @@ export default function DeveloperPortal() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <Button className="bg-gradient-to-r from-primary to-sea hover:from-primary-dark hover:to-sea-dark">
+                  <Button className="bg-primary hover:bg-primary/90">
                     Start for free
                   </Button>
                   <Button variant="outline">
@@ -585,7 +585,7 @@ export default function DeveloperPortal() {
                   Join Australia's leading property developers who trust our platform to connect with qualified buyers.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-gradient-to-r from-primary to-sea hover:from-primary-dark hover:to-sea-dark px-8 py-4 text-lg font-semibold">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 px-8 py-4 text-lg font-semibold">
                     <Code className="mr-3 h-6 w-6" />
                     Start for Free
                   </Button>
