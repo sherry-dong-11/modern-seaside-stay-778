@@ -508,29 +508,7 @@ export default function DeveloperPortal() {
       
 
       {/* CTA Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <FadeInSection className="text-center">
-            <Card className="max-w-4xl mx-auto p-12 bg-gradient-to-br from-primary/10 to-sea/10 border-0">
-              <CardContent className="p-0">
-                
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Ready to Showcase Your Development?
-                </h2>
-                <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  Join Australia's leading property developers who trust our platform to connect with qualified buyers.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  
-                  <Button asChild variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold">
-                    <Link to="/contact">Book a Demo</Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </FadeInSection>
-        </div>
-      </section>
+      
 
       <ModernFooter />
     </div>;
