@@ -112,7 +112,7 @@ export default function DeveloperPortal() {
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
               {/* Left Side - Text Content */}
               <div className="order-2 lg:order-1">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Real-Time Reporting</h2>
+                <h2 className="text-3xl font-bold mb-6 md:text-3xl">Real-Time Reporting</h2>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -341,7 +341,7 @@ export default function DeveloperPortal() {
               </div>
               
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">High-Intent Leads</h2>
+                <h2 className="text-3xl font-bold mb-6 md:text-3xl">High-Intent Leads</h2>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -459,10 +459,8 @@ export default function DeveloperPortal() {
               
               {/* Right Side - Text Content */}
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Branded Project Websites</h2>
-                <p className="text-xl text-muted-foreground mb-8">
-                  Get a fully customised project website designed for your development
-                </p>
+                <h2 className="text-3xl font-bold mb-6 md:text-3xl">Branded Project Websites</h2>
+                
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
