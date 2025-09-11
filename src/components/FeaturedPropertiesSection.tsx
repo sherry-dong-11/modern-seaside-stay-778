@@ -101,7 +101,7 @@ export default function FeaturedPropertiesSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(var(--primary-rgb)/0.05),transparent_50%)] pointer-events-none" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="mb-16 text-center my-0 py-[17px]">
+        <div className="mb-16 text-center py-0 my-[34px]">
           <div className="inline-flex items-center gap-2 backdrop-blur-sm rounded-full px-6 py-2 mb-6 border border-primary-100/50 bg-orange-100">
             <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
             <span className="text-sm font-medium text-primary-700">Premium Collection</span>
