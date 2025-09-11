@@ -232,44 +232,4 @@
     transform: scaleY(0);
     transform-origin: bottom;
   }
-
-  /* Pie chart animations - clockwise filling */
-  @keyframes pie-fill-1 {
-    0% { 
-      stroke-dashoffset: 251;
-    }
-    100% { 
-      stroke-dashoffset: 100;
-    }
-  }
-
-  @keyframes pie-fill-2 {
-    0% { 
-      stroke-dashoffset: 100;
-    }
-    100% { 
-      stroke-dashoffset: 24.6;
-    }
-  }
-
-  @keyframes pie-fill-3 {
-    0% { 
-      stroke-dashoffset: 25.1;
-    }
-    100% { 
-      stroke-dashoffset: 0;
-    }
-  }
-
-  .animate-pie-fill-1 {
-    animation: pie-fill-1 1.2s ease-out 0.5s both;
-  }
-
-  .animate-pie-fill-2 {
-    animation: pie-fill-2 0.8s ease-out 1.7s both;
-  }
-
-  .animate-pie-fill-3 {
-    animation: pie-fill-3 0.4s ease-out 2.5s both;
-  }
 }
