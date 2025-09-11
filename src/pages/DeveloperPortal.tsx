@@ -336,55 +336,26 @@ export default function DeveloperPortal() {
         </div>
       </section>
 
-      {/* Service Introduction */}
-      <section className="py-20 bg-background">
+      {/* Why Choose Us */}
+      <section className="py-20 bg-gradient-to-r from-primary/5 to-sea/5">
         <div className="container mx-auto px-4">
           <FadeInSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Australia's number one off-the-plan property marketplace</h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Join Australia's leading property developers who trust our platform to connect with qualified buyers through innovative technology and dedicated marketing solutions.
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Our Platform</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              The established portals not getting it done? Here's why we're different.
             </p>
           </FadeInSection>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Column 1: Smarter Lead Collection */}
-            <FadeInSection delay={0.1}>
-              <div className="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-muted/20">
-                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl flex items-center justify-center">
-                  <Database className="h-10 w-10 text-blue-600" />
+          <div className="grid md:grid-cols-3 gap-8">
+            {advantages.map((advantage, index) => <FadeInSection key={index} delay={index * 0.1}>
+                <div className="text-center">
+                  <div className="bg-background/80 backdrop-blur-sm rounded-xl p-8 hover:bg-background transition-colors">
+                    <advantage.icon className="h-16 w-16 text-primary mx-auto mb-6" />
+                    <h3 className="text-xl font-semibold mb-4">{advantage.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{advantage.description}</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-foreground">Smarter Lead Collection</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Capture buyer enquiries with verified contact details and AI qualification, ensuring every lead is worth your time.
-                </p>
-              </div>
-            </FadeInSection>
-
-            {/* Column 2: Market Insights */}
-            <FadeInSection delay={0.2}>
-              <div className="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-muted/20">
-                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-teal-100 to-teal-50 rounded-2xl flex items-center justify-center">
-                  <Zap className="h-10 w-10 text-teal-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-foreground">Market Insights at Your Fingertips</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Compare project prices with suburb trends and discover what buyers really want with our monthly data reports.
-                </p>
-              </div>
-            </FadeInSection>
-
-            {/* Column 3: Custom Project Websites */}
-            <FadeInSection delay={0.3}>
-              <div className="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-muted/20">
-                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-orange-100 to-orange-50 rounded-2xl flex items-center justify-center">
-                  <Globe className="h-10 w-10 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-foreground">Custom Project Websites</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  We design dedicated pages for your developments, seamlessly connected to YepHome, boosting exposure and lead generation.
-                </p>
-              </div>
-            </FadeInSection>
+              </FadeInSection>)}
           </div>
         </div>
       </section>
@@ -415,11 +386,7 @@ export default function DeveloperPortal() {
               </Card>
             </FadeInSection>
             <FadeInSection delay={0.2}>
-              <Card className="p-8 text-center">
-                <div className="text-4xl font-bold text-primary mb-2">SMS</div>
-                <h3 className="text-lg font-semibold mb-2">Verified Contacts</h3>
-                <p className="text-muted-foreground">Every lead comes with SMS verified contact details for maximum quality</p>
-              </Card>
+              
             </FadeInSection>
           </div>
         </div>
