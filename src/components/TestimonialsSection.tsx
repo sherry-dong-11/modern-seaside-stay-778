@@ -121,7 +121,21 @@ export default function TestimonialsSection() {
               {testimonials.map((_, index) => <button key={index} onClick={() => {
               if (isAnimating) return;
               setIsAnimating(true);
-              setDirection(index > activeIndex ? 'forward' : 'backward');
+              
+              // Handle circular carousel direction
+              let newDirection: 'forward' | 'backward' = 'forward';
+              if (activeIndex === testimonials.length - 1 && index === 0) {
+                // Last to first: forward (slide right)
+                newDirection = 'forward';
+              } else if (activeIndex === 0 && index === testimonials.length - 1) {
+                // First to last: backward (slide left)
+                newDirection = 'backward';
+              } else {
+                // Normal case
+                newDirection = index > activeIndex ? 'forward' : 'backward';
+              }
+              
+              setDirection(newDirection);
               setActiveIndex(index);
               setTimeout(() => setIsAnimating(false), 500);
             }} className={`w-3 h-3 rounded-full transition-all ${activeIndex === index ? "bg-primary w-6" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"}`} aria-label={`Go to testimonial ${index + 1}`} />)}
