@@ -485,6 +485,7 @@ export default function DeveloperPortal() {
                           animationDelay: '0.8s'
                         }}></div>
                         </div>
+                        <Globe className="w-6 h-6 text-sea mr-2" />
                         <h3 className="text-xl font-bold text-foreground">Custom Website</h3>
                       </div>
                     </div>
