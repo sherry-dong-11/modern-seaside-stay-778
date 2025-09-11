@@ -407,7 +407,7 @@ export default function DeveloperPortal() {
                         animationDelay: '0.8s'
                       }}></div>
                       </div>
-                      <h3 className="text-xl font-semibold">Custom Project Website</h3>
+                      <h3 className="text-xl font-semibold">Custom Website</h3>
                     </div>
                     
                     {/* Browser mockup */}
