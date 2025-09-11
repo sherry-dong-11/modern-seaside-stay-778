@@ -150,7 +150,9 @@ export default function ModernHeroSection() {
             delay: 0.6,
             duration: 0.8,
             ease: "easeOut"
-          }} className="block text-4xl md:text-5xl font-medium lg:text-6xl">
+          }} className="block text-4xl md:text-5xl font-medium lg:text-6xl" style={{
+            textShadow: '0 4px 8px rgba(0,0,0,0.8), 0 2px 4px rgba(0,0,0,0.6), 0 8px 16px rgba(0,0,0,0.4)'
+          }}>
               Find Your Perfect
             </motion.span>
             <motion.span initial={{
@@ -163,7 +165,9 @@ export default function ModernHeroSection() {
             delay: 0.8,
             duration: 0.8,
             ease: "easeOut"
-          }} className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent md:text-5xl lg:text-6xl font-medium text-6xl">New Home</motion.span>
+          }} className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent md:text-5xl lg:text-6xl font-medium text-6xl" style={{
+            textShadow: '0 4px 8px rgba(0,0,0,0.8), 0 2px 4px rgba(0,0,0,0.6), 0 8px 16px rgba(0,0,0,0.4)'
+          }}>New Home</motion.span>
           </motion.h1>
 
 
