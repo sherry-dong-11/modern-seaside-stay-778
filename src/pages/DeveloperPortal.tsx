@@ -101,7 +101,7 @@ export default function DeveloperPortal() {
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
               <div className="order-2 lg:order-1">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Services</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">Reporting</h2>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
