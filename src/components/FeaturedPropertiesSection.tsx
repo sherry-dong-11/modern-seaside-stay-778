@@ -107,7 +107,7 @@ export default function FeaturedPropertiesSection() {
             <span className="text-sm font-medium text-primary-700">Premium Collection</span>
           </div>
           <h2 className="text-4xl text-foreground mb-4 tracking-tight font-medium md:text-5xl">
-            Discover Our <span className="text-primary-600 font-medium">Featured Homes</span>
+            Discover Our <span className="font-medium text-orange-500">Featured Homes</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Handpicked luxury properties that represent the pinnacle of modern living
