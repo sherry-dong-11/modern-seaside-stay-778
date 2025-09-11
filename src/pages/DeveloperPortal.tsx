@@ -470,21 +470,6 @@ export default function DeveloperPortal() {
                     {/* Enhanced header with status badges */}
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center gap-3">
-                        <div className="flex gap-1">
-                          <div className="w-1 h-8 bg-gradient-to-t from-sea to-sea/60 rounded-full animate-pulse"></div>
-                          <div className="w-1 h-8 bg-gradient-to-t from-sea/60 to-sea/40 rounded-full animate-pulse" style={{
-                          animationDelay: '0.2s'
-                        }}></div>
-                          <div className="w-1 h-8 bg-gradient-to-t from-sea/40 to-sea/20 rounded-full animate-pulse" style={{
-                          animationDelay: '0.4s'
-                        }}></div>
-                          <div className="w-1 h-8 bg-gradient-to-t from-sea/20 to-sea/10 rounded-full animate-pulse" style={{
-                          animationDelay: '0.6s'
-                        }}></div>
-                          <div className="w-1 h-8 bg-gradient-to-t from-sea/10 to-transparent rounded-full animate-pulse" style={{
-                          animationDelay: '0.8s'
-                        }}></div>
-                        </div>
                         <Globe className="w-6 h-6 text-sea mr-2" />
                         <h3 className="text-xl font-bold text-foreground">Custom Website</h3>
                       </div>
