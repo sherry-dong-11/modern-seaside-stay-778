@@ -343,7 +343,7 @@ export default function DeveloperPortal() {
               
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Is your cost per lead getting out of control?
+                  Tired of paying for low-quality leads?
                 </h2>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
