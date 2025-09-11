@@ -323,15 +323,15 @@ export default function DeveloperPortal() {
                   <div className="bg-muted/50 p-4 border-t">
                     <div className="flex items-center gap-4">
                       <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center animate-pulse">
-                        <span className="text-white text-sm font-bold">LL</span>
+                        <span className="text-white text-sm font-bold">AB</span>
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-semibold">Leady Leaderson</h4>
-                        <p className="text-sm text-muted-foreground">leady_l@leadmail.com</p>
-                        <p className="text-sm text-muted-foreground">+614 888 888</p>
-                        <p className="text-sm text-muted-foreground">Next home buyer</p>
-                        <p className="text-sm text-muted-foreground">1 Bed / 1 Bath / 1 Car</p>
-                        <p className="text-sm text-muted-foreground">72m² / $685,000</p>
+                        <h4 className="font-semibold">Alex Buyer</h4>
+                        <p className="text-sm text-muted-foreground">jamie.buyer@samplemail.com</p>
+                        <p className="text-sm text-muted-foreground">+61 400 000 000</p>
+                        <p className="text-sm text-muted-foreground">First-time Home Buyer</p>
+                        <p className="text-sm text-muted-foreground">2 Bed / 2 Bath / 1 Car</p>
+                        <p className="text-sm text-muted-foreground">85m² / $720,000</p>
                       </div>
                       <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center animate-bounce">
                         <div className="w-0 h-0 border-l-4 border-l-white border-y-2 border-y-transparent"></div>
