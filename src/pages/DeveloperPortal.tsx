@@ -120,7 +120,7 @@ export default function DeveloperPortal() {
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
                     <p className="text-lg text-muted-foreground">
-                      All of Apartments.com.au's audience is looking specifically for new apartment & townhouses
+                      Our live reporting shows who is engaging with your project and what they're interested in
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
