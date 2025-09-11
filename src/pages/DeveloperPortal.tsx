@@ -304,7 +304,7 @@ export default function DeveloperPortal() {
                         <div className="flex justify-between text-sm font-medium border-b pb-2">
                           <span>DATE</span>
                           <span>BUYER</span>
-                          <span>CONTACT</span>
+                          <span>Email</span>
                         </div>
                         {[...Array(6)].map((_, i) => <div key={i} className="flex justify-between items-center py-2 border-b last:border-b-0 animate-fade-in" style={{
                         animationDelay: `${i * 0.2}s`
