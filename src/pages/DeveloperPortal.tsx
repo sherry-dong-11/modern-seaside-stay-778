@@ -350,7 +350,7 @@ export default function DeveloperPortal() {
                             animationDelay: `${i * 0.1}s`
                           }}>
                             <span className="text-sm font-medium">{lead.date}</span>
-                            <span className="text-sm">{lead.name}</span>
+                            <span className="text-sm blur-sm">{lead.name}</span>
                             <Badge 
                               variant="secondary" 
                               className={`text-xs px-2 py-1 ${
