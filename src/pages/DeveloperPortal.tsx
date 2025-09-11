@@ -255,7 +255,7 @@ export default function DeveloperPortal() {
                     
                     {/* Dynamic Pie Chart */}
                     <div className="flex items-center justify-center">
-                      <div className="relative w-32 h-32">
+                      <div className="relative w-40 h-40">
                         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                           {/* Blue section (50%) - 180 degrees */}
                           <path
