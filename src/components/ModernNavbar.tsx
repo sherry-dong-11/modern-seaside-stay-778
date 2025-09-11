@@ -425,21 +425,7 @@ export default function ModernNavbar() {
                   
                   <div>
                     
-                    <div className="space-y-2 ml-4">
-                      {professionalsDropdownItems.map((item, index) => <motion.div key={item.name} initial={{
-                    opacity: 0,
-                    x: -20
-                  }} animate={{
-                    opacity: 1,
-                    x: 0
-                  }} transition={{
-                    delay: 0.4 + index * 0.05
-                  }}>
-                          <Link to={item.path} className="block text-muted-foreground hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
-                            {item.name}
-                          </Link>
-                        </motion.div>)}
-                    </div>
+                    
                   </div>
                 </motion.div>
                 
