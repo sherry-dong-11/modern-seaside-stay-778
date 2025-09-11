@@ -299,7 +299,7 @@ export default function DeveloperPortal() {
                         animationDelay: '0.8s'
                       }}></div>
                       </div>
-                      <h3 className="text-xl font-semibold">Reporting</h3>
+                      <h3 className="text-xl font-semibold">Leads</h3>
                     </div>
                     
                     <div className="space-y-2 mb-4">
