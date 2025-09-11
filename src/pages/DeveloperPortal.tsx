@@ -322,11 +322,11 @@ export default function DeveloperPortal() {
                           </div>
                           <div className="flex-1 min-w-0">
                             <h4 className="font-semibold">Alex Buyer</h4>
-                            <p className="text-sm text-muted-foreground">jamie.buyer@samplemail.com</p>
-                            <p className="text-sm text-muted-foreground">+61 400 000 000</p>
-                            <p className="text-sm text-muted-foreground">First-time Home Buyer</p>
-                            <p className="text-sm text-muted-foreground">2 Bed / 2 Bath / 1 Car</p>
-                            <p className="text-sm text-muted-foreground">85m² / $720,000</p>
+                            <p className="text-sm text-muted-foreground my-[8px]">jamie.buyer@samplemail.com</p>
+                            <p className="text-sm text-muted-foreground my-[8px]">+61 400 000 000</p>
+                            <p className="text-sm text-muted-foreground my-[8px]">First-time Home Buyer</p>
+                            <p className="text-sm text-muted-foreground my-[8px]">2 Bed / 2 Bath / 1 Car</p>
+                            <p className="text-sm text-muted-foreground my-[8px]">85m² / $720,000</p>
                           </div>
                         </div>
                         <div className="flex justify-center mt-6">
