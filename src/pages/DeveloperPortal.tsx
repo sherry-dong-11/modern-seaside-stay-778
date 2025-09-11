@@ -96,8 +96,8 @@ export default function DeveloperPortal() {
       </section>
 
       {/* Live Reporting Service */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+      <section className="bg-muted/30 py-0">
+        <div className="container mx-auto px-[28px] my-0 py-px">
           <FadeInSection className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Services</h2>
           </FadeInSection>
