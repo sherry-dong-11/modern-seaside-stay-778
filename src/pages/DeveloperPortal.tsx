@@ -101,7 +101,9 @@ export default function DeveloperPortal() {
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
               <div className="order-2 lg:order-1">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Reporting</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                  The established portals not getting it done?
+                </h2>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -144,18 +146,10 @@ export default function DeveloperPortal() {
                     <div className="flex items-center gap-2">
                       <div className="flex gap-1">
                         <div className="w-1 h-8 bg-primary rounded-full animate-pulse"></div>
-                        <div className="w-1 h-8 bg-primary/60 rounded-full animate-pulse" style={{
-                        animationDelay: '0.2s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/40 rounded-full animate-pulse" style={{
-                        animationDelay: '0.4s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/20 rounded-full animate-pulse" style={{
-                        animationDelay: '0.6s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/10 rounded-full animate-pulse" style={{
-                        animationDelay: '0.8s'
-                      }}></div>
+                        <div className="w-1 h-8 bg-primary/60 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                        <div className="w-1 h-8 bg-primary/40 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                        <div className="w-1 h-8 bg-primary/20 rounded-full animate-pulse" style={{animationDelay: '0.6s'}}></div>
+                        <div className="w-1 h-8 bg-primary/10 rounded-full animate-pulse" style={{animationDelay: '0.8s'}}></div>
                       </div>
                       <h3 className="text-xl font-semibold">Reporting</h3>
                     </div>
@@ -169,21 +163,15 @@ export default function DeveloperPortal() {
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-3">
                       <div className="bg-gradient-to-r from-pink-400 to-purple-600 h-20 rounded-lg animate-pulse"></div>
-                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 h-16 rounded-lg animate-pulse" style={{
-                      animationDelay: '0.5s'
-                    }}></div>
-                      <div className="bg-gradient-to-r from-pink-400 to-red-500 h-12 rounded-lg animate-pulse" style={{
-                      animationDelay: '1s'
-                    }}></div>
+                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 h-16 rounded-lg animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                      <div className="bg-gradient-to-r from-pink-400 to-red-500 h-12 rounded-lg animate-pulse" style={{animationDelay: '1s'}}></div>
                     </div>
                     <div className="flex items-center justify-center">
                       <div className="relative w-24 h-24">
                         <div className="absolute inset-0 rounded-full border-8 border-blue-200"></div>
                         <div className="absolute inset-0 rounded-full border-8 border-blue-500 border-t-transparent animate-spin"></div>
                         <div className="absolute inset-2 rounded-full border-8 border-pink-200"></div>
-                        <div className="absolute inset-2 rounded-full border-8 border-pink-500 border-b-transparent animate-spin" style={{
-                        animationDirection: 'reverse'
-                      }}></div>
+                        <div className="absolute inset-2 rounded-full border-8 border-pink-500 border-b-transparent animate-spin" style={{animationDirection: 'reverse'}}></div>
                       </div>
                     </div>
                   </div>
@@ -209,18 +197,10 @@ export default function DeveloperPortal() {
                     <div className="flex items-center gap-2 mb-6">
                       <div className="flex gap-1">
                         <div className="w-1 h-8 bg-primary rounded-full animate-pulse"></div>
-                        <div className="w-1 h-8 bg-primary/60 rounded-full animate-pulse" style={{
-                        animationDelay: '0.2s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/40 rounded-full animate-pulse" style={{
-                        animationDelay: '0.4s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/20 rounded-full animate-pulse" style={{
-                        animationDelay: '0.6s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/10 rounded-full animate-pulse" style={{
-                        animationDelay: '0.8s'
-                      }}></div>
+                        <div className="w-1 h-8 bg-primary/60 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                        <div className="w-1 h-8 bg-primary/40 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                        <div className="w-1 h-8 bg-primary/20 rounded-full animate-pulse" style={{animationDelay: '0.6s'}}></div>
+                        <div className="w-1 h-8 bg-primary/10 rounded-full animate-pulse" style={{animationDelay: '0.8s'}}></div>
                       </div>
                       <h3 className="text-xl font-semibold">Leads</h3>
                     </div>
@@ -231,13 +211,13 @@ export default function DeveloperPortal() {
                         <span>BUYER</span>
                         <span>CONTACT</span>
                       </div>
-                      {[...Array(6)].map((_, i) => <div key={i} className="flex justify-between items-center py-2 border-b last:border-b-0 animate-fade-in" style={{
-                      animationDelay: `${i * 0.2}s`
-                    }}>
+                      {[...Array(6)].map((_, i) => (
+                        <div key={i} className="flex justify-between items-center py-2 border-b last:border-b-0 animate-fade-in" style={{animationDelay: `${i * 0.2}s`}}>
                           <div className="w-16 h-3 bg-muted rounded animate-pulse"></div>
                           <div className="w-20 h-3 bg-muted rounded animate-pulse"></div>
                           <div className="w-24 h-3 bg-muted rounded animate-pulse"></div>
-                        </div>)}
+                        </div>
+                      ))}
                     </div>
                   </div>
                   
