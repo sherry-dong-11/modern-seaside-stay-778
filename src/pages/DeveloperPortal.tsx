@@ -287,21 +287,6 @@ export default function DeveloperPortal() {
                     {/* Enhanced header with status badges */}
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center gap-3">
-                         <div className="flex gap-1">
-                           <div className="w-1 h-8 bg-gradient-to-t from-primary/80 to-primary/50 rounded-full animate-pulse"></div>
-                           <div className="w-1 h-8 bg-gradient-to-t from-primary/60 to-primary/30 rounded-full animate-pulse" style={{
-                           animationDelay: '0.2s'
-                         }}></div>
-                           <div className="w-1 h-8 bg-gradient-to-t from-sea/80 to-sea/50 rounded-full animate-pulse" style={{
-                           animationDelay: '0.4s'
-                         }}></div>
-                           <div className="w-1 h-8 bg-gradient-to-t from-sea/60 to-sea/30 rounded-full animate-pulse" style={{
-                           animationDelay: '0.6s'
-                         }}></div>
-                           <div className="w-1 h-8 bg-gradient-to-t from-sea/40 to-transparent rounded-full animate-pulse" style={{
-                           animationDelay: '0.8s'
-                         }}></div>
-                         </div>
                         <h3 className="text-xl font-bold text-foreground">Lead Management</h3>
                       </div>
                       <div className="flex gap-2">
