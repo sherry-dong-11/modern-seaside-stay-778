@@ -302,7 +302,7 @@ export default function DeveloperPortal() {
                           animationDelay: '0.8s'
                         }}></div>
                         </div>
-                        <h3 className="text-xl font-bold bg-gradient-to-r from-primary to-sea bg-clip-text text-transparent">Lead Management</h3>
+                        <h3 className="text-xl font-bold text-foreground">Lead Management</h3>
                       </div>
                       <div className="flex gap-2">
                         <Badge className="bg-green-100 text-green-700 hover:bg-green-200 transition-colors">
