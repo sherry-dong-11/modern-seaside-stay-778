@@ -95,14 +95,14 @@ export default function FeaturedPropertiesSection() {
       emblaApi.off("select", onSelect);
     };
   }, [emblaApi, onInit, onSelect]);
-  return <section className="py-20 bg-gradient-to-br from-background via-neutral-50/30 to-primary-50/20 relative overflow-hidden">
+  return <section className="bg-gradient-to-br from-background via-neutral-50/30 to-primary-50/20 relative overflow-hidden py-[6px]">
       {/* Premium background effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(var(--primary-rgb)/0.1),transparent_50%)] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(var(--primary-rgb)/0.05),transparent_50%)] pointer-events-none" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="mb-16 text-center">
-          <div className="inline-flex items-center gap-2 bg-primary-50/50 backdrop-blur-sm rounded-full px-6 py-2 mb-6 border border-primary-100/50">
+        <div className="mb-16 text-center my-0 py-[17px]">
+          <div className="inline-flex items-center gap-2 backdrop-blur-sm rounded-full px-6 py-2 mb-6 border border-primary-100/50 bg-orange-100">
             <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
             <span className="text-sm font-medium text-primary-700">Premium Collection</span>
           </div>
