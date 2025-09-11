@@ -132,7 +132,7 @@ export default function ModernHeroSection() {
           </motion.div>
 
           {/* Main heading with staggered animation */}
-          <motion.h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[0.9]" initial={{
+          <motion.h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[1.2]" initial={{
           opacity: 0
         }} animate={{
           opacity: 1
