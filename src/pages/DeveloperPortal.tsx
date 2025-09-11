@@ -384,31 +384,128 @@ export default function DeveloperPortal() {
         </div>
       </section>
 
-      {/* Solutions */}
-      <section className="py-20">
+      {/* Custom Website Service */}
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <FadeInSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Complete Solutions</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Everything you need to successfully market and sell off-the-plan properties
-            </p>
+          <FadeInSection>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Left Side - Website Mockup */}
+              <div>
+                <div className="bg-background rounded-xl shadow-lg border overflow-hidden">
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-6">
+                      <div className="flex gap-1">
+                        <div className="w-1 h-8 bg-primary rounded-full animate-pulse"></div>
+                        <div className="w-1 h-8 bg-primary/60 rounded-full animate-pulse" style={{
+                          animationDelay: '0.2s'
+                        }}></div>
+                        <div className="w-1 h-8 bg-primary/40 rounded-full animate-pulse" style={{
+                          animationDelay: '0.4s'
+                        }}></div>
+                        <div className="w-1 h-8 bg-primary/20 rounded-full animate-pulse" style={{
+                          animationDelay: '0.6s'
+                        }}></div>
+                        <div className="w-1 h-8 bg-primary/10 rounded-full animate-pulse" style={{
+                          animationDelay: '0.8s'
+                        }}></div>
+                      </div>
+                      <h3 className="text-xl font-semibold">Custom Website</h3>
+                    </div>
+                    
+                    {/* Browser mockup */}
+                    <div className="bg-muted/50 rounded-lg p-4">
+                      <div className="flex items-center gap-2 mb-4">
+                        <div className="flex gap-1">
+                          <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                          <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                          <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                        </div>
+                        <div className="flex-1 bg-background rounded px-3 py-1 text-sm text-muted-foreground">
+                          yourproject.com.au
+                        </div>
+                      </div>
+                      
+                      {/* Website content mockup */}
+                      <div className="bg-background rounded-lg p-4 space-y-4">
+                        <div className="h-6 bg-gradient-to-r from-primary to-sea rounded animate-pulse"></div>
+                        <div className="grid grid-cols-3 gap-2">
+                          <div className="h-16 bg-muted rounded animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                          <div className="h-16 bg-muted rounded animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                          <div className="h-16 bg-muted rounded animate-pulse" style={{ animationDelay: '0.6s' }}></div>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="h-3 bg-muted rounded animate-pulse"></div>
+                          <div className="h-3 bg-muted rounded w-3/4 animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                        </div>
+                        <div className="flex gap-2">
+                          <div className="h-8 bg-primary/20 rounded px-4 animate-pulse"></div>
+                          <div className="h-8 bg-sea/20 rounded px-4 animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-primary/5 p-4 border-t">
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center animate-pulse">
+                        <Globe className="h-5 w-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold">Professional Website Design</h4>
+                        <p className="text-sm text-muted-foreground">Custom-built for your development</p>
+                        <p className="text-sm text-muted-foreground">Integrated with YepHome platform</p>
+                        <p className="text-sm text-muted-foreground">Mobile-responsive & SEO optimized</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Right Side - Text Content */}
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                  Need more exposure for your project?
+                </h2>
+                <p className="text-xl text-muted-foreground mb-8">
+                  Get a fully customised project website designed for your development
+                </p>
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <p className="text-lg text-muted-foreground">
+                      Seamlessly connect it with YepHome to boost exposure and capture more enquiries
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <p className="text-lg text-muted-foreground">
+                      Drive buyer engagement with a professional online presence tailored to your development
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <p className="text-lg text-muted-foreground">
+                      Stand out from competitors with a dedicated website that showcases your project's unique features
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <Button className="bg-gradient-to-r from-primary to-sea hover:from-primary-dark hover:to-sea-dark">
+                    Start for free
+                  </Button>
+                  <Button variant="outline">
+                    Book a demo →
+                  </Button>
+                </div>
+              </div>
+            </div>
           </FadeInSection>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {solutions.map((solution, index) => <FadeInSection key={index} delay={index * 0.1}>
-                <Card className="p-6 text-center hover:shadow-lg transition-all duration-300 group">
-                  <CardContent className="p-0">
-                    <solution.icon className="h-12 w-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                    <h3 className="text-lg font-semibold mb-3">{solution.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{solution.description}</p>
-                    <Button variant="outline" size="sm" className="w-full">
-                      <Download className="h-4 w-4 mr-2" />
-                      Learn More
-                    </Button>
-                  </CardContent>
-                </Card>
-              </FadeInSection>)}
-          </div>
         </div>
       </section>
 
