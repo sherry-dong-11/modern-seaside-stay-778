@@ -413,26 +413,61 @@ export default function DeveloperPortal() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20 bg-gradient-to-r from-primary/5 to-sea/5">
+      {/* Service Introduction Section */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <FadeInSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Our Platform</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              The established portals not getting it done? Here's why we're different.
+              Everything you need to successfully market and sell your property developments
             </p>
           </FadeInSection>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {advantages.map((advantage, index) => <FadeInSection key={index} delay={index * 0.1}>
-                <div className="text-center">
-                  <div className="bg-background/80 backdrop-blur-sm rounded-xl p-8 hover:bg-background transition-colors">
-                    <advantage.icon className="h-16 w-16 text-primary mx-auto mb-6" />
-                    <h3 className="text-xl font-semibold mb-4">{advantage.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{advantage.description}</p>
+            {/* Column 1: Smarter Lead Collection */}
+            <FadeInSection delay={0}>
+              <div className="text-center">
+                <div className="bg-background rounded-xl shadow-lg border p-8 hover:shadow-xl transition-all duration-300">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                    <Database className="h-8 w-8 text-white" />
                   </div>
+                  <h3 className="text-xl font-bold mb-4">Smarter Lead Collection</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Capture buyer enquiries with verified contact details and AI qualification, ensuring every lead is worth your time.
+                  </p>
                 </div>
-              </FadeInSection>)}
+              </div>
+            </FadeInSection>
+
+            {/* Column 2: Market Insights */}
+            <FadeInSection delay={0.1}>
+              <div className="text-center">
+                <div className="bg-background rounded-xl shadow-lg border p-8 hover:shadow-xl transition-all duration-300">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center">
+                    <Zap className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4">Market Insights at Your Fingertips</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Compare project prices with suburb trends and discover what buyers really want with our monthly data reports.
+                  </p>
+                </div>
+              </div>
+            </FadeInSection>
+
+            {/* Column 3: Custom Project Websites */}
+            <FadeInSection delay={0.2}>
+              <div className="text-center">
+                <div className="bg-background rounded-xl shadow-lg border p-8 hover:shadow-xl transition-all duration-300">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center">
+                    <Globe className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4">Custom Project Websites</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    We design dedicated pages for your developments, seamlessly connected to YepHome, boosting exposure and lead generation.
+                  </p>
+                </div>
+              </div>
+            </FadeInSection>
           </div>
         </div>
       </section>
