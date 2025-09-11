@@ -429,8 +429,8 @@ export default function DeveloperPortal() {
                           {/* Property image */}
                           <div className="flex-1">
                             <img 
-                              src="/src/assets/luxury-beachfront-apartments.jpg" 
-                              alt="Luxury beachfront apartment project" 
+                              src="/lovable-uploads/7c92edf9-776f-4998-81d5-b250983c55cf.png" 
+                              alt="Luxury apartment interior with modern design" 
                               className="w-full h-64 object-cover rounded-lg"
                             />
                           </div>
