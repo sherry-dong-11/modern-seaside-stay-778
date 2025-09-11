@@ -187,10 +187,10 @@ export default function DeveloperPortal() {
                   
                   <div className="grid grid-cols-2 gap-8">
                     {/* Dynamic Bar Chart */}
-                    <div className="relative h-40 flex items-end justify-center gap-2 px-2 py-4">
-                      <div className="flex flex-col items-center gap-1">
+                    <div className="relative max-h-[300px] h-60 flex items-end justify-center gap-3 px-4 py-8 overflow-hidden">
+                      <div className="flex flex-col items-center gap-2">
                         <div 
-                          className="w-12 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
+                          className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-md animate-grow-up"
                           style={{
                             height: '80px',
                             animationDelay: '0s'
@@ -199,59 +199,59 @@ export default function DeveloperPortal() {
                         <div className="text-xs text-muted-foreground">Q1</div>
                       </div>
                       
-                      <div className="flex flex-col items-center gap-1">
+                      <div className="flex flex-col items-center gap-2">
                         <div 
-                          className="w-12 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                          className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-md animate-grow-up"
                           style={{
                             height: '45px',
                             animationDelay: '0.3s'
                           }}
                         ></div>
-                        <div className="text-xs text-muted-foreground">Q1</div>
-                      </div>
-                      
-                      <div className="flex flex-col items-center gap-1">
-                        <div 
-                          className="w-12 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
-                          style={{
-                            height: '120px',
-                            animationDelay: '0.6s'
-                          }}
-                        ></div>
                         <div className="text-xs text-muted-foreground">Q2</div>
                       </div>
                       
-                      <div className="flex flex-col items-center gap-1">
+                      <div className="flex flex-col items-center gap-2">
                         <div 
-                          className="w-12 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                          className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-md animate-grow-up"
+                          style={{
+                            height: '110px',
+                            animationDelay: '0.6s'
+                          }}
+                        ></div>
+                        <div className="text-xs text-muted-foreground">Q3</div>
+                      </div>
+                      
+                      <div className="flex flex-col items-center gap-2">
+                        <div 
+                          className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-md animate-grow-up"
                           style={{
                             height: '60px',
                             animationDelay: '0.9s'
                           }}
                         ></div>
-                        <div className="text-xs text-muted-foreground">Q2</div>
+                        <div className="text-xs text-muted-foreground">Q4</div>
                       </div>
                       
-                      <div className="flex flex-col items-center gap-1">
+                      <div className="flex flex-col items-center gap-2">
                         <div 
-                          className="w-12 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
+                          className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-md animate-grow-up"
                           style={{
-                            height: '95px',
+                            height: '90px',
                             animationDelay: '1.2s'
                           }}
                         ></div>
-                        <div className="text-xs text-muted-foreground">Q3</div>
+                        <div className="text-xs text-muted-foreground">Q5</div>
                       </div>
                       
-                      <div className="flex flex-col items-center gap-1">
+                      <div className="flex flex-col items-center gap-2">
                         <div 
-                          className="w-12 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                          className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-md animate-grow-up"
                           style={{
                             height: '35px',
                             animationDelay: '1.5s'
                           }}
                         ></div>
-                        <div className="text-xs text-muted-foreground">Q3</div>
+                        <div className="text-xs text-muted-foreground">Q6</div>
                       </div>
                     </div>
                     
