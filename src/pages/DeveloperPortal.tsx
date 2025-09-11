@@ -112,7 +112,7 @@ export default function DeveloperPortal() {
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
                     <p className="text-lg text-muted-foreground">
-                      Buyers looking for established property are less likely to purchase off-the-plan
+                      Unlike buyers of established homes, YepHome's audience is actively searching for new apartments, townhouses, and house & land projects
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
