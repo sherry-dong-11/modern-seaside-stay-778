@@ -78,7 +78,7 @@ export default function DeveloperPortal() {
           <FadeInSection className="text-center max-w-5xl mx-auto">
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-              The best place to sell <span className="bg-gradient-to-r from-primary to-sea bg-clip-text text-transparent">new and off-the-plan property</span>
+              The smartest way to market and sell <span className="bg-gradient-to-r from-primary to-sea bg-clip-text text-transparent">new developments</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-4xl mx-auto">
               Showcase your projects on Australia's largest audience and platform dedicated to off-the-plan apartment and townhouse buyers.
