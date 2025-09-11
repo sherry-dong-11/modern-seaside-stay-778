@@ -70,17 +70,17 @@ export default function ModernHeroSection() {
         backgroundImage: `url(${heroImage})`
       }} />
         
-        {/* Subtle gradient overlay for better text readability */}
+        {/* Dynamic gradient overlay that responds to mouse */}
         <motion.div className="absolute inset-0" style={{
         background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, 
-              rgba(0,0,0,0.1) 0%, 
-              rgba(0,0,0,0.2) 50%, 
-              rgba(0,0,0,0.3) 100%)`
+              rgba(0,0,0,0.4) 0%, 
+              rgba(0,0,0,0.7) 50%, 
+              rgba(0,0,0,0.8) 100%)`
       }} animate={{
         background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, 
-              rgba(0,0,0,0.1) 0%, 
-              rgba(0,0,0,0.2) 50%, 
-              rgba(0,0,0,0.3) 100%)`
+              rgba(0,0,0,0.4) 0%, 
+              rgba(0,0,0,0.7) 50%, 
+              rgba(0,0,0,0.8) 100%)`
       }} transition={{
         duration: 0.3
       }} />
@@ -115,7 +115,7 @@ export default function ModernHeroSection() {
       }} transition={{
         duration: 1,
         ease: "easeOut"
-      }} className="max-w-5xl mx-auto my-[60px] py-[14px]">
+      }} className="max-w-5xl mx-auto py-[14px] my-[32px]">
           {/* Premium badge */}
           <motion.div initial={{
           opacity: 0,
@@ -126,7 +126,7 @@ export default function ModernHeroSection() {
         }} transition={{
           delay: 0.2,
           duration: 0.6
-        }} className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-6 mb-8 border border-white/20 py-[10px] my-[12px]">
+        }} className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full mb-8 border border-white/20 py-[7px] px-[21px] mx-0 my-[33px]">
             <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
             <span className="text-sm font-medium">Premium New Home Platform</span>
           </motion.div>
@@ -150,9 +150,7 @@ export default function ModernHeroSection() {
             delay: 0.6,
             duration: 0.8,
             ease: "easeOut"
-          }} className="block text-4xl md:text-5xl font-medium lg:text-6xl" style={{
-            textShadow: '0 2px 4px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.5)'
-          }}>
+          }} className="block text-4xl md:text-5xl font-medium my-[17px] lg:text-6xl">
               Find Your Perfect
             </motion.span>
             <motion.span initial={{
@@ -165,9 +163,7 @@ export default function ModernHeroSection() {
             delay: 0.8,
             duration: 0.8,
             ease: "easeOut"
-          }} className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent md:text-5xl lg:text-6xl font-medium text-6xl" style={{
-            filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.4)) drop-shadow(0 4px 8px rgba(139,69,19,0.3))'
-          }}>New Home</motion.span>
+          }} className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent md:text-5xl lg:text-6xl font-medium text-6xl">New Home</motion.span>
           </motion.h1>
 
 
