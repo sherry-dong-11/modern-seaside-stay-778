@@ -187,12 +187,12 @@ export default function DeveloperPortal() {
                   
                   <div className="grid grid-cols-2 gap-8">
                     {/* Dynamic Bar Chart */}
-                    <div className="relative h-44 flex items-end justify-center gap-2 px-4">
+                    <div className="relative h-40 flex items-end justify-center gap-3 px-4">
                       <div className="flex flex-col items-center gap-1">
                         <div 
-                          className="w-8 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
+                          className="w-12 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
                           style={{
-                            height: '60px',
+                            height: '80px',
                             animationDelay: '0s'
                           }}
                         ></div>
@@ -201,10 +201,10 @@ export default function DeveloperPortal() {
                       
                       <div className="flex flex-col items-center gap-1">
                         <div 
-                          className="w-8 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                          className="w-12 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
                           style={{
-                            height: '35px',
-                            animationDelay: '0.2s'
+                            height: '45px',
+                            animationDelay: '0.3s'
                           }}
                         ></div>
                         <div className="text-xs text-muted-foreground">Q1</div>
@@ -212,20 +212,9 @@ export default function DeveloperPortal() {
                       
                       <div className="flex flex-col items-center gap-1">
                         <div 
-                          className="w-8 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
+                          className="w-12 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
                           style={{
-                            height: '85px',
-                            animationDelay: '0.4s'
-                          }}
-                        ></div>
-                        <div className="text-xs text-muted-foreground">Q2</div>
-                      </div>
-                      
-                      <div className="flex flex-col items-center gap-1">
-                        <div 
-                          className="w-8 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
-                          style={{
-                            height: '50px',
+                            height: '120px',
                             animationDelay: '0.6s'
                           }}
                         ></div>
@@ -234,46 +223,35 @@ export default function DeveloperPortal() {
                       
                       <div className="flex flex-col items-center gap-1">
                         <div 
-                          className="w-8 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
+                          className="w-12 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
                           style={{
-                            height: '75px',
-                            animationDelay: '0.8s'
+                            height: '60px',
+                            animationDelay: '0.9s'
                           }}
                         ></div>
-                        <div className="text-xs text-muted-foreground">Q3</div>
+                        <div className="text-xs text-muted-foreground">Q2</div>
                       </div>
                       
                       <div className="flex flex-col items-center gap-1">
                         <div 
-                          className="w-8 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
-                          style={{
-                            height: '40px',
-                            animationDelay: '1.0s'
-                          }}
-                        ></div>
-                        <div className="text-xs text-muted-foreground">Q3</div>
-                      </div>
-                      
-                      <div className="flex flex-col items-center gap-1">
-                        <div 
-                          className="w-8 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
+                          className="w-12 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
                           style={{
                             height: '95px',
                             animationDelay: '1.2s'
                           }}
                         ></div>
-                        <div className="text-xs text-muted-foreground">Q4</div>
+                        <div className="text-xs text-muted-foreground">Q3</div>
                       </div>
                       
                       <div className="flex flex-col items-center gap-1">
                         <div 
-                          className="w-8 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                          className="w-12 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
                           style={{
-                            height: '65px',
-                            animationDelay: '1.4s'
+                            height: '35px',
+                            animationDelay: '1.5s'
                           }}
                         ></div>
-                        <div className="text-xs text-muted-foreground">Q4</div>
+                        <div className="text-xs text-muted-foreground">Q3</div>
                       </div>
                     </div>
                     
