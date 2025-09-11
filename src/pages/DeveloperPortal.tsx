@@ -2,7 +2,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Code, Database, Zap, Shield, Globe, GitBranch, Terminal, Book, Download, ExternalLink, Cpu, Network, Lock } from "lucide-react";
+import { Code, Database, Zap, Shield, Globe, GitBranch, Terminal, Book, Download, ExternalLink, Cpu, Network, Lock, Calendar, ChevronDown, Headphones } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import ModernNavbar from "@/components/ModernNavbar";
 import ModernFooter from "@/components/ModernFooter";
 import FadeInSection from "@/components/FadeInSection";
@@ -87,8 +88,8 @@ export default function DeveloperPortal() {
                 <ExternalLink className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
               <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold">
-                <Book className="mr-3 h-6 w-6" />
-                Audience & Services
+                <Headphones className="mr-3 h-6 w-6" />
+                Customer Support
               </Button>
             </div>
           </FadeInSection>
@@ -103,14 +104,18 @@ export default function DeveloperPortal() {
           </FadeInSection>
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+              {/* Left Side - Text Content */}
               <div className="order-2 lg:order-1">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                  Access Live Reporting for Real-Time Buyer Insights
+                </h2>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
                     <p className="text-lg text-muted-foreground">
-                      Buyers looking for established property are less likely to purchase off-the-plan
+                      Unlike buyers of established homes, YepHome's audience is actively searching for new apartments, townhouses, and house & land projects
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
@@ -118,7 +123,7 @@ export default function DeveloperPortal() {
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
                     <p className="text-lg text-muted-foreground">
-                      All of Apartments.com.au's audience is looking specifically for new apartment & townhouses
+                      Our live reporting shows who is engaging with your project and what they're interested in
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
@@ -126,7 +131,7 @@ export default function DeveloperPortal() {
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
                     <p className="text-lg text-muted-foreground">
-                      Access live reporting for real time campaign insights
+                      Gain real-time insights into campaign performance and buyer demand to drive faster sales
                     </p>
                   </div>
                 </div>
@@ -140,58 +145,128 @@ export default function DeveloperPortal() {
                 </div>
               </div>
               
+              {/* Right Side - Reporting Module */}
               <div className="order-1 lg:order-2">
-                <div className="bg-background rounded-xl shadow-lg p-6 border py-[18px]">
+                <div className="bg-background rounded-xl shadow-lg p-6 border">
                   <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center gap-2">
-                      <div className="flex gap-1">
-                        <div className="w-1 h-8 bg-primary rounded-full animate-pulse"></div>
-                        <div className="w-1 h-8 bg-primary/60 rounded-full animate-pulse" style={{
-                        animationDelay: '0.2s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/40 rounded-full animate-pulse" style={{
-                        animationDelay: '0.4s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/20 rounded-full animate-pulse" style={{
-                        animationDelay: '0.6s'
-                      }}></div>
-                        <div className="w-1 h-8 bg-primary/10 rounded-full animate-pulse" style={{
-                        animationDelay: '0.8s'
-                      }}></div>
-                      </div>
-                      <h3 className="text-xl font-semibold">Reporting</h3>
-                    </div>
+                    <h3 className="text-2xl font-bold">Reporting</h3>
                     <div className="flex gap-2">
-                      <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">SUMMARY</span>
-                      <span className="px-3 py-1 bg-muted text-muted-foreground text-sm rounded-full">PROJECTS</span>
-                      <span className="px-3 py-1 bg-muted text-muted-foreground text-sm rounded-full">LEADS</span>
+                      <span className="px-4 py-2 bg-primary text-primary-foreground text-sm rounded-lg font-medium">SUMMARY</span>
+                      <span className="px-4 py-2 bg-muted text-muted-foreground text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">PROJECTS</span>
+                      <span className="px-4 py-2 bg-muted text-muted-foreground text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">LEADS</span>
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-3">
-                      <div className="bg-gradient-to-r from-pink-400 to-purple-600 h-20 rounded-lg animate-pulse"></div>
-                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 h-16 rounded-lg animate-pulse" style={{
-                      animationDelay: '0.5s'
-                    }}></div>
-                      <div className="bg-gradient-to-r from-pink-400 to-red-500 h-12 rounded-lg animate-pulse" style={{
-                      animationDelay: '1s'
-                    }}></div>
+                  <div className="flex gap-4 mb-6">
+                    <div className="flex-1">
+                      <div className="w-full bg-background border border-muted rounded-md px-3 py-2 flex items-center justify-between">
+                        <span className="text-sm">Urban Village + 5 projects</span>
+                        <ChevronDown className="h-4 w-4 text-muted-foreground" />
+                      </div>
                     </div>
-                    <div className="flex items-center justify-center">
-                      <div className="relative w-24 h-24">
-                        <div className="absolute inset-0 rounded-full border-8 border-blue-200"></div>
-                        <div className="absolute inset-0 rounded-full border-8 border-blue-500 border-t-transparent animate-spin"></div>
-                        <div className="absolute inset-2 rounded-full border-8 border-pink-200"></div>
-                        <div className="absolute inset-2 rounded-full border-8 border-pink-500 border-b-transparent animate-spin" style={{
-                        animationDirection: 'reverse'
-                      }}></div>
+                    <div className="flex-1">
+                      <div className="w-full bg-background border border-muted rounded-md px-3 py-2 flex items-center justify-between">
+                        <span className="text-sm">16/06/2023 - 16/08/2023</span>
+                        <ChevronDown className="h-4 w-4 text-muted-foreground" />
                       </div>
                     </div>
                   </div>
                   
-                  <div className="mt-4 text-sm text-muted-foreground">
-                    Urban Village • 5 projects | 10/05/2023 - 16/08/2023
+                  <div className="grid grid-cols-2 gap-8 ml-8">
+                    {/* Dynamic Bar Chart */}
+                    <div className="relative h-40 flex items-end justify-center gap-4 px-2 py-4 ml-4">
+                      {/* Q1 Group */}
+                      <div className="flex flex-col items-center gap-1">
+                        <div className="flex items-end gap-0">
+                          <div 
+                            className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
+                            style={{
+                              height: '80px',
+                              animationDelay: '0s'
+                            }}
+                          ></div>
+                          <div 
+                            className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                            style={{
+                              height: '45px',
+                              animationDelay: '0.3s'
+                            }}
+                          ></div>
+                        </div>
+                        <div className="text-xs text-muted-foreground">Q1</div>
+                      </div>
+                      
+                      {/* Q2 Group */}
+                      <div className="flex flex-col items-center gap-1">
+                        <div className="flex items-end gap-0">
+                          <div 
+                            className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
+                            style={{
+                              height: '120px',
+                              animationDelay: '0.6s'
+                            }}
+                          ></div>
+                          <div 
+                            className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                            style={{
+                              height: '60px',
+                              animationDelay: '0.9s'
+                            }}
+                          ></div>
+                        </div>
+                        <div className="text-xs text-muted-foreground">Q2</div>
+                      </div>
+                      
+                      {/* Q3 Group */}
+                      <div className="flex flex-col items-center gap-1">
+                        <div className="flex items-end gap-0">
+                          <div 
+                            className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up"
+                            style={{
+                              height: '95px',
+                              animationDelay: '1.2s'
+                            }}
+                          ></div>
+                          <div 
+                            className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up"
+                            style={{
+                              height: '35px',
+                              animationDelay: '1.5s'
+                            }}
+                          ></div>
+                        </div>
+                        <div className="text-xs text-muted-foreground">Q3</div>
+                      </div>
+                    </div>
+                    
+                    {/* Dynamic Pie Chart */}
+                    <div className="flex items-center justify-center">
+                      <div className="relative w-40 h-40">
+                        <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                          {/* Blue section (50%) - 180 degrees */}
+                          <path
+                            d="M 50,50 L 50,10 A 40,40 0 1,1 50,90 Z"
+                            fill="rgb(59 130 246)"
+                            className="opacity-0 animate-fade-in"
+                            style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}
+                          />
+                          {/* Pink section (30%) - 108 degrees */}
+                          <path
+                            d="M 50,50 L 50,90 A 40,40 0 0,1 11.27,69.44 Z"
+                            fill="rgb(236 72 153)"
+                            className="opacity-0 animate-fade-in"
+                            style={{ animationDelay: '1s', animationFillMode: 'forwards' }}
+                          />
+                          {/* Orange section (20%) - 72 degrees */}
+                          <path
+                            d="M 50,50 L 11.27,69.44 A 40,40 0 0,1 50,10 Z"
+                            fill="rgb(251 146 60)"
+                            className="opacity-0 animate-fade-in"
+                            style={{ animationDelay: '1.5s', animationFillMode: 'forwards' }}
+                          />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -232,6 +307,7 @@ export default function DeveloperPortal() {
                         <span>DATE</span>
                         <span>BUYER</span>
                         <span>CONTACT</span>
+                        <span>PROPERTY TYPE</span>
                       </div>
                       {[...Array(6)].map((_, i) => <div key={i} className="flex justify-between items-center py-2 border-b last:border-b-0 animate-fade-in" style={{
                       animationDelay: `${i * 0.2}s`
@@ -239,6 +315,7 @@ export default function DeveloperPortal() {
                           <div className="w-16 h-3 bg-muted rounded animate-pulse"></div>
                           <div className="w-20 h-3 bg-muted rounded animate-pulse"></div>
                           <div className="w-24 h-3 bg-muted rounded animate-pulse"></div>
+                          <div className="w-20 h-3 bg-muted rounded animate-pulse"></div>
                         </div>)}
                     </div>
                   </div>
@@ -246,15 +323,15 @@ export default function DeveloperPortal() {
                   <div className="bg-muted/50 p-4 border-t">
                     <div className="flex items-center gap-4">
                       <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center animate-pulse">
-                        <span className="text-white text-sm font-bold">LL</span>
+                        <span className="text-white text-sm font-bold">AB</span>
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-semibold">Leady Leaderson</h4>
-                        <p className="text-sm text-muted-foreground">leady_l@leadmail.com</p>
-                        <p className="text-sm text-muted-foreground">+614 888 888</p>
-                        <p className="text-sm text-muted-foreground">Next home buyer</p>
-                        <p className="text-sm text-muted-foreground">1 Bed / 1 Bath / 1 Car</p>
-                        <p className="text-sm text-muted-foreground">72m² / $685,000</p>
+                        <h4 className="font-semibold">Alex Buyer</h4>
+                        <p className="text-sm text-muted-foreground">jamie.buyer@samplemail.com</p>
+                        <p className="text-sm text-muted-foreground">+61 400 000 000</p>
+                        <p className="text-sm text-muted-foreground">First-time Home Buyer</p>
+                        <p className="text-sm text-muted-foreground">2 Bed / 2 Bath / 1 Car</p>
+                        <p className="text-sm text-muted-foreground">85m² / $720,000</p>
                       </div>
                       <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center animate-bounce">
                         <div className="w-0 h-0 border-l-4 border-l-white border-y-2 border-y-transparent"></div>
@@ -266,7 +343,7 @@ export default function DeveloperPortal() {
               
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Is your cost per lead getting out of control?
+                  Tired of paying for low-quality leads?
                 </h2>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
@@ -274,7 +351,7 @@ export default function DeveloperPortal() {
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
                     <p className="text-lg text-muted-foreground">
-                      Reduce the risk on your marketing investment
+                      Get verified buyer enquiries with real intent
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
@@ -282,7 +359,7 @@ export default function DeveloperPortal() {
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
                     <p className="text-lg text-muted-foreground">
-                      Every Apartments.com.au lead comes with an SMS verified phone number
+                      Every YepHome lead is AI-qualified and contact-ready
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
@@ -290,7 +367,7 @@ export default function DeveloperPortal() {
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
                     <p className="text-lg text-muted-foreground">
-                      Track buyer interactions so you contact at the perfect time
+                      Track buyer interests and reach out at the right moment
                     </p>
                   </div>
                 </div>
@@ -386,7 +463,11 @@ export default function DeveloperPortal() {
               </Card>
             </FadeInSection>
             <FadeInSection delay={0.2}>
-              
+              <Card className="p-8 text-center">
+                <div className="text-4xl font-bold text-primary mb-2">SMS</div>
+                <h3 className="text-lg font-semibold mb-2">Verified Leads</h3>
+                <p className="text-muted-foreground">Every lead comes with verified contact details</p>
+              </Card>
             </FadeInSection>
           </div>
         </div>
