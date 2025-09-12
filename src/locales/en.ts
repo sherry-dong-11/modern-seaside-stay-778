@@ -393,5 +393,15 @@ export const en = {
         ]
       }
     }
+  },
+  propertyMarket: {
+    title: "Property Market Information",
+    description: "Latest pricing trends for new properties across Australian states",
+    propertyTypes: {
+      newApartment: "New Apartment",
+      newTownhouses: "New Townhouses", 
+      newHouses: "New Houses"
+    },
+    lastUpdated: "Data updated weekly based on market trends"
   }
 };

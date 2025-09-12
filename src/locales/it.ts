@@ -393,5 +393,15 @@ export const it = {
       name: "Appartamento Vista Giardino",
       description: "Appartamento tranquillo circondato da rigogliosi giardini, a breve distanza dalla spiaggia."
     }
+  },
+  propertyMarket: {
+    title: "Informazioni Mercato Immobiliare",
+    description: "Ultimi trend di prezzo per nuove proprietà negli stati australiani",
+    propertyTypes: {
+      newApartment: "Nuovo Appartamento",
+      newTownhouses: "Nuove Villette a Schiera",
+      newHouses: "Nuove Case"
+    },
+    lastUpdated: "Dati aggiornati settimanalmente basati sui trend di mercato"
   }
 };

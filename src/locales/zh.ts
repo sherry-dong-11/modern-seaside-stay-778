@@ -393,5 +393,15 @@ export const zh = {
         ]
       }
     }
+  },
+  propertyMarket: {
+    title: "房价行情信息",
+    description: "澳洲各州新房价格最新趋势",
+    propertyTypes: {
+      newApartment: "新公寓",
+      newTownhouses: "新联排别墅",
+      newHouses: "新独栋别墅"
+    },
+    lastUpdated: "数据每周更新，基于市场趋势"
   }
 };

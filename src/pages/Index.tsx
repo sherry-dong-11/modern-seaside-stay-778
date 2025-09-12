@@ -6,7 +6,7 @@ import FeaturedPropertiesSection from "@/components/FeaturedPropertiesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ExploreCitiesSection from "@/components/ExploreCitiesSection";
 import FeaturedCategoriesSection from "@/components/FeaturedCategoriesSection";
-
+import PropertyMarketSection from "@/components/PropertyMarketSection";
 import { HomeLoanCalculatorSection } from "@/components/HomeLoanCalculatorSection";
 import { LatestNewsSection } from "@/components/LatestNewsSection";
 import AnimatedPropertyCard from "@/components/AnimatedPropertyCard";
@@ -106,6 +106,11 @@ export default function Index() {
         {/* Featured Categories */}
         <FadeInSection>
           <FeaturedCategoriesSection />
+        </FadeInSection>
+        
+        {/* Property Market Information */}
+        <FadeInSection>
+          <PropertyMarketSection />
         </FadeInSection>
         
         {/* Home Loan Calculator */}
