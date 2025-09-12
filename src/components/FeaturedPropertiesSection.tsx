@@ -113,7 +113,7 @@ export default function FeaturedPropertiesSection() {
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto mt-8 rounded-full"></div>
         </div>
 
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative max-w-6xl mx-auto">
           {/* Carousel */}
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
@@ -180,7 +180,7 @@ export default function FeaturedPropertiesSection() {
                             <p className="text-3xl font-light text-primary-600 tracking-tight">
                               {property.price}
                             </p>
-                            <p className="text-sm text-muted-foreground mt-1">Starting from</p>
+                            
                           </div>
                         </div>
                       </div>
