@@ -104,12 +104,12 @@ export default function DeveloperPortal() {
 
       {/* Live Reporting Service */}
       <section className="bg-muted/30 py-0">
-        <div className="container pt-12 md:pt-16 pb-6">
+        <div className="container mx-auto px-[28px] pt-16 pb-4 py-[43px]">
           <FadeInSection className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-6 py-0 text-left md:text-5xl">Our Services</h2>
           </FadeInSection>
           <FadeInSection>
-            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start mb-16">
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
               {/* Left Side - Text Content */}
               <div className="order-2 lg:order-1">
                 <h2 className="text-3xl font-bold mb-6 md:text-3xl">Real-Time Reporting</h2>
@@ -151,7 +151,7 @@ export default function DeveloperPortal() {
               
               {/* Right Side - Reporting Module */}
               <div className="order-1 lg:order-2">
-                <div className="bg-background rounded-xl shadow-lg p-4 md:p-6 border animate-fade-in hover-scale transition-all duration-300 hover:shadow-xl">
+                <div className="bg-background rounded-xl shadow-lg p-6 border animate-fade-in hover-scale transition-all duration-300 hover:shadow-xl">
                   <div className="flex items-center justify-between mb-6">
                      <div className="flex items-center gap-2">
                        <h3 className="font-bold text-xl">Reporting</h3>
@@ -178,9 +178,9 @@ export default function DeveloperPortal() {
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Dynamic Bar Chart */}
-                    <div className="relative h-36 md:h-44 lg:h-48 flex items-end justify-center gap-3 px-4 py-6 bg-gradient-to-t from-muted/10 to-transparent rounded-lg">
+                    <div className="relative h-48 flex items-end justify-center gap-3 px-4 py-6 bg-gradient-to-t from-muted/10 to-transparent rounded-lg">
                       {/* Q1 Group */}
                       <div className="flex flex-col items-center gap-2">
                         <div className="flex items-end gap-1">
@@ -229,7 +229,7 @@ export default function DeveloperPortal() {
                     
                     {/* Dynamic Pie Chart */}
                     <div className="flex items-center justify-center p-6 bg-gradient-to-br from-muted/5 to-transparent rounded-lg">
-                      <div className="relative w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40">
+                      <div className="relative w-40 h-40">
                         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                           {/* Blue section (50%) - 180 degrees */}
                           <path d="M 50,50 L 50,10 A 40,40 0 1,1 50,90 Z" fill="rgb(59 130 246)" className="opacity-0 animate-fade-in" style={{
@@ -248,20 +248,20 @@ export default function DeveloperPortal() {
                         }} />
                         </svg>
                         {/* Chart Legend */}
-                          <div className="mt-3 flex justify-center gap-3 text-xs">
-                            <div className="flex items-center gap-1">
-                              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                              <span>Leads</span>
-                            </div>
-                            <div className="flex items-center gap-1">
-                              <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
-                              <span>Views</span>
-                            </div>
-                            <div className="flex items-center gap-1">
-                              <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                              <span>Tours</span>
-                            </div>
+                        <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 text-xs">
+                          <div className="flex items-center gap-1">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            <span>Leads</span>
                           </div>
+                          <div className="flex items-center gap-1">
+                            <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                            <span>Views</span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                            <span>Tours</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -280,10 +280,10 @@ export default function DeveloperPortal() {
         
         <div className="container mx-auto px-4 relative z-10">
           <FadeInSection>
-            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 overflow-hidden group hover:shadow-2xl hover:scale-[1.01] md:hover:scale-[1.02] transition-all duration-500">
-                  <div className="p-4 md:p-6">
+                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 overflow-hidden group hover:shadow-2xl hover:scale-[1.02] transition-all duration-500">
+                  <div className="p-6">
                     {/* Enhanced header with status badges */}
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center gap-3">
@@ -449,11 +449,11 @@ export default function DeveloperPortal() {
         
         <div className="container mx-auto px-4 relative z-10">
           <FadeInSection>
-            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left Side - Enhanced Website Mockup */}
               <div>
-                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-sea/10 overflow-hidden group hover:shadow-2xl hover:scale-[1.01] md:hover:scale-[1.02] transition-all duration-500">
-                  <div className="p-4 md:p-6">
+                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-sea/10 overflow-hidden group hover:shadow-2xl hover:scale-[1.02] transition-all duration-500">
+                  <div className="p-6">
                     {/* Enhanced header with status badges */}
                     <div className="flex items-center justify-between mb-6">
                        <div className="flex items-center gap-3">
@@ -479,7 +479,7 @@ export default function DeveloperPortal() {
                       </div>
                       
                       {/* Enhanced website content with better proportions */}
-                      <div className="bg-white rounded-lg shadow-inner overflow-hidden min-h-64 md:min-h-80">
+                      <div className="bg-white rounded-lg shadow-inner overflow-hidden min-h-80">
                         <div className="space-y-0">
                           {/* Hero section mockup - increased height */}
                           <div className="relative h-32 bg-gradient-to-r from-primary to-sea p-6 flex items-center justify-center">
