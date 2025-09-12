@@ -114,78 +114,80 @@ export default function FeaturedPropertiesSection() {
         </div>
 
         <div className="relative max-w-7xl mx-auto">
-          {/* Grid Layout - 3 items on all screens but scaled responsively */}
-          <div className="grid grid-cols-3 gap-2 sm:gap-4 lg:gap-6">
-            {featuredProperties.slice(0, 3).map(property => (
-              <div key={property.id} className="group relative bg-card rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 border border-primary-100/20">
-                {/* Image Container - responsive aspect ratio */}
-                <div className="relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-[16/9] overflow-hidden">
-                  <img src={property.image} alt={property.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  
-                  {/* Premium overlay with enhanced gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <h3 className="text-lg sm:text-3xl lg:text-5xl xl:text-6xl font-light text-white tracking-wide text-center px-2">
-                      {property.name}
-                    </h3>
-                  </div>
-                  
-                  {/* Premium badge - responsive */}
-                  <div className="absolute top-2 right-2 sm:top-4 sm:right-4 lg:top-8 lg:right-8">
-                    <div className="bg-primary-500/90 backdrop-blur-sm text-white px-2 py-1 sm:px-3 sm:py-1.5 lg:px-4 lg:py-2 rounded-full text-xs sm:text-sm font-medium border border-primary-400/30">
-                      Featured
-                    </div>
-                  </div>
-                </div>
-
-                {/* Premium Details Section - responsive padding */}
-                <div className="bg-gradient-to-br from-white to-neutral-50/50 p-3 sm:p-4 lg:p-8 border-t border-primary-100/20">
-                  <div className="flex items-start justify-between flex-col gap-2 sm:gap-4 lg:gap-6">
-                    {/* Property Details */}
-                    <div className="flex-1 min-w-0 w-full">
-                      <h4 className="text-sm sm:text-lg lg:text-xl font-semibold text-foreground mb-1">
-                        {property.name}
-                      </h4>
-                      <p className="text-muted-foreground text-xs sm:text-sm mb-2 sm:mb-4 line-clamp-2">
-                        {property.address}
-                      </p>
+          {/* Carousel */}
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex">
+              {featuredProperties.map(property => <div key={property.id} className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0 px-2 sm:px-3 lg:px-4">
+                  <div className="group relative bg-card rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 border border-primary-100/20">
+                    {/* Image Container */}
+                    <div className="relative aspect-[16/9] overflow-hidden">
+                      <img src={property.image} alt={property.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                       
-                      {/* Amenities - responsive sizing */}
-                      <div className="flex items-center gap-2 sm:gap-4 lg:gap-6 text-muted-foreground">
-                        <div className="flex items-center gap-1">
-                          <Bed className="h-3 w-3 sm:h-4 sm:w-4" />
-                          <span className="text-xs sm:text-sm font-medium">{property.bedrooms}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Bath className="h-3 w-3 sm:h-4 sm:w-4" />
-                          <span className="text-xs sm:text-sm font-medium">{property.bathrooms}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Car className="h-3 w-3 sm:h-4 sm:w-4" />
-                          <span className="text-xs sm:text-sm font-medium">{property.parking}</span>
+                      {/* Premium overlay with enhanced gradient */}
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <h3 className="text-5xl md:text-6xl font-light text-white tracking-wide text-center">
+                          {property.name}
+                        </h3>
+                      </div>
+                      
+                      {/* Premium badge */}
+                      <div className="absolute top-8 right-8">
+                        <div className="bg-primary-500/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium border border-primary-400/30">
+                          Featured
                         </div>
                       </div>
                     </div>
 
-                    {/* Type & Price - responsive */}
-                    <div className="flex flex-col items-start gap-2 sm:gap-3 text-left w-full">
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-primary-600 rounded-lg sm:rounded-xl blur-sm opacity-40"></div>
-                        <Badge variant="secondary" className="relative bg-white/95 backdrop-blur-md text-primary-900 border border-white/50 px-2 py-1 sm:px-3 sm:py-1.5 lg:px-5 lg:py-2.5 text-xs font-bold rounded-lg sm:rounded-xl shadow-2xl tracking-wider uppercase">
-                          {property.type}
-                        </Badge>
-                      </div>
-                      <div className="text-left w-full">
-                        <p className="text-lg sm:text-xl lg:text-3xl font-light text-primary-600 tracking-tight">
-                          {property.price}
-                        </p>
-                        <p className="text-xs sm:text-sm text-muted-foreground mt-1">Starting from</p>
+                    {/* Premium Details Section */}
+                    <div className="bg-gradient-to-br from-white to-neutral-50/50 p-8 border-t border-primary-100/20">
+                      <div className="flex items-start justify-between flex-col sm:flex-row gap-4 sm:gap-6">
+                        {/* Left Side - Property Details */}
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-xl font-semibold text-foreground mb-1">
+                            {property.name}
+                          </h4>
+                          <p className="text-muted-foreground text-sm mb-4">
+                            {property.address}
+                          </p>
+                          
+                          {/* Amenities */}
+                          <div className="flex items-center gap-6 text-muted-foreground">
+                            <div className="flex items-center gap-1">
+                              <Bed className="h-4 w-4" />
+                              <span className="text-sm font-medium">{property.bedrooms}</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Bath className="h-4 w-4" />
+                              <span className="text-sm font-medium">{property.bathrooms}</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Car className="h-4 w-4" />
+                              <span className="text-sm font-medium">{property.parking}</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Right Side - Type & Price */}
+                        <div className="flex flex-col sm:items-end items-start gap-3 sm:text-right text-left w-full sm:w-auto">
+                          <div className="relative">
+                            <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-primary-600 rounded-xl blur-sm opacity-40"></div>
+                            <Badge variant="secondary" className="relative bg-white/95 backdrop-blur-md text-primary-900 border border-white/50 px-5 py-2.5 text-xs font-bold rounded-xl shadow-2xl tracking-wider uppercase">
+                              {property.type}
+                            </Badge>
+                          </div>
+                          <div className="sm:text-right text-left w-full">
+                            <p className="text-3xl font-light text-primary-600 tracking-tight">
+                              {property.price}
+                            </p>
+                            <p className="text-sm text-muted-foreground mt-1">Starting from</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                </div>)}
+            </div>
           </div>
 
           {/* Navigation Arrows */}
