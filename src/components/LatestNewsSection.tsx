@@ -28,7 +28,7 @@ export function LatestNewsSection() {
   const handleBrowseAllNews = () => {
     navigate("/blog");
   };
-  return <section className="py-6 bg-gray-50/50">
+  return <section className="py-4 md:py-6 bg-gray-50/50">
       <div className="container">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
@@ -45,12 +45,12 @@ export function LatestNewsSection() {
         </div>
 
         {/* News Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {newsArticles.map(article => <Card key={article.id} className="group cursor-pointer hover:shadow-xl transition-all duration-300 border-0 shadow-sm hover:-translate-y-1">
               <CardContent className="p-0">
                 {/* Article Image */}
                 <div className="relative overflow-hidden rounded-t-lg">
-                  <img src={article.image} alt={article.headline} className="w-full h-[180px] object-cover group-hover:scale-110 transition-transform duration-300" />
+                  <img src={article.image} alt={article.headline} className="w-full h-24 md:h-[180px] object-cover group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 
                 {/* Article Content */}
@@ -58,7 +58,7 @@ export function LatestNewsSection() {
                   <p className="text-sm text-muted-foreground mb-2">
                     {article.date}
                   </p>
-                  <h3 className="text-base leading-tight text-foreground group-hover:text-primary transition-colors line-clamp-3 font-semibold">
+                  <h3 className="text-sm md:text-base leading-tight text-foreground group-hover:text-primary transition-colors line-clamp-3 font-semibold">
                     {article.headline}
                   </h3>
                   

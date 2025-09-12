@@ -44,7 +44,7 @@ const citiesData = [{
 export default function ExploreCitiesSection() {
   return <section className="bg-background py-6">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
           {citiesData.map(city => <div key={city.id} className="group relative overflow-hidden rounded-lg cursor-pointer aspect-square transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
               {/* Full-bleed background image */}
               <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{
@@ -52,12 +52,12 @@ export default function ExploreCitiesSection() {
           }} />
               
               {/* Default location overlay */}
-              <div className="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 group-hover:opacity-0">
+              <div className="absolute inset-0 flex items-end justify-start p-3 md:p-6 transition-opacity duration-300 group-hover:opacity-0">
                 <div className="text-white">
-                  <h3 className="text-2xl font-bold mb-1 drop-shadow-lg">
+                  <h3 className="text-lg md:text-2xl font-bold mb-1 drop-shadow-lg">
                     {city.name}
                   </h3>
-                  <p className="text-lg font-medium drop-shadow-md opacity-90">
+                  <p className="text-sm md:text-lg font-medium drop-shadow-md opacity-90">
                     {city.state}
                   </p>
                 </div>

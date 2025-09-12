@@ -109,7 +109,7 @@ const PropertyCard = ({
   return <Card className="group cursor-pointer transition-all duration-300 hover:shadow-lg border-0 bg-card h-full flex flex-col">
       <CardContent className="p-0 flex flex-col h-full">
         <div className="relative overflow-hidden rounded-lg">
-          <img src={property.image} alt={property.name} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
+          <img src={property.image} alt={property.name} className="w-full h-32 md:h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
           <button className="absolute top-3 right-3 p-2 bg-white/90 hover:bg-white rounded-full shadow-sm transition-colors">
             <Heart className="w-4 h-4 text-muted-foreground hover:text-red-500" />
           </button>
@@ -117,8 +117,8 @@ const PropertyCard = ({
         
         <div className="p-4 flex flex-col flex-1 bg-white">
           <div className="flex-1 space-y-3">
-            <h3 className="font-semibold text-lg text-foreground">{property.name}</h3>
-            <p className="text-sm text-muted-foreground line-clamp-2 min-h-[2.5rem] leading-relaxed">{property.address}</p>
+            <h3 className="font-semibold text-base md:text-lg text-foreground">{property.name}</h3>
+            <p className="text-xs md:text-sm text-muted-foreground line-clamp-2 min-h-[2.5rem] leading-relaxed">{property.address}</p>
             
             <div className="h-6 flex items-center">
               {(property.bedrooms > 0 || property.bathrooms > 0 || property.parking > 0) && <div className="flex items-center gap-4 text-sm text-muted-foreground">
@@ -175,13 +175,13 @@ const CategorySection = ({
         </Button>
       </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {properties.map(property => <PropertyCard key={property.id} property={property} />)}
       </div>
     </div>;
 };
 export default function FeaturedCategoriesSection() {
-  return <section className="bg-background py-8">
+  return <section className="bg-background py-4 md:py-8">
       <div className="container mx-auto px-4">
         <CategorySection title="New Apartments" properties={apartmentProperties} />
         <CategorySection title="New Townhouses" properties={townhouseProperties} />
