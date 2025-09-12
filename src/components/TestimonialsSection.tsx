@@ -33,11 +33,12 @@ const testimonials: Testimonial[] = [{
   rating: 4
 }];
 export default function TestimonialsSection() {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [direction, setDirection] = useState<'forward' | 'backward'>('forward');
-
   const nextTestimonial = () => {
     if (isAnimating) return;
     setIsAnimating(true);
@@ -47,7 +48,6 @@ export default function TestimonialsSection() {
       setIsAnimating(false);
     }, 500);
   };
-
   const prevTestimonial = () => {
     if (isAnimating) return;
     setIsAnimating(true);
@@ -64,7 +64,7 @@ export default function TestimonialsSection() {
   return <section className="bg-muted py-4 sm:py-6 lg:py-8">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-8 animate-fade-in">
-          <h2 className="text-2xl md:text-3xl mb-2 font-semibold">
+          <h2 className="text-3xl mb-2 font-semibold md:text-4xl">
             {t.testimonials.title}
           </h2>
           <p className="text-muted-foreground">
@@ -75,19 +75,17 @@ export default function TestimonialsSection() {
         <div className="relative max-w-4xl mx-auto">
           <div className="relative min-h-[350px] sm:min-h-[400px] md:min-h-[300px]">
             {testimonials.map((testimonial, index) => {
-              let slideClass = '';
-              if (activeIndex === index) {
-                slideClass = "opacity-100 translate-x-0 z-10";
-              } else if (direction === 'forward') {
-                // For forward direction, previous slides go left, next slides go right
-                slideClass = index < activeIndex ? "opacity-0 -translate-x-full z-0" : "opacity-0 translate-x-full z-0";
-              } else {
-                // For backward direction, previous slides go right, next slides go left
-                slideClass = index > activeIndex ? "opacity-0 translate-x-full z-0" : "opacity-0 -translate-x-full z-0";
-              }
-              
-              return (
-                <div key={testimonial.id} className={cn("absolute inset-0 glass-card p-4 sm:p-6 md:p-8 lg:p-10 transition-all duration-500", slideClass)}>
+            let slideClass = '';
+            if (activeIndex === index) {
+              slideClass = "opacity-100 translate-x-0 z-10";
+            } else if (direction === 'forward') {
+              // For forward direction, previous slides go left, next slides go right
+              slideClass = index < activeIndex ? "opacity-0 -translate-x-full z-0" : "opacity-0 translate-x-full z-0";
+            } else {
+              // For backward direction, previous slides go right, next slides go left
+              slideClass = index > activeIndex ? "opacity-0 translate-x-full z-0" : "opacity-0 -translate-x-full z-0";
+            }
+            return <div key={testimonial.id} className={cn("absolute inset-0 glass-card p-4 sm:p-6 md:p-8 lg:p-10 transition-all duration-500", slideClass)}>
                 <div className="flex flex-col md:flex-row gap-4 sm:gap-6 h-full">
                   <div className="flex flex-col items-center md:items-start shrink-0">
                     <div className="rounded-full overflow-hidden w-16 h-16 sm:w-20 sm:h-20 mb-3 sm:mb-4 border-2 border-primary">
@@ -106,9 +104,8 @@ export default function TestimonialsSection() {
                     </blockquote>
                   </div>
                 </div>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
           
           <div className="flex justify-between mt-8">
@@ -121,7 +118,7 @@ export default function TestimonialsSection() {
               {testimonials.map((_, index) => <button key={index} onClick={() => {
               if (isAnimating) return;
               setIsAnimating(true);
-              
+
               // Handle circular carousel direction
               let newDirection: 'forward' | 'backward' = 'forward';
               if (activeIndex === testimonials.length - 1 && index === 0) {
@@ -134,7 +131,6 @@ export default function TestimonialsSection() {
                 // Normal case
                 newDirection = index > activeIndex ? 'forward' : 'backward';
               }
-              
               setDirection(newDirection);
               setActiveIndex(index);
               setTimeout(() => setIsAnimating(false), 500);
