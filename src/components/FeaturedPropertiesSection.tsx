@@ -113,11 +113,11 @@ export default function FeaturedPropertiesSection() {
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto mt-8 rounded-full"></div>
         </div>
 
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative max-w-7xl mx-auto">
           {/* Carousel */}
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
-              {featuredProperties.map(property => <div key={property.id} className="flex-[0_0_100%] min-w-0 px-4">
+              {featuredProperties.map(property => <div key={property.id} className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0 px-2 sm:px-3 lg:px-4">
                   <div className="group relative bg-card rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 border border-primary-100/20">
                     {/* Image Container */}
                     <div className="relative aspect-[16/9] overflow-hidden">
