@@ -64,7 +64,7 @@ export default function TestimonialsSection() {
   return <section className="bg-muted py-4 sm:py-6 lg:py-8">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-8 animate-fade-in">
-          <h2 className="text-3xl mb-2 md:text-3xl font-semibold">
+          <h2 className="text-2xl md:text-3xl mb-2 font-semibold">
             {t.testimonials.title}
           </h2>
           <p className="text-muted-foreground">
