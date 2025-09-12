@@ -126,13 +126,13 @@ export default function ModernHeroSection() {
         }} transition={{
           delay: 0.2,
           duration: 0.6
-        }} className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-3 sm:px-4 md:px-6 mb-6 sm:mb-8 border border-white/20 py-1.5 sm:py-2 md:py-[10px] my-[12px]">
-            <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
-            <span className="text-xs sm:text-sm font-medium">Premium New Home Platform</span>
+        }} className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-6 mb-8 border border-white/20 py-[10px] my-[12px]">
+            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+            <span className="text-sm font-medium">Premium New Home Platform</span>
           </motion.div>
 
           {/* Main heading with staggered animation */}
-          <motion.h1 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-bold mb-6 sm:mb-8 leading-[1.2]" initial={{
+          <motion.h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[1.2]" initial={{
           opacity: 0
         }} animate={{
           opacity: 1
@@ -150,7 +150,7 @@ export default function ModernHeroSection() {
             delay: 0.6,
             duration: 0.8,
             ease: "easeOut"
-          }} className="block text-xl sm:text-2xl md:text-5xl font-medium lg:text-6xl" style={{
+          }} className="block text-4xl md:text-5xl font-medium lg:text-6xl" style={{
             textShadow: '0 2px 4px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.5)'
           }}>
               Find Your Perfect
@@ -165,7 +165,7 @@ export default function ModernHeroSection() {
             delay: 0.8,
             duration: 0.8,
             ease: "easeOut"
-          }} className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium" style={{
+          }} className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent md:text-5xl lg:text-6xl font-medium text-6xl" style={{
             filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.4)) drop-shadow(0 4px 8px rgba(139,69,19,0.3))'
           }}>New Home</motion.span>
           </motion.h1>
@@ -181,17 +181,16 @@ export default function ModernHeroSection() {
         }} transition={{
           delay: 1.2,
           duration: 0.6
-        }} className="max-w-3xl mx-auto mb-8 sm:mb-12">
-            <div className="relative p-1.5 sm:p-2 bg-white/10 backdrop-blur-xl rounded-xl sm:rounded-2xl border border-white/20 shadow-2xl">
-              <div className="flex flex-col md:flex-row gap-2 sm:gap-3">
+        }} className="max-w-3xl mx-auto mb-12">
+            <div className="relative p-2 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl">
+              <div className="flex flex-col md:flex-row gap-3">
                 <div className="flex-1 relative">
-                  <Search className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 text-white/60 h-4 w-4 sm:h-5 sm:w-5" />
-                  <Input placeholder="Search by suburb, postcode, or development name..." className="pl-10 sm:pl-12 bg-transparent border-none text-white placeholder:text-white/60 text-sm sm:text-lg h-10 sm:h-12 md:h-14 focus:ring-0" />
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60 h-5 w-5" />
+                  <Input placeholder="Search by suburb, postcode, or development name..." className="pl-12 bg-transparent border-none text-white placeholder:text-white/60 text-lg h-14 focus:ring-0" />
                 </div>
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-6 md:px-8 h-10 sm:h-12 md:h-14 rounded-lg sm:rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl text-sm sm:text-base">
-                  <Search className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
-                  <span className="hidden sm:inline">Search Properties</span>
-                  <span className="sm:hidden">Search</span>
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 h-14 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                  <Search className="w-5 h-5 mr-2" />
+                  Search Properties
                 </Button>
               </div>
             </div>
