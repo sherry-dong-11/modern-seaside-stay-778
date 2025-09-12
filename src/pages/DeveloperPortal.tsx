@@ -163,7 +163,7 @@ export default function DeveloperPortal() {
                     </div>
                   </div>
                   
-                  <div className="flex flex-row gap-2 sm:gap-3 mb-4 sm:mb-6">
+                  <div className="flex flex-col gap-2 sm:gap-3 mb-4 sm:mb-6">
                     <div className="w-full">
                       <div className="w-full bg-background border border-muted rounded-md px-2 sm:px-3 py-2 flex items-center justify-between">
                         <span className="text-xs sm:text-sm truncate">640 Bourke st</span>
@@ -178,7 +178,7 @@ export default function DeveloperPortal() {
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                  <div className="grid grid-cols-1 gap-4 sm:gap-6">
                     {/* Dynamic Bar Chart */}
                     <div className="relative h-24 sm:h-32 md:h-40 w-full flex items-end justify-center gap-1 sm:gap-2 px-1 sm:px-2 py-2 sm:py-4">
                       {/* Q1 Group */}
@@ -398,13 +398,13 @@ export default function DeveloperPortal() {
               </div>
               
               <div>
-                <h2 className="text-3xl font-bold mb-6 md:text-3xl">High-Intent Leads</h2>
+                <h2 className="font-bold mb-6 md:text-3xl text-2xl">High-Intent Leads</h2>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-lg text-muted-foreground">
+                    <p className="text-muted-foreground text-base">
                       Get verified buyer enquiries with real intent
                     </p>
                   </div>
@@ -412,7 +412,7 @@ export default function DeveloperPortal() {
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-lg text-muted-foreground">
+                    <p className="text-muted-foreground text-base">
                       Every YepHome lead is AI-qualified and contact-ready
                     </p>
                   </div>
@@ -420,7 +420,7 @@ export default function DeveloperPortal() {
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-lg text-muted-foreground">
+                    <p className="text-muted-foreground text-base">
                       Track buyer interests and reach out at the right moment
                     </p>
                   </div>
@@ -547,14 +547,14 @@ export default function DeveloperPortal() {
               
               {/* Right Side - Text Content */}
               <div>
-                <h2 className="text-3xl font-bold mb-6 md:text-3xl">Branded Project Websites</h2>
+                <h2 className="font-bold mb-6 md:text-3xl text-2xl">Branded Project Websites</h2>
                 
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-lg text-muted-foreground">
+                    <p className="text-muted-foreground text-base">
                       Seamlessly connect it with YepHome to boost exposure and capture more enquiries
                     </p>
                   </div>
@@ -562,7 +562,7 @@ export default function DeveloperPortal() {
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-lg text-muted-foreground">
+                    <p className="text-muted-foreground text-base">
                       Drive buyer engagement with a professional online presence tailored to your development
                     </p>
                   </div>
@@ -570,7 +570,7 @@ export default function DeveloperPortal() {
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-lg text-muted-foreground">
+                    <p className="text-muted-foreground text-base">
                       Stand out from competitors with a dedicated website that showcases your project's unique features
                     </p>
                   </div>
