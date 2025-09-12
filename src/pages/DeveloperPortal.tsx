@@ -104,21 +104,21 @@ export default function DeveloperPortal() {
 
       {/* Live Reporting Service */}
       <section className="bg-muted/30 py-0">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 overflow-x-hidden">
+        <div className="container mx-auto px-[28px] pt-16 pb-4 py-[43px]">
           <FadeInSection className="text-center mb-16">
-            <h2 className="text-2xl font-bold mb-6 py-0 text-left md:text-5xl">Our Services</h2>
+            <h2 className="text-3xl font-bold mb-6 py-0 text-left md:text-5xl">Our Services</h2>
           </FadeInSection>
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
               {/* Left Side - Text Content */}
               <div className="order-2 lg:order-1">
-                <h2 className="text-2xl font-bold mb-6 md:text-3xl">Real-Time Reporting</h2>
+                <h2 className="text-3xl font-bold mb-6 md:text-3xl">Real-Time Reporting</h2>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-base md:text-lg text-muted-foreground">
+                    <p className="text-lg text-muted-foreground">
                       Our audience is actively searching for new apartments, townhouses, and house & land projects
                     </p>
                   </div>
@@ -126,7 +126,7 @@ export default function DeveloperPortal() {
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-base md:text-lg text-muted-foreground">
+                    <p className="text-lg text-muted-foreground">
                       Our live reporting shows who is engaging with your project and what they're interested in
                     </p>
                   </div>
@@ -134,7 +134,7 @@ export default function DeveloperPortal() {
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-base md:text-lg text-muted-foreground">
+                    <p className="text-lg text-muted-foreground">
                       Gain real-time insights into campaign performance and buyer demand to drive faster sales
                     </p>
                   </div>
@@ -151,19 +151,19 @@ export default function DeveloperPortal() {
               
               {/* Right Side - Reporting Module */}
               <div className="order-1 lg:order-2">
-                <div className="bg-background rounded-xl shadow-lg p-6 border animate-fade-in overflow-hidden transition-all duration-300 hover:shadow-xl md:hover:scale-[1.02]">
-                    <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
+                <div className="bg-background rounded-xl shadow-lg p-6 border animate-fade-in hover-scale transition-all duration-300 hover:shadow-xl">
+                  <div className="flex items-center justify-between mb-6">
                      <div className="flex items-center gap-2">
                        <h3 className="font-bold text-xl">Reporting</h3>
                      </div>
-                    <div className="flex gap-2 flex-wrap">
-                      <span className="px-3 py-1 bg-primary text-primary-foreground text-xs md:text-sm rounded-lg font-medium">SUMMARY</span>
-                      <span className="px-3 py-1 bg-muted text-muted-foreground text-xs md:text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">PROJECTS</span>
-                      <span className="px-3 py-1 bg-muted text-muted-foreground text-xs md:text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">LEADS</span>
+                    <div className="flex gap-2">
+                      <span className="px-4 py-2 bg-primary text-primary-foreground text-sm rounded-lg font-medium">SUMMARY</span>
+                      <span className="px-4 py-2 bg-muted text-muted-foreground text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">PROJECTS</span>
+                      <span className="px-4 py-2 bg-muted text-muted-foreground text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">LEADS</span>
                     </div>
                   </div>
                   
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6">
+                  <div className="flex gap-4 mb-6">
                     <div className="flex-1">
                       <div className="w-full bg-background border border-muted rounded-md px-3 py-2 flex items-center justify-between">
                         <span className="text-sm">640 Bourke st</span>
@@ -178,17 +178,17 @@ export default function DeveloperPortal() {
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                  <div className="grid grid-cols-2 gap-8 ml-8">
                     {/* Dynamic Bar Chart */}
-                    <div className="relative h-32 md:h-40 w-full flex items-end justify-center gap-1 sm:gap-2 md:gap-4 px-1 sm:px-2 md:px-4 py-4">
+                    <div className="relative h-40 flex items-end justify-center gap-4 px-2 py-4 ml-4">
                       {/* Q1 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
-                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
                           height: '80px',
                           animationDelay: '0s'
                         }}></div>
-                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
                           height: '45px',
                           animationDelay: '0.3s'
                         }}></div>
@@ -199,11 +199,11 @@ export default function DeveloperPortal() {
                       {/* Q2 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
-                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
                           height: '120px',
                           animationDelay: '0.6s'
                         }}></div>
-                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
                           height: '60px',
                           animationDelay: '0.9s'
                         }}></div>
@@ -214,11 +214,11 @@ export default function DeveloperPortal() {
                       {/* Q3 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
-                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
                           height: '95px',
                           animationDelay: '1.2s'
                         }}></div>
-                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
                           height: '35px',
                           animationDelay: '1.5s'
                         }}></div>
@@ -228,8 +228,8 @@ export default function DeveloperPortal() {
                     </div>
                     
                     {/* Dynamic Pie Chart */}
-                    <div className="flex items-center justify-center w-full">
-                      <div className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40">
+                    <div className="flex items-center justify-center">
+                      <div className="relative w-40 h-40">
                         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                           {/* Blue section (50%) - 180 degrees */}
                           <path d="M 50,50 L 50,10 A 40,40 0 1,1 50,90 Z" fill="rgb(59 130 246)" className="opacity-0 animate-fade-in" style={{
@@ -260,14 +260,14 @@ export default function DeveloperPortal() {
       {/* Lead Management Service */}
       <section className="relative py-20 overflow-hidden">
         {/* Enhanced gradient background */}
-        <div className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-br from-primary/5 via-sea/10 to-background/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-sea/10 to-purple-100/30"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(var(--primary-rgb)/0.1),transparent_50%)] pointer-events-none" />
         
         <div className="container mx-auto px-4 relative z-10">
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 overflow-hidden group hover:shadow-2xl md:hover:scale-[1.02] transition-all duration-500">
+                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 overflow-hidden group hover:shadow-2xl hover:scale-[1.02] transition-all duration-500">
                   <div className="p-6">
                     {/* Enhanced header with status badges */}
                     <div className="flex items-center justify-between mb-6">
@@ -275,10 +275,7 @@ export default function DeveloperPortal() {
                         <h3 className="text-xl font-bold text-foreground">Lead Management</h3>
                       </div>
                       <div className="flex gap-2">
-                        <Badge className="bg-green-100 text-green-700 hover:bg-green-200 transition-colors">
-                          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-1"></div>
-                          Live
-                        </Badge>
+                        
                         <Badge variant="secondary" className="bg-blue-100 text-blue-700">
                           342 Today
                         </Badge>
@@ -305,7 +302,7 @@ export default function DeveloperPortal() {
                       </div>
                     </div>
                     
-                    <div className="flex flex-col md:flex-row gap-4">
+                    <div className="flex gap-4">
                       <div className="flex-1 space-y-2">
                         <div className="flex justify-between text-sm font-medium border-b pb-2 text-muted-foreground">
                           <span>DATE</span>
@@ -353,7 +350,7 @@ export default function DeveloperPortal() {
                           </div>)}
                       </div>
                       
-                      <div className="w-full md:w-80 bg-gradient-to-br from-primary/5 to-sea/5 p-4 rounded-lg border border-primary/20 backdrop-blur-sm">
+                      <div className="w-80 bg-gradient-to-br from-primary/5 to-sea/5 p-4 rounded-lg border border-primary/20 backdrop-blur-sm">
                         <div className="flex items-start gap-4">
                           <div className="relative">
                             <div className="w-12 h-12 bg-gradient-to-br from-primary to-sea rounded-full flex items-center justify-center animate-pulse flex-shrink-0 shadow-lg">
