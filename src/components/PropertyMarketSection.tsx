@@ -115,7 +115,7 @@ interface StateCardProps {
 
 const StateCard: React.FC<StateCardProps> = ({ data, propertyLabels }) => {
   return (
-    <div className="card-modern group hover:shadow-primary/10 transition-all duration-300">
+    <div className="card-modern group hover:bg-orange-100 dark:hover:bg-orange-900/20 transition-all duration-300">
       <div className="mb-4">
         <h3 className="text-lg font-bold text-neutral-900 dark:text-neutral-900 mb-1">
           {data.stateCode}
