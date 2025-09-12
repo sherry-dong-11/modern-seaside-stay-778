@@ -133,9 +133,7 @@ export default function FeaturedPropertiesSection() {
                       
                       {/* Premium badge */}
                       <div className="absolute top-8 right-8">
-                        <div className="bg-primary-500/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium border border-primary-400/30">
-                          Featured
-                        </div>
+                        
                       </div>
                     </div>
 
