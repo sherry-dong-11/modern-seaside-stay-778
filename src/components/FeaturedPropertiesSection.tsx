@@ -170,12 +170,12 @@ export default function FeaturedPropertiesSection() {
                         <div className="flex flex-col sm:items-end items-start gap-3 sm:text-right text-left w-full sm:w-auto">
                           <div className="relative">
                             <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-primary-600 rounded-xl blur-sm opacity-40"></div>
-                            <Badge variant="secondary" className="relative bg-white/95 backdrop-blur-md text-primary-900 border border-white/50 px-5 py-2.5 text-xs font-bold rounded-xl shadow-2xl tracking-wider uppercase">
+                            <Badge variant="secondary" className="relative bg-white/95 backdrop-blur-md text-primary-900 border border-white/50 px-5 py-2.5 text-xs font-bold shadow-2xl tracking-wider uppercase rounded-xl">
                               {property.type}
                             </Badge>
                           </div>
                           <div className="sm:text-right text-left w-full">
-                            <p className="text-3xl font-light text-primary-600 tracking-tight">
+                            <p className="font-light text-primary-600 tracking-tight text-base">
                               {property.price}
                             </p>
                             
