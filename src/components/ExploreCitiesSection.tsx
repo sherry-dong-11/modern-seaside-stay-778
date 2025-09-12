@@ -52,12 +52,12 @@ export default function ExploreCitiesSection() {
           }} />
               
               {/* Default location overlay */}
-              <div className="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 group-hover:opacity-0">
+              <div className="absolute inset-0 flex items-end justify-start p-3 sm:p-4 md:p-6 transition-opacity duration-300 group-hover:opacity-0">
                 <div className="text-white">
-                  <h3 className="text-2xl font-bold mb-1 drop-shadow-lg">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-0.5 sm:mb-1 drop-shadow-lg">
                     {city.name}
                   </h3>
-                  <p className="text-lg font-medium drop-shadow-md opacity-90">
+                  <p className="text-sm sm:text-base md:text-lg font-medium drop-shadow-md opacity-90">
                     {city.state}
                   </p>
                 </div>
@@ -67,9 +67,9 @@ export default function ExploreCitiesSection() {
               <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               
               <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                <Button variant="hero" size="lg" className="border-white/30 bg-white/10 hover:bg-white/20 backdrop-blur-sm shadow-2xl text-white">
+                <Button variant="hero" size="lg" className="border-white/30 bg-white/10 hover:bg-white/20 backdrop-blur-sm shadow-2xl text-white text-sm sm:text-base px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3">
                   Explore {city.name}
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-1.5 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Button>
               </div>
             </div>)}

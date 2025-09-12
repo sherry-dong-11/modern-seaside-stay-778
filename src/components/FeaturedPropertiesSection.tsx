@@ -101,16 +101,16 @@ export default function FeaturedPropertiesSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(var(--primary-rgb)/0.05),transparent_50%)] pointer-events-none" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="mb-16 text-center py-0 my-[34px]">
-          <div className="inline-flex items-center gap-2 backdrop-blur-sm rounded-full px-6 py-2 mb-6 border border-primary-100/50 bg-orange-100">
-            <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
-            <span className="text-sm font-medium text-primary-700">Premium Collection</span>
+        <div className="mb-8 sm:mb-12 md:mb-16 text-center py-0 my-[20px] sm:my-[28px] md:my-[34px]">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 backdrop-blur-sm rounded-full px-4 sm:px-5 md:px-6 py-1.5 sm:py-2 mb-4 sm:mb-5 md:mb-6 border border-primary-100/50 bg-orange-100">
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary-500 rounded-full animate-pulse" />
+            <span className="text-xs sm:text-sm font-medium text-primary-700">Premium Collection</span>
           </div>
-          <h2 className="text-4xl text-foreground mb-4 tracking-tight font-medium md:text-4xl">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-foreground mb-3 sm:mb-4 tracking-tight font-medium">
             Discover Our <span className="font-medium text-orange-500">Featured Homes</span>
           </h2>
           
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto mt-8 rounded-full"></div>
+          <div className="w-16 sm:w-20 md:w-24 h-0.5 sm:h-0.5 md:h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto mt-4 sm:mt-6 md:mt-8 rounded-full"></div>
         </div>
 
         <div className="relative max-w-5xl mx-auto">
@@ -126,7 +126,7 @@ export default function FeaturedPropertiesSection() {
                       {/* Premium overlay with enhanced gradient */}
                       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40" />
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <h3 className="text-5xl md:text-6xl font-light text-white tracking-wide text-center">
+                        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-wide text-center">
                           {property.name}
                         </h3>
                       </div>
@@ -140,47 +140,47 @@ export default function FeaturedPropertiesSection() {
                     </div>
 
                     {/* Premium Details Section */}
-                    <div className="bg-gradient-to-br from-white to-neutral-50/50 p-8 border-t border-primary-100/20">
-                      <div className="flex items-start justify-between flex-col sm:flex-row gap-4 sm:gap-6">
+                    <div className="bg-gradient-to-br from-white to-neutral-50/50 p-4 sm:p-6 md:p-8 border-t border-primary-100/20">
+                      <div className="flex items-start justify-between flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6">
                         {/* Left Side - Property Details */}
                         <div className="flex-1 min-w-0">
-                          <h4 className="text-xl font-semibold text-foreground mb-1">
+                          <h4 className="text-lg sm:text-xl font-semibold text-foreground mb-1">
                             {property.name}
                           </h4>
-                          <p className="text-muted-foreground text-sm mb-4">
+                          <p className="text-muted-foreground text-xs sm:text-sm mb-3 sm:mb-4">
                             {property.address}
                           </p>
                           
                           {/* Amenities */}
-                          <div className="flex items-center gap-6 text-muted-foreground">
+                          <div className="flex items-center gap-4 sm:gap-6 text-muted-foreground">
                             <div className="flex items-center gap-1">
-                              <Bed className="h-4 w-4" />
-                              <span className="text-sm font-medium">{property.bedrooms}</span>
+                              <Bed className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                              <span className="text-xs sm:text-sm font-medium">{property.bedrooms}</span>
                             </div>
                             <div className="flex items-center gap-1">
-                              <Bath className="h-4 w-4" />
-                              <span className="text-sm font-medium">{property.bathrooms}</span>
+                              <Bath className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                              <span className="text-xs sm:text-sm font-medium">{property.bathrooms}</span>
                             </div>
                             <div className="flex items-center gap-1">
-                              <Car className="h-4 w-4" />
-                              <span className="text-sm font-medium">{property.parking}</span>
+                              <Car className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                              <span className="text-xs sm:text-sm font-medium">{property.parking}</span>
                             </div>
                           </div>
                         </div>
 
                         {/* Right Side - Type & Price */}
-                        <div className="flex flex-col sm:items-end items-start gap-3 sm:text-right text-left w-full sm:w-auto">
+                        <div className="flex flex-col sm:items-end items-start gap-2 sm:gap-3 sm:text-right text-left w-full sm:w-auto">
                           <div className="relative">
-                            <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-primary-600 rounded-xl blur-sm opacity-40"></div>
-                            <Badge variant="secondary" className="relative bg-white/95 backdrop-blur-md text-primary-900 border border-white/50 px-5 py-2.5 text-xs font-bold rounded-xl shadow-2xl tracking-wider uppercase">
+                            <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-primary-600 rounded-lg sm:rounded-xl blur-sm opacity-40"></div>
+                            <Badge variant="secondary" className="relative bg-white/95 backdrop-blur-md text-primary-900 border border-white/50 px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 text-xs font-bold rounded-lg sm:rounded-xl shadow-2xl tracking-wider uppercase">
                               {property.type}
                             </Badge>
                           </div>
                           <div className="sm:text-right text-left w-full">
-                            <p className="text-3xl font-light text-primary-600 tracking-tight">
+                            <p className="text-xl sm:text-2xl md:text-3xl font-light text-primary-600 tracking-tight">
                               {property.price}
                             </p>
-                            <p className="text-sm text-muted-foreground mt-1">Starting from</p>
+                            <p className="text-xs sm:text-sm text-muted-foreground mt-1">Starting from</p>
                           </div>
                         </div>
                       </div>
