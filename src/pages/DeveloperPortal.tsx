@@ -104,7 +104,7 @@ export default function DeveloperPortal() {
 
       {/* Live Reporting Service */}
       <section className="bg-muted/30 py-0">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 overflow-x-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 md:py-20 overflow-x-hidden py-0">
           <FadeInSection className="text-center mb-16">
             <h2 className="text-2xl font-bold mb-6 py-0 text-left md:text-5xl">Our Services</h2>
           </FadeInSection>
@@ -163,7 +163,7 @@ export default function DeveloperPortal() {
                     </div>
                   </div>
                   
-                  <div className="flex flex-row gap-2 sm:gap-3 mb-4 sm:mb-6">
+                  <div className="flex flex-col gap-2 sm:gap-3 mb-4 sm:mb-6">
                     <div className="w-full">
                       <div className="w-full bg-background border border-muted rounded-md px-2 sm:px-3 py-2 flex items-center justify-between">
                         <span className="text-xs sm:text-sm truncate">640 Bourke st</span>
@@ -178,7 +178,7 @@ export default function DeveloperPortal() {
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                  <div className="grid grid-cols-1 gap-4 sm:gap-6">
                     {/* Dynamic Bar Chart */}
                     <div className="relative h-24 sm:h-32 md:h-40 w-full flex items-end justify-center gap-1 sm:gap-2 px-1 sm:px-2 py-2 sm:py-4">
                       {/* Q1 Group */}
