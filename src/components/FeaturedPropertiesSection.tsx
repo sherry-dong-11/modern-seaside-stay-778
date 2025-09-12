@@ -175,7 +175,7 @@ export default function FeaturedPropertiesSection() {
                             </Badge>
                           </div>
                           <div className="sm:text-right text-left w-full">
-                            <p className="font-light text-primary-600 tracking-tight text-base">
+                            <p className="font-light text-primary-600 tracking-tight text-2xl">
                               {property.price}
                             </p>
                             
