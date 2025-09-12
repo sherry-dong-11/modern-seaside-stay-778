@@ -118,7 +118,7 @@ export default function FeaturedPropertiesSection() {
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {featuredProperties.map(property => <div key={property.id} className="flex-[0_0_100%] min-w-0 px-4">
-                  <div className="group relative bg-card rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 border border-primary-100/20">
+                  <div className="group relative bg-card rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-700 hover:-translate-y-2 border border-primary-100/20">
                     {/* Image Container */}
                     <div className="relative aspect-[16/9] overflow-hidden">
                       <img src={property.image} alt={property.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
