@@ -44,7 +44,7 @@ const citiesData = [{
 export default function ExploreCitiesSection() {
   return <section className="bg-background py-6">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {citiesData.map(city => <div key={city.id} className="group relative overflow-hidden rounded-lg cursor-pointer aspect-square transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
               {/* Full-bleed background image */}
               <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{
