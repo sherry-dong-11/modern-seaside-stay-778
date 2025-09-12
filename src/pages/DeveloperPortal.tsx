@@ -151,85 +151,82 @@ export default function DeveloperPortal() {
               
               {/* Right Side - Reporting Module */}
               <div className="order-1 lg:order-2">
-                <div className="bg-background rounded-xl shadow-lg p-6 border animate-fade-in overflow-hidden transition-all duration-300 hover:shadow-xl md:hover:scale-[1.02]">
-                    <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
+                  <div className="bg-background rounded-xl shadow-lg p-4 sm:p-6 border animate-fade-in overflow-x-hidden transition-all duration-300 hover:shadow-xl sm:hover:scale-[1.02]">
+                    <div className="flex items-center justify-between mb-4 sm:mb-6 flex-wrap gap-2">
                      <div className="flex items-center gap-2">
-                       <h3 className="font-bold text-xl">Reporting</h3>
+                       <h3 className="font-bold text-sm sm:text-base md:text-xl">Reporting</h3>
                      </div>
-                    <div className="flex gap-2 flex-wrap">
-                      <span className="px-3 py-1 bg-primary text-primary-foreground text-xs md:text-sm rounded-lg font-medium">SUMMARY</span>
-                      <span className="px-3 py-1 bg-muted text-muted-foreground text-xs md:text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">PROJECTS</span>
-                      <span className="px-3 py-1 bg-muted text-muted-foreground text-xs md:text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">LEADS</span>
+                    <div className="flex gap-1 sm:gap-2 flex-wrap">
+                      <span className="px-2 sm:px-3 py-1 bg-primary text-primary-foreground text-xs rounded-lg font-medium">SUMMARY</span>
+                      <span className="px-2 sm:px-3 py-1 bg-muted text-muted-foreground text-xs rounded-lg font-medium cursor-pointer hover:bg-muted/80">PROJECTS</span>
+                      <span className="px-2 sm:px-3 py-1 bg-muted text-muted-foreground text-xs rounded-lg font-medium cursor-pointer hover:bg-muted/80">LEADS</span>
                     </div>
                   </div>
                   
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6">
-                    <div className="flex-1">
-                      <div className="w-full bg-background border border-muted rounded-md px-3 py-2 flex items-center justify-between">
-                        <span className="text-sm">640 Bourke st</span>
-                        <ChevronDown className="h-4 w-4 text-muted-foreground" />
+                  <div className="flex flex-col gap-2 sm:gap-3 mb-4 sm:mb-6">
+                    <div className="w-full">
+                      <div className="w-full bg-background border border-muted rounded-md px-2 sm:px-3 py-2 flex items-center justify-between">
+                        <span className="text-xs sm:text-sm truncate">640 Bourke st</span>
+                        <ChevronDown className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground flex-shrink-0" />
                       </div>
                     </div>
-                    <div className="flex-1">
-                      <div className="w-full bg-background border border-muted rounded-md px-3 py-2 flex items-center justify-between">
-                        <span className="text-sm">10/08/2025 - 10/09/2025</span>
-                        <ChevronDown className="h-4 w-4 text-muted-foreground" />
+                    <div className="w-full">
+                      <div className="w-full bg-background border border-muted rounded-md px-2 sm:px-3 py-2 flex items-center justify-between">
+                        <span className="text-xs sm:text-sm truncate">10/08/2025 - 10/09/2025</span>
+                        <ChevronDown className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground flex-shrink-0" />
                       </div>
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                  <div className="grid grid-cols-1 gap-4 sm:gap-6">
                     {/* Dynamic Bar Chart */}
-                    <div className="relative h-32 md:h-40 w-full flex items-end justify-center gap-1 sm:gap-2 md:gap-4 px-1 sm:px-2 md:px-4 py-4">
+                    <div className="relative h-24 sm:h-32 md:h-40 w-full flex items-end justify-center gap-1 sm:gap-2 px-1 sm:px-2 py-2 sm:py-4">
                       {/* Q1 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
-                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
-                          height: '80px',
+                          <div className="w-3 sm:w-4 md:w-6 lg:w-8 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
+                          height: '60px',
                           animationDelay: '0s'
                         }}></div>
-                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
-                          height: '45px',
+                          <div className="w-3 sm:w-4 md:w-6 lg:w-8 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
+                          height: '35px',
                           animationDelay: '0.3s'
                         }}></div>
                         </div>
-                        
                       </div>
                       
                       {/* Q2 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
-                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
-                          height: '120px',
+                          <div className="w-3 sm:w-4 md:w-6 lg:w-8 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
+                          height: '80px',
                           animationDelay: '0.6s'
                         }}></div>
-                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
-                          height: '60px',
+                          <div className="w-3 sm:w-4 md:w-6 lg:w-8 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
+                          height: '45px',
                           animationDelay: '0.9s'
                         }}></div>
                         </div>
-                        
                       </div>
                       
                       {/* Q3 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
-                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
-                          height: '95px',
+                          <div className="w-3 sm:w-4 md:w-6 lg:w-8 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
+                          height: '70px',
                           animationDelay: '1.2s'
                         }}></div>
-                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
-                          height: '35px',
+                          <div className="w-3 sm:w-4 md:w-6 lg:w-8 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
+                          height: '25px',
                           animationDelay: '1.5s'
                         }}></div>
                         </div>
-                        
                       </div>
                     </div>
                     
                     {/* Dynamic Pie Chart */}
                     <div className="flex items-center justify-center w-full">
-                      <div className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40">
+                      <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32">
                         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                           {/* Blue section (50%) - 180 degrees */}
                           <path d="M 50,50 L 50,10 A 40,40 0 1,1 50,90 Z" fill="rgb(59 130 246)" className="opacity-0 animate-fade-in" style={{
@@ -266,48 +263,48 @@ export default function DeveloperPortal() {
         <div className="container mx-auto px-4 relative z-10">
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 overflow-hidden group hover:shadow-2xl md:hover:scale-[1.02] transition-all duration-500">
-                  <div className="p-6">
+              <div className="w-full">
+                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 overflow-x-hidden group hover:shadow-2xl sm:hover:scale-[1.02] transition-all duration-500">
+                  <div className="p-4 sm:p-6">
                     {/* Enhanced header with status badges */}
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="flex items-center gap-3">
-                        <h3 className="text-xl font-bold text-foreground">Lead Management</h3>
+                    <div className="flex items-center justify-between mb-4 sm:mb-6 flex-wrap gap-2">
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <h3 className="text-sm sm:text-base md:text-xl font-bold text-foreground">Lead Management</h3>
                       </div>
-                      <div className="flex gap-2">
-                        <Badge className="bg-green-100 text-green-700 hover:bg-green-200 transition-colors">
-                          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-1"></div>
+                      <div className="flex gap-1 sm:gap-2 flex-wrap">
+                        <Badge className="bg-green-100 text-green-700 hover:bg-green-200 transition-colors text-xs">
+                          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full animate-pulse mr-1"></div>
                           Live
                         </Badge>
-                        <Badge variant="secondary" className="bg-blue-100 text-blue-700">
+                        <Badge variant="secondary" className="bg-blue-100 text-blue-700 text-xs">
                           342 Today
                         </Badge>
                       </div>
                     </div>
                     
                     {/* Enhanced stats section */}
-                    <div className="grid grid-cols-3 gap-4 mb-6">
-                      <div className="text-center p-3 bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg group-hover:shadow-md transition-all duration-300">
-                        <div className="text-2xl font-bold text-green-600 animate-fade-in">87</div>
+                    <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6">
+                      <div className="text-center p-2 sm:p-3 bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg group-hover:shadow-md transition-all duration-300">
+                        <div className="text-lg sm:text-xl md:text-2xl font-bold text-green-600 animate-fade-in">87</div>
                         <div className="text-xs text-green-600/70">New Leads</div>
                       </div>
-                      <div className="text-center p-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:shadow-md transition-all duration-300">
-                        <div className="text-2xl font-bold text-blue-600 animate-fade-in" style={{
+                      <div className="text-center p-2 sm:p-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:shadow-md transition-all duration-300">
+                        <div className="text-lg sm:text-xl md:text-2xl font-bold text-blue-600 animate-fade-in" style={{
                         animationDelay: '0.2s'
                       }}>94%</div>
                         <div className="text-xs text-blue-600/70">Qualified</div>
                       </div>
-                      <div className="text-center p-3 bg-gradient-to-br from-orange-50 to-amber-50 rounded-lg group-hover:shadow-md transition-all duration-300">
-                        <div className="text-2xl font-bold text-orange-600 animate-fade-in" style={{
+                      <div className="text-center p-2 sm:p-3 bg-gradient-to-br from-orange-50 to-amber-50 rounded-lg group-hover:shadow-md transition-all duration-300">
+                        <div className="text-lg sm:text-xl md:text-2xl font-bold text-orange-600 animate-fade-in" style={{
                         animationDelay: '0.4s'
                       }}>23</div>
                         <div className="text-xs text-orange-600/70">Converting</div>
                       </div>
                     </div>
                     
-                    <div className="flex flex-col md:flex-row gap-4">
-                      <div className="flex-1 space-y-2">
-                        <div className="flex justify-between text-sm font-medium border-b pb-2 text-muted-foreground">
+                    <div className="flex flex-col gap-4">
+                      <div className="w-full space-y-2">
+                        <div className="flex justify-between text-xs sm:text-sm font-medium border-b pb-2 text-muted-foreground">
                           <span>DATE</span>
                           <span>BUYER</span>
                           <span>STATUS</span>
@@ -342,54 +339,54 @@ export default function DeveloperPortal() {
                         name: 'David Smith',
                         status: 'Hot',
                         color: 'red'
-                      }].map((lead, i) => <div key={i} className="flex justify-between items-center py-2 border-b last:border-b-0 animate-fade-in hover:bg-muted/30 transition-colors rounded px-2" style={{
+                      }].map((lead, i) => <div key={i} className="flex justify-between items-center py-2 border-b last:border-b-0 animate-fade-in hover:bg-muted/30 transition-colors rounded px-1 sm:px-2" style={{
                         animationDelay: `${i * 0.1}s`
                       }}>
-                            <span className="text-sm font-medium">{lead.date}</span>
-                            <span className="text-sm blur-sm">{lead.name}</span>
-                            <Badge variant="secondary" className={`text-xs px-2 py-1 ${lead.color === 'red' ? 'bg-red-100 text-red-700' : lead.color === 'orange' ? 'bg-orange-100 text-orange-700' : 'bg-blue-100 text-blue-700'}`}>
+                            <span className="text-xs sm:text-sm font-medium w-12 sm:w-16 flex-shrink-0">{lead.date}</span>
+                            <span className="text-xs sm:text-sm blur-sm flex-1 text-center truncate px-1">{lead.name}</span>
+                            <Badge variant="secondary" className={`text-xs px-1 sm:px-2 py-0.5 sm:py-1 flex-shrink-0 ${lead.color === 'red' ? 'bg-red-100 text-red-700' : lead.color === 'orange' ? 'bg-orange-100 text-orange-700' : 'bg-blue-100 text-blue-700'}`}>
                               {lead.status}
                             </Badge>
                           </div>)}
                       </div>
                       
-                      <div className="w-full md:w-80 bg-gradient-to-br from-primary/5 to-sea/5 p-4 rounded-lg border border-primary/20 backdrop-blur-sm">
-                        <div className="flex items-start gap-4">
-                          <div className="relative">
-                            <div className="w-12 h-12 bg-gradient-to-br from-primary to-sea rounded-full flex items-center justify-center animate-pulse flex-shrink-0 shadow-lg">
-                              <span className="text-white text-sm font-bold">B</span>
+                      <div className="w-full bg-gradient-to-br from-primary/5 to-sea/5 p-3 sm:p-4 rounded-lg border border-primary/20 backdrop-blur-sm">
+                        <div className="flex items-start gap-2 sm:gap-4">
+                          <div className="relative flex-shrink-0">
+                            <div className="w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-sea rounded-full flex items-center justify-center animate-pulse shadow-lg">
+                              <span className="text-white text-xs sm:text-sm font-bold">B</span>
                             </div>
-                            <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-bounce"></div>
+                            <div className="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 w-3 h-3 sm:w-4 sm:h-4 bg-green-500 rounded-full border-2 border-white animate-bounce"></div>
                           </div>
                           <div className="flex-1 min-w-0">
-                            <div className="flex items-center gap-2 mb-1">
-                              <h4 className="font-semibold">Buyer</h4>
+                            <div className="flex items-center gap-1 sm:gap-2 mb-1 flex-wrap">
+                              <h4 className="font-semibold text-xs sm:text-sm">Buyer</h4>
                               <Badge className="bg-red-100 text-red-700 text-xs">Hot Lead</Badge>
                             </div>
-                            <p className="text-sm text-muted-foreground">buyer@email.com</p>
-                            <p className="text-sm text-muted-foreground">+61 412 345 678</p>
-                            <div className="mt-3 space-y-1">
-                              <div className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                                <span className="text-xs text-muted-foreground">First Home Buyer</span>
+                            <p className="text-xs sm:text-sm text-muted-foreground truncate">buyer@email.com</p>
+                            <p className="text-xs sm:text-sm text-muted-foreground">+61 412 345 678</p>
+                            <div className="mt-2 sm:mt-3 space-y-1">
+                              <div className="flex items-center gap-1 sm:gap-2">
+                                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full flex-shrink-0"></div>
+                                <span className="text-xs text-muted-foreground truncate">First Home Buyer</span>
                               </div>
-                              <div className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                                <span className="text-xs text-muted-foreground">Budget: $750K - $850K</span>
+                              <div className="flex items-center gap-1 sm:gap-2">
+                                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
+                                <span className="text-xs text-muted-foreground truncate">Budget: $750K - $850K</span>
                               </div>
-                              <div className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                                <span className="text-xs text-muted-foreground">2 Bed / 2 Bath / 1 Car</span>
+                              <div className="flex items-center gap-1 sm:gap-2">
+                                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-500 rounded-full flex-shrink-0"></div>
+                                <span className="text-xs text-muted-foreground truncate">2 Bed / 2 Bath / 1 Car</span>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div className="flex justify-center mt-6">
-                          <div className="flex gap-2">
-                            <Button size="sm" className="bg-primary hover:bg-primary/90 text-xs px-3 py-1">
+                        <div className="flex justify-center mt-4 sm:mt-6">
+                          <div className="flex gap-1 sm:gap-2">
+                            <Button size="sm" className="bg-primary hover:bg-primary/90 text-xs px-2 sm:px-3 py-1">
                               Contact
                             </Button>
-                            <Button variant="outline" size="sm" className="text-xs px-3 py-1">
+                            <Button variant="outline" size="sm" className="text-xs px-2 sm:px-3 py-1">
                               View Profile
                             </Button>
                           </div>
