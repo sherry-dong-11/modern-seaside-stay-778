@@ -260,7 +260,7 @@ export default function DeveloperPortal() {
       {/* Lead Management Service */}
       <section className="relative py-20 overflow-hidden">
         {/* Enhanced gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-sea/10 to-purple-100/30"></div>
+        <div className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-br from-primary/5 via-sea/10 to-background/30"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(var(--primary-rgb)/0.1),transparent_50%)] pointer-events-none" />
         
         <div className="container mx-auto px-4 relative z-10">
