@@ -163,7 +163,7 @@ export default function DeveloperPortal() {
                     </div>
                   </div>
                   
-                  <div className="flex flex-col gap-2 sm:gap-3 mb-4 sm:mb-6">
+                  <div className="flex flex-row gap-2 sm:gap-3 mb-4 sm:mb-6">
                     <div className="w-full">
                       <div className="w-full bg-background border border-muted rounded-md px-2 sm:px-3 py-2 flex items-center justify-between">
                         <span className="text-xs sm:text-sm truncate">640 Bourke st</span>
