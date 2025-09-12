@@ -150,7 +150,7 @@ export default function PropertyMarketSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="section bg-background">
+    <section className="py-6 bg-muted">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 mb-4">
