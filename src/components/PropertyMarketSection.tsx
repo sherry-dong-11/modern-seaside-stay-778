@@ -175,11 +175,6 @@ export default function PropertyMarketSection() {
           ))}
         </div>
         
-        <div className="text-center mt-8">
-          <p className="text-sm text-neutral-500 dark:text-neutral-500">
-            {t.propertyMarket.lastUpdated}
-          </p>
-        </div>
       </div>
     </section>
   );
