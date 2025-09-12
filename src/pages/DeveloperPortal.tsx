@@ -151,19 +151,19 @@ export default function DeveloperPortal() {
               
               {/* Right Side - Reporting Module */}
               <div className="order-1 lg:order-2">
-                <div className="bg-background rounded-xl shadow-lg p-6 border animate-fade-in hover-scale transition-all duration-300 hover:shadow-xl">
-                  <div className="flex items-center justify-between mb-6">
+                <div className="bg-background rounded-xl shadow-lg p-6 border animate-fade-in overflow-hidden transition-all duration-300 hover:shadow-xl md:hover:scale-[1.02]">
+                    <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
                      <div className="flex items-center gap-2">
                        <h3 className="font-bold text-xl">Reporting</h3>
                      </div>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 flex-wrap">
                       <span className="px-3 py-1 bg-primary text-primary-foreground text-xs md:text-sm rounded-lg font-medium">SUMMARY</span>
                       <span className="px-3 py-1 bg-muted text-muted-foreground text-xs md:text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">PROJECTS</span>
                       <span className="px-3 py-1 bg-muted text-muted-foreground text-xs md:text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">LEADS</span>
                     </div>
                   </div>
                   
-                  <div className="flex gap-4 mb-6">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6">
                     <div className="flex-1">
                       <div className="w-full bg-background border border-muted rounded-md px-3 py-2 flex items-center justify-between">
                         <span className="text-sm">640 Bourke st</span>
@@ -180,15 +180,15 @@ export default function DeveloperPortal() {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                     {/* Dynamic Bar Chart */}
-                    <div className="relative h-32 md:h-40 w-full flex items-end justify-center gap-2 md:gap-4 px-2 md:px-4 py-4">
+                    <div className="relative h-32 md:h-40 w-full flex items-end justify-center gap-1 sm:gap-2 md:gap-4 px-1 sm:px-2 md:px-4 py-4">
                       {/* Q1 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
-                          <div className="w-6 md:w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
                           height: '80px',
                           animationDelay: '0s'
                         }}></div>
-                          <div className="w-6 md:w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
                           height: '45px',
                           animationDelay: '0.3s'
                         }}></div>
@@ -199,11 +199,11 @@ export default function DeveloperPortal() {
                       {/* Q2 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
-                          <div className="w-6 md:w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
                           height: '120px',
                           animationDelay: '0.6s'
                         }}></div>
-                          <div className="w-6 md:w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
                           height: '60px',
                           animationDelay: '0.9s'
                         }}></div>
@@ -214,11 +214,11 @@ export default function DeveloperPortal() {
                       {/* Q3 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
-                          <div className="w-6 md:w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
                           height: '95px',
                           animationDelay: '1.2s'
                         }}></div>
-                          <div className="w-6 md:w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-4 sm:w-6 md:w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
                           height: '35px',
                           animationDelay: '1.5s'
                         }}></div>
@@ -229,7 +229,7 @@ export default function DeveloperPortal() {
                     
                     {/* Dynamic Pie Chart */}
                     <div className="flex items-center justify-center w-full">
-                      <div className="relative w-32 h-32 md:w-40 md:h-40">
+                      <div className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40">
                         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                           {/* Blue section (50%) - 180 degrees */}
                           <path d="M 50,50 L 50,10 A 40,40 0 1,1 50,90 Z" fill="rgb(59 130 246)" className="opacity-0 animate-fade-in" style={{
@@ -267,7 +267,7 @@ export default function DeveloperPortal() {
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 overflow-hidden group hover:shadow-2xl hover:scale-[1.02] transition-all duration-500">
+                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 overflow-hidden group hover:shadow-2xl md:hover:scale-[1.02] transition-all duration-500">
                   <div className="p-6">
                     {/* Enhanced header with status badges */}
                     <div className="flex items-center justify-between mb-6">
@@ -305,7 +305,7 @@ export default function DeveloperPortal() {
                       </div>
                     </div>
                     
-                    <div className="flex gap-4">
+                    <div className="flex flex-col md:flex-row gap-4">
                       <div className="flex-1 space-y-2">
                         <div className="flex justify-between text-sm font-medium border-b pb-2 text-muted-foreground">
                           <span>DATE</span>
@@ -353,7 +353,7 @@ export default function DeveloperPortal() {
                           </div>)}
                       </div>
                       
-                      <div className="w-80 bg-gradient-to-br from-primary/5 to-sea/5 p-4 rounded-lg border border-primary/20 backdrop-blur-sm">
+                      <div className="w-full md:w-80 bg-gradient-to-br from-primary/5 to-sea/5 p-4 rounded-lg border border-primary/20 backdrop-blur-sm">
                         <div className="flex items-start gap-4">
                           <div className="relative">
                             <div className="w-12 h-12 bg-gradient-to-br from-primary to-sea rounded-full flex items-center justify-center animate-pulse flex-shrink-0 shadow-lg">
