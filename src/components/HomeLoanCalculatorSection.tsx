@@ -43,5 +43,181 @@ export const HomeLoanCalculatorSection = () => {
       setStampDuty(calculated);
     }
   };
-  return;
+  return (
+    <section className="py-16 bg-muted">
+      <div className="container">
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Property Purchase Calculator</h2>
+          <p className="text-lg text-muted-foreground">Calculate your home loan repayments and stamp duty</p>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Home Loan Calculator */}
+          <Card>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
+                <CreditCard className="w-5 h-5" />
+                Home Loan Calculator
+              </h3>
+              
+              <div className="space-y-4">
+                <div>
+                  <Label htmlFor="property-price">Property Price</Label>
+                  <div className="relative">
+                    <DollarSign className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                    <Input
+                      id="property-price"
+                      type="text"
+                      value={propertyPrice}
+                      onChange={(e) => setPropertyPrice(e.target.value)}
+                      className="pl-9"
+                      placeholder="750,000"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <Label htmlFor="deposit">Deposit</Label>
+                  <div className="relative">
+                    <DollarSign className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                    <Input
+                      id="deposit"
+                      type="text"
+                      value={deposit}
+                      onChange={(e) => setDeposit(e.target.value)}
+                      className="pl-9"
+                      placeholder="150,000"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <Label htmlFor="interest-rate">Interest Rate (%)</Label>
+                  <div className="relative">
+                    <Percent className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                    <Input
+                      id="interest-rate"
+                      type="text"
+                      value={interestRate}
+                      onChange={(e) => setInterestRate(e.target.value)}
+                      className="pl-9"
+                      placeholder="6.5"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <Label htmlFor="loan-term">Loan Term (years)</Label>
+                  <div className="relative">
+                    <Calendar className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                    <Input
+                      id="loan-term"
+                      type="text"
+                      value={loanTerm}
+                      onChange={(e) => setLoanTerm(e.target.value)}
+                      className="pl-9"
+                      placeholder="30"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <Label htmlFor="repayment-type">Repayment Type</Label>
+                  <Select value={repaymentType} onValueChange={(value: "principal" | "interest") => setRepaymentType(value)}>
+                    <SelectTrigger>
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="principal">Principal & Interest</SelectItem>
+                      <SelectItem value="interest">Interest Only</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                <div className="bg-primary/10 p-4 rounded-lg">
+                  <p className="text-sm text-muted-foreground">Monthly Repayment</p>
+                  <p className="text-2xl font-bold text-primary">
+                    ${calculateMonthlyRepayment().toLocaleString('en-AU', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          
+          {/* Stamp Duty Calculator */}
+          <Card>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+                Stamp Duty Calculator
+              </h3>
+              
+              <div className="space-y-4">
+                <div>
+                  <Label htmlFor="stamp-property-price">Property Price</Label>
+                  <div className="relative">
+                    <DollarSign className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                    <Input
+                      id="stamp-property-price"
+                      type="text"
+                      value={stampPropertyPrice}
+                      onChange={(e) => setStampPropertyPrice(e.target.value)}
+                      className="pl-9"
+                      placeholder="750,000"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <Label htmlFor="buyer-type">Buyer Type</Label>
+                  <Select value={buyerType} onValueChange={setBuyerType}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select buyer type" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="first-home">First Home Buyer</SelectItem>
+                      <SelectItem value="investor">Investor</SelectItem>
+                      <SelectItem value="owner-occupier">Owner Occupier</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                <div>
+                  <Label htmlFor="state">State</Label>
+                  <Select value={state} onValueChange={setState}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select state" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="VIC">Victoria</SelectItem>
+                      <SelectItem value="NSW">New South Wales</SelectItem>
+                      <SelectItem value="QLD">Queensland</SelectItem>
+                      <SelectItem value="WA">Western Australia</SelectItem>
+                      <SelectItem value="SA">South Australia</SelectItem>
+                      <SelectItem value="TAS">Tasmania</SelectItem>
+                      <SelectItem value="ACT">Australian Capital Territory</SelectItem>
+                      <SelectItem value="NT">Northern Territory</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                <Button onClick={calculateStampDuty} className="w-full">
+                  Calculate Stamp Duty
+                </Button>
+                
+                {stampDuty !== null && (
+                  <div className="bg-primary/10 p-4 rounded-lg">
+                    <p className="text-sm text-muted-foreground">Estimated Stamp Duty</p>
+                    <p className="text-2xl font-bold text-primary">
+                      ${stampDuty.toLocaleString('en-AU', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
 };

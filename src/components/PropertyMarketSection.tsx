@@ -154,7 +154,7 @@ export default function PropertyMarketSection() {
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 mb-4">
-            {t.propertyMarket.title}
+            Market Trend
           </h2>
           <p className="text-lg text-neutral-600 dark:text-neutral-400">
             {t.propertyMarket.description}
