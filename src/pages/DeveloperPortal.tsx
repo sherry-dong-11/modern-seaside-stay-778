@@ -178,9 +178,9 @@ export default function DeveloperPortal() {
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-2 gap-8 ml-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                     {/* Dynamic Bar Chart */}
-                    <div className="relative h-40 flex items-end justify-center gap-4 px-2 py-4 ml-4">
+                    <div className="relative h-40 w-full flex items-end justify-center gap-4 px-2 md:px-4 py-4">
                       {/* Q1 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
@@ -228,7 +228,7 @@ export default function DeveloperPortal() {
                     </div>
                     
                     {/* Dynamic Pie Chart */}
-                    <div className="flex items-center justify-center">
+                    <div className="flex items-center justify-center w-full">
                       <div className="relative w-40 h-40">
                         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                           {/* Blue section (50%) - 180 degrees */}
