@@ -106,19 +106,19 @@ export default function DeveloperPortal() {
       <section className="bg-muted/30 py-0">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 overflow-x-hidden">
           <FadeInSection className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-6 py-0 text-left md:text-5xl">Our Services</h2>
+            <h2 className="text-2xl font-bold mb-6 py-0 text-left md:text-5xl">Our Services</h2>
           </FadeInSection>
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
               {/* Left Side - Text Content */}
               <div className="order-2 lg:order-1">
-                <h2 className="text-3xl font-bold mb-6 md:text-3xl">Real-Time Reporting</h2>
+                <h2 className="text-2xl font-bold mb-6 md:text-3xl">Real-Time Reporting</h2>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-lg text-muted-foreground">
+                    <p className="text-base md:text-lg text-muted-foreground">
                       Our audience is actively searching for new apartments, townhouses, and house & land projects
                     </p>
                   </div>
@@ -126,7 +126,7 @@ export default function DeveloperPortal() {
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-lg text-muted-foreground">
+                    <p className="text-base md:text-lg text-muted-foreground">
                       Our live reporting shows who is engaging with your project and what they're interested in
                     </p>
                   </div>
@@ -134,7 +134,7 @@ export default function DeveloperPortal() {
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-lg text-muted-foreground">
+                    <p className="text-base md:text-lg text-muted-foreground">
                       Gain real-time insights into campaign performance and buyer demand to drive faster sales
                     </p>
                   </div>
@@ -157,9 +157,9 @@ export default function DeveloperPortal() {
                        <h3 className="font-bold text-xl">Reporting</h3>
                      </div>
                     <div className="flex gap-2">
-                      <span className="px-4 py-2 bg-primary text-primary-foreground text-sm rounded-lg font-medium">SUMMARY</span>
-                      <span className="px-4 py-2 bg-muted text-muted-foreground text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">PROJECTS</span>
-                      <span className="px-4 py-2 bg-muted text-muted-foreground text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">LEADS</span>
+                      <span className="px-3 py-1 bg-primary text-primary-foreground text-xs md:text-sm rounded-lg font-medium">SUMMARY</span>
+                      <span className="px-3 py-1 bg-muted text-muted-foreground text-xs md:text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">PROJECTS</span>
+                      <span className="px-3 py-1 bg-muted text-muted-foreground text-xs md:text-sm rounded-lg font-medium cursor-pointer hover:bg-muted/80">LEADS</span>
                     </div>
                   </div>
                   
@@ -180,15 +180,15 @@ export default function DeveloperPortal() {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                     {/* Dynamic Bar Chart */}
-                    <div className="relative h-40 w-full flex items-end justify-center gap-4 px-2 md:px-4 py-4">
+                    <div className="relative h-32 md:h-40 w-full flex items-end justify-center gap-2 md:gap-4 px-2 md:px-4 py-4">
                       {/* Q1 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
-                          <div className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-6 md:w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
                           height: '80px',
                           animationDelay: '0s'
                         }}></div>
-                          <div className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-6 md:w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
                           height: '45px',
                           animationDelay: '0.3s'
                         }}></div>
@@ -199,11 +199,11 @@ export default function DeveloperPortal() {
                       {/* Q2 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
-                          <div className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-6 md:w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
                           height: '120px',
                           animationDelay: '0.6s'
                         }}></div>
-                          <div className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-6 md:w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
                           height: '60px',
                           animationDelay: '0.9s'
                         }}></div>
@@ -214,11 +214,11 @@ export default function DeveloperPortal() {
                       {/* Q3 Group */}
                       <div className="flex flex-col items-center gap-1">
                         <div className="flex items-end gap-0">
-                          <div className="w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-6 md:w-10 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
                           height: '95px',
                           animationDelay: '1.2s'
                         }}></div>
-                          <div className="w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
+                          <div className="w-6 md:w-10 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
                           height: '35px',
                           animationDelay: '1.5s'
                         }}></div>
@@ -229,7 +229,7 @@ export default function DeveloperPortal() {
                     
                     {/* Dynamic Pie Chart */}
                     <div className="flex items-center justify-center w-full">
-                      <div className="relative w-40 h-40">
+                      <div className="relative w-32 h-32 md:w-40 md:h-40">
                         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                           {/* Blue section (50%) - 180 degrees */}
                           <path d="M 50,50 L 50,10 A 40,40 0 1,1 50,90 Z" fill="rgb(59 130 246)" className="opacity-0 animate-fade-in" style={{
