@@ -150,7 +150,7 @@ export default function ModernHeroSection() {
             delay: 0.6,
             duration: 0.8,
             ease: "easeOut"
-          }} className="block text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-medium" style={{
+          }} className="block text-3xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-medium" style={{
             textShadow: '0 2px 4px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.5)'
           }}>
               Find Your Perfect
