@@ -39,7 +39,7 @@ export const en = {
   },
   testimonials: {
     title: "What Our Customers Say",
-    description: "Discover why our guests keep coming back to MareSereno for their seaside getaways."
+    description: "Discover why more buyers trust YepHome for their new home journey."
   },
   notFound: {
     title: "Page Not Found",
