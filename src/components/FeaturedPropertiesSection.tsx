@@ -113,7 +113,7 @@ export default function FeaturedPropertiesSection() {
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto mt-8 rounded-full"></div>
         </div>
 
-        <div className="relative max-w-6xl mx-auto">
+        <div className="relative max-w-6xl mx-auto group">
           {/* Carousel */}
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
@@ -188,12 +188,12 @@ export default function FeaturedPropertiesSection() {
             </div>
           </div>
 
-          {/* Navigation Arrows */}
-          <Button variant="outline" size="icon" onClick={scrollPrev} className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white border-border/20 backdrop-blur-sm shadow-lg">
+          {/* Navigation Arrows - Show on hover */}
+          <Button variant="outline" size="icon" onClick={scrollPrev} className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white border-border/20 backdrop-blur-sm shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <ChevronLeft className="h-5 w-5" />
           </Button>
           
-          <Button variant="outline" size="icon" onClick={scrollNext} className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white border-border/20 backdrop-blur-sm shadow-lg">
+          <Button variant="outline" size="icon" onClick={scrollNext} className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white border-border/20 backdrop-blur-sm shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <ChevronRight className="h-5 w-5" />
           </Button>
 
