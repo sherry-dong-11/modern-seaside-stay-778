@@ -133,9 +133,6 @@ const PropertyRow: React.FC<PropertyRowProps> = ({ type, label, price, change })
         </div>
         
         <div className="flex items-center gap-3">
-          <div className="w-16 h-8 flex items-center justify-center">
-            <TrendIcon className={`w-5 h-5 ${isPositive ? 'text-green-500' : 'text-red-500'}`} />
-          </div>
           <motion.div 
             className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium ${
               isPositive 
