@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TrendingUp, TrendingDown, Building, Home, Building2 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
-import { LineChart, Line, ResponsiveContainer } from 'recharts';
+import { ResponsiveContainer, LineChart, Line } from 'recharts';
 
 interface PropertyTypeData {
   price: number;
@@ -109,7 +109,6 @@ const PropertyRow: React.FC<PropertyRowProps> = ({ type, label, price, change })
   const isPositive = change >= 0;
   const TrendIcon = isPositive ? TrendingUp : TrendingDown;
   const PropertyIcon = propertyTypeIcons[type];
-  const chartData = generateChartData(change);
   
   return (
     <motion.div 
@@ -134,24 +133,14 @@ const PropertyRow: React.FC<PropertyRowProps> = ({ type, label, price, change })
         </div>
         
         <div className="flex items-center gap-3">
-          <div className="w-16 h-8">
-            <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={chartData}>
-                <Line 
-                  type="monotone" 
-                  dataKey="value" 
-                  stroke={isPositive ? "hsl(var(--success))" : "hsl(var(--destructive))"} 
-                  strokeWidth={2}
-                  dot={false}
-                />
-              </LineChart>
-            </ResponsiveContainer>
+          <div className="w-16 h-8 flex items-center justify-center">
+            <div className={`w-12 h-1 rounded-full ${isPositive ? 'bg-green-500' : 'bg-red-500'}`} />
           </div>
           <motion.div 
             className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium ${
               isPositive 
-                ? 'bg-success/10 text-success border border-success/20' 
-                : 'bg-destructive/10 text-destructive border border-destructive/20'
+                ? 'bg-green-100 text-green-700 border border-green-200' 
+                : 'bg-red-100 text-red-700 border border-red-200'
             }`}
             animate={{ scale: [1, 1.05, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
