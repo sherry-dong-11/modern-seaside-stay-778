@@ -395,13 +395,16 @@ export const en = {
     }
   },
   propertyMarket: {
-    title: "Property Market Information",
-    description: "Latest pricing trends for new properties across Australian states",
+    title: "🇦🇺 Aussie Property Heat Map",
+    subtitle: "Live Market Pulse",
+    description: "Get the latest pricing intel from across the nation - where's hot, where's not!",
     propertyTypes: {
-      newApartment: "New Apartment",
+      newApartment: "New Apartments",
       newTownhouses: "New Townhouses", 
       newHouses: "New Houses"
     },
-    lastUpdated: "Data updated weekly based on market trends"
+    lastUpdated: "Data refreshed weekly from real estate networks",
+    trending: "Trending Now",
+    hotMarkets: "🔥 Hot Markets"
   }
 };
