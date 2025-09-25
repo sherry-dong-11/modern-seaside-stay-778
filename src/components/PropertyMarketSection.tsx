@@ -121,31 +121,31 @@ const StateCard: React.FC<StateCardProps> = ({ data, propertyLabels }) => {
   const hasHotMarket = data.properties.newHouses.change > 4 || data.properties.newApartment.change > 3;
   
   return (
-    <div className="relative bg-card/80 backdrop-blur-sm border border-white/20 rounded-2xl p-6 group hover:shadow-xl hover:scale-105 transition-all duration-500 hover:bg-gradient-to-br hover:from-primary/5 hover:to-accent/10">
+    <div className="relative bg-card/90 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 group hover:shadow-2xl hover:shadow-primary/20 hover:scale-105 transition-all duration-500 hover:bg-gradient-to-br hover:from-primary/5 hover:to-accent/10">
       {hasHotMarket && (
-        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
+        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse shadow-lg">
           🔥 HOT
         </div>
       )}
       <div className="mb-6">
         <div className="flex items-center gap-3 mb-2">
-          <div className="w-12 h-12 bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl flex items-center justify-center">
-            <h3 className="text-lg font-bold text-primary-600">
+          <div className="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl flex items-center justify-center shadow-sm">
+            <h3 className="text-xl font-bold text-primary-600">
               {data.stateCode}
             </h3>
           </div>
-          <div>
-            <h3 className="text-lg font-bold text-neutral-900 dark:text-neutral-100">
-              {data.stateCode}
-            </h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400">
+          <div className="flex-1">
+            <p className="text-lg font-bold text-neutral-900 dark:text-neutral-100 mb-1">
               {data.stateName}
+            </p>
+            <p className="text-xs text-primary-500 font-medium uppercase tracking-wider">
+              Australia • Live Data
             </p>
           </div>
         </div>
       </div>
       
-      <div className="space-y-1">
+      <div className="space-y-2 bg-neutral-50/50 dark:bg-neutral-800/20 rounded-xl p-4">
         <PropertyRow
           label={propertyLabels.newApartment}
           price={data.properties.newApartment.price}
@@ -193,7 +193,7 @@ export default function PropertyMarketSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {marketData.map((state) => (
             <StateCard
               key={state.stateCode}
@@ -205,6 +205,12 @@ export default function PropertyMarketSection() {
               }}
             />
           ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+          <p className="text-sm text-primary-500 font-medium">
+            {t.propertyMarket.lastUpdated}
+          </p>
         </div>
         
       </div>
