@@ -4,49 +4,41 @@ const citiesData = [{
   id: 1,
   name: "Sydney",
   state: "New South Wales",
-  description: "🏙️ Harbour City Vibes",
   image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=600&fit=crop&crop=center"
 }, {
   id: 2,
   name: "Melbourne",
   state: "Victoria",
-  description: "☕ Coffee Culture Capital",
   image: "https://images.unsplash.com/photo-1460574283810-2aab119d8511?w=800&h=600&fit=crop&crop=center"
 }, {
   id: 3,
   name: "Brisbane",
   state: "Queensland",
-  description: "☀️ Sunshine State Living",
   image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=800&h=600&fit=crop&crop=center"
 }, {
   id: 4,
   name: "Perth",
   state: "Western Australia",
-  description: "🌊 West Coast Lifestyle",
   image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=800&h=600&fit=crop&crop=center"
 }, {
   id: 5,
   name: "Adelaide",
   state: "South Australia",
-  description: "🎭 Festival City Charm",
   image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&h=600&fit=crop&crop=center"
 }, {
   id: 6,
   name: "Newcastle",
   state: "New South Wales",
-  description: "⚓ Coastal Mining Heritage",
   image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=600&fit=crop&crop=center"
 }, {
   id: 7,
   name: "Gold Coast",
   state: "Queensland",
-  description: "🏄 Surf & Sand Paradise",
   image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=800&h=600&fit=crop&crop=center"
 }, {
   id: 8,
   name: "Canberra",
   state: "ACT",
-  description: "🏛️ Capital Territory Life",
   image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=600&fit=crop&crop=center"
 }];
 export default function ExploreCitiesSection() {
@@ -66,7 +58,7 @@ export default function ExploreCitiesSection() {
                     {city.name}
                   </h3>
                   <p className="text-sm md:text-lg font-medium drop-shadow-md opacity-90">
-                    {city.description}
+                    {city.state}
                   </p>
                 </div>
               </div>

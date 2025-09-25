@@ -395,16 +395,13 @@ export const it = {
     }
   },
   propertyMarket: {
-    title: "🇦🇺 Mappa del Calore Immobiliare Australiano",
-    subtitle: "Pulse del Mercato Live",
-    description: "Ottieni le ultime informazioni sui prezzi da tutta la nazione - cosa è caldo, cosa non lo è!",
+    title: "Informazioni Mercato Immobiliare",
+    description: "Ultimi trend di prezzo per nuove proprietà negli stati australiani",
     propertyTypes: {
       newApartment: "Nuovo Appartamento",
       newTownhouses: "Nuove Villette a Schiera",
       newHouses: "Nuove Case"
     },
-    lastUpdated: "Dati aggiornati settimanalmente dalle reti immobiliari",
-    trending: "Tendenza Ora",
-    hotMarkets: "🔥 Mercati Caldi"
+    lastUpdated: "Dati aggiornati settimanalmente basati sui trend di mercato"
   }
 };

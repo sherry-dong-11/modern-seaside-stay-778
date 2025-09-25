@@ -1,6 +1,8 @@
-import React from 'react';
-import { TrendingUp, TrendingDown } from 'lucide-react';
+import React, { useState } from 'react';
+import { TrendingUp, TrendingDown, Building, Home, Building2 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { motion } from 'framer-motion';
+import { ResponsiveContainer, LineChart, Line } from 'recharts';
 
 interface PropertyTypeData {
   price: number;
@@ -74,37 +76,83 @@ const marketData: StateMarketData[] = [
   },
 ];
 
+// Generate chart data for trends
+const generateChartData = (change: number) => {
+  const months = 6;
+  const data = [];
+  const baseValue = 100;
+  const monthlyChange = change / months;
+  
+  for (let i = 0; i < months; i++) {
+    data.push({
+      month: i,
+      value: baseValue + (monthlyChange * i) + (Math.random() - 0.5) * 2
+    });
+  }
+  return data;
+};
+
+const propertyTypeIcons = {
+  newApartment: Building2,
+  newTownhouses: Building,
+  newHouses: Home,
+};
+
 interface PropertyRowProps {
+  type: 'newApartment' | 'newTownhouses' | 'newHouses';
   label: string;
   price: number;
   change: number;
 }
 
-const PropertyRow: React.FC<PropertyRowProps> = ({ label, price, change }) => {
+const PropertyRow: React.FC<PropertyRowProps> = ({ type, label, price, change }) => {
   const isPositive = change >= 0;
   const TrendIcon = isPositive ? TrendingUp : TrendingDown;
-  const isHot = Math.abs(change) > 4;
+  const PropertyIcon = propertyTypeIcons[type];
   
   return (
-    <div className="flex items-center justify-between py-3 px-3 rounded-lg hover:bg-neutral-50/50 dark:hover:bg-neutral-800/50 transition-colors">
-      <div className="flex items-center gap-2">
-        <span className="text-sm font-medium text-neutral-700 dark:text-neutral-300">{label}</span>
-        {isHot && <span className="text-xs">🔥</span>}
-      </div>
-      <div className="flex items-center gap-3">
-        <span className="text-sm font-bold text-neutral-900 dark:text-neutral-100">
-          ${price.toLocaleString()}/m²
-        </span>
-        <div className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-bold ${
-          isPositive 
-            ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' 
-            : 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'
-        }`}>
-          <TrendIcon className="w-3 h-3" />
-          <span>{isPositive ? '+' : ''}{change.toFixed(1)}%</span>
+    <motion.div 
+      className="relative p-4 rounded-xl bg-gradient-to-r from-background via-background to-muted/30 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
+      whileHover={{ scale: 1.02, y: -2 }}
+      transition={{ duration: 0.2 }}
+    >
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="p-2 rounded-lg bg-primary/10">
+            <PropertyIcon className="w-4 h-4 text-primary" />
+          </div>
+          <div>
+            <span className="text-sm font-medium text-foreground">{label}</span>
+            <div className="flex items-center gap-2 mt-1">
+              <span className="text-lg font-bold text-foreground">
+                ${price.toLocaleString()}
+              </span>
+              <span className="text-xs text-muted-foreground">/m²</span>
+            </div>
+          </div>
+        </div>
+        
+        <div className="flex items-center gap-3">
+          <div className="w-16 h-8 flex items-center justify-center">
+            <TrendIcon className={`w-5 h-5 ${isPositive ? 'text-green-500' : 'text-red-500'}`} />
+          </div>
+          <motion.div 
+            className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium ${
+              isPositive 
+                ? 'bg-green-100 text-green-700 border border-green-200' 
+                : 'bg-red-100 text-red-700 border border-red-200'
+            }`}
+            animate={{ scale: [1, 1.05, 1] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <TrendIcon className="w-3 h-3" />
+            <span>{Math.abs(change).toFixed(1)}%</span>
+          </motion.div>
         </div>
       </div>
-    </div>
+      
+      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+    </motion.div>
   );
 };
 
@@ -118,101 +166,133 @@ interface StateCardProps {
 }
 
 const StateCard: React.FC<StateCardProps> = ({ data, propertyLabels }) => {
-  const hasHotMarket = data.properties.newHouses.change > 4 || data.properties.newApartment.change > 3;
+  const [isExpanded, setIsExpanded] = useState(false);
   
   return (
-    <div className="relative bg-card/90 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 group hover:shadow-2xl hover:shadow-primary/20 hover:scale-105 transition-all duration-500 hover:bg-gradient-to-br hover:from-primary/5 hover:to-accent/10">
-      {hasHotMarket && (
-        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse shadow-lg">
-          🔥 HOT
+    <motion.div 
+      className="relative p-6 rounded-2xl bg-gradient-to-br from-card via-card to-muted/20 border border-border/50 hover:border-primary/40 transition-all duration-500 group overflow-hidden cursor-pointer"
+      whileHover={{ y: -8, scale: 1.02 }}
+      onClick={() => setIsExpanded(!isExpanded)}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+    >
+      <div className="relative z-10">
+        <div className="mb-6">
+          <motion.h3 
+            className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300"
+            animate={isExpanded ? { scale: 1.05 } : { scale: 1 }}
+          >
+            {data.stateCode}
+          </motion.h3>
+          <p className="text-sm text-muted-foreground font-medium">
+            {data.stateName}
+          </p>
         </div>
-      )}
-      <div className="mb-6">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl flex items-center justify-center shadow-sm">
-            <h3 className="text-xl font-bold text-primary-600">
-              {data.stateCode}
-            </h3>
-          </div>
-          <div className="flex-1">
-            <p className="text-lg font-bold text-neutral-900 dark:text-neutral-100 mb-1">
-              {data.stateName}
-            </p>
-            <p className="text-xs text-primary-500 font-medium uppercase tracking-wider">
-              Australia • Live Data
-            </p>
-          </div>
-        </div>
+        
+        <motion.div 
+          className="space-y-4"
+          animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <PropertyRow
+            type="newApartment"
+            label={propertyLabels.newApartment}
+            price={data.properties.newApartment.price}
+            change={data.properties.newApartment.change}
+          />
+          <PropertyRow
+            type="newTownhouses"
+            label={propertyLabels.newTownhouses}
+            price={data.properties.newTownhouses.price}
+            change={data.properties.newTownhouses.change}
+          />
+          <PropertyRow
+            type="newHouses"
+            label={propertyLabels.newHouses}
+            price={data.properties.newHouses.price}
+            change={data.properties.newHouses.change}
+          />
+        </motion.div>
       </div>
       
-      <div className="space-y-2 bg-neutral-50/50 dark:bg-neutral-800/20 rounded-xl p-4">
-        <PropertyRow
-          label={propertyLabels.newApartment}
-          price={data.properties.newApartment.price}
-          change={data.properties.newApartment.change}
-        />
-        <PropertyRow
-          label={propertyLabels.newTownhouses}
-          price={data.properties.newTownhouses.price}
-          change={data.properties.newTownhouses.change}
-        />
-        <PropertyRow
-          label={propertyLabels.newHouses}
-          price={data.properties.newHouses.price}
-          change={data.properties.newHouses.change}
-        />
-      </div>
-    </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-primary/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
+    </motion.div>
   );
 };
 
 export default function PropertyMarketSection() {
   const { t } = useLanguage();
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
-    <section className="py-16 bg-gradient-to-br from-primary-50 to-accent/30 relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent"></div>
-      <div className="absolute top-10 right-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 left-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl"></div>
+    <section className="relative py-16 bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5" />
+      <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl" />
       
-      <div className="container relative">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <span className="animate-pulse">🔥</span>
-            {t.propertyMarket.trending}
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent mb-2">
-            {t.propertyMarket.title}
-          </h2>
-          <p className="text-lg md:text-xl text-primary-600 font-medium mb-4">
-            {t.propertyMarket.subtitle}
-          </p>
-          <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
+      <div className="container relative z-10">
+        <motion.div 
+          className="max-w-4xl mx-auto text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-foreground to-accent bg-clip-text text-transparent mb-6"
+            animate={{ backgroundPosition: ["0%", "100%", "0%"] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+          >
+            Property Market Trends
+          </motion.h2>
+          <motion.p 
+            className="text-lg text-muted-foreground max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             {t.propertyMarket.description}
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-          {marketData.map((state) => (
-            <StateCard
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {marketData.map((state, index) => (
+            <motion.div
               key={state.stateCode}
-              data={state}
-              propertyLabels={{
-                newApartment: t.propertyMarket.propertyTypes.newApartment,
-                newTownhouses: t.propertyMarket.propertyTypes.newTownhouses,
-                newHouses: t.propertyMarket.propertyTypes.newHouses,
-              }}
-            />
+              variants={cardVariants}
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <StateCard
+                data={state}
+                propertyLabels={{
+                  newApartment: t.propertyMarket.propertyTypes.newApartment,
+                  newTownhouses: t.propertyMarket.propertyTypes.newTownhouses,
+                  newHouses: t.propertyMarket.propertyTypes.newHouses,
+                }}
+              />
+            </motion.div>
           ))}
-        </div>
-        
-        <div className="mt-12 text-center">
-          <p className="text-sm text-primary-500 font-medium">
-            {t.propertyMarket.lastUpdated}
-          </p>
-        </div>
-        
+        </motion.div>
       </div>
     </section>
   );

@@ -24,11 +24,8 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState('en');
   const [t, setT] = useState<Translations>(translations.en);
 
-  console.log('LanguageProvider rendered, current language:', language);
-
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language');
-    console.log('Saved language from localStorage:', savedLanguage);
     if (savedLanguage && translations[savedLanguage]) {
       setLanguage(savedLanguage);
       setT(translations[savedLanguage]);
@@ -36,7 +33,6 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const changeLanguage = (lang: string) => {
-    console.log('Changing language to:', lang);
     if (translations[lang]) {
       setLanguage(lang);
       setT(translations[lang]);
@@ -44,11 +40,8 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
-  const contextValue = { language, setLanguage: changeLanguage, t };
-  console.log('LanguageProvider context value:', contextValue);
-
   return (
-    <LanguageContext.Provider value={contextValue}>
+    <LanguageContext.Provider value={{ language, setLanguage: changeLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );
@@ -56,9 +49,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
-  console.log('useLanguage called, context:', context);
   if (context === undefined) {
-    console.error('LanguageContext is undefined - make sure LanguageProvider is wrapping the component');
     throw new Error('useLanguage must be used within a LanguageProvider');
   }
   return context;
