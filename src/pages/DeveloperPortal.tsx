@@ -104,7 +104,7 @@ export default function DeveloperPortal() {
 
       {/* Live Reporting Service */}
       <section className="bg-muted/30 py-0">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 overflow-x-hidden">
+        <div className="container mx-auto sm:px-6 lg:px-8 md:py-20 overflow-x-hidden px-[25px] py-0">
           <FadeInSection className="text-center mb-16">
             <h2 className="text-2xl font-bold mb-6 py-0 text-left md:text-5xl">Our Services</h2>
           </FadeInSection>
@@ -232,7 +232,7 @@ export default function DeveloperPortal() {
       </section>
 
       {/* Lead Management Service */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative overflow-hidden py-[47px]">
         {/* Enhanced gradient background */}
         <div className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-br from-primary/5 via-sea/10 to-background/30"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(var(--primary-rgb)/0.1),transparent_50%)] pointer-events-none" />
@@ -417,7 +417,7 @@ export default function DeveloperPortal() {
       </section>
 
       {/* Custom Website Service */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative overflow-hidden py-[43px]">
         {/* Enhanced gradient background */}
         <div className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-br from-primary/5 via-sea/10 to-background/30"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(var(--sea-rgb)/0.1),transparent_50%)] pointer-events-none" />
