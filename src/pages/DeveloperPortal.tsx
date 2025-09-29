@@ -143,7 +143,7 @@ export default function DeveloperPortal() {
                   <Button className="bg-primary hover:bg-primary/90">
                     Start for free
                   </Button>
-                  <Button variant="outline">
+                  <Button variant="outline" className="bg-white hover:bg-gray-50">
                     Book a demo →
                   </Button>
                 </div>
@@ -406,7 +406,7 @@ export default function DeveloperPortal() {
                   <Button className="bg-primary hover:bg-primary/90">
                     Start for free
                   </Button>
-                  <Button variant="outline">
+                  <Button variant="outline" className="bg-white hover:bg-gray-50">
                     Book a demo →
                   </Button>
                 </div>
@@ -556,7 +556,7 @@ export default function DeveloperPortal() {
                   <Button className="bg-primary hover:bg-primary/90">
                     Start for free
                   </Button>
-                  <Button variant="outline">
+                  <Button variant="outline" className="bg-white hover:bg-gray-50">
                     Book a demo →
                   </Button>
                 </div>
