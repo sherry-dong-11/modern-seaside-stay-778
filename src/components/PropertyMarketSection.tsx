@@ -154,41 +154,39 @@ const PropertyRow: React.FC<PropertyRowProps> = ({
   const isPositive = change >= 0;
   const TrendIcon = isPositive ? TrendingUp : TrendingDown;
   const PropertyIcon = propertyTypeIcons[type];
-  return <motion.div className="relative p-4 rounded-xl bg-white/95 backdrop-blur-sm border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 group z-10 h-[110px] w-full flex flex-col justify-between overflow-hidden" whileHover={{
-    scale: 1.02,
-    y: -2
+  return <motion.div className="relative p-3 rounded-lg bg-gradient-to-br from-card via-background to-primary/5 border-2 border-border hover:border-primary/60 shadow-lg hover:shadow-primary/20 transition-all duration-300 group z-10 h-[100px] w-full flex flex-col justify-between overflow-hidden" whileHover={{
+    scale: 1.02
   }} transition={{
     duration: 0.2
   }}>
-      <div className="flex items-start gap-3 flex-1">
-        <div className="p-2 rounded-lg bg-gradient-to-br from-primary to-primary-foreground shadow-sm flex-shrink-0">
-          <PropertyIcon className="w-4 h-4 text-white" />
+      <div className="flex items-start gap-2 flex-1">
+        <div className="p-1.5 rounded-lg bg-primary/20 border border-primary/30 flex-shrink-0">
+          <PropertyIcon className="w-3 h-3 text-primary" />
         </div>
         <div className="flex-1 min-w-0 overflow-hidden">
-          <span className="text-xs font-semibold text-gray-900 block mb-1 truncate leading-tight">{label}</span>
+          <span className="text-[10px] font-semibold text-primary/90 block mb-1 truncate leading-tight">{label}</span>
           <div className="flex flex-col">
-            <span className="text-sm font-bold text-gray-900 truncate leading-tight">
+            <span className="text-xs font-bold text-foreground truncate leading-tight">
               ${price.toLocaleString()}
             </span>
-            <span className="text-xs text-gray-600 leading-tight font-medium">/m²</span>
+            <span className="text-[10px] text-muted-foreground/80 leading-tight">/m²</span>
           </div>
         </div>
       </div>
       
-      <div className="flex justify-center mt-2">
-        <motion.div className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold shadow-sm ${isPositive ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white' : 'bg-gradient-to-r from-red-500 to-rose-500 text-white'}`} animate={{
+      <div className="flex justify-center mt-1">
+        <motion.div className={`flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-semibold border-2 ${isPositive ? 'bg-primary/15 text-primary border-primary/40' : 'bg-muted text-muted-foreground border-border'}`} animate={{
         scale: [1, 1.08, 1]
       }} transition={{
-        duration: 2,
+        duration: 1.5,
         repeat: Infinity
       }}>
-          <TrendIcon className="w-3 h-3" />
+          <TrendIcon className="w-2.5 h-2.5" />
           <span>{Math.abs(change).toFixed(1)}%</span>
         </motion.div>
       </div>
       
-      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-sm" />
+      <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/8 via-transparent to-accent/8 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </motion.div>;
 };
 interface StateCardProps {
@@ -204,28 +202,27 @@ const StateCard: React.FC<StateCardProps> = ({
   propertyLabels
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  return <motion.div className="relative p-8 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl hover:shadow-3xl transition-all duration-500 group overflow-hidden cursor-pointer z-0" whileHover={{
-    scale: 1.02,
-    y: -4
+  return <motion.div className="relative p-6 rounded-2xl bg-gradient-to-br from-card via-background to-primary/8 border-2 border-border hover:border-primary/50 shadow-xl hover:shadow-primary/25 transition-all duration-500 group overflow-hidden cursor-pointer z-0" whileHover={{
+    scale: 1.02
   }} onClick={() => setIsExpanded(!isExpanded)} transition={{
     duration: 0.3,
     ease: "easeOut"
   }}>
       <div className="relative z-10">
-        <div className="mb-8">
-          <motion.h3 className="text-3xl font-bold text-white mb-3 group-hover:text-orange-300 transition-colors duration-300 drop-shadow-lg" animate={isExpanded ? {
+        <div className="mb-6">
+          <motion.h3 className="text-2xl font-bold text-primary mb-2 group-hover:text-primary/80 transition-colors duration-300" animate={isExpanded ? {
           scale: 1.05
         } : {
           scale: 1
         }}>
             {data.stateCode}
           </motion.h3>
-          <p className="text-base text-gray-200 font-semibold">
+          <p className="text-sm text-foreground/80 font-semibold">
             {data.stateName}
           </p>
         </div>
         
-        <motion.div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6" animate={isExpanded ? {
+        <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" animate={isExpanded ? {
         opacity: 1,
         y: 0
       } : {
@@ -240,9 +237,8 @@ const StateCard: React.FC<StateCardProps> = ({
         </motion.div>
       </div>
       
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-transparent to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-orange-400/30 to-blue-400/30 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
-      <div className="absolute -inset-1 bg-gradient-to-r from-orange-500/30 to-blue-500/30 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-sm" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute -bottom-2 -right-2 w-24 h-24 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
     </motion.div>;
 };
 export default function PropertyMarketSection() {
@@ -271,14 +267,13 @@ export default function PropertyMarketSection() {
       y: 0
     }
   };
-  return <section className="relative py-20 bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 via-transparent to-blue-600/20" />
-      <div className="absolute top-20 left-20 w-64 h-64 bg-orange-500/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+  return <section className="relative py-16 bg-gradient-to-br from-background via-primary/5 to-background overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/8 via-transparent to-accent/8" />
+      <div className="absolute top-10 left-10 w-32 h-32 bg-primary/15 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/15 rounded-full blur-3xl" />
       
       <div className="container relative z-10">
-        <motion.div className="max-w-5xl mx-auto text-center mb-20" initial={{
+        <motion.div className="max-w-4xl mx-auto text-center mb-16" initial={{
         opacity: 0,
         y: 30
       }} animate={{
@@ -293,10 +288,10 @@ export default function PropertyMarketSection() {
           duration: 8,
           repeat: Infinity,
           ease: "linear"
-        }} className="text-5xl bg-gradient-to-r from-orange-400 via-white to-blue-400 bg-clip-text text-transparent mb-8 font-bold md:text-6xl drop-shadow-2xl">
+        }} className="text-4xl bg-gradient-to-r from-primary via-foreground to-accent bg-clip-text mb-6 font-bold md:text-5xl">
             Property Market Trends
           </motion.h2>
-          <motion.p className="text-xl text-gray-200 max-w-3xl mx-auto font-medium leading-relaxed" initial={{
+          <motion.p className="text-lg text-foreground/80 max-w-2xl mx-auto font-medium" initial={{
           opacity: 0,
           y: 20
         }} animate={{
@@ -310,7 +305,7 @@ export default function PropertyMarketSection() {
           </motion.p>
         </motion.div>
         
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" animate="visible">
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 rounded-3xl bg-gradient-to-br from-background/50 via-transparent to-primary/5 border border-primary/20" variants={containerVariants} initial="hidden" animate="visible">
           {marketData.map((state, index) => <motion.div key={state.stateCode} variants={cardVariants} whileInView="visible" viewport={{
           once: true
         }}>
