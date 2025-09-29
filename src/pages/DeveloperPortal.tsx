@@ -2,7 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Code, Database, Zap, Shield, Globe, GitBranch, Terminal, Book, Download, ExternalLink, Cpu, Network, Lock, Calendar, ChevronDown, Headphones } from "lucide-react";
+import { Code, Database, Zap, Shield, Globe, GitBranch, Terminal, Book, Download, ExternalLink, Cpu, Network, Lock, Calendar, ChevronDown, Headphones, Building, Users, Target, BarChart3, TrendingUp, TrendingDown } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import ModernNavbar from "@/components/ModernNavbar";
 import ModernFooter from "@/components/ModernFooter";
@@ -151,99 +151,84 @@ export default function DeveloperPortal() {
               
               {/* Right Side - Reporting Module */}
               <div className="order-1 lg:order-2">
-                  <div className="bg-background rounded-xl shadow-lg p-4 sm:p-6 border animate-fade-in overflow-x-hidden transition-all duration-300 hover:shadow-xl sm:hover:scale-[1.02]">
-                    <div className="flex items-center justify-between mb-4 sm:mb-6 flex-wrap gap-2">
-                     <div className="flex items-center gap-2">
-                       <h3 className="font-bold text-sm sm:text-base md:text-xl">Reporting</h3>
-                     </div>
-                    <div className="flex gap-1 sm:gap-2 flex-wrap">
-                      <span className="px-2 sm:px-3 py-1 bg-primary text-primary-foreground text-xs rounded-lg font-medium">SUMMARY</span>
-                      <span className="px-2 sm:px-3 py-1 bg-muted text-muted-foreground text-xs rounded-lg font-medium cursor-pointer hover:bg-muted/80">PROJECTS</span>
-                      <span className="px-2 sm:px-3 py-1 bg-muted text-muted-foreground text-xs rounded-lg font-medium cursor-pointer hover:bg-muted/80">LEADS</span>
+                <div className="bg-background rounded-xl shadow-lg p-6 border animate-fade-in overflow-hidden">
+                  <div className="flex items-center justify-between mb-6">
+                    <div>
+                      <h3 className="text-xl font-bold text-foreground">Project Overview</h3>
+                      <p className="text-sm text-muted-foreground">Welcome back, John. Here's what's happening with your projects.</p>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Calendar className="h-4 w-4" />
+                      <span>Last 30 days</span>
                     </div>
                   </div>
                   
-                  <div className="flex flex-col gap-2 sm:gap-3 mb-4 sm:mb-6">
-                    <div className="w-full">
-                      <div className="w-full bg-background border border-muted rounded-md px-2 sm:px-3 py-2 flex items-center justify-between">
-                        <span className="text-xs sm:text-sm truncate">640 Bourke st</span>
-                        <ChevronDown className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground flex-shrink-0" />
-                      </div>
-                    </div>
-                    <div className="w-full">
-                      <div className="w-full bg-background border border-muted rounded-md px-2 sm:px-3 py-2 flex items-center justify-between">
-                        <span className="text-xs sm:text-sm truncate">10/08/2025 - 10/09/2025</span>
-                        <ChevronDown className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground flex-shrink-0" />
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-2 sm:gap-4 md:gap-6">
-                    {/* Dynamic Bar Chart */}
-                    <div className="relative h-20 sm:h-32 md:h-40 w-full flex items-end justify-center gap-1 sm:gap-2 px-1 sm:px-2 py-2 sm:py-4">
-                      {/* Q1 Group */}
-                      <div className="flex flex-col items-center gap-1">
-                        <div className="flex items-end gap-0">
-                          <div className="w-3 sm:w-4 md:w-6 lg:w-8 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
-                          height: '60px',
-                          animationDelay: '0s'
-                        }}></div>
-                          <div className="w-3 sm:w-4 md:w-6 lg:w-8 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
-                          height: '35px',
-                          animationDelay: '0.3s'
-                        }}></div>
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                    {/* Total Projects */}
+                    <div className="bg-card border rounded-lg p-4">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="p-2 bg-orange-100 rounded-lg">
+                          <Building className="h-5 w-5 text-orange-600" />
                         </div>
+                        <span className="text-sm font-medium text-muted-foreground">Total Projects</span>
                       </div>
-                      
-                      {/* Q2 Group */}
-                      <div className="flex flex-col items-center gap-1">
-                        <div className="flex items-end gap-0">
-                          <div className="w-3 sm:w-4 md:w-6 lg:w-8 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
-                          height: '80px',
-                          animationDelay: '0.6s'
-                        }}></div>
-                          <div className="w-3 sm:w-4 md:w-6 lg:w-8 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
-                          height: '45px',
-                          animationDelay: '0.9s'
-                        }}></div>
-                        </div>
-                      </div>
-                      
-                      {/* Q3 Group */}
-                      <div className="flex flex-col items-center gap-1">
-                        <div className="flex items-end gap-0">
-                          <div className="w-3 sm:w-4 md:w-6 lg:w-8 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t-sm animate-grow-up" style={{
-                          height: '70px',
-                          animationDelay: '1.2s'
-                        }}></div>
-                          <div className="w-3 sm:w-4 md:w-6 lg:w-8 bg-gradient-to-t from-orange-400 to-yellow-500 rounded-t-sm animate-grow-up" style={{
-                          height: '25px',
-                          animationDelay: '1.5s'
-                        }}></div>
+                      <div className="space-y-1">
+                        <div className="text-2xl font-bold text-foreground">12</div>
+                        <div className="flex items-center gap-1 text-xs">
+                          <TrendingUp className="h-3 w-3 text-green-600" />
+                          <span className="text-green-600 font-medium">+2 this month</span>
                         </div>
                       </div>
                     </div>
-                    
-                    {/* Dynamic Pie Chart */}
-                    <div className="flex items-center justify-center w-full">
-                      <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32">
-                        <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
-                          {/* Blue section (50%) - 180 degrees */}
-                          <path d="M 50,50 L 50,10 A 40,40 0 1,1 50,90 Z" fill="rgb(59 130 246)" className="opacity-0 animate-fade-in" style={{
-                          animationDelay: '0.5s',
-                          animationFillMode: 'forwards'
-                        }} />
-                          {/* Pink section (30%) - 108 degrees */}
-                          <path d="M 50,50 L 50,90 A 40,40 0 0,1 11.27,69.44 Z" fill="rgb(236 72 153)" className="opacity-0 animate-fade-in" style={{
-                          animationDelay: '1s',
-                          animationFillMode: 'forwards'
-                        }} />
-                          {/* Orange section (20%) - 72 degrees */}
-                          <path d="M 50,50 L 11.27,69.44 A 40,40 0 0,1 50,10 Z" fill="rgb(251 146 60)" className="opacity-0 animate-fade-in" style={{
-                          animationDelay: '1.5s',
-                          animationFillMode: 'forwards'
-                        }} />
-                        </svg>
+
+                    {/* Leads This Month */}
+                    <div className="bg-card border rounded-lg p-4">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="p-2 bg-green-100 rounded-lg">
+                          <Users className="h-5 w-5 text-green-600" />
+                        </div>
+                        <span className="text-sm font-medium text-muted-foreground">Leads This Month</span>
+                      </div>
+                      <div className="space-y-1">
+                        <div className="text-2xl font-bold text-foreground">248</div>
+                        <div className="flex items-center gap-1 text-xs">
+                          <TrendingUp className="h-3 w-3 text-green-600" />
+                          <span className="text-green-600 font-medium">+18.5% from last month</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Conversion Rate */}
+                    <div className="bg-card border rounded-lg p-4">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="p-2 bg-yellow-100 rounded-lg">
+                          <Target className="h-5 w-5 text-yellow-600" />
+                        </div>
+                        <span className="text-sm font-medium text-muted-foreground">Conversion Rate</span>
+                      </div>
+                      <div className="space-y-1">
+                        <div className="text-2xl font-bold text-foreground">12.3%</div>
+                        <div className="flex items-center gap-1 text-xs">
+                          <TrendingDown className="h-3 w-3 text-red-600" />
+                          <span className="text-red-600 font-medium">-2.1% from last month</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Active Campaigns */}
+                    <div className="bg-card border rounded-lg p-4">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="p-2 bg-blue-100 rounded-lg">
+                          <BarChart3 className="h-5 w-5 text-blue-600" />
+                        </div>
+                        <span className="text-sm font-medium text-muted-foreground">Active Campaigns</span>
+                      </div>
+                      <div className="space-y-1">
+                        <div className="text-2xl font-bold text-foreground">8</div>
+                        <div className="flex items-center gap-1 text-xs">
+                          <TrendingUp className="h-3 w-3 text-green-600" />
+                          <span className="text-green-600 font-medium">+3 this week</span>
+                        </div>
                       </div>
                     </div>
                   </div>
