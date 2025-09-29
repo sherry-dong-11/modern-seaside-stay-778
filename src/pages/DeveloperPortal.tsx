@@ -187,7 +187,7 @@ export default function DeveloperPortal() {
                             <Users className="h-3 w-3 text-green-600" />
                           </div>
                         </div>
-                        <span className="text-xs font-medium text-muted-foreground leading-tight">Leads This Month</span>
+                        <span className="text-xs font-medium text-muted-foreground leading-tight">New Leads Acquired</span>
                       </div>
                       <div className="mt-auto">
                         <div className="text-lg sm:text-xl font-bold text-foreground">248</div>
