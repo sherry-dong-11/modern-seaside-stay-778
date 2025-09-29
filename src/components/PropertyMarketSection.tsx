@@ -226,7 +226,7 @@ const StateCard: React.FC<StateCardProps> = ({
           </p>
         </div>
         
-        <motion.div className="space-y-4" animate={isExpanded ? {
+        <motion.div className="flex gap-2" animate={isExpanded ? {
         opacity: 1,
         y: 0
       } : {
