@@ -104,12 +104,12 @@ export default function DeveloperPortal() {
 
       {/* Live Reporting Service */}
       <section className="bg-muted/30 py-0">
-        <div className="container mx-auto px-4 py-16">
+        <div className="container mx-auto px-4 py-[3px]">
           <FadeInSection className="text-center mb-16">
-            <h2 className="text-2xl font-bold mb-6 text-left py-[19px] md:text-5xl">Our Services</h2>
+            <h2 className="font-bold mb-6 text-left py-[19px] text-2xl md:text-5xl">Our Services</h2>
           </FadeInSection>
           <FadeInSection>
-            <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 py-[22px]">
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 py-0">
               {/* Left Side - Text Content */}
               <div className="order-2 lg:order-1">
                 <h2 className="text-2xl font-bold mb-6 md:text-3xl">Real-Time Reporting</h2>
