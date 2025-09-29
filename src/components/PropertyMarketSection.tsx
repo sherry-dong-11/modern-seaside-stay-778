@@ -164,9 +164,9 @@ const PropertyRow: React.FC<PropertyRowProps> = ({
           <PropertyIcon className="w-4 h-4 text-primary" />
         </div>
         <div className="flex-1 min-w-0 overflow-hidden">
-          <span className="text-sm font-medium text-foreground block mb-2 truncate">{label}</span>
+          <span className="text-xs font-medium text-foreground block mb-2 truncate">{label}</span>
           <div className="flex flex-col gap-1">
-            <span className="text-lg font-bold text-foreground truncate">
+            <span className="text-sm font-bold text-foreground truncate">
               ${price.toLocaleString()}
             </span>
             <span className="text-xs text-muted-foreground">/m²</span>
