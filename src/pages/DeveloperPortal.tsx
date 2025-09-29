@@ -419,7 +419,7 @@ export default function DeveloperPortal() {
       {/* Custom Website Service */}
       <section className="relative py-20 overflow-hidden">
         {/* Enhanced gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-indigo-50/50 to-sea-50/30"></div>
+        <div className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-br from-primary/5 via-sea/10 to-background/30"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(var(--sea-rgb)/0.1),transparent_50%)] pointer-events-none" />
         
         <div className="container mx-auto px-4 relative z-10">
