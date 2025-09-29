@@ -151,83 +151,83 @@ export default function DeveloperPortal() {
               
               {/* Right Side - Reporting Module */}
               <div className="order-1 lg:order-2">
-                <div className="bg-background rounded-xl shadow-lg p-6 border animate-fade-in overflow-hidden">
-                  <div className="flex items-center justify-between mb-6">
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground">Project Overview</h3>
-                      <p className="text-sm text-muted-foreground">Welcome back, John. Here's what's happening with your projects.</p>
+                <div className="bg-background rounded-xl shadow-lg p-3 sm:p-4 lg:p-6 border animate-fade-in overflow-hidden w-full max-w-full">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 lg:mb-6 gap-2">
+                    <div className="w-full sm:w-auto">
+                      <h3 className="text-lg sm:text-xl font-bold text-foreground truncate">Project Overview</h3>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Welcome back, John. Here's what's happening with your projects.</p>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Calendar className="h-4 w-4" />
-                      <span>Last 30 days</span>
+                    <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground flex-shrink-0">
+                      <Calendar className="h-3 w-3 sm:h-4 sm:w-4" />
+                      <span className="whitespace-nowrap">Last 30 days</span>
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 lg:gap-4 w-full">
                     {/* Total Projects */}
-                    <div className="bg-card border rounded-lg p-4">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="p-2 bg-orange-100 rounded-lg">
-                          <Building className="h-5 w-5 text-orange-600" />
+                    <div className="bg-card border rounded-lg p-3 sm:p-4 min-w-0 w-full">
+                      <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                        <div className="p-1.5 sm:p-2 bg-orange-100 rounded-lg flex-shrink-0">
+                          <Building className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5 text-orange-600" />
                         </div>
-                        <span className="text-sm font-medium text-muted-foreground">Total Projects</span>
+                        <span className="text-xs sm:text-sm font-medium text-muted-foreground truncate">Total Projects</span>
                       </div>
                       <div className="space-y-1">
-                        <div className="text-2xl font-bold text-foreground">12</div>
+                        <div className="text-xl sm:text-2xl font-bold text-foreground">12</div>
                         <div className="flex items-center gap-1 text-xs">
-                          <TrendingUp className="h-3 w-3 text-green-600" />
-                          <span className="text-green-600 font-medium">+2 this month</span>
+                          <TrendingUp className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-green-600 flex-shrink-0" />
+                          <span className="text-green-600 font-medium truncate">+2 this month</span>
                         </div>
                       </div>
                     </div>
 
                     {/* Leads This Month */}
-                    <div className="bg-card border rounded-lg p-4">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="p-2 bg-green-100 rounded-lg">
-                          <Users className="h-5 w-5 text-green-600" />
+                    <div className="bg-card border rounded-lg p-3 sm:p-4 min-w-0 w-full">
+                      <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                        <div className="p-1.5 sm:p-2 bg-green-100 rounded-lg flex-shrink-0">
+                          <Users className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5 text-green-600" />
                         </div>
-                        <span className="text-sm font-medium text-muted-foreground">Leads This Month</span>
+                        <span className="text-xs sm:text-sm font-medium text-muted-foreground truncate">Leads This Month</span>
                       </div>
                       <div className="space-y-1">
-                        <div className="text-2xl font-bold text-foreground">248</div>
+                        <div className="text-xl sm:text-2xl font-bold text-foreground">248</div>
                         <div className="flex items-center gap-1 text-xs">
-                          <TrendingUp className="h-3 w-3 text-green-600" />
-                          <span className="text-green-600 font-medium">+18.5% from last month</span>
+                          <TrendingUp className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-green-600 flex-shrink-0" />
+                          <span className="text-green-600 font-medium truncate">+18.5% from last month</span>
                         </div>
                       </div>
                     </div>
 
                     {/* Conversion Rate */}
-                    <div className="bg-card border rounded-lg p-4">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="p-2 bg-yellow-100 rounded-lg">
-                          <Target className="h-5 w-5 text-yellow-600" />
+                    <div className="bg-card border rounded-lg p-3 sm:p-4 min-w-0 w-full">
+                      <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                        <div className="p-1.5 sm:p-2 bg-yellow-100 rounded-lg flex-shrink-0">
+                          <Target className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5 text-yellow-600" />
                         </div>
-                        <span className="text-sm font-medium text-muted-foreground">Conversion Rate</span>
+                        <span className="text-xs sm:text-sm font-medium text-muted-foreground truncate">Conversion Rate</span>
                       </div>
                       <div className="space-y-1">
-                        <div className="text-2xl font-bold text-foreground">12.3%</div>
+                        <div className="text-xl sm:text-2xl font-bold text-foreground">12.3%</div>
                         <div className="flex items-center gap-1 text-xs">
-                          <TrendingDown className="h-3 w-3 text-red-600" />
-                          <span className="text-red-600 font-medium">-2.1% from last month</span>
+                          <TrendingDown className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-red-600 flex-shrink-0" />
+                          <span className="text-red-600 font-medium truncate">-2.1% from last month</span>
                         </div>
                       </div>
                     </div>
 
                     {/* Active Campaigns */}
-                    <div className="bg-card border rounded-lg p-4">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="p-2 bg-blue-100 rounded-lg">
-                          <BarChart3 className="h-5 w-5 text-blue-600" />
+                    <div className="bg-card border rounded-lg p-3 sm:p-4 min-w-0 w-full">
+                      <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                        <div className="p-1.5 sm:p-2 bg-blue-100 rounded-lg flex-shrink-0">
+                          <BarChart3 className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5 text-blue-600" />
                         </div>
-                        <span className="text-sm font-medium text-muted-foreground">Active Campaigns</span>
+                        <span className="text-xs sm:text-sm font-medium text-muted-foreground truncate">Active Campaigns</span>
                       </div>
                       <div className="space-y-1">
-                        <div className="text-2xl font-bold text-foreground">8</div>
+                        <div className="text-xl sm:text-2xl font-bold text-foreground">8</div>
                         <div className="flex items-center gap-1 text-xs">
-                          <TrendingUp className="h-3 w-3 text-green-600" />
-                          <span className="text-green-600 font-medium">+3 this week</span>
+                          <TrendingUp className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-green-600 flex-shrink-0" />
+                          <span className="text-green-600 font-medium truncate">+3 this week</span>
                         </div>
                       </div>
                     </div>
