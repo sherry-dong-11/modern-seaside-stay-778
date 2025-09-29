@@ -163,7 +163,7 @@ export default function DeveloperPortal() {
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 w-full text-center">
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 w-full">
                     {/* Total Projects */}
                     <div className="bg-card border rounded-lg p-2 sm:p-3 min-w-0 w-full">
                       <div className="flex flex-col gap-1 sm:gap-2 mb-2">
