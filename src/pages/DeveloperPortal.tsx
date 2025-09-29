@@ -155,7 +155,7 @@ export default function DeveloperPortal() {
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 lg:mb-6 gap-2">
                     <div className="w-full sm:w-auto">
                       <h3 className="text-lg sm:text-xl font-bold text-foreground truncate">Project Overview</h3>
-                      <p className="text-xs sm:text-sm text-muted-foreground">Welcome back. Here's what's happening with your projects.</p>
+                      
                     </div>
                     <div className="flex items-center gap-2 text-xs sm:text-sm text-white flex-shrink-0 bg-orange-500 px-2 py-1 rounded-md hover:bg-orange-600 transition-colors cursor-pointer">
                       <Eye className="h-3 w-3 sm:h-4 sm:w-4" />
