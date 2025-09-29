@@ -163,13 +163,13 @@ const PropertyRow: React.FC<PropertyRowProps> = ({
         <div className="p-1.5 rounded-md bg-primary/10">
           <PropertyIcon className="w-3 h-3 text-primary" />
         </div>
-        <div>
-          <span className="text-xs font-medium text-foreground">{label}</span>
+        <div className="flex-1 min-w-0">
+          <span className="text-xs font-medium text-foreground block">{label}</span>
           <div className="flex items-center gap-1 mt-0.5">
             <span className="text-sm font-bold text-foreground">
               ${price.toLocaleString()}
             </span>
-            <span className="text-xs text-muted-foreground">/m²</span>
+            <span className="text-xs text-muted-foreground whitespace-nowrap">/m²</span>
           </div>
         </div>
       </div>
