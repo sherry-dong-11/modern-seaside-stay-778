@@ -154,39 +154,39 @@ const PropertyRow: React.FC<PropertyRowProps> = ({
   const isPositive = change >= 0;
   const TrendIcon = isPositive ? TrendingUp : TrendingDown;
   const PropertyIcon = propertyTypeIcons[type];
-  return <motion.div className="relative p-3 rounded-lg bg-gradient-to-r from-background via-background to-muted/30 border border-border/50 hover:border-primary/30 transition-all duration-300 group z-10 h-[100px] w-full flex flex-col justify-between overflow-hidden" whileHover={{
-    scale: 1.01
+  return <motion.div className="relative p-3 rounded-lg bg-gradient-to-br from-card via-background to-primary/5 border-2 border-border hover:border-primary/60 shadow-lg hover:shadow-primary/20 transition-all duration-300 group z-10 h-[100px] w-full flex flex-col justify-between overflow-hidden" whileHover={{
+    scale: 1.02
   }} transition={{
     duration: 0.2
   }}>
       <div className="flex items-start gap-2 flex-1">
-        <div className="p-1 rounded-md bg-primary/10 flex-shrink-0">
+        <div className="p-1.5 rounded-lg bg-primary/20 border border-primary/30 flex-shrink-0">
           <PropertyIcon className="w-3 h-3 text-primary" />
         </div>
         <div className="flex-1 min-w-0 overflow-hidden">
-          <span className="text-[10px] font-medium text-foreground block mb-1 truncate leading-tight">{label}</span>
+          <span className="text-[10px] font-semibold text-primary/90 block mb-1 truncate leading-tight">{label}</span>
           <div className="flex flex-col">
             <span className="text-xs font-bold text-foreground truncate leading-tight">
               ${price.toLocaleString()}
             </span>
-            <span className="text-[10px] text-muted-foreground leading-tight">/m²</span>
+            <span className="text-[10px] text-muted-foreground/80 leading-tight">/m²</span>
           </div>
         </div>
       </div>
       
       <div className="flex justify-center mt-1">
-        <motion.div className={`flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-medium ${isPositive ? 'bg-green-100 text-green-700 border border-green-200' : 'bg-red-100 text-red-700 border border-red-200'}`} animate={{
-        scale: [1, 1.05, 1]
+        <motion.div className={`flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-semibold border-2 ${isPositive ? 'bg-primary/15 text-primary border-primary/40' : 'bg-muted text-muted-foreground border-border'}`} animate={{
+        scale: [1, 1.08, 1]
       }} transition={{
-        duration: 2,
+        duration: 1.5,
         repeat: Infinity
       }}>
-          <TrendIcon className="w-2 h-2" />
+          <TrendIcon className="w-2.5 h-2.5" />
           <span>{Math.abs(change).toFixed(1)}%</span>
         </motion.div>
       </div>
       
-      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/8 via-transparent to-accent/8 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </motion.div>;
 };
 interface StateCardProps {
@@ -202,22 +202,22 @@ const StateCard: React.FC<StateCardProps> = ({
   propertyLabels
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  return <motion.div className="relative p-6 rounded-2xl bg-gradient-to-br from-card via-card to-muted/20 border border-border/50 hover:border-primary/40 transition-all duration-500 group overflow-hidden cursor-pointer z-0" whileHover={{
-    scale: 1.01
+  return <motion.div className="relative p-6 rounded-2xl bg-gradient-to-br from-card via-background to-primary/8 border-2 border-border hover:border-primary/50 shadow-xl hover:shadow-primary/25 transition-all duration-500 group overflow-hidden cursor-pointer z-0" whileHover={{
+    scale: 1.02
   }} onClick={() => setIsExpanded(!isExpanded)} transition={{
     duration: 0.3,
     ease: "easeOut"
   }}>
       <div className="relative z-10">
         <div className="mb-6">
-          <motion.h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300" animate={isExpanded ? {
+          <motion.h3 className="text-2xl font-bold text-primary mb-2 group-hover:text-primary/80 transition-colors duration-300" animate={isExpanded ? {
           scale: 1.05
         } : {
           scale: 1
         }}>
             {data.stateCode}
           </motion.h3>
-          <p className="text-sm text-muted-foreground font-medium">
+          <p className="text-sm text-foreground/80 font-semibold">
             {data.stateName}
           </p>
         </div>
@@ -237,8 +237,8 @@ const StateCard: React.FC<StateCardProps> = ({
         </motion.div>
       </div>
       
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-primary/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute -bottom-2 -right-2 w-24 h-24 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
     </motion.div>;
 };
 export default function PropertyMarketSection() {
@@ -267,10 +267,10 @@ export default function PropertyMarketSection() {
       y: 0
     }
   };
-  return <section className="relative py-16 bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 py-0 my-[5px]" />
-      <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl" />
+  return <section className="relative py-16 bg-gradient-to-br from-background via-primary/5 to-background overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/8 via-transparent to-accent/8" />
+      <div className="absolute top-10 left-10 w-32 h-32 bg-primary/15 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/15 rounded-full blur-3xl" />
       
       <div className="container relative z-10">
         <motion.div className="max-w-4xl mx-auto text-center mb-16" initial={{
@@ -288,10 +288,10 @@ export default function PropertyMarketSection() {
           duration: 8,
           repeat: Infinity,
           ease: "linear"
-        }} className="text-4xl bg-gradient-to-r from-primary via-foreground to-accent bg-clip-text mb-6 font-bold text-gray-900 md:text-5xl">
+        }} className="text-4xl bg-gradient-to-r from-primary via-foreground to-accent bg-clip-text mb-6 font-bold md:text-5xl">
             Property Market Trends
           </motion.h2>
-          <motion.p className="text-lg text-muted-foreground max-w-2xl mx-auto" initial={{
+          <motion.p className="text-lg text-foreground/80 max-w-2xl mx-auto font-medium" initial={{
           opacity: 0,
           y: 20
         }} animate={{
@@ -305,7 +305,7 @@ export default function PropertyMarketSection() {
           </motion.p>
         </motion.div>
         
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" animate="visible">
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 rounded-3xl bg-gradient-to-br from-background/50 via-transparent to-primary/5 border border-primary/20" variants={containerVariants} initial="hidden" animate="visible">
           {marketData.map((state, index) => <motion.div key={state.stateCode} variants={cardVariants} whileInView="visible" viewport={{
           once: true
         }}>
