@@ -106,7 +106,7 @@ export default function DeveloperPortal() {
       <section className="bg-muted/30 py-0">
         <div className="container mx-auto sm:px-6 lg:px-8 md:py-20 overflow-x-hidden px-[25px] py-0">
           <FadeInSection className="text-center mb-16">
-            <h2 className="text-2xl font-bold mb-6 text-left py-[37px] md:text-5xl">Our Services</h2>
+            <h2 className="text-2xl font-bold mb-6 text-left py-[38px] md:text-5xl">Our Services</h2>
           </FadeInSection>
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
@@ -239,7 +239,7 @@ export default function DeveloperPortal() {
         
         <div className="container mx-auto px-4 relative z-10">
           <FadeInSection>
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-center py-[63px]">
               <div className="w-full">
                 <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 overflow-x-hidden group hover:shadow-2xl sm:hover:scale-[1.02] transition-all duration-500">
                   <div className="p-4 sm:p-6">
@@ -417,7 +417,7 @@ export default function DeveloperPortal() {
       </section>
 
       {/* Custom Website Service */}
-      <section className="relative overflow-hidden py-[73px]">
+      <section className="relative overflow-hidden py-[34px]">
         {/* Enhanced gradient background */}
         <div className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-br from-primary/5 via-sea/10 to-background/30"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(var(--sea-rgb)/0.1),transparent_50%)] pointer-events-none" />
