@@ -165,8 +165,8 @@ export default function DeveloperPortal() {
                   
                   <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 w-full text-center">
                     {/* Total Projects */}
-                    <div className="bg-card border rounded-lg p-2 sm:p-3 min-w-0 w-full">
-                      <div className="flex flex-col gap-1 sm:gap-2 mb-2">
+                    <div className="bg-card border rounded-lg p-2 sm:p-3 min-w-0 w-full flex flex-col justify-between h-full">
+                      <div className="flex flex-col gap-1 sm:gap-2">
                         <div className="flex items-center gap-2">
                           <div className="p-1 bg-orange-100 rounded flex-shrink-0">
                             <Building className="h-3 w-3 text-orange-600" />
@@ -174,15 +174,14 @@ export default function DeveloperPortal() {
                         </div>
                         <span className="text-xs font-medium text-muted-foreground leading-tight">Total Projects</span>
                       </div>
-                      <div className="space-y-1">
+                      <div className="mt-auto">
                         <div className="text-lg sm:text-xl font-bold text-foreground">12</div>
-                        
                       </div>
                     </div>
 
                     {/* Leads This Month */}
-                    <div className="bg-card border rounded-lg p-2 sm:p-3 min-w-0 w-full">
-                      <div className="flex flex-col gap-1 sm:gap-2 mb-2">
+                    <div className="bg-card border rounded-lg p-2 sm:p-3 min-w-0 w-full flex flex-col justify-between h-full">
+                      <div className="flex flex-col gap-1 sm:gap-2">
                         <div className="flex items-center gap-2">
                           <div className="p-1 bg-green-100 rounded flex-shrink-0">
                             <Users className="h-3 w-3 text-green-600" />
@@ -190,15 +189,14 @@ export default function DeveloperPortal() {
                         </div>
                         <span className="text-xs font-medium text-muted-foreground leading-tight">Leads This Month</span>
                       </div>
-                      <div className="space-y-1">
+                      <div className="mt-auto">
                         <div className="text-lg sm:text-xl font-bold text-foreground">248</div>
-                        
                       </div>
                     </div>
 
                     {/* Conversion Rate */}
-                    <div className="bg-card border rounded-lg p-2 sm:p-3 min-w-0 w-full">
-                      <div className="flex flex-col gap-1 sm:gap-2 mb-2">
+                    <div className="bg-card border rounded-lg p-2 sm:p-3 min-w-0 w-full flex flex-col justify-between h-full">
+                      <div className="flex flex-col gap-1 sm:gap-2">
                         <div className="flex items-center gap-2">
                           <div className="p-1 bg-yellow-100 rounded flex-shrink-0">
                             <Target className="h-3 w-3 text-yellow-600" />
@@ -206,15 +204,14 @@ export default function DeveloperPortal() {
                         </div>
                         <span className="text-xs font-medium text-muted-foreground leading-tight">Conversion Rate</span>
                       </div>
-                      <div className="space-y-1">
+                      <div className="mt-auto">
                         <div className="text-lg sm:text-xl font-bold text-foreground">12.3%</div>
-                        
                       </div>
                     </div>
 
                     {/* Active Campaigns */}
-                    <div className="bg-card border rounded-lg p-2 sm:p-3 min-w-0 w-full">
-                      <div className="flex flex-col gap-1 sm:gap-2 mb-2">
+                    <div className="bg-card border rounded-lg p-2 sm:p-3 min-w-0 w-full flex flex-col justify-between h-full">
+                      <div className="flex flex-col gap-1 sm:gap-2">
                         <div className="flex items-center gap-2">
                           <div className="p-1 bg-blue-100 rounded flex-shrink-0">
                             <BarChart3 className="h-3 w-3 text-blue-600" />
@@ -222,9 +219,8 @@ export default function DeveloperPortal() {
                         </div>
                         <span className="text-xs font-medium text-muted-foreground leading-tight">Active Campaigns</span>
                       </div>
-                      <div className="space-y-1">
+                      <div className="mt-auto">
                         <div className="text-lg sm:text-xl font-bold text-foreground">8</div>
-                        
                       </div>
                     </div>
                   </div>
