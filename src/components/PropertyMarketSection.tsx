@@ -159,33 +159,31 @@ const PropertyRow: React.FC<PropertyRowProps> = ({
   }} transition={{
     duration: 0.2
   }}>
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="p-1.5 rounded-md bg-primary/10">
-            <PropertyIcon className="w-3 h-3 text-primary" />
-          </div>
-          <div>
-            <span className="text-xs font-medium text-foreground">{label}</span>
-            <div className="flex items-center gap-1 mt-0.5">
-              <span className="text-sm font-bold text-foreground">
-                ${price.toLocaleString()}
-              </span>
-              <span className="text-xs text-muted-foreground">/m²</span>
-            </div>
+      <div className="flex items-center gap-2 mb-2">
+        <div className="p-1.5 rounded-md bg-primary/10">
+          <PropertyIcon className="w-3 h-3 text-primary" />
+        </div>
+        <div>
+          <span className="text-xs font-medium text-foreground">{label}</span>
+          <div className="flex items-center gap-1 mt-0.5">
+            <span className="text-sm font-bold text-foreground">
+              ${price.toLocaleString()}
+            </span>
+            <span className="text-xs text-muted-foreground">/m²</span>
           </div>
         </div>
-        
-        <div className="flex items-center gap-1">
-          <motion.div className={`flex items-center gap-1 px-1.5 py-0.5 rounded-full text-xs font-medium ${isPositive ? 'bg-green-100 text-green-700 border border-green-200' : 'bg-red-100 text-red-700 border border-red-200'}`} animate={{
-          scale: [1, 1.05, 1]
-        }} transition={{
-          duration: 2,
-          repeat: Infinity
-        }}>
-            <TrendIcon className="w-2.5 h-2.5" />
-            <span>{Math.abs(change).toFixed(1)}%</span>
-          </motion.div>
-        </div>
+      </div>
+      
+      <div className="flex justify-center">
+        <motion.div className={`flex items-center gap-1 px-1.5 py-0.5 rounded-full text-xs font-medium ${isPositive ? 'bg-green-100 text-green-700 border border-green-200' : 'bg-red-100 text-red-700 border border-red-200'}`} animate={{
+        scale: [1, 1.05, 1]
+      }} transition={{
+        duration: 2,
+        repeat: Infinity
+      }}>
+          <TrendIcon className="w-2.5 h-2.5" />
+          <span>{Math.abs(change).toFixed(1)}%</span>
+        </motion.div>
       </div>
       
       <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
