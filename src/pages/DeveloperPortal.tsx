@@ -2,7 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Code, Database, Zap, Shield, Globe, GitBranch, Terminal, Book, Download, ExternalLink, Cpu, Network, Lock, Calendar, ChevronDown, Headphones, Building, Users, Target, BarChart3, TrendingUp, TrendingDown } from "lucide-react";
+import { Code, Database, Zap, Shield, Globe, GitBranch, Terminal, Book, Download, ExternalLink, Cpu, Network, Lock, Calendar, ChevronDown, Headphones, Building, Users, Target, BarChart3, TrendingUp, TrendingDown, Eye } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import ModernNavbar from "@/components/ModernNavbar";
 import ModernFooter from "@/components/ModernFooter";
@@ -158,8 +158,8 @@ export default function DeveloperPortal() {
                       <p className="text-xs sm:text-sm text-muted-foreground">Welcome back. Here's what's happening with your projects.</p>
                     </div>
                     <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground flex-shrink-0">
-                      <Calendar className="h-3 w-3 sm:h-4 sm:w-4" />
-                      <span className="whitespace-nowrap">Last 30 days</span>
+                      <Eye className="h-3 w-3 sm:h-4 sm:w-4" />
+                      <span className="whitespace-nowrap">View Report</span>
                     </div>
                   </div>
                   
