@@ -155,7 +155,7 @@ export default function DeveloperPortal() {
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 lg:mb-6 gap-2">
                     <div className="w-full sm:w-auto">
                       <h3 className="text-lg sm:text-xl font-bold text-foreground truncate">Project Overview</h3>
-                      <p className="text-xs sm:text-sm text-muted-foreground">Welcome back, John. Here's what's happening with your projects.</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Welcome back. Here's what's happening with your projects.</p>
                     </div>
                     <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground flex-shrink-0">
                       <Calendar className="h-3 w-3 sm:h-4 sm:w-4" />
@@ -176,10 +176,7 @@ export default function DeveloperPortal() {
                       </div>
                       <div className="space-y-1">
                         <div className="text-lg sm:text-xl font-bold text-foreground">12</div>
-                        <div className="flex items-center gap-1 text-xs">
-                          <TrendingUp className="h-2 w-2 text-green-600 flex-shrink-0" />
-                          <span className="text-green-600 font-medium">+2 this month</span>
-                        </div>
+                        
                       </div>
                     </div>
 
@@ -195,10 +192,7 @@ export default function DeveloperPortal() {
                       </div>
                       <div className="space-y-1">
                         <div className="text-lg sm:text-xl font-bold text-foreground">248</div>
-                        <div className="flex items-center gap-1 text-xs">
-                          <TrendingUp className="h-2 w-2 text-green-600 flex-shrink-0" />
-                          <span className="text-green-600 font-medium">+18.5% from last month</span>
-                        </div>
+                        
                       </div>
                     </div>
 
@@ -214,10 +208,7 @@ export default function DeveloperPortal() {
                       </div>
                       <div className="space-y-1">
                         <div className="text-lg sm:text-xl font-bold text-foreground">12.3%</div>
-                        <div className="flex items-center gap-1 text-xs">
-                          <TrendingDown className="h-2 w-2 text-red-600 flex-shrink-0" />
-                          <span className="text-red-600 font-medium">-2.1% from last month</span>
-                        </div>
+                        
                       </div>
                     </div>
 
@@ -233,10 +224,7 @@ export default function DeveloperPortal() {
                       </div>
                       <div className="space-y-1">
                         <div className="text-lg sm:text-xl font-bold text-foreground">8</div>
-                        <div className="flex items-center gap-1 text-xs">
-                          <TrendingUp className="h-2 w-2 text-green-600 flex-shrink-0" />
-                          <span className="text-green-600 font-medium">+3 this week</span>
-                        </div>
+                        
                       </div>
                     </div>
                   </div>
