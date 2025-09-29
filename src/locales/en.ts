@@ -398,9 +398,9 @@ export const en = {
     title: "Property Market Information",
     description: "Latest pricing trends for new properties across Australian states",
     propertyTypes: {
-      newApartment: "New Apartment",
-      newTownhouses: "New Townhouses", 
-      newHouses: "New Houses"
+      newApartment: "Apartments",
+      newTownhouses: "Townhouses", 
+      newHouses: "Houses"
     },
     lastUpdated: "Data updated weekly based on market trends"
   }
