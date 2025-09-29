@@ -175,14 +175,14 @@ const PropertyRow: React.FC<PropertyRowProps> = ({
           </div>
         </div>
         
-        <div className="flex items-center justify-end">
-          <motion.div className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium whitespace-nowrap ${isPositive ? 'bg-green-100 text-green-700 border border-green-200' : 'bg-red-100 text-red-700 border border-red-200'}`} animate={{
+        <div className="flex items-center gap-1">
+          <motion.div className={`flex items-center gap-1 px-1.5 py-0.5 rounded-full text-xs font-medium ${isPositive ? 'bg-green-100 text-green-700 border border-green-200' : 'bg-red-100 text-red-700 border border-red-200'}`} animate={{
           scale: [1, 1.05, 1]
         }} transition={{
           duration: 2,
           repeat: Infinity
         }}>
-            <TrendIcon className="w-3 h-3 flex-shrink-0" />
+            <TrendIcon className="w-2.5 h-2.5" />
             <span>{Math.abs(change).toFixed(1)}%</span>
           </motion.div>
         </div>
