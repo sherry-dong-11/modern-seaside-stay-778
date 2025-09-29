@@ -88,7 +88,7 @@ export default function DeveloperPortal() {
                 Log into Portal
                 <ExternalLink className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
-              <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold">
+              <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold bg-white hover:bg-gray-50">
                 <Headphones className="mr-3 h-6 w-6" />
                 Customer Support
               </Button>
