@@ -175,7 +175,7 @@ const PropertyRow: React.FC<PropertyRowProps> = ({
       </div>
       
       <div className="flex justify-center mt-1">
-        <motion.div className={`flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-medium ${isPositive ? 'bg-green-100 text-green-700 border border-green-200' : 'bg-red-100 text-red-700 border border-red-200'}`} animate={{
+        <motion.div className={`flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-medium ${isPositive ? 'bg-primary/20 text-primary border border-primary/30' : 'bg-orange-500/20 text-orange-300 border border-orange-500/30'}`} animate={{
         scale: [1, 1.05, 1]
       }} transition={{
         duration: 2,
@@ -267,10 +267,10 @@ export default function PropertyMarketSection() {
       y: 0
     }
   };
-  return <section className="relative py-16 bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 py-0 my-[5px]" />
-      <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl" />
+  return <section className="relative py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-orange-500/10 to-primary/20" />
+      <div className="absolute top-10 left-10 w-32 h-32 bg-primary/30 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 right-10 w-40 h-40 bg-orange-500/20 rounded-full blur-3xl" />
       
       <div className="container relative z-10">
         <motion.div className="max-w-4xl mx-auto text-center mb-16" initial={{
@@ -288,10 +288,10 @@ export default function PropertyMarketSection() {
           duration: 8,
           repeat: Infinity,
           ease: "linear"
-        }} className="text-4xl bg-gradient-to-r from-primary via-foreground to-accent bg-clip-text mb-6 font-bold text-gray-900 md:text-5xl">
+        }} className="text-4xl bg-gradient-to-r from-primary via-orange-400 to-orange-500 bg-clip-text mb-6 font-bold text-transparent md:text-5xl">
             Property Market Trends
           </motion.h2>
-          <motion.p className="text-lg text-muted-foreground max-w-2xl mx-auto" initial={{
+          <motion.p className="text-lg text-slate-300 max-w-2xl mx-auto" initial={{
           opacity: 0,
           y: 20
         }} animate={{
