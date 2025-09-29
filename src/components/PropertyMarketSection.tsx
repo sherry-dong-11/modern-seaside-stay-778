@@ -154,7 +154,7 @@ const PropertyRow: React.FC<PropertyRowProps> = ({
   const isPositive = change >= 0;
   const TrendIcon = isPositive ? TrendingUp : TrendingDown;
   const PropertyIcon = propertyTypeIcons[type];
-  return <motion.div className="relative p-4 rounded-xl bg-white/95 backdrop-blur-sm border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 group z-10 h-[110px] w-full flex flex-col justify-between overflow-hidden" whileHover={{
+  return <motion.div className="relative p-4 rounded-xl bg-white/95 backdrop-blur-sm border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 group z-10 h-[120px] w-full flex flex-col justify-between overflow-hidden" whileHover={{
     scale: 1.02,
     y: -2
   }} transition={{
@@ -167,7 +167,7 @@ const PropertyRow: React.FC<PropertyRowProps> = ({
         <div className="flex-1 min-w-0 overflow-hidden">
           <span className="text-xs font-semibold text-gray-900 block mb-1 truncate leading-tight">{label}</span>
           <div className="flex flex-col">
-            <span className="text-sm font-bold text-gray-900 truncate leading-tight">
+            <span className="text-sm font-bold text-gray-900 leading-tight whitespace-nowrap">
               ${price.toLocaleString()}
             </span>
             <span className="text-xs text-gray-600 leading-tight font-medium">/m²</span>
