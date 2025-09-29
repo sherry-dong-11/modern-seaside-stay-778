@@ -154,39 +154,39 @@ const PropertyRow: React.FC<PropertyRowProps> = ({
   const isPositive = change >= 0;
   const TrendIcon = isPositive ? TrendingUp : TrendingDown;
   const PropertyIcon = propertyTypeIcons[type];
-  return <motion.div className="relative p-3 rounded-lg bg-gradient-to-r from-background via-background to-muted/30 border border-border/50 hover:border-primary/30 transition-all duration-300 group z-10 h-[100px] w-full flex flex-col justify-between overflow-hidden" whileHover={{
-    scale: 1.01
+  return <motion.div className="relative p-3 rounded-lg bg-gradient-to-br from-white via-gray-50 to-blue-50 border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 group z-10 h-[100px] w-full flex flex-col justify-between overflow-hidden shadow-lg hover:shadow-xl" whileHover={{
+    scale: 1.02
   }} transition={{
     duration: 0.2
   }}>
       <div className="flex items-start gap-2 flex-1">
-        <div className="p-1 rounded-md bg-primary/10 flex-shrink-0">
-          <PropertyIcon className="w-3 h-3 text-primary" />
+        <div className="p-1.5 rounded-md bg-blue-600 flex-shrink-0 shadow-md">
+          <PropertyIcon className="w-3 h-3 text-white" />
         </div>
         <div className="flex-1 min-w-0 overflow-hidden">
-          <span className="text-[10px] font-medium text-foreground block mb-1 truncate leading-tight">{label}</span>
+          <span className="text-[10px] font-bold text-gray-800 block mb-1 truncate leading-tight">{label}</span>
           <div className="flex flex-col">
-            <span className="text-xs font-bold text-foreground truncate leading-tight">
+            <span className="text-xs font-black text-gray-900 truncate leading-tight">
               ${price.toLocaleString()}
             </span>
-            <span className="text-[10px] text-muted-foreground leading-tight">/m²</span>
+            <span className="text-[10px] text-gray-600 font-medium leading-tight">/m²</span>
           </div>
         </div>
       </div>
       
       <div className="flex justify-center mt-1">
-        <motion.div className={`flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-medium ${isPositive ? 'bg-green-100 text-green-700 border border-green-200' : 'bg-red-100 text-red-700 border border-red-200'}`} animate={{
-        scale: [1, 1.05, 1]
+        <motion.div className={`flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-bold shadow-md ${isPositive ? 'bg-green-500 text-white border-2 border-green-600' : 'bg-red-500 text-white border-2 border-red-600'}`} animate={{
+        scale: [1, 1.1, 1]
       }} transition={{
-        duration: 2,
+        duration: 1.5,
         repeat: Infinity
       }}>
-          <TrendIcon className="w-2 h-2" />
+          <TrendIcon className="w-2.5 h-2.5" />
           <span>{Math.abs(change).toFixed(1)}%</span>
         </motion.div>
       </div>
       
-      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </motion.div>;
 };
 interface StateCardProps {
@@ -305,7 +305,7 @@ export default function PropertyMarketSection() {
           </motion.p>
         </motion.div>
         
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" animate="visible">
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl border-2 border-blue-200 shadow-xl" variants={containerVariants} initial="hidden" animate="visible">
           {marketData.map((state, index) => <motion.div key={state.stateCode} variants={cardVariants} whileInView="visible" viewport={{
           once: true
         }}>
