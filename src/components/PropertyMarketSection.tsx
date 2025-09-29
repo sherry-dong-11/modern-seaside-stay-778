@@ -154,7 +154,7 @@ const PropertyRow: React.FC<PropertyRowProps> = ({
   const isPositive = change >= 0;
   const TrendIcon = isPositive ? TrendingUp : TrendingDown;
   const PropertyIcon = propertyTypeIcons[type];
-  return <motion.div className="relative p-4 rounded-xl bg-gradient-to-r from-background via-background to-muted/30 border border-border/50 hover:border-primary/30 transition-all duration-300 group" whileHover={{
+  return <motion.div className="relative p-3 rounded-xl bg-gradient-to-r from-background via-background to-muted/30 border border-border/50 hover:border-primary/30 transition-all duration-300 group flex-1" whileHover={{
     scale: 1.02,
     y: -2
   }} transition={{
@@ -226,7 +226,7 @@ const StateCard: React.FC<StateCardProps> = ({
           </p>
         </div>
         
-        <motion.div className="flex gap-2" animate={isExpanded ? {
+        <motion.div className="flex flex-wrap gap-2 sm:flex-nowrap" animate={isExpanded ? {
         opacity: 1,
         y: 0
       } : {
