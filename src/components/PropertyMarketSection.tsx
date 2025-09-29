@@ -154,9 +154,8 @@ const PropertyRow: React.FC<PropertyRowProps> = ({
   const isPositive = change >= 0;
   const TrendIcon = isPositive ? TrendingUp : TrendingDown;
   const PropertyIcon = propertyTypeIcons[type];
-  return <motion.div className="relative p-2 rounded-lg bg-gradient-to-r from-background via-background to-muted/30 border border-border/50 hover:border-primary/30 transition-all duration-300 group" whileHover={{
-    scale: 1.02,
-    y: -2
+  return <motion.div className="relative p-2 rounded-lg bg-gradient-to-r from-background via-background to-muted/30 border border-border/50 hover:border-primary/30 transition-all duration-300 group z-10" whileHover={{
+    scale: 1.01
   }} transition={{
     duration: 0.2
   }}>
@@ -205,9 +204,8 @@ const StateCard: React.FC<StateCardProps> = ({
   propertyLabels
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  return <motion.div className="relative p-6 rounded-2xl bg-gradient-to-br from-card via-card to-muted/20 border border-border/50 hover:border-primary/40 transition-all duration-500 group overflow-hidden cursor-pointer" whileHover={{
-    y: -8,
-    scale: 1.02
+  return <motion.div className="relative p-6 rounded-2xl bg-gradient-to-br from-card via-card to-muted/20 border border-border/50 hover:border-primary/40 transition-all duration-500 group overflow-hidden cursor-pointer z-0" whileHover={{
+    scale: 1.01
   }} onClick={() => setIsExpanded(!isExpanded)} transition={{
     duration: 0.3,
     ease: "easeOut"
