@@ -95,7 +95,7 @@ export default function FeaturedPropertiesSection() {
       emblaApi.off("select", onSelect);
     };
   }, [emblaApi, onInit, onSelect]);
-  return <section className="bg-gradient-to-br from-background via-neutral-50/30 to-primary-50/20 relative overflow-hidden py-[6px]">
+  return <section className="bg-gradient-to-br from-background to-orange-50/30 border-y border-orange-100/30 py-6 md:py-8">
       {/* Premium background effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(var(--primary-rgb)/0.1),transparent_50%)] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(var(--primary-rgb)/0.05),transparent_50%)] pointer-events-none" />

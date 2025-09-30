@@ -61,7 +61,7 @@ export default function TestimonialsSection() {
     const interval = setInterval(nextTestimonial, 8000);
     return () => clearInterval(interval);
   }, []);
-  return <section className="bg-muted py-4 sm:py-6 lg:py-8">
+  return <section className="bg-gradient-to-br from-orange-50/30 to-neutral-100/60 border-y border-orange-100/30 py-6 md:py-8">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-8 animate-fade-in">
           <h2 className="text-3xl mb-2 font-semibold md:text-4xl">

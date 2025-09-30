@@ -28,7 +28,7 @@ export function LatestNewsSection() {
   const handleBrowseAllNews = () => {
     navigate("/blog");
   };
-  return <section className="py-4 md:py-6 bg-gray-50/50">
+  return <section className="bg-gradient-to-br from-neutral-50/40 to-orange-50/30 border-y border-orange-100/30 py-6 md:py-8">
       <div className="container">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
