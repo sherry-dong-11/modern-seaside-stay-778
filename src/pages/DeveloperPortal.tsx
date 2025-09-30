@@ -151,7 +151,7 @@ export default function DeveloperPortal() {
               
               {/* Right Side - Reporting Module */}
               <div className="order-1 lg:order-2">
-                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 animate-fade-in overflow-hidden w-full max-w-full p-3 sm:p-4 lg:p-6 py-[15px]">
+                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 animate-fade-in overflow-hidden w-full max-w-full p-2 sm:p-3 lg:p-4 py-[8px]">
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 lg:mb-6 gap-2">
                     <div className="w-full sm:w-auto">
                       <h3 className="text-lg sm:text-xl font-bold text-foreground truncate">Project Overview</h3>
