@@ -312,9 +312,9 @@ export default function DeveloperPortal() {
                       <div className="w-full bg-gradient-to-br from-primary/5 to-sea/5 p-4 sm:p-6 rounded-lg border border-primary/20 backdrop-blur-sm">
                         <div className="space-y-4">
                           {/* Headers in flex row */}
-                          <div className="flex justify-between items-center">
+                          <div className="flex items-center gap-4">
                             <h3 className="text-xl font-bold text-foreground sm:text-xl">Buyer 1</h3>
-                            <h4 className="text-lg sm:text-xl font-bold text-foreground text-left">Notes</h4>
+                            <h4 className="text-lg sm:text-xl font-bold text-foreground">Notes</h4>
                           </div>
                           
                           {/* Content in two columns */}
