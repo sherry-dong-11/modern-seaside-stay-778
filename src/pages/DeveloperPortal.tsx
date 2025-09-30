@@ -319,7 +319,7 @@ export default function DeveloperPortal() {
                               <div className="space-y-3">
                                 <div className="flex items-center gap-3">
                                   <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
-                                  <span className="text-sm sm:text-xs text-slate-500">sarah.johnson@email.com</span>
+                                  <span className="text-sm sm:text-xs text-slate-500">buyer1@email.com</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                   <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
