@@ -314,7 +314,7 @@ export default function DeveloperPortal() {
                           {/* Headers in flex row */}
                           <div className="flex justify-between items-center">
                             <h3 className="text-xl font-bold text-foreground sm:text-xl">Buyer 1</h3>
-                            <h4 className="text-lg sm:text-xl font-bold text-foreground">Notes</h4>
+                            <h4 className="text-lg sm:text-xl font-bold text-foreground text-left">Notes</h4>
                           </div>
                           
                           {/* Content in two columns */}
@@ -342,7 +342,7 @@ export default function DeveloperPortal() {
                             {/* Notes Content */}
                             <div>
                               <div className="bg-muted/50 p-3 sm:p-4 rounded-md">
-                                <p className="text-sm sm:text-base text-muted-foreground">
+                                <p className="text-sm text-muted-foreground sm:text-xs">
                                   Interested in 2BR apartment, budget up to $800K
                                 </p>
                               </div>
