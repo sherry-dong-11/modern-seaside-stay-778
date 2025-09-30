@@ -312,7 +312,7 @@ export default function DeveloperPortal() {
                       <div className="w-full bg-gradient-to-br from-primary/5 to-sea/5 p-4 sm:p-6 rounded-lg border border-primary/20 backdrop-blur-sm">
                         <div className="space-y-4">
                           {/* Name Header */}
-                          <h3 className="text-xl sm:text-2xl font-bold text-foreground">Sarah Johnson</h3>
+                          <h3 className="text-xl font-bold text-foreground sm:text-xl">Buyer 1</h3>
                           
                           {/* Contact Information */}
                           <div className="space-y-3">
