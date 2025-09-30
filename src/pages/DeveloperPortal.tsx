@@ -239,7 +239,7 @@ export default function DeveloperPortal() {
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 py-0">
               <div className="w-full">
                 <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 overflow-x-hidden group hover:shadow-2xl sm:hover:scale-[1.02] transition-all duration-500">
-                  <div className="p-4 sm:p-6">
+                  <div className="p-3 sm:p-4">
                     {/* Enhanced header with status badges */}
                     <div className="flex items-center justify-between mb-4 sm:mb-6 flex-wrap gap-2">
                       <div className="flex items-center gap-2 sm:gap-3">
