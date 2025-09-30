@@ -267,7 +267,7 @@ export default function PropertyMarketSection() {
       y: 0
     }
   };
-  return <section className="bg-gradient-to-br from-orange-50/20 to-neutral-50/40 border-y border-orange-100/30 py-6 md:py-8 relative overflow-hidden">
+  return <section className="bg-gradient-to-br from-orange-50/20 to-neutral-50/40 py-6 md:py-8 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 py-0 my-[5px]" />
       <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl" />
