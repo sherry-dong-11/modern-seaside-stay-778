@@ -311,36 +311,41 @@ export default function DeveloperPortal() {
                       
                       <div className="w-full bg-gradient-to-br from-primary/5 to-sea/5 p-4 sm:p-6 rounded-lg border border-primary/20 backdrop-blur-sm">
                         <div className="space-y-4">
-                          {/* Name Header */}
-                          <h3 className="text-xl font-bold text-foreground sm:text-xl">Buyer 1</h3>
-                          
-                          {/* Contact Information */}
-                          <div className="space-y-3">
-                            <div className="flex items-center gap-3">
-                              <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
-                              <span className="text-sm sm:text-xs text-slate-500">sarah.johnson@email.com</span>
-                            </div>
-                            <div className="flex items-center gap-3">
-                              <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
-                              <span className="text-sm sm:text-xs text-slate-500">+61 423 456 789</span>
-                            </div>
-                            <div className="flex items-center gap-3">
-                              <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
-                              <span className="text-sm sm:text-xs text-slate-500">Sydney, NSW</span>
-                            </div>
-                            <div className="flex items-center gap-3">
-                              <Building2 className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
-                              <span className="text-sm sm:text-xs text-slate-500">Skyline Apartments</span>
-                            </div>
+                          {/* Headers in flex row */}
+                          <div className="flex justify-between items-center">
+                            <h3 className="text-xl font-bold text-foreground sm:text-xl">Buyer 1</h3>
+                            <h4 className="text-lg sm:text-xl font-bold text-foreground">Notes</h4>
                           </div>
                           
-                          {/* Notes Section */}
-                          <div className="space-y-2 ml-auto max-w-md">
-                            <h4 className="text-lg sm:text-xl font-bold text-foreground">Notes</h4>
-                            <div className="bg-muted/50 p-3 sm:p-4 rounded-md">
-                              <p className="text-sm sm:text-base text-muted-foreground">
-                                Interested in 2BR apartment, budget up to $800K
-                              </p>
+                          {/* Content in two columns */}
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {/* Contact Information */}
+                            <div className="space-y-3">
+                              <div className="flex items-center gap-3">
+                                <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
+                                <span className="text-sm sm:text-xs text-slate-500">sarah.johnson@email.com</span>
+                              </div>
+                              <div className="flex items-center gap-3">
+                                <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
+                                <span className="text-sm sm:text-xs text-slate-500">+61 423 456 789</span>
+                              </div>
+                              <div className="flex items-center gap-3">
+                                <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
+                                <span className="text-sm sm:text-xs text-slate-500">Sydney, NSW</span>
+                              </div>
+                              <div className="flex items-center gap-3">
+                                <Building2 className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
+                                <span className="text-sm sm:text-xs text-slate-500">Skyline Apartments</span>
+                              </div>
+                            </div>
+                            
+                            {/* Notes Content */}
+                            <div>
+                              <div className="bg-muted/50 p-3 sm:p-4 rounded-md">
+                                <p className="text-sm sm:text-base text-muted-foreground">
+                                  Interested in 2BR apartment, budget up to $800K
+                                </p>
+                              </div>
                             </div>
                           </div>
                         </div>
