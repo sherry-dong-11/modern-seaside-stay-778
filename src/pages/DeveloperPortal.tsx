@@ -232,14 +232,11 @@ export default function DeveloperPortal() {
       </section>
 
       {/* Lead Management Service */}
-      <section className="relative overflow-hidden py-[8px]">
-        {/* Enhanced gradient background */}
-        <div className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-br from-primary/5 via-sea/10 to-background/30"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(var(--primary-rgb)/0.1),transparent_50%)] pointer-events-none" />
+      <section className="bg-gradient-to-br from-primary-50/40 to-accent/30 py-0 border-y border-primary-200/40 shadow-sm">
+        <div className="container mx-auto px-[15px] py-[13px]">
         
-        <div className="container mx-auto px-4 relative z-10">
           <FadeInSection>
-            <div className="grid lg:grid-cols-2 gap-12 items-center py-[58px]">
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 py-0">
               <div className="w-full">
                 <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 overflow-x-hidden group hover:shadow-2xl sm:hover:scale-[1.02] transition-all duration-500">
                   <div className="p-4 sm:p-6">
@@ -417,14 +414,10 @@ export default function DeveloperPortal() {
       </section>
 
       {/* Custom Website Service */}
-      <section className="relative overflow-hidden py-[67px]">
-        {/* Enhanced gradient background */}
-        <div className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-br from-primary/5 via-sea/10 to-background/30"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(var(--sea-rgb)/0.1),transparent_50%)] pointer-events-none" />
-        
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="bg-gradient-to-br from-primary-50/40 to-accent/30 py-0 border-y border-primary-200/40 shadow-sm">
+        <div className="container mx-auto px-[15px] py-[13px]">
           <FadeInSection>
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 py-0">
               {/* Left Side - Enhanced Website Mockup */}
               <div>
                 <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-sea/10 overflow-hidden group hover:shadow-2xl hover:scale-[1.02] transition-all duration-500">
