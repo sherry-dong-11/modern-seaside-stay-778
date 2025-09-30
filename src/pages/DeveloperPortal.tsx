@@ -298,21 +298,6 @@ export default function DeveloperPortal() {
                         name: 'Sarah Kim',
                         status: 'Hot',
                         color: 'red'
-                      }, {
-                        date: '09/09',
-                        name: 'Michael Ross',
-                        status: 'Cold',
-                        color: 'blue'
-                      }, {
-                        date: '08/09',
-                        name: 'Lisa Chang',
-                        status: 'Warm',
-                        color: 'orange'
-                      }, {
-                        date: '08/09',
-                        name: 'David Smith',
-                        status: 'Hot',
-                        color: 'red'
                       }].map((lead, i) => <div key={i} className="flex justify-between items-center py-2 border-b last:border-b-0 animate-fade-in hover:bg-muted/30 transition-colors rounded px-1 sm:px-2" style={{
                         animationDelay: `${i * 0.1}s`
                       }}>
