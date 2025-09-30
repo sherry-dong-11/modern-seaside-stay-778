@@ -349,13 +349,19 @@ export default function DeveloperPortal() {
                         </div>
                         
                         {/* Action Buttons */}
-                        <div className="flex justify-center mt-6">
-                          <div className="flex gap-2">
-                            <Button size="sm" className="bg-primary hover:bg-primary/90 text-xs sm:text-sm px-3 sm:px-4 py-2">
-                              Contact
+                        <div className="mt-6">
+                          <div className="flex flex-col gap-3 w-full">
+                            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white w-full">
+                              <Mail className="mr-2 h-5 w-5" />
+                              Send Email
                             </Button>
-                            <Button variant="outline" size="sm" className="text-xs sm:text-sm px-3 sm:px-4 py-2">
-                              View Profile
+                            <Button variant="outline" size="lg" className="w-full bg-white hover:bg-gray-50">
+                              <Phone className="mr-2 h-5 w-5" />
+                              Call Lead
+                            </Button>
+                            <Button variant="outline" size="lg" className="w-full bg-white hover:bg-gray-50">
+                              <ExternalLink className="mr-2 h-5 w-5" />
+                              View Project
                             </Button>
                           </div>
                         </div>
