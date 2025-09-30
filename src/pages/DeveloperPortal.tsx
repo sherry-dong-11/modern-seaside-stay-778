@@ -405,7 +405,7 @@ export default function DeveloperPortal() {
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 py-0">
               {/* Left Side - Enhanced Website Mockup */}
               <div>
-                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-sea/10 overflow-hidden group hover:shadow-2xl hover:scale-[1.02] transition-all duration-500">
+                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 overflow-hidden group hover:shadow-2xl hover:scale-[1.02] transition-all duration-500">
                   <div className="p-6">
                     {/* Enhanced header with status badges */}
                     <div className="flex items-center justify-between mb-6">
