@@ -361,7 +361,7 @@ export default function DeveloperPortal() {
                             </Button>
                             <Button variant="outline" size="lg" className="w-full bg-white hover:bg-gray-50">
                               <ExternalLink className="mr-2 h-5 w-5" />
-                              View Project
+                              View Profile
                             </Button>
                           </div>
                         </div>
