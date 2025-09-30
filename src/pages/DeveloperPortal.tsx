@@ -233,7 +233,7 @@ export default function DeveloperPortal() {
 
       {/* Lead Management Service */}
       <section className="bg-gradient-to-br from-primary-50/40 to-accent/30 py-0 border-y border-primary-200/40 shadow-sm">
-        <div className="container mx-auto px-[15px] py-[13px]">
+        <div className="container mx-auto px-[15px] py-[34px]">
         
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 py-0">
@@ -415,7 +415,7 @@ export default function DeveloperPortal() {
 
       {/* Custom Website Service */}
       <section className="bg-gradient-to-br from-primary-50/40 to-accent/30 py-0 border-y border-primary-200/40 shadow-sm">
-        <div className="container mx-auto px-[15px] py-[13px]">
+        <div className="container mx-auto px-[15px] py-[30px]">
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 py-0">
               {/* Left Side - Enhanced Website Mockup */}
