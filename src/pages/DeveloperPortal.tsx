@@ -103,10 +103,10 @@ export default function DeveloperPortal() {
       </FadeInSection>
 
       {/* Live Reporting Service */}
-      <section className="bg-gradient-to-br from-slate-50 to-gray-100/50 py-0 border-y border-slate-200/50">
+      <section className="bg-gradient-to-br from-slate-100 to-slate-200/80 py-0 border-y border-slate-300/40 shadow-inner">
         <div className="container mx-auto px-[15px] py-[13px]">
           <FadeInSection className="text-center mb-16">
-            <h2 className="font-bold mb-6 text-left text-2xl text-slate-900 py-[7px] md:text-5xl">Our Services</h2>
+            <h2 className="font-bold mb-6 text-left text-2xl text-slate-800 py-[7px] md:text-5xl">Our Services</h2>
           </FadeInSection>
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 py-0">
