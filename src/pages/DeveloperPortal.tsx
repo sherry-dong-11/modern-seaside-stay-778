@@ -232,7 +232,7 @@ export default function DeveloperPortal() {
       </section>
 
       {/* Lead Management Service */}
-      <section className="bg-gradient-to-br from-accent/30 to-primary-50/40 py-0 border-y border-primary-200/40 shadow-sm">
+      <section className="bg-gradient-to-br from-primary-50/40 to-accent/30 py-0 border-y border-primary-200/40 shadow-sm">
         <div className="container mx-auto px-[15px] py-[34px]">
         
           <FadeInSection>
