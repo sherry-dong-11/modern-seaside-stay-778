@@ -2,7 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Code, Database, Zap, Shield, Globe, GitBranch, Terminal, Book, Download, ExternalLink, Cpu, Network, Lock, Calendar, ChevronDown, Headphones, Building, Users, Target, BarChart3, TrendingUp, TrendingDown, Eye } from "lucide-react";
+import { Code, Database, Zap, Shield, Globe, GitBranch, Terminal, Book, Download, ExternalLink, Cpu, Network, Lock, Calendar, ChevronDown, Headphones, Building, Users, Target, BarChart3, TrendingUp, TrendingDown, Eye, Mail, Phone, MapPin, Building2 } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import ModernNavbar from "@/components/ModernNavbar";
 import ModernFooter from "@/components/ModernFooter";
@@ -309,43 +309,49 @@ export default function DeveloperPortal() {
                           </div>)}
                       </div>
                       
-                      <div className="w-full bg-gradient-to-br from-primary/5 to-sea/5 p-3 sm:p-4 rounded-lg border border-primary/20 backdrop-blur-sm">
-                        <div className="flex items-start gap-2 sm:gap-4">
-                          <div className="relative flex-shrink-0">
-                            <div className="w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-sea rounded-full flex items-center justify-center animate-pulse shadow-lg">
-                              <span className="text-white text-xs sm:text-sm font-bold">B</span>
+                      <div className="w-full bg-gradient-to-br from-primary/5 to-sea/5 p-4 sm:p-6 rounded-lg border border-primary/20 backdrop-blur-sm">
+                        <div className="space-y-4">
+                          {/* Name Header */}
+                          <h3 className="text-xl sm:text-2xl font-bold text-foreground">Sarah Johnson</h3>
+                          
+                          {/* Contact Information */}
+                          <div className="space-y-3">
+                            <div className="flex items-center gap-3">
+                              <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
+                              <span className="text-sm sm:text-base text-foreground">sarah.johnson@email.com</span>
                             </div>
-                            <div className="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 w-3 h-3 sm:w-4 sm:h-4 bg-green-500 rounded-full border-2 border-white animate-bounce"></div>
+                            <div className="flex items-center gap-3">
+                              <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
+                              <span className="text-sm sm:text-base text-foreground">+61 423 456 789</span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                              <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
+                              <span className="text-sm sm:text-base text-foreground">Sydney, NSW</span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                              <Building2 className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
+                              <span className="text-sm sm:text-base text-foreground">Skyline Apartments</span>
+                            </div>
                           </div>
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center gap-1 sm:gap-2 mb-1 flex-wrap">
-                              <h4 className="font-semibold text-xs sm:text-sm">Buyer</h4>
-                              <Badge className="bg-red-100 text-red-700 text-xs">Hot Lead</Badge>
-                            </div>
-                            <p className="text-xs sm:text-sm text-muted-foreground truncate">buyer@email.com</p>
-                            <p className="text-xs sm:text-sm text-muted-foreground">+61 412 345 678</p>
-                            <div className="mt-2 sm:mt-3 space-y-1">
-                              <div className="flex items-center gap-1 sm:gap-2">
-                                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full flex-shrink-0"></div>
-                                <span className="text-xs text-muted-foreground truncate">First Home Buyer</span>
-                              </div>
-                              <div className="flex items-center gap-1 sm:gap-2">
-                                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
-                                <span className="text-xs text-muted-foreground truncate">Budget: $750K - $850K</span>
-                              </div>
-                              <div className="flex items-center gap-1 sm:gap-2">
-                                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-500 rounded-full flex-shrink-0"></div>
-                                <span className="text-xs text-muted-foreground truncate">2 Bed / 2 Bath / 1 Car</span>
-                              </div>
+                          
+                          {/* Notes Section */}
+                          <div className="space-y-2">
+                            <h4 className="text-lg sm:text-xl font-bold text-foreground">Notes</h4>
+                            <div className="bg-muted/50 p-3 sm:p-4 rounded-md">
+                              <p className="text-sm sm:text-base text-muted-foreground">
+                                Interested in 2BR apartment, budget up to $800K
+                              </p>
                             </div>
                           </div>
                         </div>
-                        <div className="flex justify-center mt-4 sm:mt-6">
-                          <div className="flex gap-1 sm:gap-2">
-                            <Button size="sm" className="bg-primary hover:bg-primary/90 text-xs px-2 sm:px-3 py-1">
+                        
+                        {/* Action Buttons */}
+                        <div className="flex justify-center mt-6">
+                          <div className="flex gap-2">
+                            <Button size="sm" className="bg-primary hover:bg-primary/90 text-xs sm:text-sm px-3 sm:px-4 py-2">
                               Contact
                             </Button>
-                            <Button variant="outline" size="sm" className="text-xs px-2 sm:px-3 py-1">
+                            <Button variant="outline" size="sm" className="text-xs sm:text-sm px-3 sm:px-4 py-2">
                               View Profile
                             </Button>
                           </div>
