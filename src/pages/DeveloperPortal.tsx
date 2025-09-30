@@ -335,7 +335,7 @@ export default function DeveloperPortal() {
                           </div>
                           
                           {/* Notes Section */}
-                          <div className="space-y-2">
+                          <div className="space-y-2 ml-auto max-w-md">
                             <h4 className="text-lg sm:text-xl font-bold text-foreground">Notes</h4>
                             <div className="bg-muted/50 p-3 sm:p-4 rounded-md">
                               <p className="text-sm sm:text-base text-muted-foreground">
