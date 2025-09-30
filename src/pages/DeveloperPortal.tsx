@@ -103,10 +103,10 @@ export default function DeveloperPortal() {
       </FadeInSection>
 
       {/* Live Reporting Service */}
-      <section className="bg-gradient-to-br from-slate-100 to-slate-200/80 py-0 border-y border-slate-300/40 shadow-inner">
+      <section className="bg-gradient-to-br from-primary-50/40 to-accent/30 py-0 border-y border-primary-200/40 shadow-sm">
         <div className="container mx-auto px-[15px] py-[13px]">
           <FadeInSection className="text-center mb-16">
-            <h2 className="font-bold mb-6 text-left text-2xl text-slate-800 py-[7px] md:text-5xl">Our Services</h2>
+            <h2 className="font-bold mb-6 text-left text-2xl text-primary-900 py-[7px] md:text-5xl">Our Services</h2>
           </FadeInSection>
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 py-0">
@@ -118,7 +118,7 @@ export default function DeveloperPortal() {
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-base md:text-lg text-slate-600">
+                    <p className="text-base md:text-lg text-slate-700">
                       Our audience is actively searching for new apartments, townhouses, and house & land projects
                     </p>
                   </div>
@@ -126,7 +126,7 @@ export default function DeveloperPortal() {
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-base md:text-lg text-slate-600">
+                    <p className="text-base md:text-lg text-slate-700">
                       Our live reporting shows who is engaging with your project and what they're interested in
                     </p>
                   </div>
@@ -134,7 +134,7 @@ export default function DeveloperPortal() {
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-base md:text-lg text-slate-600">
+                    <p className="text-base md:text-lg text-slate-700">
                       Gain real-time insights into campaign performance and buyer demand to drive faster sales
                     </p>
                   </div>
