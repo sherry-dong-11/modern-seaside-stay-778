@@ -400,7 +400,7 @@ export default function DeveloperPortal() {
 
       {/* Custom Website Service */}
       <section className="bg-gradient-to-br from-primary-50/40 to-accent/30 py-0 border-y border-primary-200/40 shadow-sm">
-        <div className="container mx-auto px-[15px] py-[30px]">
+        <div className="container mx-auto px-[16px] py-[33px]">
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 py-0">
               {/* Left Side - Enhanced Website Mockup */}
