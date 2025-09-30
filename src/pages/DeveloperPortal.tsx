@@ -311,36 +311,34 @@ export default function DeveloperPortal() {
                       
                       <div className="w-full bg-gradient-to-br from-primary/5 to-sea/5 p-4 sm:p-6 rounded-lg border border-primary/20 backdrop-blur-sm">
                         <div className="space-y-4">
-                          {/* Headers in flex row */}
-                          <div className="flex items-center gap-4">
-                            <h3 className="text-xl font-bold text-foreground sm:text-xl">Buyer 1</h3>
-                            <h4 className="text-lg sm:text-xl font-bold text-foreground">Notes</h4>
-                          </div>
-                          
-                          {/* Content in two columns */}
+                          {/* Headers and Content in grid */}
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {/* Contact Information */}
-                            <div className="space-y-3">
-                              <div className="flex items-center gap-3">
-                                <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
-                                <span className="text-sm sm:text-xs text-slate-500">sarah.johnson@email.com</span>
-                              </div>
-                              <div className="flex items-center gap-3">
-                                <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
-                                <span className="text-sm sm:text-xs text-slate-500">+61 423 456 789</span>
-                              </div>
-                              <div className="flex items-center gap-3">
-                                <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
-                                <span className="text-sm sm:text-xs text-slate-500">Sydney, NSW</span>
-                              </div>
-                              <div className="flex items-center gap-3">
-                                <Building2 className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
-                                <span className="text-sm sm:text-xs text-slate-500">Skyline Apartments</span>
+                            {/* Left Column: Buyer Info */}
+                            <div>
+                              <h3 className="text-xl font-bold text-foreground sm:text-xl mb-3">Buyer 1</h3>
+                              <div className="space-y-3">
+                                <div className="flex items-center gap-3">
+                                  <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
+                                  <span className="text-sm sm:text-xs text-slate-500">sarah.johnson@email.com</span>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                  <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
+                                  <span className="text-sm sm:text-xs text-slate-500">+61 423 456 789</span>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                  <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
+                                  <span className="text-sm sm:text-xs text-slate-500">Sydney, NSW</span>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                  <Building2 className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
+                                  <span className="text-sm sm:text-xs text-slate-500">Skyline Apartments</span>
+                                </div>
                               </div>
                             </div>
                             
-                            {/* Notes Content */}
+                            {/* Right Column: Notes */}
                             <div>
+                              <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3">Notes</h4>
                               <div className="bg-muted/50 p-3 sm:p-4 rounded-md">
                                 <p className="text-sm text-muted-foreground sm:text-xs">
                                   Interested in 2BR apartment, budget up to $800K
