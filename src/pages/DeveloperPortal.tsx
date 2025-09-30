@@ -103,22 +103,22 @@ export default function DeveloperPortal() {
       </FadeInSection>
 
       {/* Live Reporting Service */}
-      <section className="bg-slate-900 py-0">
+      <section className="bg-muted/30 py-0">
         <div className="container mx-auto px-4 py-[3px]">
           <FadeInSection className="text-center mb-16">
-            <h2 className="font-bold mb-6 text-left py-[19px] text-2xl md:text-5xl text-white">Our Services</h2>
+            <h2 className="font-bold mb-6 text-left py-[19px] text-2xl md:text-5xl">Our Services</h2>
           </FadeInSection>
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 py-0">
               {/* Left Side - Text Content */}
               <div className="order-2 lg:order-1">
-                <h2 className="text-2xl font-bold mb-6 md:text-3xl text-white">Real-Time Reporting</h2>
+                <h2 className="text-2xl font-bold mb-6 md:text-3xl">Real-Time Reporting</h2>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-base md:text-lg text-gray-300">
+                    <p className="text-base md:text-lg text-muted-foreground">
                       Our audience is actively searching for new apartments, townhouses, and house & land projects
                     </p>
                   </div>
@@ -126,7 +126,7 @@ export default function DeveloperPortal() {
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-base md:text-lg text-gray-300">
+                    <p className="text-base md:text-lg text-muted-foreground">
                       Our live reporting shows who is engaging with your project and what they're interested in
                     </p>
                   </div>
@@ -134,7 +134,7 @@ export default function DeveloperPortal() {
                     <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <p className="text-base md:text-lg text-gray-300">
+                    <p className="text-base md:text-lg text-muted-foreground">
                       Gain real-time insights into campaign performance and buyer demand to drive faster sales
                     </p>
                   </div>
