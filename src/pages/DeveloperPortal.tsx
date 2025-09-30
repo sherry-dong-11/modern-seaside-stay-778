@@ -104,9 +104,9 @@ export default function DeveloperPortal() {
 
       {/* Live Reporting Service */}
       <section className="bg-gradient-to-br from-slate-50 to-gray-100/50 py-0 border-y border-slate-200/50">
-        <div className="container mx-auto px-4 py-[3px]">
+        <div className="container mx-auto px-[15px] py-[13px]">
           <FadeInSection className="text-center mb-16">
-            <h2 className="font-bold mb-6 text-left py-[19px] text-2xl md:text-5xl text-slate-900">Our Services</h2>
+            <h2 className="font-bold mb-6 text-left text-2xl text-slate-900 py-[7px] md:text-5xl">Our Services</h2>
           </FadeInSection>
           <FadeInSection>
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 py-0">
@@ -151,7 +151,7 @@ export default function DeveloperPortal() {
               
               {/* Right Side - Reporting Module */}
               <div className="order-1 lg:order-2">
-                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 animate-fade-in overflow-hidden w-full max-w-full p-3 sm:p-4 lg:p-6">
+                <div className="bg-background/95 backdrop-blur-sm rounded-xl shadow-2xl border border-primary/10 animate-fade-in overflow-hidden w-full max-w-full p-3 sm:p-4 lg:p-6 py-[15px]">
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 lg:mb-6 gap-2">
                     <div className="w-full sm:w-auto">
                       <h3 className="text-lg sm:text-xl font-bold text-foreground truncate">Project Overview</h3>
