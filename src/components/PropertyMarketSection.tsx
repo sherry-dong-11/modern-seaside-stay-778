@@ -301,7 +301,7 @@ export default function PropertyMarketSection() {
           duration: 0.6,
           delay: 0.2
         }}>
-            {t.propertyMarket.description}
+            Latest new home pricing trends across Australia
           </motion.p>
         </motion.div>
         
