@@ -267,12 +267,12 @@ export default function PropertyMarketSection() {
       y: 0
     }
   };
-  return <section className="relative py-16 bg-gradient-to-br from-background via-muted/30 to-background overflow-x-hidden">
+  return <section className="relative py-16 bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 py-0 my-[5px]" />
       <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl" />
       
-      <div className="container relative z-10 px-4">
+      <div className="container relative z-10">
         <motion.div className="max-w-4xl mx-auto text-center mb-16" initial={{
         opacity: 0,
         y: 30
@@ -305,7 +305,7 @@ export default function PropertyMarketSection() {
           </motion.p>
         </motion.div>
         
-        <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch w-full" variants={containerVariants} initial="hidden" animate="visible">
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 items-stretch max-w-full" variants={containerVariants} initial="hidden" animate="visible">
           {marketData.map((state, index) => <motion.div key={state.stateCode} variants={cardVariants} whileInView="visible" viewport={{
           once: true
         }}>
