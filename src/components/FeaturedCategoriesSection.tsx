@@ -167,7 +167,7 @@ const CategorySection = ({
       navigate("/house-land");
     }
   };
-  return <div className="mb-12 py-[14px]">
+  return <div className="mb-12">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-foreground text-2xl font-semibold">{title}</h2>
         <Button variant="ghost" className="text-orange-500 hover:text-orange-600 p-0" onClick={handleShowAll}>
@@ -181,7 +181,7 @@ const CategorySection = ({
     </div>;
 };
 export default function FeaturedCategoriesSection() {
-  return <section className="bg-background md:py-8 py-px">
+  return <section className="bg-background py-4 md:py-8">
       <div className="container mx-auto px-4">
         <CategorySection title="New Apartments" properties={apartmentProperties} />
         <CategorySection title="New Townhouses" properties={townhouseProperties} />
