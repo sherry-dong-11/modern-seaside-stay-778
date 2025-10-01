@@ -154,7 +154,7 @@ const PropertyRow: React.FC<PropertyRowProps> = ({
   const isPositive = change >= 0;
   const TrendIcon = isPositive ? TrendingUp : TrendingDown;
   const PropertyIcon = propertyTypeIcons[type];
-  return <motion.div className="relative p-3 rounded-lg bg-gradient-to-r from-background via-background to-muted/30 border border-border/50 hover:border-primary/30 transition-all duration-300 group z-10 h-full min-h-[100px] w-full flex flex-col justify-between overflow-hidden" whileHover={{
+  return <motion.div className="relative p-3 rounded-lg bg-gradient-to-r from-background via-background to-muted/30 border border-border/50 hover:border-primary/30 transition-all duration-300 group z-10 h-full w-full flex flex-col justify-between overflow-hidden" whileHover={{
     scale: 1.01
   }} transition={{
     duration: 0.2
@@ -202,7 +202,7 @@ const StateCard: React.FC<StateCardProps> = ({
   propertyLabels
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  return <motion.div className="relative h-full p-6 rounded-2xl bg-gradient-to-br from-card via-card to-muted/20 border border-border/50 hover:border-primary/40 transition-all duration-500 group overflow-hidden cursor-pointer z-0" whileHover={{
+  return <motion.div className="relative h-full p-4 md:p-6 rounded-2xl bg-gradient-to-br from-card via-card to-muted/20 border border-border/50 hover:border-primary/40 transition-all duration-500 group overflow-hidden cursor-pointer z-0" whileHover={{
     scale: 1.01
   }} onClick={() => setIsExpanded(!isExpanded)} transition={{
     duration: 0.3,
@@ -222,7 +222,7 @@ const StateCard: React.FC<StateCardProps> = ({
           </p>
         </div>
         
-        <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch" animate={isExpanded ? {
+        <motion.div className="grid grid-cols-1 gap-3 items-stretch" animate={isExpanded ? {
         opacity: 1,
         y: 0
       } : {
@@ -305,7 +305,7 @@ export default function PropertyMarketSection() {
           </motion.p>
         </motion.div>
         
-        <motion.div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8 items-stretch" variants={containerVariants} initial="hidden" animate="visible">
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 items-stretch max-w-full" variants={containerVariants} initial="hidden" animate="visible">
           {marketData.map((state, index) => <motion.div key={state.stateCode} variants={cardVariants} whileInView="visible" viewport={{
           once: true
         }}>
