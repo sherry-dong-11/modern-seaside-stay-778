@@ -288,7 +288,7 @@ export default function PropertyMarketSection() {
           duration: 8,
           repeat: Infinity,
           ease: "linear"
-        }} className="bg-gradient-to-r from-primary via-foreground to-accent bg-clip-text mb-6 font-bold text-gray-900 md:text-5xl text-3xl">
+        }} className="bg-gradient-to-r from-primary via-foreground to-accent bg-clip-text mb-6 font-bold text-gray-900 md:text-5xl text-2xl">
             Property Market Trends
           </motion.h2>
           <motion.p initial={{
