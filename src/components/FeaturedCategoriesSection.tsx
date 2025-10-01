@@ -181,7 +181,7 @@ const CategorySection = ({
     </div>;
 };
 export default function FeaturedCategoriesSection() {
-  return <section className="bg-background py-4 md:py-8">
+  return <section className="bg-background md:py-8 py-px">
       <div className="container mx-auto px-4">
         <CategorySection title="New Apartments" properties={apartmentProperties} />
         <CategorySection title="New Townhouses" properties={townhouseProperties} />
