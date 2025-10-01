@@ -42,7 +42,7 @@ const citiesData = [{
   image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=600&fit=crop&crop=center"
 }];
 export default function ExploreCitiesSection() {
-  return <section className="bg-background py-[60px]">
+  return <section className="bg-background py-[50px]">
       <div className="container">
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
           {citiesData.map(city => <div key={city.id} className="group relative overflow-hidden rounded-lg cursor-pointer aspect-square transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
