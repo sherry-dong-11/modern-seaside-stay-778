@@ -7,7 +7,6 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ExploreCitiesSection from "@/components/ExploreCitiesSection";
 import FeaturedCategoriesSection from "@/components/FeaturedCategoriesSection";
 import PropertyMarketSection from "@/components/PropertyMarketSection";
-
 import { LatestNewsSection } from "@/components/LatestNewsSection";
 import AnimatedPropertyCard from "@/components/AnimatedPropertyCard";
 import FadeInSection from "@/components/FadeInSection";
@@ -145,14 +144,14 @@ export default function Index() {
                   Ready to Find Your Dream Home?
                 </h2>
                 
-                <p className="text-xl text-gray-300 mb-12 leading-relaxed">Join us to find out about new listings and access exclusive content</p>
+                <p className="text-gray-300 mb-12 leading-relaxed text-lg">Join us to find out about new listings and access exclusive content</p>
                 
                 <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
                   <div>
                     
                   </div>
                   <div>
-                    <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white backdrop-blur-sm text-lg font-semibold rounded-full mx-0 px-[37px] py-[31px] border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white backdrop-blur-sm font-semibold rounded-full mx-0 px-[37px] py-[31px] border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-base">
                       Register Now
                     </Button>
                   </div>
