@@ -154,7 +154,7 @@ const PropertyRow: React.FC<PropertyRowProps> = ({
   const isPositive = change >= 0;
   const TrendIcon = isPositive ? TrendingUp : TrendingDown;
   const PropertyIcon = propertyTypeIcons[type];
-  return <motion.div className="relative p-3 rounded-lg bg-gradient-to-r from-background via-background to-muted/30 border border-border/50 hover:border-primary/30 transition-all duration-300 group z-10 h-[100px] w-full flex flex-col justify-between overflow-hidden" whileHover={{
+  return <motion.div className="relative p-3 rounded-lg bg-gradient-to-r from-background via-background to-muted/30 border border-border/50 hover:border-primary/30 transition-all duration-300 group z-10 h-full w-full flex flex-col justify-between overflow-hidden" whileHover={{
     scale: 1.01
   }} transition={{
     duration: 0.2
@@ -202,27 +202,27 @@ const StateCard: React.FC<StateCardProps> = ({
   propertyLabels
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  return <motion.div className="relative p-6 rounded-2xl bg-gradient-to-br from-card via-card to-muted/20 border border-border/50 hover:border-primary/40 transition-all duration-500 group overflow-hidden cursor-pointer z-0" whileHover={{
+  return <motion.div className="relative h-full p-2 sm:p-4 md:p-6 rounded-2xl bg-gradient-to-br from-card via-card to-muted/20 border border-border/50 hover:border-primary/40 transition-all duration-500 group overflow-hidden cursor-pointer z-0" whileHover={{
     scale: 1.01
   }} onClick={() => setIsExpanded(!isExpanded)} transition={{
     duration: 0.3,
     ease: "easeOut"
   }}>
       <div className="relative z-10">
-        <div className="mb-6">
-          <motion.h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300" animate={isExpanded ? {
+        <div className="mb-3 sm:mb-4 md:mb-6">
+          <motion.h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-1 sm:mb-2 group-hover:text-primary transition-colors duration-300" animate={isExpanded ? {
           scale: 1.05
         } : {
           scale: 1
         }}>
             {data.stateCode}
           </motion.h3>
-          <p className="text-sm text-muted-foreground font-medium">
+          <p className="text-xs sm:text-sm text-muted-foreground font-medium">
             {data.stateName}
           </p>
         </div>
         
-        <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" animate={isExpanded ? {
+        <motion.div className="grid grid-cols-1 gap-2 sm:gap-3 items-stretch" animate={isExpanded ? {
         opacity: 1,
         y: 0
       } : {
@@ -267,12 +267,12 @@ export default function PropertyMarketSection() {
       y: 0
     }
   };
-  return <section className="relative py-16 bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
+  return <section className="relative py-16 bg-gradient-to-br from-background via-muted/30 to-background overflow-x-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 py-0 my-[5px]" />
       <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl" />
       
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-2 sm:px-4 md:px-6 lg:px-8">
         <motion.div className="max-w-4xl mx-auto text-center mb-16" initial={{
         opacity: 0,
         y: 30
@@ -288,10 +288,10 @@ export default function PropertyMarketSection() {
           duration: 8,
           repeat: Infinity,
           ease: "linear"
-        }} className="bg-gradient-to-r from-primary via-foreground to-accent bg-clip-text mb-6 font-bold text-gray-900 md:text-5xl text-2xl">
+        }} className="text-4xl bg-gradient-to-r from-primary via-foreground to-accent bg-clip-text mb-6 font-bold text-gray-900 md:text-5xl">
             Property Market Trends
           </motion.h2>
-          <motion.p initial={{
+          <motion.p className="text-lg text-muted-foreground max-w-2xl mx-auto" initial={{
           opacity: 0,
           y: 20
         }} animate={{
@@ -300,12 +300,12 @@ export default function PropertyMarketSection() {
         }} transition={{
           duration: 0.6,
           delay: 0.2
-        }} className="text-muted-foreground max-w-2xl mx-auto text-base">
+        }}>
             {t.propertyMarket.description}
           </motion.p>
         </motion.div>
         
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" animate="visible">
+        <motion.div className="grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-6 items-stretch w-full min-w-0" variants={containerVariants} initial="hidden" animate="visible">
           {marketData.map((state, index) => <motion.div key={state.stateCode} variants={cardVariants} whileInView="visible" viewport={{
           once: true
         }}>
