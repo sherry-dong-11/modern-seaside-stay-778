@@ -202,7 +202,7 @@ const StateCard: React.FC<StateCardProps> = ({
   propertyLabels
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  return <motion.div className="relative p-6 rounded-2xl bg-gradient-to-br from-card via-card to-muted/20 border border-border/50 hover:border-primary/40 transition-all duration-500 group overflow-hidden cursor-pointer z-0" whileHover={{
+  return <motion.div className="relative h-full p-6 rounded-2xl bg-gradient-to-br from-card via-card to-muted/20 border border-border/50 hover:border-primary/40 transition-all duration-500 group overflow-hidden cursor-pointer z-0" whileHover={{
     scale: 1.01
   }} onClick={() => setIsExpanded(!isExpanded)} transition={{
     duration: 0.3,
@@ -305,7 +305,7 @@ export default function PropertyMarketSection() {
           </motion.p>
         </motion.div>
         
-        <motion.div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8" variants={containerVariants} initial="hidden" animate="visible">
+        <motion.div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8 items-stretch" variants={containerVariants} initial="hidden" animate="visible">
           {marketData.map((state, index) => <motion.div key={state.stateCode} variants={cardVariants} whileInView="visible" viewport={{
           once: true
         }}>
