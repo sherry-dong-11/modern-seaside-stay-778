@@ -27,8 +27,8 @@ const citiesData = [{
   image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&h=600&fit=crop&crop=center"
 }, {
   id: 6,
-  name: "Newcastle",
-  state: "New South Wales",
+  name: "Hobart",
+  state: "Tasmania",
   image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=600&fit=crop&crop=center"
 }, {
   id: 7,
